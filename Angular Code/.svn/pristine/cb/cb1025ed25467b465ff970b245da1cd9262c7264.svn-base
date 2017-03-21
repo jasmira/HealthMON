@@ -1,0 +1,20 @@
+<div role="tabpanel" class="tab-pane active" id="alert">
+<div style="overflow-y: scroll;height: 400px;">
+<div ng-repeat='task in dashboardCtrl.TaskAlertList' ng-if="task.User_Task_Type == 'task' && task.User_Task_Severity != 1 " class='border-bottom'>
+<div class="panel panel-default">
+  <div class="panel-body">
+   <div class="row">
+    <div class="col-md-3 text">  
+        Created on  <br>                  
+       {{task.User_Task_CreatedTime}}
+                                  
+  </div>
+ 
+   <div class="col-md-9 border-left alert-text"> {{task.User_Task_Description}} 
+       <h6>Due Date<span ng-if='task.User_Task_Date!=Invalid date && task.User_Task_Date!=null'> {{task.User_Task_Date}}</span></h6> </div>
+   </div>
+  </div>
+</div>
+    </div>
+    </div>
+    

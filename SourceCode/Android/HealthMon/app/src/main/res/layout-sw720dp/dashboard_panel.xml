@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/widthdashboardlayout"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlue"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/llDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/heightdashboardpanelbutton"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivDashboardPannelDashboard"
+            android:background="@drawable/ic_menu_dashboard_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtDashboard"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sizetexttopdashboardpanelbutton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llDashboardactive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/heightdashboardpanelbutton"
+        android:gravity="center"
+        android:background="@color/colorlightgray"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivDashboardPannelDashboardactive"
+            android:background="@drawable/ic_menu_dashboard_active" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtDashboard"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/sizetexttopdashboardpanelbutton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPatientRegistration"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margintopdashboardpanelbutton"
+        android:layout_height="@dimen/heightdashboardpanelbutton"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivDashboardPannelRegistration"
+            android:background="@drawable/ic_menu_register_patient_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtPatientRegistration"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sizetexttopdashboardpanelbutton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPatientRegistrationactive"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margintopdashboardpanelbutton"
+        android:layout_height="@dimen/heightdashboardpanelbutton"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/colorlightgray"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivDashboardPannelRegistrationactive"
+            android:background="@drawable/ic_menu_register_patient_active" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtPatientRegistration"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/sizetexttopdashboardpanelbutton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAllPatient"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margintopdashboardpanelbutton"
+        android:layout_height="@dimen/heightdashboardpanelbutton"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivDashboardPannelAllPatients"
+            android:background="@drawable/ic_menu_all_patients_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtAllPatients"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sizetexttopdashboardpanelbutton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAllPatientactive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/heightdashboardpanelbutton"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margintopdashboardpanelbutton"
+        android:visibility="gone"
+        android:background="@color/colorlightgray"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivDashboardPannelAllPatientsactive"
+            android:background="@drawable/ic_menu_all_patients_active" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtAllPatients"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/sizetexttopdashboardpanelbutton" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llReports"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margintopdashboardpanelbutton"
+        android:layout_height="@dimen/heightdashboardpanelbutton"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivDashboardPannelReports"
+            android:background="@drawable/ic_menu_reports_normal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtReports"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sizetexttopdashboardpanelbutton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llReportsactive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/heightdashboardpanelbutton"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margintopdashboardpanelbutton"
+        android:visibility="gone"
+        android:background="@color/colorlightgray"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivDashboardPannelReportsactive"
+            android:background="@drawable/ic_menu_reports_active"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtReports"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/sizetexttopdashboardpanelbutton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llEducation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/heightdashboardpanelbutton"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margintopdashboardpanelbutton"
+        android:background="@color/colorBlue"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivDashboardPannelEducation"
+            android:background="@drawable/ic_menu_education_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtEducation"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sizetexttopdashboardpanelbutton" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llEducationactive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/heightdashboardpanelbutton"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/margintopdashboardpanelbutton"
+        android:background="@color/colorlightgray"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivDashboardPannelEducationactive"
+            android:background="@drawable/ic_menu_education_active" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtEducation"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/sizetexttopdashboardpanelbutton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCollaboration"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/heightdashboardpanelbutton"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margintopdashboardpanelbutton"
+        android:background="@color/colorBlue"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivDashboardPannelCollaboration"
+            android:background="@drawable/ic_menu_collaboration_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtCollaboration"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sizetexttopdashboardpanelbutton" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llCollaborationactive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/heightdashboardpanelbutton"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margintopdashboardpanelbutton"
+        android:visibility="gone"
+        android:background="@color/colorlightgray"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivDashboardPannelCollaborationactive"
+            android:background="@drawable/ic_menu_collaboration_active" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtCollaboration"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/sizetexttopdashboardpanelbutton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llMyActivities"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/heightdashboardpanelbutton"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margintopdashboardpanelbutton"
+        android:background="@color/colorBlue"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivDashboardPannelMyActivities"
+            android:background="@drawable/ic_menu_my_activities_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtMyActivities"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sizetexttopdashboardpanelbutton" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llMyActivitiesactive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/heightdashboardpanelbutton"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margintopdashboardpanelbutton"
+        android:visibility="gone"
+        android:background="@color/colorlightgray"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivDashboardPannelMyActivitiesactive"
+            android:background="@drawable/ic_menu_my_activities_active" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtMyActivities"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/sizetexttopdashboardpanelbutton" />
+    </LinearLayout>
+<!--    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:drawableTop="@drawable/selector_panel_education"
+        android:text="ny_text" />-->
+</LinearLayout>

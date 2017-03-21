@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.persistent.healthmon">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+    <!-- android:required="true" declares that this app is available to BLE-capable devices only -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".app.HealthMonApp"
+        android:allowBackup="true"
+        android:allowClearUserData="true"
+        android:configChanges="locale"
+        android:icon="@mipmap/ic_launching_01"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".viewcontroller.HealthMonSplashActivity"
+            android:configChanges="orientation|screenSize">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:name=".viewcontroller.HealthMonMainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".viewcontroller.HealthMonLoginActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+
+        <receiver
+            android:name=".communication.NetworkStatusReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        android:name=".model.Customer"
+        android:authorities="com.persistent.healthmon.model.customer"
+        android:exported="false" />
+        <provider
+            android:name=".database.DatabaseProvider"
+            android:authorities="com.persistent.healthmon" />
+
+        <activity android:name=".communication.HealthDevicesActivity" />
+        <activity android:name=".fragments.ECGWaveFormActivity" />
+
+        <service android:name=".communication.ECGBluetoothService" />
+        <service android:name=".communication.PulseOxiWvFormBluetoothService" />
+
+        <activity android:name=".fragments.PulseOxiWaveformActivity" />
+        <activity android:name=".fragments.HealthDeviceSettingsActivity" />
+        <activity
+            android:name=".placeholder.PDFViewerPopupActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".placeholder.AudioPopUpActivity"
+            android:theme="@android:style/Theme.Dialog"/>
+    </application>
+
+</manifest>

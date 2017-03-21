@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/llContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTaskName"
+            style="@style/txt_blue_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Sample"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtTaskDate"
+            style="@style/Font15BlackNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Sample" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtPatientId"
+        style="@style/Font17BlackNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:text="Sample" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/llContainer"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorlinegray" />
+</RelativeLayout>

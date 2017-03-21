@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All Patients List View</title>
+</head>
+<body >
+    <div class="wrapper">
+      <div class="container-fluid">
+		<!---header--->
+			<header></header>
+		<!---header close--->
+        <div class="row" >
+            <!---left menu---->
+            <left-menu-panel></left-menu-panel>                  
+            <!---left menu close---->
+
+            <!---right coloumn----->
+            <!---right coloumn----->
+            <div id="allPatients">
+                <div class="row">
+                    <div class="col-sm-11">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <h4 class="col-md-9">
+                                        <span> All Patients </span>
+                                        <span> ({{allPatientsCtrl.patientCount}}) </span> 
+                                    </h4>
+                                    <div class=" col-md-3">
+                                    <div class="input-group pull-right">
+                                      <input type="text" class="form-control" placeholder="Search by PID or Name" aria-describedby="basic-addon1" ng-model="allPatientsCtrl.searchText">
+                                      <span class="input-group-btn">
+                                      <button class="btn btn-default" type="button"><img src="static/images/search.png" width="25" height="26"></button>
+                                      </span> 
+                                    </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-8 row">
+                                    <form role="form" class="col-md-9 row">
+                                        <div class="checkbox col-md-4">
+                                          <label><input type="checkbox" value="" disabled>Out Patients (0)</label>
+                                        </div>
+                                        <div class="checkbox col-md-4">
+                                          <label><input type="checkbox" value="" disabled>In Patients (0)</label>
+                                        </div>
+                                        <div class="checkbox col-md-4">
+                                          <label><input type="checkbox" ng-false-value="false" ng-model="allPatientsCtrl.referred">Referred Patients ({{allPatientsCtrl.referredCount}})</label>
+                                        </div>
+                                    </form>
+                                    
+                                    <div class="col-md-3">
+                                        
+                                        <div id="sortBySeverityDropDown" class="col-md-8  top-pad-right">
+                                            
+                                          <div class="dropdown "><div>Sort By</div>
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                                            {{allPatientsCtrl.orderByColumnLabel}}
+                                            <span class="caret"></span></button>
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="allPatientsCtrl.sortPatients('Patient_Age')">Age</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="allPatientsCtrl.sortPatients('EDD')">EDD</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="allPatientsCtrl.sortPatients('severity')">Severity</a></li>
+                                            </ul>
+                                          </div>                                         
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-4 paddingTop">
+                                        <div class="pull-right">
+                                            <a ui-sref="allPatients" data-toggle="tab">
+                                            <span>Card View</span>
+                                            <span><img src="static/images/cardView_icon.png"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                        
+                        <!-- all patients List view-->
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <h4 class="blueTextTitle"> {{allPatientsCtrl.orderByColumnLabel}} </h4> 
+                                
+                                    <div id="allPatientsListTableHeader" class="row borderedRow blueBgRow">
+                                        <div class="col-md-3 rightBorderedCol">Name & Details</div>
+                                        <div class="col-md-1 rightBorderedCol">Status</div>
+                                        <div class="col-md-1 rightBorderedCol">Risk Factor</div>
+                                        <div class="col-md-1 rightBorderedCol">HB/BP</div>
+                                        <div class="col-md-2 rightBorderedCol">Visits</div>
+                                        <div class="col-md-2 rightBorderedCol">TT</div>
+                                        <div class="col-md-2">IFA</div>
+                                    </div>
+                                    <p></p>
+                                    <div id="casesRowWrapper">
+                                        <div id="highRiskCases" ng-repeat="(severity, patients) in allPatientsCtrl.allPatientsDisplayData | groupBy:'severity'">
+                                            <div>
+                                                <span class="blueTextTitle" ng-if="severity == 1">High Risk Cases</span>
+                                                <span class="blueTextTitle" ng-if="severity == 2">Moderate Risk Cases</span>
+                                                <span class="blueTextTitle" ng-if="severity == 3">Normal Cases</span>
+                                            </div>
+                                            <div class="cardRow row" ng-repeat="patient in patients | filterBy: ['Patient_id', 'Patient_FName', 'Patient_LName']: allPatientsCtrl.searchText | filter: { referred: (allPatientsCtrl.referred ||'') } | orderBy:allPatientsCtrl.orderByColumn">
+                                            
+                                            <!-- One Entity in list -->
+                                                
+                                            <table class="table table-bordered riskRow allPatientsListViewTable">
+                                                <tbody>
+                                                  <tr>
+                                                    <td class="col-md-3">
+                                                    <img ng-if="patient.appointment_count == 0" src="static/images/NewTag.png" style="position:left-top; position: absolute;z-index:999">
+                                                        
+                                                        <div>
+                                                        <div ng-class="{redSevere: patient.severity == 1, yellowSevere: patient.severity == 2, greenSevere: patient.severity == 3}">
+                                                            <div class="profileDiv">
+                                                                <div class="row">
+                                                                    <div class="col-md-3 text-center "> 
+                                                                        <img data-ng-src= "{{'data:image/png;base64,'+patient.Patient_Image}}" width="53" height="53"><br>
+                                                                    </div>
+                                                                    <div class="col-md-9 top-pad-both">
+                                                                    <span class="card-title">
+                                                                        {{patient.Patient_FName}} {{patient.Patient_LName}}, {{patient.Patient_Age}}/F <br>                                                                       
+                                                                    </span> 
+                                                                    <span class="card-small-text">
+                                                                        <span>PID {{patient.Patient_id}} {{patient.referred ? ', Referred' : ''}}</span>
+                                                                        <br>
+                                                                        <span>Contact No.</span><span>{{patient.Patient_Contact}}</span>
+                                                                    </span>    
+                                                                    </div>
+                                                                </div> 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </td>
+                                                    
+                                                    
+                                                    <td class="col-md-1 rightBorderedCol minPaddingListView">
+                                                       <div >
+                                                        <div class=""> 
+                                                                <span> {{patient.weeks}} Weeks</span>
+                                                                <br>
+                                                                <span class="card-small-text">LMP: {{patient.LMPDate}} </span>
+                                                                <br>
+                                                                <span class="card-small-text">EDD: {{patient.EDD}} </span>
+                                                        </div>
+                                                    </div> 
+                                                    </td>
+                                                    
+                                                    
+                                                    <td class="col-md-1 rightBorderedCol">
+                                                       <div>
+                                                        <span ng-if="patient.hb > 0 && patient.hb < 8" class="redTextSpan">Severly Anemic</span>
+                                                        <span ng-if="(patient.hb == ''||patient.hb == 0||patient.hb == null) || patient.hb > 7" style="color:#1DBD9D">Normal</span>
+                                                    </div> 
+                                                    </td>
+                                                    
+                                                    <td class="col-md-1 rightBorderedCol">
+                                                       <div>
+                                                            <span class="redTextSpan" ng-if="(patient.hb>0) && (patient.hb<=7)"> HB : {{patient.hb}} </span>
+                                                            <span class="blackTextSpan" ng-if="(patient.hb==null || patient.hb==0) || (patient.hb>7)"> HB : {{patient.hb}} </span>
+                                                            <br>
+                                                            <span class="blackTextSpan"> BP : {{patient.bp}} </span>
+                                                        </div> 
+                                                    </td>
+                                                    
+                                                    <td class="col-md-2 rightBorderedCol">
+                                                        <div>
+                                                            <span> Visits : 4</span>
+                                                            <br>
+                                                            <span>Due: 13/05/16 </span>
+                                                            <br>
+                                                            <span>Last: 13/05/16 </span>
+                                                        </div>
+                                                    </td>
+                                                    
+                                                    <td class="col-md-2 allPatientListOrangeBgCol">
+                                                        <span ng-if='allPatientsCtrl.medicationInfo[patient.Patient_id].TT1_Medication!=null'>
+                                                                    <span>{{allPatientsCtrl.medicationInfo[patient.Patient_id].TT1_Medication}} :</span>
+                                                                    <br>
+                                                                    <span class="card-small-text" ng-if='allPatientsCtrl.medicationInfo[patient.Patient_id].TT1_Medication_dueDate!=null'><span >Due :</span><span>{{allPatientsCtrl.medicationInfo[patient.Patient_id].TT1_Medication_dueDate}}</span></span>
+                                                                    <br>
+                                                                    <span class="card-small-text" ng-if='allPatientsCtrl.medicationInfo[patient.Patient_id].TT1_Medication_LastDate!=null'><span >Last :</span><span>{{allPatientsCtrl.medicationInfo[patient.Patient_id].TT1_Medication_LastDate}}</span></span>
+                                                                </span>
+                                                                
+                                                                  <span ng-if='allPatientsCtrl.medicationInfo[patient.Patient_id].TT1_Medication==null && allPatientsCtrl.medicationInfo[patient.Patient_id].TT2_Medication!=null'>
+                                                                    <span>{{allPatientsCtrl.medicationInfo[patient.Patient_id].TT2_Medication}} :</span>
+                                                                    <br>
+                                                                    <span class="card-small-text" ng-if='allPatientsCtrl.medicationInfo[patient.Patient_id].TT1_Medication_dueDate==null && allPatientsCtrl.medicationInfo[patient.Patient_id].TT2_Medication_dueDate!=null'><span >Due :</span><span>{{allPatientsCtrl.medicationInfo[patient.Patient_id].TT2_Medication_dueDate}}</span></span>
+                                                                    <br>
+                                                                    <span  class="card-small-text" ng-if='allPatientsCtrl.medicationInfo[patient.Patient_id].TT1_Medication_LastDate==null && allPatientsCtrl.medicationInfo[patient.Patient_id].TT2_Medication_dueDate!=null'><span >Last :</span><span>{{allPatientsCtrl.medicationInfo[patient.Patient_id].TT2_Medication_LastDate}}</span></span>
+                                                                </span>
+  <span ng-if='allPatientsCtrl.medicationInfo[patient.Patient_id].TT1_Medication==null && allPatientsCtrl.medicationInfo[patient.Patient_id].TT2_Medication==null && allPatientsCtrl.medicationInfo[patient.Patient_id].TT_Booster_Medication!=null'>
+                                                                    <span>{{allPatientsCtrl.medicationInfo[patient.Patient_id].TT_Booster_Medication}} :</span>
+                                                                    <br>
+                                                                    <span class="card-small-text" ng-if='allPatientsCtrl.medicationInfo[patient.Patient_id].TT1_Medication_dueDate==null && allPatientsCtrl.medicationInfo[patient.Patient_id].TT2_Medication_dueDate==null && allPatientsCtrl.medicationInfo[patient.Patient_id].TT_Booster_Medication_dueDate!=null'><span >Due :</span><span>{{allPatientsCtrl.medicationInfo[patient.Patient_id].TT_Booster_Medication_dueDate}}</span></span>
+                                                                    <br>
+                                                                    <span  class="card-small-text"><span ng-if='allPatientsCtrl.medicationInfo[patient.Patient_id].TT1_Medication_LastDate==null && allPatientsCtrl.medicationInfo[patient.Patient_id].TT2_Medication_LastDate==null && allPatientsCtrl.medicationInfo[patient.Patient_id].TT_Booster_Medication_LastDate!=null'>Last :</span><span>{{allPatientsCtrl.medicationInfo[patient.Patient_id].TT_Booster_Medication_LastDate}}</span></span>
+                                                                </span>
+ <span ng-if='allPatientsCtrl.medicationInfo[patient.Patient_id].TT1_Medication==null && allPatientsCtrl.medicationInfo[patient.Patient_id].TT2_Medication==null && allPatientsCtrl.medicationInfo[patient.Patient_id].TT_Booster_Medication==null'>
+                                                                    <span>TT :</span><br>
+     <span class="card-small-text">Due:</span><br>
+     <span class="card-small-text">Last:</span><br>
+                                                            </div>
+                                                    </td>
+                                                    
+                                                    <td class="col-md-2">
+                                                         <div class="minPadding border-left"> 
+                                                                <span>
+                                                                    <span>IFA :</span>
+                                                                    <br>
+                                                                    <span  class="card-small-text"><span>Due :</span><span ng-if='allPatientsCtrl.medicationInfo[patient.Patient_id].IFA_Medication_dueDate!=null'>{{allPatientsCtrl.medicationInfo[patient.Patient_id].IFA_Medication_dueDate}}</span></span>
+                                                                    <br>
+                                                                    <span  class="card-small-text" ><span>Last :</span><span ng-if='allPatientsCtrl.medicationInfo[patient.Patient_id].IFA_Medication_LastDate!=null'>{{allPatientsCtrl.medicationInfo[patient.Patient_id].IFA_Medication_LastDate}}</span></span>
+                                                                </span>
+                                                            </div>
+                                                    </td>
+                                                    
+                                                  </tr>
+                                                </tbody>
+                                              </table>                                            
+                                            <!-- One Entity in list closes here-->
+                                        </div>    
+                                        </div>
+                                        </div>    
+                                        </div>                                            
+                                        </div>    
+                                        </div>                                        
+                                        </div>
+                                        <br/>                                       
+                                        </div>
+                                        </div>
+                                    </div>                                   
+                            </div>
+                        </div>
+            <!---right coloumn----->
+                    </div>
+                </div></div>
+        </div></div>
+</body>
+</html>

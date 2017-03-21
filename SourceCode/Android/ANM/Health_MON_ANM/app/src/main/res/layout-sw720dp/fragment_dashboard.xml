@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="horizontal"
+    android:padding="10dp">
+    <!-- First vertical half-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/edittext_border_gray"
+        android:gravity="left"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtTodayPatient"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtPatientCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/txtTodayPatient"
+                android:textColor="@color/colortextgray"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/searchViewPatient"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/edittext_border_gray"
+            android:focusable="true"
+            android:queryHint="@string/hinttasksearch" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/sliding_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            app:tabIndicatorColor="@color/colorBlue"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/colorBlue"
+            app:tabTextColor="@color/colortextgray" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpDocPatientList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+    <!-- Second vertical half-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="2"
+            android:background="@drawable/edittext_border_gray"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtAlerts"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtAlertsCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/txtTodayPatient"
+                    android:textColor="@color/colortextgray"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/colorLightGreenBg"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/txtTask" />
+
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/txtPatientID" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lstAlerts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_border_gray_graybg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtLog"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtLogDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="(June'16)"
+                    android:textColor="@color/colortextgray"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/txt_blue_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtEnrolledPatients" />
+
+                    <TextView
+                        android:id="@+id/txtEnrolledPatients"
+                        style="@style/txt_blue_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="256"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/txt_blue_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtExpecteddeliveries" />
+
+                    <TextView
+                        android:id="@+id/txtExpectedDeliveries"
+                        style="@style/txt_blue_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/txt_blue_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtHighRiskPatients" />
+
+                    <TextView
+                        android:id="@+id/txtHighRiskPatients"
+                        style="@style/txt_blue_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="52"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="2"
+            android:background="@drawable/edittext_border_gray"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtUpcomingTask"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtUpcomingTaskCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/txtTodayPatient"
+                    android:textColor="@color/colortextgray"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/colorLightGreenBg"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/txtPatient" />
+
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="50dp"
+                    android:text="@string/txtTask" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lstUpcommingTask"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

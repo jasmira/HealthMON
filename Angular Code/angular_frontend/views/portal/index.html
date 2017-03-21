@@ -1,0 +1,78 @@
+<html ng-app="healthMon">
+  <head>
+    <title>HealthMon</title>
+    <!-- Pre-requisite files -->
+	<link href="/static/css/style.css" rel="stylesheet" type="text/css">
+	<link href="/static/css/fonts.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/nv.d3.min.css" rel="stylesheet" type="text/css">
+	<link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="/static/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+	<link href="/static/app/portal/plugins/angularjs-datetime-picker.css" rel="stylesheet" type="text/css">
+	<script src="/static/app/portal/plugins/jquery.min.js"></script>
+	<link href="/static/app/portal/plugins/ui-calendar/fullcalendar.css" rel="stylesheet" type="text/css">
+    <link href="/static/app/portal/plugins/c3.min.css" rel="stylesheet" type="text/css">
+	<script src="/static/app/portal/plugins/ui-calendar/moment.js"></script>
+    <script src="/static/app/portal/plugins/underscore-min.js"></script>
+	<script src="/static/app/portal/plugins/angular.min.js"></script>
+	<script src="/static/app/portal/plugins/ui-calendar/angular-moment.min.js"></script>
+    <script src="/static/app/portal/plugins/angular-underscore-module.js"></script>
+	<script src="/static/app/portal/plugins/ui-calendar/fullcalendar.min.js"></script>
+	<script src="/static/app/portal/plugins/ui-calendar/calendar.js"></script>
+	<script src="/static/app/portal/plugins/angular-filter.min.js"></script>
+    <script src="/static/app/portal/plugins/angular-ui-router.min.js"></script>
+	<script src="/static/app/portal/plugins/bootstrap.min.js"></script>
+	<script src="/static/app/portal/plugins/ui-bootstrap-tpls.min.js"></script>
+	<script src="/static/app/portal/plugins/angularjs-datetime-picker.min.js"></script>
+    <script src="/static/app/portal/plugins/c3.min.js"></script>
+    <script src="/static/app/portal/plugins/d3.min.js"></script>
+	<link href="/static/app/portal/plugins/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Changes For Anemia Status -->
+    <script src="/static/app/portal/plugins/nv.d3.min.js"></script>
+    <script src="/static/app/portal/plugins/angular-nvd3.min.js"></script>
+      
+       <!-- chart js files -->
+    <script src="/static/app/portal/plugins/Chart.js"></script>
+    <script src="/static/app/portal/plugins/Chart.min.js"></script>
+    <script src="/static/app/portal/plugins/angular-chart.min.js"></script>
+    <script src="/static/app/portal/plugins/angular-chart.js"></script>
+    <script src="/static/app/portal/plugins/Chart.bundle.js"></script>
+      
+    <!-- Actual logic files -->
+    <script src="/static/app/portal/plugins/angular-cookie.js"></script>
+
+    <script src="/static/app/portal/app.js"></script>
+
+    <script src="/static/app/portal/controllers/analytics/anemiaStatusCtrl.js"></script>
+    <script src="/static/app/portal/controllers/analytics/enrolledPatientsCtrl.js"></script>
+    <script src="/static/app/portal/controllers/analytics/expectedDeliveryCtrl.js"></script>
+      
+    <script src="/static/app/portal/factories/httpInterceptor.js"></script>
+    <script src="/static/app/portal/factories/authFact.js"></script>
+    <script src="/static/app/portal/factories/patientFact.js"></script>
+	<script src="/static/config/env.js"></script>
+	<script src="/static/app/portal/routes.js"></script>
+	<script src="/static/app/portal/hoRoutes.js"></script>
+	<script src="/static/app/portal/directives/leftNav-directive.js"></script>
+	<script src="/static/app/portal/directives/hoLeftNav-directive.js"></script>
+	<script src="/static/app/portal/directives/header-directive.js"></script>
+	<script src="/static/app/portal/directives/autoFocus-directives.js"></script>
+	<script src="/static/app/portal/controllers/header/headerCtrl.js"></script>
+	<script src="/static/app/portal/controllers/login/loginCtrl.js"></script>
+	<script src="/static/app/portal/controllers/dashboard/dashboardCtrl.js"></script>
+	<script src="/static/app/portal/controllers/dashboard/hoDashboardCtrl.js"></script>
+	<script src="/static/app/portal/controllers/all_patients/allPatientsCtrl.js"></script>
+    <script src="/static/app/portal/controllers/analytics/analyticsCtrl.js"></script>
+	<script src="/static/app/portal/controllers/calendar/calendarCtrl.js"></script>
+    <script src="/static/app/portal/controllers/all_patients/patientCareplanCtrl.js"></script>
+    <script src="/static/app/portal/controllers/all_patients/patientViewTrendsCtrl.js"></script>
+    <script src="/static/app/portal/services/common/commonFunctionsService.js"></script>
+    <script src="/static/app/portal/services/common/graphFunctionsService.js"></script>
+    <script src="/static/app/portal/controllers/all_patients/patientTreatmentTabCtrl.js"></script>
+    <script src="/static/app/portal/services/all_patients/patientTreatmentService.js"></script>
+  </head>
+
+  <body>
+    <div ui-view=''></div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Login</title>
+	</head>
+	<body class="wrapper">
+		<div class="login-wrapper">
+			<div class="logo-login"><img src="/static/images/login-logo.png" width="225" height="84" alt="logo"></div>
+			<div style="width:300px; margin:0 auto; padding-bottom:30px;">
+				<form id="login-form" ng-submit="loginCtrl.submit()">
+					  <div class="form-group">
+						  <div class="input-group">
+							  <span class="input-group-addon" id="basic-addon1"><img src="/static/images/icon-user.png" width="17" height="17" alt="User"></span>
+							  <div class="alert alert-danger" ng-show="loginCtrl.InvalidCredentials">Invalid Username or Password</div>
+							  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" ng-model="loginCtrl.username" ng-required="true">
+							  <span class="help-block" ng-show="adduser.name.$invalid && !adduser.name.$pristine"></span>
+						  </div>
+					  </div>
+					  <div class="form-group">
+						  <div class="input-group">
+							  <span class="input-group-addon" id="basic-addon1"><img src="/static/images/icon-password.png" width="15" height="20" alt="password"></span>
+							  <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1" ng-model="loginCtrl.password" ng-required="true">
+							  <span class="help-block" ng-show="adduser.name.$invalid && !adduser.name.$pristine"></span>
+						  </div>
+					  </div>
+					  <div>&nbsp;</div>
+					  <div class="checkbox">
+						<label>
+						  <input type="checkbox">Remember Me
+						</label>
+					  </div>
+					  <button type="submit" class="btn btn-default btn-lg btn-block">login</button>
+					  <div>&nbsp;</div>
+					<div class="forgot-pass"><a href="#">Forgot Password?</a></div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

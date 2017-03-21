@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_test_header"
+            android:src="@drawable/ic_landing_bloodpressure"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtbloodpressure"
+            android:id="@+id/tv_test_header_name"
+            android:textColor="@color/colorBlue"
+            android:layout_marginLeft="21dp"
+            android:layout_marginStart="21dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_test_header"
+            android:layout_toEndOf="@+id/iv_test_header" />
+        <!--Due Lastrecoded LastData-->
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:id="@+id/rlduelayout"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/btnHelp"
+            android:layout_toStartOf="@+id/btnHelp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="50dp"
+                android:layout_marginEnd="50dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskDue"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtLastSyncNotAvaliable"
+                        android:id="@+id/tvDue" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskLastRecorded" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtLastSyncNotAvaliable"
+                        android:id="@+id/tvLastRecorded" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/llLastdata">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskLastData" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:text="@string/txtLastSyncNotAvaliable"
+                        android:id="@+id/tvLastData" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:id="@+id/asha_popup_line2"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@+id/rlduelayout"
+            android:layout_toStartOf="@+id/rlduelayout"
+            android:background="@color/colorBlue"/>
+
+        <!--ConnectionSetting manualMode-->
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/asha_popup_line2"
+            android:layout_toStartOf="@+id/asha_popup_line2">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:id="@+id/iv_BLSetting"
+                        android:src="@drawable/ic_bluetooth"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorgreenprimary"
+                            android:id="@+id/tv_connection"
+                            android:text="@string/txtTaskConnectionSetting" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/llSwitchMode">
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnManual"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvChangeMode"
+                        android:text="@string/txtTaskDeviceMode"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskHelpGuide"
+            android:id="@+id/btnHelp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            style="@style/greenRoundButton"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:id="@+id/asha_popup_line1"
+        android:background="@color/colorBlue"/>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <h4>Anemia Patient Trends</h4>
+    </head>
+    <body>
+        <table class="table">
+          <thead class="thead-default">
+            <tr>
+              <th>Sr. No.</th>
+              <th>Name of PHC</th>
+              <th>Address</th>
+              <th>Name of Pragnant Woman</th>
+              <th>Level of HB(%gm)</th>
+              <th>Treatment Being Given</th>
+              <th>Place & Date of Referred to Higher Center</th>
+              <th>Registration Week</th>
+              <th>EDD</th>
+            </tr>
+          </thead>
+            
+          <tbody>
+            <tr ng-repeat="data in anemiaPatientTrendsCtrl.anemiaReportData">
+                <td>{{$index +1}}</td>
+                <td> </td>
+                <td> </td>
+                <td>{{data.Patient}}</td>
+                <td>{{data.HB_Value}}</td>
+                <td> </td>
+                <td> </td>
+                <td>{{data.Created_Date | date: "Www"}}</td>
+                <td>{{data.EDD}}</td>
+              
+            </tr>
+        </tbody>
+        </table>
+    </body>
+</html>

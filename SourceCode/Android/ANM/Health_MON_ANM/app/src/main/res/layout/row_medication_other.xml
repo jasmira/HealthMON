@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/heightMedicationrow"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".14"
+            android:text="@string/txtLastSyncNotAvaliable"
+            android:id="@+id/tvOtherRowDrugName"
+            android:textColor="@color/colorBlue" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".14"
+            android:text="@string/txtLastSyncNotAvaliable"
+            android:id="@+id/tvOtherRowQuantity"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".14"
+            android:text="@string/txtLastSyncNotAvaliable"
+            android:id="@+id/tvOtherRowGivenBy"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".14"
+            android:text="@string/txtLastSyncNotAvaliable"
+            android:id="@+id/tvOtherRowRole"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".14"
+            android:text="@string/txtLastSyncNotAvaliable"
+            android:id="@+id/tvOtherRowLocation"
+            android:textColor="@color/colorBlack" />
+
+
+        <LinearLayout
+            android:id="@+id/llMOtherDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".14"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/btnMOtherDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtDelete"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text20sp" />
+
+            <TextView
+                android:id="@+id/btnMOtherDelete2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorPrimary" />
+                </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Calendar</title>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="container-fluid">
+		<!---header--->
+			<header></header>
+		<!---header close--->
+		<div class="row" >
+			<!---left menu---->
+				<left-menu-panel></left-menu-panel>
+			<!---left menu close---->
+			<!---right coloumn----->
+			<div id="calendarPage">
+				<div class="row">
+					<div class="col-sm-11">
+						<div class="row">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<h4>Calendar</h4>
+									<div class="calendarTopOption col-md-1">
+										<a ui-sref="newActivity">
+											<p > <img src="/static/images/newActivities.png" style="height:32px;margin-top:10px"/> </p>
+											<p> New Activities </p>
+										</a>
+									</div>
+									
+									<div class="calendarTopOption col-md-1">
+										 <a ui-sref="{{$state.current.name}}">
+											<p > <img src="/static/images/mailBox.png" style="height:32px;margin-top:10px"/> </p>
+											<p> Mail Box </p>
+										</a>
+									</div>
+									
+									<div class="calendarTopOption col-md-1">
+										<a ui-sref="{{$state.current.name}}">
+										   <p > <img src="/static/images/delete.png" style="height:32px;margin-top:10px"/> </p>
+										   <p> Delete </p>
+										</a>
+									</div>
+									
+									<div class="calendarTopOption col-md-1">
+										<a ui-sref="{{$state.current.name}}">
+											<p > <img src="/static/images/reminder.png" style="height:32px;margin-top:10px"/> </p>
+											<p> Reminder </p>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div id="#calendarView" class="row">
+							<div class="panel panel-default">
+								<script type="text/ng-template" id="modalContent.html">
+									<div class="modal-header">
+										<h3 class="modal-title">Events</h3>
+									</div>
+									<div class="modal-body">
+										<div class="asteric">{{modalController.Message}}</div>
+										
+											<input type="hidden" ng-model="modalController.NewEvent.EventID" autofocus class="form-control" />
+										
+										<div class="form-group">
+											<label>Subject <span class="asteric">*</span>  : </label>
+											<input type="text" ng-model="modalController.NewEvent.Title" maxlength="100" autofocus class="form-control" />
+										</div>
+										<div class="form-group">
+											<label>Venue : </label>
+											<input type="text" ng-model="modalController.NewEvent.Venue" maxlength="50" autofocus class="form-control" />
+										</div>
+										<div class="form-group row">
+											<label class="col-md-2 top-pad-both">Time Slot<span class="asteric">*</span>  : </label>
+											<span class="col-md-10">{{modalController.NewEvent.StartAt}} - {{modalController.NewEvent.EndAt}}</span>
+										</div>
+										<div class="form-group row">
+											<label class="col-md-2 top-pad-both">All Day Booked : </label>
+											<div class="col-md-10 "><input type="checkbox" class="pull-left" ng-model="modalController.NewEvent.allDayEvent" ng-checked="{{modalController.NewEvent.allDayEvent}}" autofocus /></div>
+										</div>
+										<div class="form-group row">
+											<label class="col-md-2 top-pad-both">Set Reminder :</label>
+											<div class="col-md-1 "><input type="checkbox" ng-model="modalController.NewEvent.setReminder" class="pull-left" ng-checked="{{modalController.NewEvent.setReminder}}" autofocus /></div>
+											<div class="col-md-9 "><select name="ReminderInterval" class="pull-left" ng-model="modalController.NewEvent.ReminderInterval" ng-disabled="!modalController.NewEvent.setReminder">
+											  <option value="">Select</option>
+											  <option ng-selected="{{modalController.NewEvent.ReminderInterval == 5}}" value="5">5 min</option>
+											  <option ng-selected="{{modalController.NewEvent.ReminderInterval == 10}}" value="10">10 min</option>
+											  <option ng-selected="{{modalController.NewEvent.ReminderInterval == 15}}" value="15">15 min</option>
+											  <option ng-selected="{{modalController.NewEvent.ReminderInterval == 20}}" value="20">20 min</option>
+											  <option ng-selected="{{modalController.NewEvent.ReminderInterval == 30}}" value="30">30 min</option>
+											  <option ng-selected="{{modalController.NewEvent.ReminderInterval == 60}}" value="60">1 hour</option>
+											</select></div>
+										</div>
+										<div class="form-group">
+											<label>Message : </label>
+											<textarea cols="20" rows="2" ng-model="modalController.NewEvent.Description" style="resize:none" class="form-control">{{modalController.NewEvent.Description}}</textarea>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button class="btn btn-primary" type="button" ng-click="modalController.ok()">Save</button> 
+										<button class="btn btn-danger" type="button" ng-show="modalController.NewEvent.EventID > 0" ng-click="modalController.delete()">Delete</button> 
+										<button class="btn btn-warning" type="button" ng-click="modalController.cancel()">Cancel</button> 
+							 
+									</div>
+								</script>
+								<div class="panel-body" >
+								<!--<div class="col-md-8">								
+									<div id="calendar" ui-calendar="calendarCtrl.uiConfig.calendar" ng-model="calendarCtrl.eventSources" calendar="myCalendar"></div>
+									
+								</div>
+								<div class="col-md-4">	
+									<div ng-show = "calendarCtrl.SelectedEvent" class="alert alert-success" style="margin-top:50px;">
+										<h2 style="margin-top:0px;">Selected Event </h2>
+										<h3 style="color:#A9A50E;">{{calendarCtrl.SelectedEvent.title}}</h3>
+										<p>{{calendarCtrl.SelectedEvent.description}}</p>
+									</div>
+								</div>	-->
+								<div id="calendar" ui-calendar="calendarCtrl.uiConfig.calendar" ng-model="calendarCtrl.eventSources" calendar="myCalendar"></div>	
+								</div>
+							</div>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+				<!---right coloumn----->
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

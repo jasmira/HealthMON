@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="@string/txtSummaryView"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/edittext_border_blue">
+        <!-- Main parent container-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <!-- Tab option container-->
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/colorBlue"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtDemographics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/txtDemographics"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="@dimen/text17sp" />
+
+                <TextView
+                    android:id="@+id/txtFamilyInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlue"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/txtFamilyInfo"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text17sp" />
+
+                <TextView
+                    android:id="@+id/txtEligibility"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlue"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/txtEligibility"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text17sp" />
+
+                <TextView
+                    android:id="@+id/txtVitals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlue"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/txtVitals"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text17sp" />
+
+                <TextView
+                    android:id="@+id/txtAllergies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlue"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/txtAllergies"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text17sp" />
+
+                <TextView
+                    android:id="@+id/txtDiagnosis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlue"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/txtDiagnosis"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text17sp" />
+
+                <TextView
+                    android:id="@+id/txtMedications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlue"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/txtMedications"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text17sp" />
+
+                <TextView
+                    android:id="@+id/txtTests"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlue"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/txtTests"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text17sp" />
+
+                <TextView
+                    android:id="@+id/txtImunizations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlue"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/txtimmunizations"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text17sp" />
+
+                <TextView
+                    android:id="@+id/txtProcedures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlue"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/txtProcedures"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text17sp" />
+
+                <TextView
+                    android:id="@+id/txtCarePlan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlue"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/txtCarePlan"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text17sp" />
+
+                <TextView
+                    android:id="@+id/txtHRA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlue"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/txtHRA"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text17sp" />
+            </LinearLayout>
+            <!-- Tab Option Layout Container-->
+            <RelativeLayout
+                android:id="@+id/rlTabOptionLayoutContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/colorWhite"></RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

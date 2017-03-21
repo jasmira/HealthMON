@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>New Activity</title>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="container-fluid">
+		<!---header--->
+			<header></header>
+		<!---header close--->
+		<div class="row" >
+			<!---left menu---->
+				<left-menu-panel></left-menu-panel>
+			<!---left menu close---->
+			<!---right coloumn----->
+			<div id="main-panel">
+           
+                <div>&nbsp;</div>
+                <div class="row">
+                  <div class="col-md-11 row">
+				  <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div id="nav-mid"> 
+                          <p class="heading"> New Activity </p>
+                          <!-- Nav tabs -->
+                          <ul id="CalendarNewActivityTaskNav" class="nav nav-tabs nav-justified" role="tablist">
+                            <li role="presentation" class="{{($state.current.name=='newActivity' || $state.current.name=='newActivity.invite') ? 'active' : ''}}"><a ui-sref=".invite" aria-controls="invite" role="tab" data-toggle="tab" aria-expanded="true">INVITE</a></li>
+                            <li role="presentation" class="{{$state.current.name=='newActivity.pushActivity' ? 'active' : ''}}"><a ui-sref=".pushActivity" aria-controls="pushActivity" role="tab" data-toggle="tab" aria-expanded="false">PUSH ACTIVITY</a></li>
+							<li role="presentation" class="{{$state.current.name=='newActivity.selfActivity' ? 'active' : ''}}"><a ui-sref=".selfActivity" aria-controls="selfActivity" role="tab" data-toggle="tab" aria-expanded="false">SELF SCHEDULE</a></li>
+                          </ul>
+                    
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <ui-view></ui-view>
+                   
+                            </div>
+                        </div>
+                    </div></div>
+                  </div>                     
+                
+                  
+            <!---right coloumn----->
+                    </div>
+                </div>
+				<!---right coloumn----->
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

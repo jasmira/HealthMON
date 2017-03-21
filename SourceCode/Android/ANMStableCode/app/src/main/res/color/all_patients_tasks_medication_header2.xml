@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_task_header"
+            android:src="@drawable/ic_medication"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtMedication"
+            android:id="@+id/tv_task_header_name"
+            android:textColor="@color/colorBlue"
+            android:layout_marginLeft="21dp"
+            android:layout_marginStart="21dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_task_header"
+            android:layout_toEndOf="@+id/iv_task_header" />
+
+        <!--IFA given-->
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:id="@+id/rlduelayout"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/linearLayout3"
+            android:layout_toStartOf="@+id/linearLayout3">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvIFAGiventext"
+                android:text="@string/txtLastSyncNotAvaliable"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtIFAGivenTillDate"
+                android:text="@string/txtIFAGivenTillDate"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:layout_toRightOf="@+id/tvIFAGiventext"
+                android:layout_toEndOf="@+id/tvIFAGiventext"/>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:id="@+id/asha_popup_line2"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/rlduelayout"
+            android:layout_toStartOf="@+id/rlduelayout"
+            android:background="@color/colorBlue"/>
+
+        <!--Calcium Given-->
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/asha_popup_line2"
+            android:layout_toStartOf="@+id/asha_popup_line2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvCalciumGiventext"
+                android:text="@string/txtLastSyncNotAvaliable"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCalciumGivenTillDate"
+                android:text="@string/txtCalciumGivenTillDate"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:layout_alignTop="@+id/tvCalciumGiventext"
+                android:layout_toRightOf="@+id/tvCalciumGiventext"
+                android:layout_toEndOf="@+id/tvCalciumGiventext" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:id="@+id/asha_popup_line1"
+            android:background="@color/colorBlue"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout3">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtTaskViewAll"
+                android:textSize="@dimen/text20sp"
+                android:id="@+id/btnTaskViewAll"
+                android:textColor="@color/colorPrimary"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/btnTaskViewAll2"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:id="@+id/asha_popup_line3"
+        android:background="@color/colorBlue"/>
+
+
+</LinearLayout>

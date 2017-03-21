@@ -1,0 +1,23 @@
+<div class="tab-pane" id="diagnosis">
+<div class="col-md-12">
+<!--a class="pull-right" href="#"> View All</a-->
+</div>
+<table class="table table-bordered table-responsive patientSummarytable">
+<thead class="blueBgTh">
+  <tr>
+    <th>Sr. No.</th>
+    <th>Diagnosis</th>
+     <th>Diagnosed By</th>
+    <th>Comments</th>
+  </tr>
+</thead>
+<tbody>
+  <tr ng-repeat="(index, info) in patientDiagnosisCtrl.patientDiagnosisData">
+    <td>{{index -- 1}}</td>
+    <td>{{info.DiagnosisType}}</td>
+    <td>{{info.User_Name}}</td>
+    <td>{{info.Comments}}</td>
+  </tr>
+</tbody>
+</table>
+</div>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight=".5"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tvFBQuestion"
+            android:layout_height="@dimen/feedbackQuestionHeight"
+            android:text="QuestionHeader"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight=".5"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+        android:id="@+id/radioGroupFB"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/feedbackQuestionHeight"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioFBStronglyA"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/radioFBAgree"
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/radioFBDisagree"
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/radioFBStronglyD"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"/>
+
+
+    </RadioGroup>
+
+
+    </LinearLayout>
+
+</LinearLayout>

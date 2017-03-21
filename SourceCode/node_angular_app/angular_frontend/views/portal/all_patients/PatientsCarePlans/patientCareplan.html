@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Patient Careplan</title>
+</head>
+<body>
+
+  <div class="wrapper" >
+      <div class="container-fluid">
+    <!---header--->
+			<header></header>
+
+        <div class="row" >
+            	<!---left menu---->
+				<left-menu-panel>
+               </left-menu-panel>
+			<!---left menu close---->
+			<!---right coloumn----->
+
+            <!---right coloumn----->
+			<div id="allPatients">
+                <div class="row">
+                    <div class="col-sm-11">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="row">
+									<div id="carePlanMenuPatientName">
+										<span > All Patients </span>
+										<span> > </span>
+										<span class="patientName"> {{patientCareplanCtrl.firstname}}
+                                                                {{patientCareplanCtrl.lastname}} </span>
+										<span class="pull-right"> <a href="/#/allPatients">Back</a> </span>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="row">
+					<div class="col-md-4 ">
+                        <div class="panel panel-default ">
+                            <div class="panel-body setHeight">
+
+								<!--card open-->
+								<div class="panel panel-default ">
+
+												  <div ng-class="{redSevere: patientCareplanCtrl.severity == 1, yellowSevere: patientCareplanCtrl.severity == 2, greenSevere: patientCareplanCtrl.severity == 3}">
+                                                    <div class="profileDiv">
+                                                        <div class="row borderBottom">
+                                                            <div class="col-md-3 text-center ">
+                                                                <!-- img src="static/images/pic_user.png"
+                                                                     width="53"
+                                                                     height="53" -->
+																	 <img class="patient-image" data-ng-src= "{{'data:image/png;base64,'+patientCareplanCtrl.Patient_Image}}">
+																	 <br>
+                                                            </div>
+                                                            <div class="col-md-9 top-pad-both">
+                                                            <span class="card-title">
+                                                                {{patientCareplanCtrl.firstname}}
+                                                                {{patientCareplanCtrl.lastname}} <br>
+
+                                                            </span>
+                                                            <span class="card-small-text">
+                                                                <span>PID {{patientCareplanCtrl.patientId}}
+                                                                </span>
+                                                                <br>
+                                                                <span>Contact No. </span><span>
+                                                                {{patientCareplanCtrl.contact}}</span>
+																<br>
+
+
+                                          <span id="lowHB" class="HBspan" ng-if="( patientCareplanCtrl.HMhb>0) && (patientCareplanCtrl.HMhb<=7) && (patientCareplanCtrl.HMhb!=null)">
+
+                                                                                    <span class="redTextSpan">Severe Anemic</span>
+                                                                                </span>
+
+
+        <!--span ng-if='patientCareplanCtrl.severity==1' class='redTextSpan'>Severe Anemic</span-->
+        <span ng-if='patientCareplanCtrl.severity==2' class='yellowTextSpan'>Moderate Risk Cases</span>
+        <span ng-if='patientCareplanCtrl.severity==3' class='greenTextSpan'>Normal Case</span>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+								<!--card close-->
+
+								<div class="row borderBottomForRow">
+									<div class="col-md-6">Antenental Care</div>
+									<div class="col-md-6">
+										<span>
+                                            <span>{{patientCareplanCtrl.PregnancyWeeks}} weeks</span>
+                                            <br>
+                                            <span>LMP :</span><span>{{patientCareplanCtrl.LMPDate}}</span>
+											<br>
+											<span>EDD :</span><span>{{patientCareplanCtrl.EDD}}</span>
+                                        </span>
+									</div>
+								</div>
+
+                                <div class="row borderBottomForRow">
+                                    <h6>Test Results</h6>
+                                    <div class="row">
+                                        <div class="col-md-6"><span>Haemoglobin</span></div>
+                                        <!--div class="col-md-6"><span class="redTextSpan">
+                                            {{patientCareplanCtrl.HMhb}}</span></div>-->
+                                        <div class="col-md-6">
+                                          <span id="lowHB" class="HBspan" ng-if="( patientCareplanCtrl.HMhb>0) && (patientCareplanCtrl.HMhb<=7)">
+
+                                                                                    <span class="redTextSpan">{{patientCareplanCtrl.HMhb}} g/dL</span>
+                                                                                </span>
+                                                                                <span id="normalHB" class="HBspan" ng-if="(patientCareplanCtrl.HMhb==null || patientCareplanCtrl.HMhb==0) || (patientCareplanCtrl.HMhb>7)">
+
+                                                                                    <span class="blackTextSpan">{{patientCareplanCtrl.HMhb}} g/dL</span>
+                                                                                </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6"><span>BP</span></div>
+                                        <div class="col-md-6"><span>
+                                        {{patientCareplanCtrl.HMsystolic}}/
+                                            {{patientCareplanCtrl.HMdiastolic}} mmHg</span></div>
+                                    </div>
+                                    <!--div class="row">
+                                        <div class="col-md-6"><span>Blood Glucose</span></div>
+                                        <div class="col-md-6"><span>static mg/dL</span></div>
+                                    </div-->
+                                    <div class="row">
+                                        <div class="col-md-6"><span>Weight</span></div>
+                                        <div class="col-md-6" ng-if='patientCareplanCtrl.weight!=null'><span>{{patientCareplanCtrl.weight}} kg</span>                                           </div>
+                                    </div>
+								</div>
+
+                                <div class="row">
+									<button ui-sref=".viewtrends" type="button" class="btn btn-default gen-
+                                    left-margin carePlanLeftPanelLargeBtn">View Trend</button>
+								</div>
+
+                                <div id="optionDiv" class="row">
+									<div class="col-md-4 optionDivCarePlan optionDivRightBorder">
+                                        <a href="#">
+                                            <img src="static\images\Refer_Icon.png"/>
+                                            <br>
+                                            <span class="optionName"> Refer </span>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 optionDivCarePlan optionDivRightBorder">
+                                        <a href="#">
+                                            <img src="static\images\Transfer_Icon.png"/>
+                                            <br>
+                                            <span class="optionName"> Transfer </span>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 optionDivCarePlan optionDivNoRightBorder">
+                                        <a href="#">
+                                            <img src="static\images\Reschedule_Icon.png"/>
+                                            <br>
+                                            <span class="optionName"> Reschedule </span>
+                                        </a>
+                                    </div>
+								</div>
+
+                                <div class="row">
+									<button type="button" class="btn btn-default gen-left-margin
+                                            carePlanLeftPanelLargeBtn">Close Visit</button>
+								</div>
+
+                            </div>
+                        </div>
+						</div>
+							<div class="col-md-8 top-pad-both ">
+							<div class=" panel panel-default ">
+								<div class="panel-body setHeight">
+
+									<div id="nav-mid">
+
+									  <!-- Nav tabs -->
+									  <ul class="nav nav-tabs nav-justified" role="tablist">
+										<li role="presentation" class="{{($state.current.name=='patientCareplan' || $state.current.name=='patientCareplan.careplan' || $state.current.name=='patientCareplan.editcareplan' || $state.current.name=='patientCareplan.addcareplantemplates') ? 'active' : ''}}"><a ui-sref=".careplan" aria-controls="alert" role="tab" data-toggle="tab" aria-expanded="true">CARE PLAN</a></li>
+										<li role="presentation" class="{{$state.current.name=='patientCareplan.patientSummary' || $state.current.name=='patientCareplan.patientSummary.demographics' || $state.current.name=='patientCareplan.patientSummary.familyinfo' || $state.current.name=='patientCareplan.patientSummary.patienteligibility' || $state.current.name=='patientCareplan.patientSummary.medication' || $state.current.name=='patientCareplan.patientSummary.immunization' || $state.current.name=='patientCareplan.patientSummary.vitals' || $state.current.name=='patientCareplan.patientSummary.patientcareplan' || $state.current.name=='patientCareplan.patientSummary.hra' || $state.current.name=='patientCareplan.patientSummary.feedback' ? 'active' : ''}}"><a ui-sref=".patientSummary" aria-controls="task" role="tab" data-toggle="tab" aria-expanded="false">PATIENT SUMMMARY</a></li>
+										<li role="presentation" class="{{$state.current.name=='patientCareplan.treatment' ? 'active' : ''}}"><a ui-sref=".treatment" aria-controls="task" role="tab" data-toggle="tab" aria-expanded="false">TREATMENT</a></li>
+									  </ul>
+								      <div class="tab-content">
+                                        <ui-view></ui-view>
+
+                                      </div>
+
+									  </div>
+                                  </div>
+							</div>
+							</div>
+					</div>
+                    </div>
+                </div>
+            </div>
+            <!---right coloumn----->
+                  </div>
+                </div>
+			</div>
+
+<!--
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.3.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/simple.dropdown.js"></script>
+    <script type="text/javascript">
+
+    </script>  -->
+
+
+</body>
+
+
+</html>

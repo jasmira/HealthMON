@@ -1,0 +1,41 @@
+<div class="tab-pane" id="carePlan">
+<div class="row">
+    <div class="col-md-8">
+        <div class="small-text-gray">
+            <span> Last updated on : </span><span>{{patientCarePlanCtrl.patientCarePlanInfo[0].Updated_By ? patientCarePlanCtrl.patientCarePlanInfo[0].Updated_Date : patientCarePlanCtrl.patientCarePlanInfo[0].Created_Date}}</span>
+        </div>
+        <div>
+            <span class="small-text-gray">Added Care Plan</span> <span class="small-text-gray"> > </span> <span class="small-text-gray">{{patientCarePlanCtrl.patientCarePlanInfo[0].template_name}}</span>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <a href="#" class="pull-right">View all</a>
+    </div>
+</div>
+
+
+<table class="table table-bordered table-responsive patientSummarytable">
+    <thead class="blueBgTh">
+      <tr>
+        <th>S No.</th>
+        <th>Date</th>
+        <th>Category</th>
+        <th>Task</th>
+        <th>Frequency</th>
+        <th>role</th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="carePlans in patientCarePlanCtrl.carePlanDisplayData">
+      <tr ng-repeat="(childIndex, info) in carePlans">
+        <td>{{childIndex == 0 ? $parent.$index -- 1 : ''}}</td>
+        <td>{{info.Created_Date}}</td>
+        <td ng-if="$index == 0"><b>{{info.Category_Desc}}</b></td>
+        <td ng-if="$index > 0"></td>
+        <td>{{info.Template_Task_Desc}}</td>
+        <td>{{info.Frequency_Desc}}</td>
+        <td>{{info.Created_By}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

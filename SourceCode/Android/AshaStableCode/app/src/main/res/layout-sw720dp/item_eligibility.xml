@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Program Info Container-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:layout_weight="1"
+    android:background="@drawable/edittext_border_gray"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stdRowSize"
+        android:layout_margin="1dp"
+        android:background="@color/colorLightGreenBg"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/txtProgramInfo"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text17sp" />
+
+
+    <!-- Program Info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/txt_preview_gray_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/txtProgram" />
+
+        <TextView
+            android:id="@+id/valProgram"
+            style="@style/txt_preview_black_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:text="@string/txtClear" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorlinegray" />
+
+    <!-- LMP Date -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stdRowSize"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/txt_preview_gray_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/txtLMPDate" />
+
+        <TextView
+            android:id="@+id/valLMPDate"
+            style="@style/txt_preview_black_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/txtClear" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorlinegray" />
+
+    <!-- EDD Date -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stdRowSize"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/txt_preview_gray_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/txtEDD" />
+
+        <TextView
+            android:id="@+id/valEDDDate"
+            style="@style/txt_preview_black_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/txtClear" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorlinegray" />
+
+    <!-- First Pragnency -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stdRowSize"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/txt_preview_gray_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/txtFirstPregnancy" />
+
+        <TextView
+            android:id="@+id/valFirstPregnancy"
+            style="@style/txt_preview_black_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/txtClear" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorlinegray" />
+    <!-- if First pragnancy is "No"-->
+    <LinearLayout
+        android:id="@+id/llFirstPrag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Gravida -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/txt_preview_gray_lable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="@string/txtGravida" />
+
+            <TextView
+                android:id="@+id/valGravida"
+                style="@style/txt_preview_black_lable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorlinegray" />
+
+        <!-- Parity -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/txt_preview_gray_lable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="@string/txtParity" />
+
+            <TextView
+                android:id="@+id/valParity"
+                style="@style/txt_preview_black_lable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorlinegray" />
+
+        <!-- Past Abortions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/txt_preview_gray_lable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="@string/txtPastAbortions" />
+
+            <TextView
+                android:id="@+id/valPastAbortons"
+                style="@style/txt_preview_black_lable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorlinegray" />
+
+        <!-- Past Still Births -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/txt_preview_gray_lable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="@string/txtPastStillBirths" />
+
+            <TextView
+                android:id="@+id/valPastStillBirths"
+                style="@style/txt_preview_black_lable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorlinegray" />
+
+        <!-- Living Children -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/txt_preview_gray_lable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="@string/txtLivingChildren" />
+
+            <TextView
+                android:id="@+id/valLivingChildren"
+                style="@style/txt_preview_black_lable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorlinegray" />
+
+        <!-- Previous Dilivery Date -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/txt_preview_gray_lable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="@string/txtPreviousDeliveryDate" />
+
+            <TextView
+                android:id="@+id/valPreviousDeliveryDate"
+                style="@style/txt_preview_black_lable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorlinegray" />
+
+        <!-- Nature of Previous Delivery -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/txt_preview_gray_lable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="@string/txtNatureofPreviousDelivery" />
+
+            <TextView
+                android:id="@+id/valNatureofPreviousDelivery"
+                style="@style/txt_preview_black_lable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorlinegray" />
+    </LinearLayout>
+    <!-- Notes -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/txt_preview_gray_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/txtNotes" />
+
+        <TextView
+            android:id="@+id/valNotes"
+            style="@style/txt_preview_black_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:text="@string/txtClear" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorlinegray" />
+</LinearLayout>

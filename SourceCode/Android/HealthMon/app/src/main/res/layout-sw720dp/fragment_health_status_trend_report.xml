@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/reportHeader"
+            style="@style/Font17BlueNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/txtHealthStatusTerned" />
+
+        <TextView
+            android:id="@+id/txtToFromDt"
+            style="@style/Font15GrayNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp"
+            android:text="@string/txtANCRegisterReport" />
+        <!-- Header-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorlinegray"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/stdRowSize"
+                android:layout_margin="1dp"
+                android:layout_weight="3"
+                android:background="@color/colorBlue"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/txtName"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:background="@color/colorBlue"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/txtPatientID"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="2.18"
+                android:background="@color/colorBlue"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/txtAgeGender"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/stdRowSize"
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:background="@color/colorBlue"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/txtRegistrationDate"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/stdRowSize"
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:background="@color/colorBlue"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/txtEDD"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/stdRowSize"
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:background="@color/colorBlue"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/txtTrimester"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text17sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:background="@color/colorBlue"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/txtLocality"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text17sp" />
+        </LinearLayout>
+        <!-- Values-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorlinegray"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="3"
+                android:background="@color/colorWhite"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:text="@string/txtName"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text17sp" />
+
+            <TextView
+                android:id="@+id/txtId"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/txtPatientID"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text17sp" />
+
+            <TextView
+                android:id="@+id/txtAgeGender"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="2.18"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/txtAgeGender"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text17sp" />
+
+            <TextView
+                android:id="@+id/txtRegistrationDt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/txtRegistrationDate"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text17sp" />
+
+            <TextView
+                android:id="@+id/txtEDD"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/txtEDD"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text17sp" />
+
+            <TextView
+                android:id="@+id/txtTrimester"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/txtTrimester"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text17sp" />
+
+            <TextView
+                android:id="@+id/txtLocality"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/txtLocality"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text17sp" />
+        </LinearLayout>
+
+        <!-- HB Chart View -->
+        <LinearLayout
+            android:id="@+id/chartHB"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                style="@style/txt_blue_lable_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtNoDataAvailableforHbTrend" />
+        </LinearLayout>
+
+        <!-- BP Sys Chart View -->
+        <LinearLayout
+            android:id="@+id/chartBPSys"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                style="@style/txt_blue_lable_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtNoDataAvailableforSystolicBP" />
+        </LinearLayout>
+        <!-- BP Dia Chart View -->
+        <LinearLayout
+            android:id="@+id/chartBPDia"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                style="@style/txt_blue_lable_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtNoDataAvailableforDiastolicBP" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

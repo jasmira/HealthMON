@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/txtMandatoryFields"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text17sp" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Svae" />
+</RelativeLayout>

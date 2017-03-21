@@ -1,0 +1,26 @@
+<div class="tab-pane" id="immunizations">
+<div class="col-md-12">
+    <a class="pull-right" ui-sref="{{$state.current.name}}"> View All</a>
+</div>
+
+<table class="table table-bordered table-responsive patientSummarytable">
+    <thead class="blueBgTh">
+      <tr>
+        <th>Sr. No.</th>
+        <th>Date</th>
+        <th>Immunization</th>
+        <th>Given at/Location</th>
+        <th>Given by</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="(index, info) in patientImmunizationCtrl.immunizationData">
+        <td>{{index -- 1}}</td>
+        <td>{{info.created_date}}</td>
+        <td>{{info.drug_name}}</td>
+        <td>{{info.phc}}</td>
+        <td>{{info.created_by}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

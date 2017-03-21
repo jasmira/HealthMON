@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/task_search_padding"
+    android:paddingTop="@dimen/task_search_padding"
+    android:paddingLeft="@dimen/task_search_padding"
+    android:paddingRight="@dimen/task_search_padding"
+    android:background="@color/colorWhite">
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/search_view_dashboard_task"
+        android:layout_width="match_parent"
+        android:focusable="true"
+        android:background="@drawable/bg_task_search_view"
+        android:layout_height="@dimen/heightsearchview"
+        android:queryHint="@string/hinttasksearch"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_dashboard_task"
+        android:scrollbars="vertical"
+        android:layout_below="@id/search_view_dashboard_task"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

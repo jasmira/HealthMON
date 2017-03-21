@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/all_patient_task_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3">
+                <ImageView
+                    android:layout_width="@dimen/feedbackSmileWidth"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ivStrngAgree"
+                    android:src="@drawable/ic_strongly_agree"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvSagree"
+                    android:text="@string/txtStronglyAgree"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorBlue"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2">
+                <ImageView
+                    android:layout_width="@dimen/feedbackSmileWidth"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ivAgree"
+                    android:src="@drawable/ic_agree" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvagree"
+                    android:text="@string/txtAgree"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorBlue"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2">
+                <ImageView
+                    android:layout_width="@dimen/feedbackSmileWidth"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ivDisgree"
+                    android:src="@drawable/ic_disagree"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvdisagree"
+                    android:text="@string/txtDisgree"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorBlue"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3">
+                <ImageView
+                    android:layout_width="@dimen/feedbackSmileWidth"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ivStrngDisgree9"
+                    android:src="@drawable/ic_strongly_disagree" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/stronglydisagree"
+                    android:text="@string/txtStronglyDisagree"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorBlue"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/llLstFeedback"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lstFeedbackQuestions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <!--Action Buttons-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="save"
+            android:id="@+id/btn_feedback_save"
+            android:layout_marginRight="@dimen/capture_buttons_between_margin"
+            android:layout_marginEnd="@dimen/capture_buttons_between_margin"
+            style="@style/greenRoundButton"
+            android:layout_alignParentBottom="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@android:string/cancel"
+            android:id="@+id/btn_feedback_cancel"
+            style="@style/greenRoundButton"
+            android:layout_toRightOf="@id/btn_feedback_save"
+            android:layout_toEndOf="@id/btn_feedback_save"
+            android:layout_alignParentBottom="true" />
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

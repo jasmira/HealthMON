@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical">
+    <!-- HRA & Vitals-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <!-- HRA-->
+        <LinearLayout
+            android:id="@+id/ltpatienthra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_hra" />
+
+                <ImageView
+                    android:id="@+id/tickHRA"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_tickmark"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtHRA" />
+
+            <TextView
+                android:id="@+id/statusHRA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtStatusDue"
+                android:textColor="@color/colorBlue"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- Vitals-->
+        <LinearLayout
+            android:id="@+id/ltpatientvitals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_vitals" />
+
+                <ImageView
+                    android:id="@+id/tickVitals"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_tickmark"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtVitals" />
+
+            <TextView
+                android:id="@+id/statusVitals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtStatusDue"
+                android:textColor="@color/colorBlue"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Capture Test Data-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_border_blue"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlue"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/txtCaptureTestData"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+        <!-- Haemoglobin-->
+        <LinearLayout
+            android:id="@+id/ltpatienthb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_landing_haemoglobin" />
+
+                <ImageView
+                    android:id="@+id/tickHB"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_tickmark"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtHaemoglobin" />
+
+            <TextView
+                android:id="@+id/statusHB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtStatusDue"
+                android:textColor="@color/colorBlue"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+        <!-- Blood Pressure-->
+        <LinearLayout
+            android:id="@+id/ltpatientbp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_landing_bloodpressure" />
+
+                <ImageView
+                    android:id="@+id/tickBP"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_tickmark"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtBloodPressure" />
+
+            <TextView
+                android:id="@+id/statusBP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtStatusDue"
+                android:textColor="@color/colorBlue"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- Blood Glucose Due-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_landing_bloodglucose" />
+
+                <ImageView
+                    android:id="@+id/tickGlucose"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_tickmark"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtbloodglucose" />
+
+            <TextView
+                android:id="@+id/statusGlucose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtStatusDue"
+                android:textColor="@color/colorBlue"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+        <!-- Pulse Oximeter-->
+        <LinearLayout
+            android:id="@+id/ltpatientoxi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_landing_pulseoximeter" />
+
+                <ImageView
+                    android:id="@+id/tickPluse"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_tickmark"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtpulseocimeter" />
+
+            <TextView
+                android:id="@+id/statusPulse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtStatusDue"
+                android:textColor="@color/colorBlue"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- Urin protin-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_landing_urineprotein" />
+
+                <ImageView
+                    android:id="@+id/tickUrine"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_tickmark"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txturineprotein" />
+
+            <TextView
+                android:id="@+id/statusUrine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtStatusDue"
+                android:textColor="@color/colorBlue"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+        <!-- ECG-->
+        <LinearLayout
+            android:id="@+id/ltpatientecg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_landing_ecg" />
+
+                <ImageView
+                    android:id="@+id/tickECG"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_tickmark"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtecg" />
+
+            <TextView
+                android:id="@+id/statusECG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtStatusDue"
+                android:textColor="@color/colorBlue"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+        <!-- Blood Glucose Due-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_landing_fetalmonitor" />
+
+                <ImageView
+                    android:id="@+id/tickFetalMonitor"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_tickmark"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtfetalmonitor" />
+
+            <TextView
+                android:id="@+id/statusFetal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtStatusDue"
+                android:textColor="@color/colorBlue"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Immunization meditation & feedback-->
+    <LinearLayout
+        android:id="@+id/ltpatientimmunization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <!-- Imunization-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_landing_immunization" />
+
+                <ImageView
+                    android:id="@+id/tickImmunization"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_tickmark"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtimmunization" />
+
+            <TextView
+                android:id="@+id/statusImmunization"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtStatusDue"
+                android:textColor="@color/colorBlue"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- Medication-->
+        <LinearLayout
+            android:id="@+id/ltpatientmedication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_medication" />
+
+                <ImageView
+                    android:id="@+id/tickMedication"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_tickmark"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtMedication" />
+
+            <TextView
+                android:id="@+id/statusMedication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtStatusDue"
+                android:textColor="@color/colorBlue"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+        <!-- Feedback-->
+        <LinearLayout
+            android:id="@+id/ltpatientfeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_feedback" />
+
+                <ImageView
+                    android:id="@+id/tickFeedback"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_tickmark"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtFeedback" />
+
+            <TextView
+                android:id="@+id/statusFeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtStatusDue"
+                android:textColor="@color/colorBlue"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/im_header"
+        android:id="@+id/header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/padding_top_line"
+        android:layout_below="@+id/header"
+        android:id="@+id/relativeLayout">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Care Plan Template"
+        style="@style/Font15BlackNormal"
+        android:id="@+id/textView3" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/spinner_style"
+        android:id="@+id/spinnerCarePlanTemplates"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/btnPreview">
+
+    </Spinner>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preview"
+            android:id="@+id/btnPreview"
+            android:layout_below="@+id/textView3"
+            android:layout_toEndOf="@+id/textView3"
+            style="@style/roundButtonSelector"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_careplan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerCarePlanTemplates"
+            android:layout_above="@+id/buttonAddCarePlan"/>
+
+        <Button
+            android:id="@+id/buttonAddCarePlan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            style="@style/roundButtonSelector"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

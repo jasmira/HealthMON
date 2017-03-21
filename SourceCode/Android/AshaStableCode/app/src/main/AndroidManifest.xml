@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.persistent.healthmon">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+    <!-- android:required="true" declares that this app is available to BLE-capable devices only -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".app.HealthMonApp"
+        android:allowBackup="true"
+        android:configChanges="locale"
+        android:icon="@mipmap/ic_launching_01"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:allowClearUserData="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".viewcontroller.HealthMonSplashActivity"
+            android:configChanges="orientation|screenSize">
+
+        </activity>
+
+        <activity
+            android:name=".viewcontroller.HealthMonMainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan">
+
+
+        </activity>
+
+        <activity
+            android:name=".viewcontroller.HealthMonLoginActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".communication.NetworkStatusReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+            android:name=".model.Customer"
+            android:authorities="com.persistent.healthmon.model.customer"
+            android:exported="false" />
+
+        <provider
+            android:name=".database.DatabaseProvider"
+            android:authorities="com.persistent.healthmon">
+
+        </provider>
+
+        <activity android:name=".communication.HealthDevicesActivity"></activity>
+
+        <activity android:name=".fragments.ECGWaveFormActivity"></activity>
+
+        <service android:name=".communication.ECGBluetoothService"></service>
+        <service android:name=".communication.PulseOxiWvFormBluetoothService"></service>
+
+        <activity android:name=".fragments.PulseOxiWaveformActivity"></activity>
+        <activity android:name=".fragments.HealthDeviceSettingsActivity"></activity>
+
+
+    </application>
+
+</manifest>

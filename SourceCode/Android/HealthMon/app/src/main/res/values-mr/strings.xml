@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Login Activity-->
+    <string name="username_hint"> युजरचे नाव</string>
+    <string name="password_hint">पासवर्ड</string>
+    <string name="txtLogin">प्रवेश करा</string>
+    <string name="txtForgotPassword">पासवर्ड विसरलात? </string>
+    <string-array name="language">
+        <item>भाषा निवडा</item>
+        <item>मराठी</item>
+        <item>हिंदी</item>
+        <item>इंग्रजी</item>
+    </string-array>
+    <string name="txtRememberMe">लक्षात ठेवा </string>
+    <string name="txtOK">ओके </string>
+    <string name="msgLoginErrorInvalidCredential">चुकीचा युजर अथवा पासवर्ड </string>
+
+    <!-- Dashboard Screen-->
+    <string name="txtPatientRegistration">रुग्ण नोंदणी</string>
+    <string name="txtAllPatients">सर्व रुग्ण</string>
+    <string name="txtMyTasks">माझी कामे </string>
+    <string name="txtEducation">शिक्षण</string>
+    <string name="txtCollaborationForum">सहयोग मंच</string>
+    <string name="txtReports">अहवाल</string>
+    <string name="txtHelpSupport">मदत आणि समर्थन</string>
+    <string name="txtDashboard">डॅशबोर्ड</string>
+    <string name="txtduetasks">शिल्लक कामे </string>
+    <string name="txtupcomingtasks">पुढची कामे </string>
+    <string name="txthelpguide">मदत मार्गदर्शक</string>
+    <string name="txttasks">कार्ये</string>
+    <string name="txthaemoglobin">हीमोग्लोबिन</string>
+    <string name="txtbloodpressure">रक्तदाब</string>
+    <string name="txtimmunization">लसीकरण</string>
+    <string name="txtbloodglucose">रक्तातील ग्लुकोज </string>
+    <string name="txttemperature">तापमान</string>
+    <string name="txtpulseocimeter">पल्स़ ऑक्सीमीटर</string>
+    <string name="txturineprotein">मूत्र प्रथिने</string>
+    <string name="txtecg">ईसीजी</string>
+    <string name="txtfetalmonitor">भ्रूण मॉनिटर </string>
+
+    <!-- Patient Registration Screen-->
+    <string name="txtPatientInfo">रुग्णाची माहिती</string>
+    <string name="txtFamilyInfo">कौटुंबिक माहिती</string>
+    <string name="txtAddress">पत्ता</string>
+    <string name="txtBasicInfo">मूलभूत माहिती</string>
+    <string name="txtProgramInfo">प्रोग्राम विषयक</string>
+    <string name="msgPatientRegisteredSuccessfully">रुग्ण यशस्वीरित्या नोंदणीकृत!</string>
+    <string name="txtGotoPatientCard">रुग्णाचे कार्ड बघा</string>
+
+    <!-- Patient Registration Personal Info Screen-->
+    <string name="txtBasicInformation">मुलभूत माहिती</string>
+    <string name="txtMandatoryFields"> * अनिवार्य माहिती</string>
+    <string name="txtTitle">शीर्षक</string>
+    <string name="txtFirstName">पहिले नाव</string>
+    <string name="txtMiddleName">मधले नाव</string>
+    <string name="txtLastName">आडनाव</string>
+    <string name="txtGender">लिंग</string>
+    <string name="txtFemale">स्त्री</string>
+    <string name="txtMale">पुरुष</string>
+    <string name="txtDateofBirth">जन्म तारीख</string>
+    <string name="txtAge">वय</string>
+    <string name="txtPlaceofBirth">जन्म स्थळ</string>
+    <string name="txtMaritalStatus">वैवाहिक स्थिती</string>
+    <string name="txtCategory">वर्ग</string>
+    <string name="txtBPL">बीपीएल</string>
+    <string name="txtLanguage">भाषा</string>
+    <string name="txtLiterate">साक्षर</string>
+    <string name="txtIlliterate">निरक्षर </string>
+    <string name="txtIdCardType">ओळखपत्र प्रकार</string>
+    <string name="txtIdCardNumber">ओळखपत्र क्रमांक</string>
+    <string name="txtContact">मोबाइल क्रमांक</string>
+    <string name="txtSaveProceed">जतन करा आणि पुढे जा!</string>
+    <string name="txtCapture">फोटो काढा</string>
+    <string name="txtRationCard">रेशन कार्ड</string>
+    <string-array name="salutation">
+        <item>सौ</item>
+        <item>श्री</item>
+        <item>कुमारी </item>
+    </string-array>
+    <string-array name="marritalStatus">
+        <item>विवाहित</item>
+        <item>अविवाहित</item>
+        <item>घटस्फोटीत</item>
+        <item>वेगळे</item>
+    </string-array>
+    <string-array name="category">
+        <item>अनुसूचित जाती</item>
+        <item>अनुसूचित जमाती</item>
+        <item>ओबीसी</item>
+        <item>सामान्य</item>
+    </string-array>
+    <string-array name="idCardType">
+        <item>आधार कार्ड</item>
+        <item>व्होटर आयडी</item>
+        <item>पॅन कार्ड</item>
+        <item>रेशन कार्ड</item>
+    </string-array>
+    <string name="txtAadharCard">आधार कार्ड</string>
+    <string name="txtVoterID">मतदान ओळख क्र.</string>
+    <string name="txtPanCard">पॅन कार्ड</string>
+    <!-- Patient Registration Address Screen-->
+    <string name="txtAddressLine1">पत्ता ओळ 1</string>
+    <string name="txtAddressLine2">पत्ता ओळ 2</string>
+    <string name="txtDistrict">जिल्हा</string>
+    <string name="txtTaluka">तालुका</string>
+    <string name="txtVillage">गाव</string>
+    <string name="txtWard">प्रभाग</string>
+    <string name="txtPincode">पिन कोड</string>
+    <string name="txtEmergencyContact">आपातकालीन संपर्क</string>
+    <string name="SaveProceedtoProgramInfo">जतन करा आणि पुढे जा</string>
+
+    <!-- Patient Registration Program Info Screen-->
+    <string name="txtProgramInformation">प्रोग्राम विषयक </string>
+    <string name="txtSelectProgram">प्रोग्राम निवडा</string>
+    <string name="txtFirstPregnancy">प्रथम गर्भधारणा</string>
+    <string name="txtYes">होय</string>
+    <string name="txtNo">नाही</string>
+    <string name="txtLMPDate">एलएमपी तारीख</string>
+    <string name="txtEDD">अपेक्षित प्रसुती तारीख</string>
+    <string name="txtNotes">टिपणी </string>
+    <string name="txtGravida">गर्भधारणा</string>
+    <string name="txtParity">पॅरिटी</string>
+    <string name="txtPastAbortions">मागील गर्भपात</string>
+    <string name="txtPastStillBirths">मृत जन्म</string>
+    <string name="txtLivingChildren">जिवंत मुले</string>
+    <string name="txtSpacingBetweenChildren">मुलांमंधील अंतर</string>
+    <string name="txtNatureofPreviousDelivery">मागील प्रसुती स्वरूप</string>
+    <string name="txtPreviousDeliveryDate">मागील प्रसुती तारीख</string>
+    <string name="txtSaveProceedtoFamilyInfo">जतन करा आणि पुढे जा!</string>
+    <string name="msgErrorCheckPrgParams">कृपया सर्व गर्भधारणा मूल्ये तपासा</string>
+    <string name="txtCesarean">सीजेरियन</string>
+    <string name="txtForceps">फोरसेप</string>
+    <string name="txtVacuum">वैक्यूम</string>
+    <string-array name="programs">
+        <item>ऐंनटीनेटल केअर (एएनसी)</item>
+        <item>पोस्ट नेटल केअर (पीएनसी)</item>
+        <item>कुटुंब नियोजन</item>
+        <item>बाल आरोग्य</item>
+
+    </string-array>
+
+    <string-array name="DeliveryNature">
+        <item>नॉर्मल </item>
+        <item>सीजेरियन</item>
+        <item>फोरसेप </item>
+        <item>वैक्यूम</item>
+    </string-array>
+    <string-array name="district">
+        <item>हवेली </item>
+        <item>खेड </item>
+        <item>जुन्नर </item>
+        <item>दौंड </item>
+    </string-array>
+    <string-array name="taluka">
+        <item>वल्हे</item>
+        <item>इंदापूर </item>
+        <item>भोर </item>
+        <item>शिरूर </item>
+    </string-array>
+    <string-array name="villageId">
+        <item>आंबेगाव </item>
+        <item>भोर</item>
+        <item>तळेगाव </item>
+        <item>दौंड</item>
+    </string-array>
+    <string-array name="pincode">
+        <item>४००१०० </item>
+        <item>४००१०१ </item>
+        <item>४००१११ </item>
+        <item>४००१२१ </item>
+    </string-array>
+
+    <!-- Patient Registration Family Info Screen-->
+    <string name="txtSaveProceedtoPreview">जतन करा आणि पुढे जा!</string>
+    <string name="txtFamilyInformation">कौटुंबिक माहिती</string>
+    <string name="txtName">नाव</string>
+    <string name="txtRelation">संबंध</string>
+    <string name="txtAadharNo">आधार क्रमांक</string>
+    <string name="txtEdit">बदल करा</string>
+    <string name="txtDelete">मिटवा </string>
+    <string name="txtFullName">संपूर्ण नाव</string>
+    <string name="txtRelationtoPatient">रुग्णाशी संबंध </string>
+    <string name="txtAdd">अधिक माहिती </string>
+    <string name="txtSave">जतन करा</string>
+    <string name="txtClear">हटवा </string>
+    <string name="txtSkip">वगळा</string>
+    <string name="txtFamilyMemberAlreadyExsist">कुटुंब सदस्य माहिती आधीच उपलब्ध!</string>
+    <string-array name="relation">
+        <item>पती </item>
+        <item>आई</item>
+        <item>वडील</item>
+        <item>सासू</item>
+        <item>सासरे</item>
+        <item>भाऊ</item>
+        <item>बहीण</item>
+        <item>मुलगी</item>
+        <item>मुलगा</item>
+    </string-array>
+    <string name="txtMyActivities">माझी कामे </string>
+    <string name="hinttasksearch">शोधा, रुग्णाचे नाव, नोंदणी क्र.</string>
+    <string name="txtFavourites">नेहमीचे संपर्क  </string>
+    <string name="txtAllContacts">संपर्क यादी  </string>
+    <string name="txtPreview">पूर्वावलोकन </string>
+    <!--Toolbar-->
+    <string name="txtNotifications"> सूचना </string>
+    <string name="txtSyncData">सिंक डेटा</string>
+    <!--\u00A0 is white space unicode to include before text-->
+    <string name="txtLastSyncData">मागील सिंक</string>
+    <string name="txtCollaboration">सहयोग मंच </string>
+    <string name="txtcallsupport">संपर्क सुविधा  </string>
+    <string name="txtCancel">रद्द करा </string>
+    <string name="txtRegistreringPatient">रुग्ण नोंदणी</string>
+    <!--Error Strings-->
+    <string name="txtEnterValue">कृपया माहिती भरा </string>
+    <string name="txtErrAddMember">कृपया सदस्याची माहिती भरा </string>
+    <string name="txtEnterCorrectValue">कृपया योग्य माहिती भरा  </string>
+    <string name="msgErrorNoInternet">नेटवर्क उपलब्ध नाही! </string>
+    <string name="msgCallFunctionalityNotAvailableOnDevice">कार्यक्षमता यंत्रावर उपलब्ध नाही</string>
+    <string name="txtDeleteConfirm">तुम्ही हटवू इच्छिता का?</string>
+    <string name="txtClose">बंद</string>
+    <string name="msgPatientHighRisk">रुग्णाच्या प्रकृतिस धोका!</string>
+
+    <!--Asha pop up strings-->
+    <string name="txtashaqualification">शिक्षण  </string>
+    <string name="txtashaemergencycontact">आपत्कालीन संपर्क</string>
+    <string name="txtashaaddress">पत्ता </string>
+    <string name="txtashacontact">मोबाइल क्र.</string>
+    <string name="txtashasignout">साइन आउट करा  </string>
+
+    <!--Notification-->
+    <string name="txtnotificationdismiss">बर्खास्त </string>
+    <string name="btnRegister">रुग्ण नोंदणी </string>
+    <string name="keySalutation">शीर्षक:</string>
+
+    <!-- Patient Registration Preview Screen-->
+    <string name="txtAgeGender">वय/लिंग </string>
+    <string name="txtProgram">प्रोग्राम </string>
+    <string name="txtDataLoss">आपला डाटा सेव झाला नाही, पुढे जाऊ इच्छिता का? </string>
+    <string name="txtLastSyncNotAvaliable">उपलब्ध नाही</string>
+    <string name="txtReferToDoc">डॉक्टरांकडे रेफर करा</string>
+    <string name="txtPregnancyDient">गरोदरपानातील आहार </string>
+    <string name="toastDataSyncStarted">डेटा सिंक सुरु!</string>
+    <string name="msgNetworkConnectivityNotAvailable">नेटवर्क उपलब्ध नाही! </string>
+    <string name="msgTaskDetailsNotFetch">कामाची माहिती मिळवताना त्रुटि!</string>
+    <string name="msgSyncError">सर्वर सोबत सिंक करताना त्रुटि!</string>
+    <string name="msgAshaDetailsNotFetch">आशाची माहिती घेताना त्रुटि </string>
+    <string name="msgLastSyncCompleted">डेटा सिंक झाला </string>
+    <string name="txtAshaName">आशा चे नाव</string>
+
+    <!-- All Patient Screen-->
+    <string name="txtPID">पीआईडी</string>
+    <string name="txtAllPatientContact">संपर्क</string>
+    <string name="txtHaemoglobin">हीमोग्लोबिन</string>
+    <string name="txtBloodPressure">रक्तदाब</string>
+    <string name="txtHighRisk">उच्च धोका</string>
+    <string name="txtModerateRisk">मध्यम धोका</string>
+    <string name="txtNormalRisk">सामान्य</string>
+    <string name="txtLMP">एलएमपी</string>
+    <string name="txtBMI">बीएमआई</string>
+    <string name="txtBP">बीपी</string>
+    <string name="txtHB">एचबी</string>
+    <string name="txtWeeks">आठवडे</string>
+    <string name="txtStatus">स्थिती</string>
+    <string name="txtEditProfile">प्रोफाईलमध्ये बदल करा</string>
+    <string name="txtSummaryView">सारांश पहा</string>
+    <string name="txtBack">मागे</string>
+    <string name="txtTasks">कार्ये</string>
+    <string name="txtRefertoDoctor">डॉक्टरांकडे रेफर करा</string>
+    <string name="txtHRA">एचआरए</string>
+    <string name="txtVitals">व्हायटल्स </string>
+    <string name="txtCaptureTestData">तपासणी चा डाटा घ्या</string>
+    <string name="txtMedication">औषधोपचार</string>
+    <string name="txtFeedback">अभिप्राय</string>
+    <string-array name="sortOrderList">
+        <item>क्रमवारी लावा</item>
+        <item>अलीकडे जोडलेले</item>
+        <item>अपेक्षित प्रसुती तारखेच्या</item>
+        <item>परिसर</item>
+        <item>वय</item>
+        <item>वितरित रुग्णांना</item>
+    </string-array>
+    <string name="txtStatusDue">देय</string>
+
+    <string name="txtTaskHelpGuide">\? मदत मार्गदर्शक</string>
+    <string name="txtTaskViewAll">सर्व पहा</string>
+    <string name="txtTaskDue">बाकी :</string>
+    <string name="txtTaskLastRecorded">मागचे रेकॉर्ड्स :</string>
+    <string name="txtTaskLastData">मागचा डाटा :</string>
+    <string name="txtTaskVitalsTemperature">तापमान</string>
+    <string name="txtTaskVitalsHeight">उंची </string>
+    <string name="txtTaskVitalsGirth">घेर</string>
+    <string name="txtTaskVitalsWeight">वजन</string>
+    <string name="txtTaskVitalsBMI">BMI</string>
+    <string name="txtTaskVitalsFundalheight">फंडल हाइट</string>
+    <string name="txtTaskVitalsTemperatureUnit">&#xb0;F</string>
+    <string name="txtTaskVitalsGirthUnit">cm</string>
+    <string name="txtTaskVitalsWeightUnit">Kgs</string>
+    <string name="txtTaskVitalsBMIUnit">Kgs/m^2</string>
+    <string name="txtTaskVitalsSave">जतन करा</string>
+    <string name="txtTaskVitalsCancel">मिटवा </string>
+    <string name="txtTaskVitalsCapture">लीजिए </string>
+    <string name="txtTaskCaptureOxiReading">रीडिंग घ्या</string>
+    <string name="txtTaskCaptureOxiGraph">वेवफॉर्म घ्या</string>
+    <string name="txtTaskVitalsreCapture">पुन्हा घ्या </string>
+    <string name="txtTaskVitalsPatientWeight">रुग्णाचे वजन वाजवीपेक्षा कमी आहे.</string>
+    <string name="txtTaskManualMode"> मॅन्युअल मोड</string>
+    <string name="txtTaskDeviceMode">डिवाइस मोड</string>
+    <string name="txtBluetooth">ब्लूटूथ </string>
+    <string name="txtScan">स्कॅन</string>
+    <string name="txtPairedDevices">पेयर्ड उपकरण </string>
+    <string name="txtAvailableDevices">उपलब्ध उपकरण </string>
+    <string name="txtTaskConnectionSetting">कनेक्शन सेटिंग्स</string>
+    <string name="txtTaskBPSystolic">सिस्टोलिक</string>
+    <string name="txtTaskBPDiastolic">डायस्टोलिक</string>
+    <string name="txtTaskBPPulse">नाड़ी</string>
+    <string name="txtTaskOxiSpO">SpO2</string>
+    <string name="txtTaskOxiSpOUnit">%</string>
+    <string name="txtTaskOxiPI">PI</string>
+    <string name="txtTaskBPSysDiaUnit">mmHg</string>
+    <string name="txtTaskBPPulseUnit">बिट्स/प्रति मिनिट  </string>
+    <string name="txtTaskHBUnit">g/dL</string>
+    <string name="txtTaskBPDataInserted">डेटा सफलतापूर्वक जतन झाला</string>
+    <string name="txtTaskBPDataNotValid">डेटा बरोबर नाही</string>
+    <string name="txtTaskOxiCaptureReading">वेवफॉर्म मध्ये डाटा अपूर्ण आहे\nवेवफोर्म घ्या</string>
+    <string name="txtTaskOxiCaptureWave">डाटा अपूर्ण आहे\nरीडिंग घ्या</string>
+    <string name="txtTaskOxiCaptureReadingWarning">कृपया रीडिंग घेण्या अगोदर बोट काढून घ्या आणि पुन्हा रीडिंग बटन दाबा</string>
+    <string name="txtTaskOxiCaptureWaveWarning">कृपया वेवफोर्म घेण्या अगोदर बोट काढून घ्या आणि पुन्हा वेवफोर्म बटन दाबा</string>
+    <string name="txtComingSoon">लवकरच येत आहे </string>
+    <string name="txtSaveData">डेटा जतन होईल. तुम्ही चालू ठेवू इच्छिता का?</string>
+    <string name="txtPatientUnderWeight">रुग्णाचे वजन कमी आहे!</string>r
+    <string name="txtPatientOverweight">रुग्णाचे वजन जास्त आहे!</string>
+    <string name="txtPatientHightBp">रुग्णाचा बी पी जास्त आहे!</string>
+    <string name="txtPatientLowBP">रुग्णाचा बी पी कमी आहे!</string>
+
+    <string name="txtPatientID">आय डी </string>
+    <!--Point of care device-->
+    <!--Health Monitor-->
+    <string name="app_registration">ऍप नोंदणी</string>
+
+    <string name="bluetooth_not_available">कनेक्शन नाही </string>
+
+    <string name="bluetooth_health_profile_not_available">ब्लूटूथ उपलब्धि नाही</string>
+
+    <string name="channel_connection">चॅनल कनेक्शन</string>
+
+    <string name="channel_connection_desc">(काही उपकरण स्वत: कनेक्शन सुरु करतात)</string>
+
+    <string name="connect">जोड़ा</string>
+
+    <string name="connected">जोडले गेले</string>
+
+    <string name="connection_state">कनेक्शन ची स्थिति </string>
+
+    <string name="data_ind">डेटा सूचक</string>
+
+    <string name="disconnect">विस्कळित</string>
+
+    <string name="disconnected">विस्कळित झाले </string>
+
+    <string name="empty"> </string>
+
+    <string name="none">काही नाही ...</string>
+
+    <string name="ok">ठीक आहे </string>
+
+    <string name="read_data">डेटा रीड होत आहे..</string>
+
+    <string name="read_data_done">डेटा रीड झाला आहे ...</string>
+
+    <string name="register">नोंदणी</string>
+
+    <string name="select_device">उपकरण निवडा!</string>
+
+    <string name="status_create_channel">चैनल ची स्थिती बनवा: %d</string>
+
+    <string name="status_destroy_channel">चैनल ची स्थिति मिटवा: %d</string>
+
+    <string name="status_msg">स्थिति संदेश</string>
+
+    <string name="status_reg">एप्लिकेशन नोंदणी ची स्थिति: %d</string>
+
+    <string name="status_unreg">एप्लिकेशन नोंदणी रद् ची स्थिति:%d</string>
+
+    <string name="unregister">नोंदणी रद्</string>
+    <string name="txtBluetoothDisable">ब्लूटूथ बंद आहे</string>
+    <!--Health Monitor-->
+
+    <string name="info_Systolic">नसांमधील दाब(हृदयाचे ठोके चालू असताना)</string>
+    <string name="info_diastolic_bpm">नसांमधील दाब, हृदयाचे ठोक्यांच्या आत</string>
+    <string name="info_pulse">प्रति मिनिट हृदयाचे ठोके</string>
+    <string name="normal_systolic">१२० पेक्षा कमी </string>
+    <string name="normal_diastolic">८० पेक्षा कमी</string>
+    <string name="reset_blutooth">ब्लूटूथ कनेक्शन मध्ये व्यत्यय! कृपया ब्लूटूथ कनेक्शन रीसेट करा. </string>
+    <string name="info_heart_rate">हृदयाचे ठोक, प्रत्येक मिनिटाला.</string>
+    <string name="info_pulse_rate">पल्स रेट, प्रती मिनिट, हृदय संकुचन पावताना</string>
+    <string name="info_ecg">इलेक्ट्रोड चा उपयोग करून रुग्णाच्या शरीरावर ठेवून विद्युतीय हालचाली घेयाच्या प्रक्रिया </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtMyTrainings">माझे प्रशिक्षण</string>
+    <string name="txtOnlineTrainings">ऑनलाइन प्रशिक्षण</string>
+    <string name="txtInternalTrns">आंतरिक प्रशिक्षण</string>
+    <string name="txtExternalTrns">बाह्य प्रशिक्षण</string>
+
+
+    <!-- Summary View Strings-->
+    <string name="txtDemographics">जनसांख्यिकी</string>
+    <string name="txtEligibility">पात्रता</string>
+    <string name="txtAllergies">एलर्जी</string>
+    <string name="txtDiagnosis">निदान</string>
+    <string name="txtMedications">औषधी</string>
+    <string name="txtTests">चाचणी</string>
+    <string name="txtProcedures">शल्यक्रिया</string>
+    <string name="txtCarePlan">केयर योजना</string>
+    <string name="txtimmunizations">लसीकरण</string>
+
+    <!-- Refer to doctor Strings-->
+    <string name="txtLastReferred">मागील रेफर केलेले</string>
+    <string name="txtTestResult">चाचणी परिणाम</string>
+    <string name="txtHealthCenterLab">स्वास्थ्य केंद्र </string>
+    <string name="txtLocation">स्थान</string>
+    <string name="txtReason">कारण</string>
+    <string name="txtRefer">रेफर</string>
+    <string name="msgPatientSuccessfullyRefferedto">रुग्ण यशस्वीपणे यांना रेफर झाला!</string>
+    <string-array name="reason">
+        <item>उच्च रक्तदाब</item>
+        <item>अशक्त</item>
+        <item>कमी एच बी</item>
+        <item>कमी रक्तदाब</item>
+    </string-array>
+
+    <!-- My Activities Strings-->
+    <string name="txtAddActivity">गतिविधि जोडा</string>
+    <string name="txtDate">तारीख</string>
+    <string name="txtActivity">गतिविधि</string>
+    <string name="txtComments">टिप्पण्या</string>
+    <string name="txtSetReminder">रिमाइंडर सेट करा</string>
+    <string name="txtSno">अनुक्रमांक</string>
+    <string name="txtMarkStatus">मार्क स्टेटस </string>
+    <string name="txtDone">झाले </string>
+    <string name="txtTime">वेळ</string>
+    <string name="txtCreatedBy">कर्त्याचे नाव</string>
+
+    <!--HRA-->
+    <string name="txtStronglyAgree">पूर्ण सहमत</string>
+    <string name="txtAgree">सहमत</string>
+    <string name="txtDisgree">असहमत</string>
+    <string name="txtStronglyDisagree">पूर्ण असहमत</string>
+    <string name="txtFirstSetQuestionHeader">आशा द्वारा संवाद</string>
+    <string name="txtSecondSetQuestionHeaderv">आशा कडून सेवा</string>
+    <string name="txtThirdSetQuestionHeader">एएनएम द्वारा संवाद</string>
+    <string name="txtFeedBackFirstSetQ1">प्र१. आशाने तुमच्यासोबत केलेला संवाद खूप चांगला होता!</string>
+    <string name="txtFeedBackFirstSetQ2">प्र२. आशा ने तुम्हाला कार्यक्रमाचा लाभ, आहार, व्यायाम, तपासणीबद्दल सगळी माहिती दिली</string>
+    <string name="txtFeedBackFirstSetQ3">प्र3. आशा ने तुम्हाला सुलभ पद्धतींनी माहिती दिली!</string>
+    <string name="txtFeedBackFirstSetQ4">प्र4. आशा ने तुम्हाला भेटीच्या वेळी तुमचे म्हणणे नीट समजून घेतले!</string>
+    <string name="txtFeedBackSecondSetQ1">प्र१. आशा ने तुम्हाला गरज असताना ताबडतोब भेट दिली!</string>
+    <string name="txtFeedBackSecondSetQ2">प्र२. आशाला तुमच्या तब्यतीची काळजी घेण्याचे ज्ञान आहे!</string>
+    <string name="txtFeedBackThirdSetQ1">प्र१. एएनएम ने ट्रीटमेंच्या वेळी तुमचे म्हणणे नीट समजून घेतले!</string>
+
+    <string-array name="reminderTime">
+        <item>५ मिनिट् </item>
+        <item>१0 मिनिट् </item>
+        <item>१५ मिनिट् </item>
+        <item>२० मिनिट् </item>
+        <item>२५ मिनिट् </item>
+        <item>३० मिनिट् </item>
+    </string-array>
+
+    <!-- Reports string-->
+    <string name="txtType">प्रकार</string>
+    <string name="txtFrom">तर्फे</string>
+    <string name="txtTo">पर्यंत</string>
+    <string name="txtGenerate">रिपोर्ट</string>
+    <string name="txtBeneficiaryPatient">लाभार्थी / रुग्ण</string>
+    <string name="txtSelectParameter">घटक निवडा</string>
+    <string-array name="reportType">
+        <item>रिपोर्ट प्रकार निवडा</item>
+        <item>ए एन सी नोंदणी </item>
+        <item>रेफरल चा लॉग</item>
+        <item>उच्च जोखिम गर्भावस्था नोंदणी</item>
+        <item>स्वास्थ्य स्थिति</item>
+        <item>लाभार्थींचे विवरण</item>
+        <item>रेफरल चा लॉग</item>
+        <item>पात्रजोड्यांची नोंदणी </item>
+        <item>संक्रमण नोंदणी </item>
+        <item>स्वास्थ्य सर्वेक्षण चा लॉग</item>
+        <item>महिलांचे स्वास्थ्य रेकॉर्ड</item>
+        <item>स्वास्थ्य डेटा आणि उपचार</item>
+    </string-array>
+    <string name="txtANCRegister">ए एन सी नोंदणी </string>
+    <string name="txtHealthStatusTerned">स्वास्थ्य स्थिति</string>
+    <string name="txtSelectReportType">रिपोर्ट प्रकार निवडा </string>
+
+    <!--ANC Reports string-->
+    <string name="txtANCRegisterReport">ए एन सी नोंदणी रिपोर्ट</string>
+    <string name="txtWeeksDuringRegistration">नोंदणी च्या वेळचा आठवडा </string>
+    <string name="txtDeliveryNumber">डेलिवरी संख्या</string>
+
+    <!--Health Status Terned Reports string-->
+    <string name="txtRegistrationDate">नोंदणी तारीख</string>
+    <string name="txtTrimester">तिमाही</string>
+    <string name="txtLocality">स्थान</string>
+    <string name="txtHealthStatusTernedOf">स्वास्थ्य स्थिति केली </string>
+    <string name="txtHbTrend">एचबी ट्रेंड</string>
+    <string name="txtHaemoglobingdL">हीमोग्लोबिन </string>
+    <string name="txtSystolicBP">सिस्टोलिक बीपी</string>
+    <string name="txtDiastolicBP">डायस्टोलिक बीपी</string>
+    <string name="txtBloodPressuremmHg">रक्तदाब</string>
+
+    //Education
+    <string name="ANC">ऐन्टे नेटल केर (ऐ एन सी)</string>
+    <string name="PNC">पोस्ट नेटल परीक्षण</string>
+    <string name="FP">परिवार नियोजन</string>
+    <string name="CH">बाल आरोग्य</string>
+    <string name="QUC">१ - क्वालिटी ऐन्टे नेटल परीक्षण</string>
+    <string name="PNA">१  - पोस्ट नेटल असेसमेंट</string>
+    <string name="AB">एम २ - आशा माहिती पुस्तक </string>
+    <string name="ITF">१ - परिवार नियोजन माहिती</string>
+    <string name="SS">२ - सुरक्षित सेक्स</string>
+    <string name="Vasecotomy">३ - वॅसेक्टोमी</string>
+    <string name="CO">१ - बाल आरोग्य आढावा</string>
+    <string name="Dirhea">२ - अतिसार</string>
+
+    <string name="txtImmunizationStatus">लसीकरण स्थिती</string>
+    <string name="txtImmunizationName">लसीकरणाचे नाव</string>
+    <string name="txtImmunizationDueDate">बाकी </string>
+    <string name="txtImmunizationDoneDate">झाले</string>
+    <string name="txtImmunizationGivenBy">ज्यांनी दिले </string>
+    <string name="txtImmunizationRole">भूमिका</string>
+    <string name="txtImmunizationGivenAt">दिलेले स्थान</string>
+    <string name="LMPDate">०२/११/२०१५ </string>
+    <string name="app_name">हेल्थमॉन</string>
+    <string name="action_share">शेयर</string>
+    <string name="action_settings">सेटिंग्स</string>
+    <string name="action_reply">उत्तर</string>
+    <string name="keyAadharNo">आधार नंबर:</string>
+    <string name="keyAddrLn1">पत्ता ओळ १:</string>
+    <string name="keyAddrLn2">पत्ता ओळ २:</string>
+    <string name="keyBPL">बी पि एल:</string>
+    <string name="keyContact">दूरध्वनी:</string>
+    <string name="keyDistrict">जिल्हा:</string>
+    <string name="keyEDD">इ डी डी:</string>
+    <string name="keyEducation">शिक्षण:</string>
+    <string name="keyEmergencyNo">आपातकालीन नंबर:</string>
+    <string name="keyFstPrgncy">पहिली प्रसूति:</string>
+    <string name="keyLMPDate">एलएमपी तारीख:</string>
+    <string name="keyLanguage">भाषा:</string>
+    <string name="keyNotes">टिपणी:</string>
+    <string name="keyPin">पिन कोड:</string>
+    <string name="keyProgram">प्रोग्राम:</string>
+    <string name="keyRationCNo">रेशन कार्ड नंबर:   </string>
+    <string name="keyTaluka">तालुका:</string>
+    <string name="keyVillage">गाव:</string>
+    <string name="keyWard">वार्ड:</string>
+    <string name="txtAsteriskMark">*</string>
+    <string name="txtBloodPressureMeasure">mmHg</string>
+    <string name="txtCapturingData">डाटा घेत आहे</string>
+    <string name="txtComment">कमेंट</string>
+    <string name="txtDataCapturedSuccessfully">डाटा यशस्वीपणे आला आहे!</string>
+    <string name="txtECGHeartbeats">इसीजी ठोके</string>
+    <string name="txtNoDataAvailable">डाटा शिल्लक नही</string>
+    <string name="txtNoDataAvailableforDiastolicBP">कमी बीपी चा डाटा शिल्लक नही</string>
+    <string name="txtNoDataAvailableforHbTrend">एच बी ट्रेंड चा डाटा शिल्लक नाही</string>
+    <string name="txtNoDataAvailableforSystolicBP">जास्त बी पी चा डाटा शिल्लक नाही</string>
+    <string name="txtNoPatientDataAvailable">रुग्णा चा डाटा शिल्लक नाही</string>
+    <string name="txtOverRideData">डेटा बदल होईल, तुम्ही चालू ठेवू इच्छिता का?</string>
+    <string name="txtSecondSetQuestionHeader">आशा कडून सेवा</string>
+    <string name="txtSelectatleastoneparameter">कमीत कमी एक घटक निवडा</string>
+    <string name="txtVisitPatient">रुग्ण बघा</string>
+    <string name="txtcollaboration">सहयोग</string>
+    <string name="txtsyncDatafirst">कृपया पहिले डाटा सिन्क करा</string>
+    <string name="valAadharNo">१२३४५६७८९</string>
+    <string name="valBPL">नाही</string>
+    <string name="valCategory">जनरल</string>
+    <string name="valContact">९८२३८२९८२३</string>
+    <string name="valDistrict">पुणे</string>
+    <string name="valEDD">२४/०७/२०१६</string>
+    <string name="valEducation">निरक्षर</string>
+    <string name="valEmergencyNo">७७३८३८३२८८</string>
+    <string name="valFstPrgncy">हो</string>
+    <string name="valLanguage">मराठी </string>
+    <string name="valPin">४११००७ </string>
+    <string name="valProgram">एमएचओ</string>
+    <string name="valRationCNo">एबिसि१२३४५६</string>
+    <string name="valVillage">महाड</string>
+    <string name="valTaluka">पुणे</string>
+    <string name="ACI">एम २ - एंटीनेटल केयर इंटर्वेंशन्स</string>
+    <string name="msgGravidaCountshouldmatchallotherparameter">ग्रॅव्हिडा संख्या जुळत नाही</string>
+    <string name="txtAadharCardShouldbeof12Digits">आधार कार्ड १२ अंकी असला पाहिजे!</string>
+    <string name="txtAsha">आशा</string>
+    <string name="txtAction">कारवाई</string>
+    <string name="txtCalcium">कॅल्शिअम</string>
+    <string name="txtCalciumGivenTillDate">कॅल्शिअम - आजपर्यंत दिलेली मात्र</string>
+    <string name="txtDrugName">औषधाचे नाव</string>
+    <string name="txtDueDate">देय तारीख</string>
+    <string name="txtHaemoglobinMeasure">g/dl</string>
+    <string name="txtIFAGivenTillDate">आयएफए आतापर्यंत दिलेले</string>
+    <string name="txtIncorrectDateOfBirth">चुकीची जन्म तारीख</string>
+    <string name="txtLMPDateCanNotBeFutureDate">एलएमपी तारीख ही भविष्यातील नसावी!</string>
+    <string name="txtLMPDateCanNotBeTodayDate">एलएमपी तारीख ही आजची नसावी!</string>
+    <string name="txtMinimum10Characters">कमीत कमी १० अक्षरे!</string>
+    <string name="txtPanCardShouldbeof10to20Digits">पॅन कार्डची १०-२० अक्षरे असावीत!</string>
+    <string name="txtPatientageshouldbetween18to55">रुग्णाचे वय १८ ते ५५ च्या आत असावे!</string>
+    <string name="txtPreviousDeliveryCanNotBeTodayDate">प्रसूती तारीख आजची नसावी!</string>
+    <string name="txtLMPDateCanNotBeBefore9Months">एलएमपी तारीख ही ९ महिन्यापेक्षा अगोदरची नसावी!</string>
+    <string name="txtPreviousDeliveryDateCanNotBeFutureDate">मागील प्रसुती तारीख ही भविष्यातील तारीख नसावी!</string>
+    <string name="txtPreviousDeliveryShouldbefore10months">मागील प्रसुती तारीख ही १० महिने अगोदरची असावी!</string>
+    <string name="txtQuantity">संख्या</string>
+    <string name="txtRangeBMI">१-२५५</string>
+    <string name="txtRangeDia">१०-२५५</string>
+    <string name="txtRangeFundal">१०-२५५</string>
+    <string name="txtRangeGirth">१००-१५००</string>
+    <string name="txtRangeHB">१-२५</string>
+    <string name="txtRangeHeight">२५-२००</string>
+    <string name="txtRangePI">१-१००</string>
+    <string name="txtRangePulse">१०-२५५</string>
+    <string name="txtRangeSpO2">९५-१००</string>
+    <string name="txtRangeSys">१०-२५५</string>
+    <string name="txtRangeTemp">१०-१५०</string>
+    <string name="txtRangeWeight">२५-२००</string>
+    <string name="txtRationCardShouldbeof12Digits">रेशन कार्ड १२ अंकी असला पाहिजे!</string>
+    <string name="txtViewAll">सर्व पहा</string>
+    <string name="txtWorkinProgress">काम सुरु आहे!</string>
+</resources>

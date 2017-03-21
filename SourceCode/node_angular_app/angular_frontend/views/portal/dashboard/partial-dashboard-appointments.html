@@ -1,0 +1,62 @@
+<div>
+  <h4>Appointments ({{AppointmentCtrl.appointmentCount}})</h4>
+</div>
+<div class="row" id="appointments" >
+	<div class="col-md-12">
+		<div class="input-group">
+		  <input type="text" class="form-control" placeholder="Search by Name, ID"  aria-describedby="basic-addon1" ng-model='AppointmentCtrl.searchText' ng-disabled="AppointmentCtrl.appointmentCount == 0" style="margin-top:5px;">
+		  <span class="input-group-btn">
+		  <button class="btn btn-default" type="button" ng-disabled="AppointmentCtrl.appointmentCount == 0"><img src="/static/images/search.png" width="25" height="26"></button>
+		  </span> </div>
+		  <br/>
+		<div style="overflow-y: scroll; height: 375px;">
+		<div ng-repeat="appointment in AppointmentCtrl.appointmentList | filterBy: ['Patient_id', 'HM_Patient_name']: AppointmentCtrl.searchText as results" style="height: 15px;">
+		<div ng-attr-id="{{AppointmentCtrl.getSeverityClass(appointment.patient_severity)}}" class="gen-margin-top">
+
+		  <div class="row">
+			<div class="col-md-12">
+			  <div class="panel panel-default">
+				<div class="panel-body">
+				  <div class="row">
+					<div class="col-md-8 ">
+					  <div class="row">
+						<div class="col-md-3 text-center ">  <span class="card-new-text" ng-if="appointment.Appointment_new_old_flag==1">(New)</span><br>
+						  <span ng-if ="appointment.patient_image == ''"><img class="patient-image" src="/static/images/pic_user.png"></span>
+						  <span ng-if ="appointment.patient_image != ''"><img class="patient-image" data-ng-src= "{{'data:image/png;base64,'+appointment.patient_image}}" class="patientRoundImg"></span><br>
+						  <span class="sub-text" ng-if="appointment.Referred==1">Referred</span> </div>
+						<div class="col-md-9 border-left"><span class="card-title">{{appointment.HM_Patient_name}} <br>
+						  ID {{appointment.Patient_id}}<br>
+						  </span> <span class="card-small-text">{{appointment.HM_Patient_taluka}}<br>
+						  {{appointment.appntDateTime}}</span></div>
+					  </div>
+					</div>
+					<div class="col-md-4">
+					  <div class="row">
+						<div class="col-md-9 "> <span class="card-small-text" ng-bind="{{AppointmentCtrl.getpregWeek(appointment.lmpDate)}}"></span>
+						<span class="card-small-text">Weeks</span><br>
+						<span class="card-small-text">{{appointment.OverAllStatus}}</span></div>
+					  </div>
+					  <div class="row">
+						<div class="col-md-12 gen-margin-top-alert">
+						  <button type="button" class="btn btn-default gen-left-margin" ng-if="appointment.AcceptedFlag==1" disabled>Accepted</button>
+						  <button type="button" class="btn btn-default gen-left-margin" ng-if="appointment.AcceptedFlag==0" ng-click="AppointmentCtrl.acceptAppointment(appointment)">Accept</button>
+						  <!--<button type="button" class="btn btn-default">Reschedule</button>-->
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		</div>
+		<div ng-if="!results.length && AppointmentCtrl.searchText">
+			<strong><span style="color:red;">No results found....!</span></strong>
+  		</div>
+		<div ng-if="AppointmentCtrl.appointmentCount == 0">
+			<strong><span style="color:red;">No Appointments found for today....!</span></strong>
+  		</div>
+		</div>
+	</div>
+ </div>

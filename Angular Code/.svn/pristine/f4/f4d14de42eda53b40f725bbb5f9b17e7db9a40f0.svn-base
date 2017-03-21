@@ -1,0 +1,45 @@
+<div id="left-nav">
+    <div class="col-sm-1 profile-bg main-nav">
+		<div class="tabs-left">
+			<ul class="nav nav-tabs">
+				<li class="{{($state.current.name=='dashboard' || $state.current.name=='dashboard.tasks' || $state.current.name=='dashboard.alerts') ? 'active text-center' : 'text-center'}}">
+				<a ui-sref="dashboard" data-toggle="tab">
+					<div class="icon-ic-menu-dashboard-normal icon-font"></div> 
+					<div class="text-center">Dashboard</div>
+				</a>
+				</li>
+				<li class="{{$state.current.name=='allPatients' || $state.current.name=='patientListView' || $state.current.name=='patientCareplan' || $state.current.name=='patientCareplan.careplan' ||
+$state.current.name=='patientCareplan.addcareplantemplates' || $state.current.name=='patientCareplan.editcareplan' || $state.current.name=='patientCareplan.patientSummary' || $state.current.name=='patientCareplan.treatment' || $state.current.name=='patientCareplan.patientSummary.demographics' || $state.current.name=='patientCareplan.patientSummary.familyinfo' || $state.current.name=='patientCareplan.patientSummary.patienteligibility' || $state.current.name=='patientCareplan.patientSummary.medication' || $state.current.name=='patientCareplan.patientSummary.visitHistory' || $state.current.name=='patientCareplan.patientSummary.diagnosis'  || $state.current.name=='patientCareplan.patientSummary.immunization' || $state.current.name=='patientCareplan.patientSummary.vitals' || $state.current.name=='patientCareplan.patientSummary.patientcareplan' || $state.current.name=='patientCareplan.patientSummary.hra' || $state.current.name=='patientCareplan.patientSummary.feedback' || $state.current.name=='patientCareplan.patientSummary.allergies' ? 'active text-center' : 'text-center'}}">
+					<a ui-sref="allPatients" data-toggle="tab">
+						<div class="icon-ic-menu-all-patients-normal icon-font"></div>
+						<div class="text-center">All Patients</div>
+					</a>
+				</li>
+				<li class="{{($state.current.name=='calendar' || $state.current.name=='newActivity' || $state.current.name=='newActivity.pushActivity' || $state.current.name=='newActivity.selfActivity' || $state.current.name=='newActivity.invite') ? 'active text-center' : 'text-center'}}">
+					<a ui-sref="calendar" data-toggle="tab">
+						<div class="icon-ic-menu-calender-normal icon-font"></div>
+						<div class="text-center">Calendar</div>
+					</a>
+				</li>
+				<li class="{{$state.current.name=='analytics' ? 'active text-center' : 'text-center'}}">
+					<a ui-sref="analytics" data-toggle="tab">
+						<div class="icon-ic-menu-analytics-normal icon-font"></div>
+						<div class="text-center">Analytics</div>
+					</a>
+				</li>
+				<li class="{{$state.current.name=='collobration' ? 'active text-center' : 'text-center'}}">
+					<a ui-sref="collobration" data-toggle="tab">
+						<div class="icon-ic-menu-collaboration-normal icon-font"></div>
+						<div class="text-center">Collaboration</div>
+					</a>
+				</li>
+				<li class="{{$state.current.name=='education' ? 'active text-center' : 'text-center'}}">
+					<a ui-sref="education" data-toggle="tab">
+						<div class="icon-ic-menu-education-normal icon-font"></div>
+						<div class="text-center">Education</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+    </div>
+</div>

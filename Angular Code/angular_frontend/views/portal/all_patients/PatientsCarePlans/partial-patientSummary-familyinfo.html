@@ -1,0 +1,49 @@
+<div class="tab-pane" id="familyInfo">
+    <div class="col-md-12">
+        <div class="col-md-6" ng-repeat="(index, value) in patientFamilyInfoCtrl.patientFamilyInfo">
+            <table class="table patientSummarytable">
+                <thead class="lightBluebg">
+                  <tr>
+                    <th colspan="2"><h5>FAMILY MEMBER {{index -- 1}}</h5></th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tdInGray">Full Name:</td>
+                    <td>{{value.Family_First_NM}} {{value.Family_Last_NM}}</td>
+                  </tr>
+                  <tr>
+                    <td class="tdInGray">Age/Gender:</td>
+                    <td>{{value.Age}}/{{value.Gender_Short_NM}}</td>
+                 </tr>
+                 <tr>
+                    <td class="tdInGray">Date of Birth:</td>
+                    <td>{{value.Date_Of_Birth}}</td>
+                 </tr>
+                 <tr>
+                    <td class="tdInGray">Relation to Patient:</td>
+                    <td>{{value.Relation}}</td>
+                 </tr>
+                 <tr>
+                    <td class="tdInGray">Marital Status:</td>
+                    <td>{{value.Marital_Status}}</td>
+                 </tr>
+                 <tr>
+                    <td class="tdInGray">Education:</td>
+                    <td>{{value.Education}}</td>
+                 </tr>
+                 <tr>
+                    <td class="tdInGray">{{value.Card_Description}} No:</td>
+                    <td>{{value.Card_Number}}</td>
+                 </tr>
+
+                 <tr>
+                    <td class="tdInGray">Contact:</td>
+                    <td>{{value.Contact}}</td>
+                 </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+</div>

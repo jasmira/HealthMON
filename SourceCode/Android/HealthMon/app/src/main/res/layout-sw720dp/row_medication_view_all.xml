@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorlinegray"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/tv_m_drug_name"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_margin="1dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/txtMedicationName"
+            android:textSize="@dimen/text17sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/stdRowSize"
+            android:id="@+id/tv_m_due_date"
+            android:layout_margin="1dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/txtImmunizationDueDate"
+            android:textSize="@dimen/text17sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_margin="1dp"
+            android:id="@+id/tv_m_done_date"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/txtImmunizationDoneDate"
+            android:textSize="@dimen/text17sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_margin="1dp"
+            android:id="@+id/tv_m_quantity"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/txtQuantity"
+            android:textSize="@dimen/text17sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_margin="1dp"
+            android:id="@+id/tv_m_given_by"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/txtImmunizationGivenBy"
+            android:textSize="@dimen/text17sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_margin="1dp"
+            android:id="@+id/tv_m_role"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/txtImmunizationRole"
+            android:textSize="@dimen/text17sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_margin="1dp"
+            android:id="@+id/tv_m_given_at"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/txtImmunizationGivenAt"
+            android:textSize="@dimen/text15sp" />
+    </LinearLayout>

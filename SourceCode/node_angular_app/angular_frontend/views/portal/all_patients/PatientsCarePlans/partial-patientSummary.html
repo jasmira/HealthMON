@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div role="tabpanel" class="tab-pane" id="patientSummarytDiv" style="margin-top:3%; border:1px solid #275073">
+    <div class="">
+        <div class="col-md-3 patientSummaryTab"> <!-- required for floating -->
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs tabs-left sideways" id=" patientSummaryNav">
+            <li class="{{$state.current.name=='patientCareplan.patientSummary' || $state.current.name=='patientCareplan.patientSummary.demographics' ? 'active' : 'inactiveLink'}}"><a href="#demographics" ui-sref=".demographics" data-target="#demographics" class="patientSummaryTabLink" data-toggle="tab">Demographics</a></li>
+
+            <li class="{{$state.current.name=='patientCareplan.patientSummary.familyinfo' ? 'active' : 'inactiveLink'}}"><a class="patientSummaryTabLink" href="#familyinfo" ui-sref=".familyinfo" data-target="#familyinfo" data-toggle="tab">Family Information</a></li>
+
+            <li class="{{$state.current.name=='patientCareplan.patientSummary.patienteligibility' ? 'active' : 'inactiveLink'}}"><a class="patientSummaryTabLink" href="#patienteligibility" ui-sref=".patienteligibility" data-target="#patienteligibility" data-toggle="tab">Eligibility</a></li>
+
+            <li class="{{$state.current.name=='patientCareplan.patientSummary.vitals' ? 'active' : 'inactiveLink'}}"><a class="patientSummaryTabLink" href="#vitals" ui-sref=".vitals" data-target="#vitals" data-toggle="tab">Vitals</a></li>
+
+            <li class="{{$state.current.name=='patientCareplan.patientSummary.allergies' ? 'active' : 'inactiveLink'}}"><a class="patientSummaryTabLink" href="#allergies" ui-sref=".allergies" data-target="#allergies" data-toggle="tab">Allergies</a></li>
+
+            <li class="{{$state.current.name=='patientCareplan.patientSummary.diagnosis' ? 'active' : 'inactiveLink'}}"><a class="patientSummaryTabLink" href="#diagnosis" ui-sref=".diagnosis" data-target="#diagnosis" data-toggle="tab">Diagnosis</a></li>
+
+            <li class="{{$state.current.name=='patientCareplan.patientSummary.visitHistory' ? 'active' : 'inactiveLink'}}"><a class="patientSummaryTabLink" ui-sref=".visitHistory"  data-toggle="tab">Visit History</a></li>
+
+            <li class="{{$state.current.name=='patientCareplan.patientSummary.medication' ? 'active' : 'inactiveLink'}}"><a class="patientSummaryTabLink" href="#medication" ui-sref=".medication" data-target="#medication" data-toggle="tab">Medications</a></li>
+
+            <li><a class="patientSummaryTabLink" ui-sref="{{$state.current.name}}"  data-toggle="tab">Investigation/Tests</a></li>
+
+            <li class="{{$state.current.name=='patientCareplan.patientSummary.immunization' ? 'active' : 'inactiveLink'}}"><a class="patientSummaryTabLink" href="#immunization" ui-sref=".immunization" data-target="#immunization" data-toggle="tab">Immunizations</a></li>
+
+            <li><a class="patientSummaryTabLink" ui-sref="{{$state.current.name}}"  data-toggle="tab">Procedures</a></li>
+
+            <li class="{{$state.current.name=='patientCareplan.patientSummary.patientcareplan' ? 'active' : 'inactiveLink'}}"><a class="patientSummaryTabLink" href="#patientcareplan" ui-sref=".patientcareplan" data-target="#patientcareplan" data-toggle="tab">Care Plan</a></li>
+
+            <li class="{{$state.current.name=='patientCareplan.patientSummary.hra' ? 'active' : 'inactiveLink'}}"><a class="patientSummaryTabLink" href="#hra" ui-sref=".hra" data-target="#hra" data-toggle="tab">HRA</a></li>
+
+            <li class="{{$state.current.name=='patientCareplan.patientSummary.feedback' ? 'active' : 'inactiveLink'}}"><a class="patientSummaryTabLink" href="#feedback" ui-sref=".feedback" data-target="#feedback" data-toggle="tab">Feedback</a></li>
+			
+			<li class="{{$state.current.name=='patientCareplan.patientSummary.outcome' ? 'active' : 'inactiveLink'}}"><a class="patientSummaryTabLink" href="#outcome" ui-sref=".outcome" data-target="#outcome" data-toggle="tab">Outcome</a></li>
+			
+          </ul>
+        </div>
+        <div class="col-md-9 top-pad-both" style="margin-left: 5%;
+    width: 70%;">
+            <div class="tab-content patientSummaryTabContent">
+                <div ui-view></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

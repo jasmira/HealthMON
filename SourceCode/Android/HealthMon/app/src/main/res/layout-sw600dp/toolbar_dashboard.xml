@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:minHeight="75dp"
+    android:background="?attr/colorPrimary"
+    android:padding="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetEnd="0dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:id="@+id/toolbar_profile_layout"
+            android:background="#898989"
+            style="@android:style/Widget.ActionButton"
+            android:gravity="center">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/userimage"
+                android:src="@mipmap/landing_toolbar_profile_pic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbar_profile_layout_username"
+                android:text="ASHAname"/>
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_dashboard_notification"
+            android:src="@drawable/logo_landing_healthmon"/>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.Toolbar>

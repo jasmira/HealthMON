@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorlinegray"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/stdRowHeader"
+        android:layout_margin="1dp"
+        android:layout_weight="1"
+        android:background="@color/colorBlue"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/txtSno"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text17sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/stdRowHeader"
+        android:layout_margin="1dp"
+        android:layout_weight="2"
+        android:background="@color/colorBlue"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/txtDate"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text17sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/stdRowHeader"
+        android:layout_margin="1dp"
+        android:layout_weight="3"
+        android:background="@color/colorBlue"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/txtBeneficiaryPatient"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text17sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        android:layout_weight="2"
+        android:background="@color/colorBlue"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/txtWeeksDuringRegistration"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text17sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/stdRowHeader"
+        android:layout_margin="1dp"
+        android:layout_weight="2"
+        android:background="@color/colorBlue"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/txtVillage"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text17sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/stdRowHeader"
+        android:layout_margin="1dp"
+        android:layout_weight="2"
+        android:background="@color/colorBlue"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/txtWard"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text17sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/stdRowHeader"
+        android:layout_margin="1dp"
+        android:layout_weight="1"
+        android:background="@color/colorBlue"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/txtAge"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text17sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/stdRowHeader"
+        android:layout_margin="1dp"
+        android:layout_weight="2"
+        android:background="@color/colorBlue"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/txtEDD"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text17sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        android:layout_weight="2"
+        android:background="@color/colorBlue"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/txtDeliveryNumber"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text17sp" />
+</LinearLayout>

@@ -1,0 +1,100 @@
+<html>
+<head>
+
+</head>
+<body>
+    
+<div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="carePlanDiv">
+        <div class="suggestDiv row">	
+            <div class="col-md-6 pull-left top-pad-both">
+			<div class="col-md-12 carePlanTopBtn">
+				<span class="card-small-text" ng-if='patientCareplan[0].Updated_By!=null'>Last Edited by 
+                            {{patientCareplan[0].Updated_By}}
+                            {{patientCareplan[0].Updated_Date}}</span>
+                <br>
+                <span class="suggestSpan" 
+                ng-if='patientCareplanCtrl.approved==true'>
+                    Careplan is Approved</span>
+                <span class="suggestSpan"><img 
+                src="static\images\Tickmark_Icon.png"></span>
+			</div>
+			</div>
+                                               
+
+
+            <div class="col-md-6">
+            <div class="col-md-12 carePlanTopBtn ">
+			<button ui-sref='patientCareplan.editcareplan'  
+                    type="button" class="btn btn-default col-md-1 pull-right">Edit</button>
+                <div class="col-md-1 pull-right"></div>
+            <button class="btn btn-default  col-md-1 pull-right " type="button" 
+                   ng-click='patientCareplanCtrl.approveCareplan()' 
+                    ng-disabled='patientCareplanCtrl.approved'>Approve</button>  
+	        </div>
+                            
+		    </div>
+		</div>
+                                                
+	    <div class="row">
+			<div class="col-md-12">
+			<span class="subTabName"> Added Care Plan</span>
+		    <span> > </span>
+		  
+			</div>
+		</div>
+        
+				                               <div class="row" >
+													<div class="col-md-12" style="margin-top:1%;border:1px solid #275073;padding: 1%!important">
+													   <span class="" style="color:#275073;font-weight:bold">Suggestions</span>
+															
+															<!-- -->
+															<div  class="top-pad-both">
+                              
+															  <textarea class="col-md-12" type="text" id="" rows="1" placeholder="Write here" style="border:none" disabled='true'></textarea>
+															 
+															</div>
+															<!-- -->
+															
+															</th>
+													</div>
+												  </div>
+														                                  
+        <div id="carePlanTable" class="row" style="height:400px;overflow:auto">  
+            <div class="">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="">Category</th>
+                            <th class="">Task</th>
+                            <th class="">Frequency</th>
+                            <th class="">Role</th>
+                        </tr>
+                    </thead>
+                    <tbody ng-repeat='careplan in  
+                            patientCareplan track by $index'>
+                        <tr ng-repeat='i in careplan track by $index'>
+                            <td ng-if="$index == 0">{{i.Category_Desc}}</td>
+                            <td ng-if="$index > 0"></td>
+                            <td> <span>{{i.Template_Task_Desc}}</span></td>
+                            <td><span>{{i.Frequency_Desc}}</span> </td>
+                            <td><span>{{i.role}}</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+			
+	     </div>									
+	</div>
+		<div role="tabpanel" class="tab-pane" id="patientSummarytDiv">
+		</div>
+		<div role="tabpanel" class="tab-pane" id="patientSummarytDiv">
+		</div>
+							
+</div>    
+    
+    
+</body>
+   
+</html>

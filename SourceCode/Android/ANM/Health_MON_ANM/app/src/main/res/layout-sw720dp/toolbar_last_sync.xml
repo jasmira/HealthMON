@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    >
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Last Sync Data"
+        android:textColor="@color/colorWhite"
+        android:gravity="end"
+        android:textSize="@dimen/sizetexttoolbar"
+        android:id="@+id/idLastSyncData" />
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Contact"
+        android:gravity="end"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sizetexttoolbar"
+        android:id="@+id/tvdashboardlastsync"
+         />
+</LinearLayout>
+</RelativeLayout>

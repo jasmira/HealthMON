@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Patient Detailed Card-->
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_border_green"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtPriority"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorLightRed" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/imgPatient"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@mipmap/ic_launcher" />
+        <!-- First Column-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txtPatientName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Sample"
+                android:textColor="@color/colorBlue"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/txt_blue_lable_normal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txtPID" />
+
+                <TextView
+                    android:id="@+id/txtPID"
+                    style="@style/txt_blue_lable_normal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="Sample" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtAgeGender"
+                style="@style/txt_blue_lable_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Sample" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorlinegray" />
+        <!-- Second Column-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txtProgramName"
+                style="@style/txt_preview_gray_lable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/txtANCare" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txtStatus" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="" />
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorlinegray" />
+        <!-- Third Column-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="20 weeks"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/txtBMI"
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="21dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txtLMP"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/txtBP"
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="21dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txtEDD"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/txtHB"
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="21dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txtEditProfile"
+                    android:textColor="@color/colorGreenButtonDark"
+                    android:textSize="17sp" />
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorlinegray" />
+        <!-- Fourth Column-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtWeeksCount"
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="" />
+
+                <TextView
+
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtRefer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txtRefer"
+                    android:textColor="@color/colorLightRed"
+                    android:textSize="@dimen/text17sp" />
+                <TextView
+                    android:id="@+id/txtTransfer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="2dp"
+                    android:text="@string/txtTransfer"
+                    android:textColor="@color/colorLightRed"
+                    android:textSize="@dimen/text17sp" />
+                <TextView
+                    android:id="@+id/txtReSchedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txtReschedule"
+                    android:textColor="@color/colorLightRed"
+                    android:textSize="@dimen/text17sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtContact"
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Button column-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <Button
+                android:id="@+id/btnSummaryView"
+                style="@style/greenRoundButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/txtSheduleApt" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,32 @@
+<div class="top-pad-both"> 
+    <div class=" panel panel-default " style="box-shadow: 0 1px 1px rgba(0,0,0,0); border:none">
+        <div class="panel-body">
+            <div class="row">
+                <span class="transferTitles">Trends</span>
+            </div>
+            <div class="row" style="margin-top:3%">
+            <div class="col-md-7">
+                <div class="dropdownBlue" >
+                    <div class="dropdown "><div>Select Parameter To View Trend</div>
+                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="width:80%;">
+                        {{patientViewTrendsCtrl.trendParam}}
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style="width: 80%;">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="patientViewTrendsCtrl.showBPGraph()">Blood Pressure</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="patientViewTrendsCtrl.showHBGraph()">Haemoglobin</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="patientViewTrendsCtrl.showWeightGraph()">Weight</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+            </div>
+
+            <div class="row chartRowTrends" id="chartHB" ng-if="patientViewTrendsCtrl.showHBChart" ></div>
+            <div class="row chartRowTrends" id="chartBP" ng-if="patientViewTrendsCtrl.showBPChart"></div>
+            <div class="row chartRowTrends" id="chartWeight" ng-if="patientViewTrendsCtrl.showWtChart"></div>
+            <div ng-if="patientViewTrendsCtrl.noGraph"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+            </div>
+
+        </div>
+    </div>
+</div>

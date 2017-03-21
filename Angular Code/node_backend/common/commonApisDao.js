@@ -1,0 +1,883 @@
+var util = require('util');
+var path = require('path');
+var rootPath = path.resolve(".");
+var env = require(rootPath+"/config/env.js");
+var logger = require(rootPath+env.paths.utils+"logger.js");
+var connectionProvider = require(rootPath+env.paths.nodeBackend+'mysqlConnectionProvider.js');
+var currentFilePath = env.paths.daoCommon+'commonApisDao.js';
+
+var commonApisDao = {
+    
+    getHmTaskAlerts : function(userId, callback){
+      
+        var connection = connectionProvider.getMysqlConnection();
+       // var sqlStatement = "SELECT  t.*, pt.*, p.HM_Patient_id, CONCAT(p.HM_Patient_FName, ' ', p.HM_Patient_LName) patient_full_name FROM HM_User_Tasks t INNER JOIN HM_Tasks_Patient pt ON t.User_Tasks_id = pt.HM_Task_id INNER JOIN HM_Patient p ON pt.HM_Patient_id = p.HM_Patient_id WHERE t.HM_User_id =?";
+		var sqlStatement = "SELECT t.*, pt.*, p.Patient_id, CONCAT(p.Patient_FName, ' ', p.Patient_LName) patient_full_name FROM HM_User_Tasks t INNER JOIN HM_Tasks_Patient pt ON t.User_Tasks_id = pt.User_Tasks_id INNER JOIN HM_Patient p ON pt.Patient_id = p.Patient_id WHERE t.User_id = ? ";	
+        if(connection){
+           var query = connection.query(sqlStatement,[userId],function(err,result){
+                if(err){
+					//throw err;
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getHmTaskAlerts');
+                    //console.log("errorMsg=================:" + errorMsg);
+                    logger.log('node','error',errorMsg);
+					callback(result);
+				}else {
+                 
+                    callback(result);
+                    
+                }
+				
+            });			                                                         
+			connectionProvider.closeMysqlConnection(connection);
+        }
+    },
+    
+    getMOTaskAlertsNotifications : function(userId, callback){
+          var connection = connectionProvider.getMysqlConnection();
+        
+        var sqlStatement="select *from HM_User_Tasks where User_id= ?";
+        
+         if(connection){
+           var query = connection.query(sqlStatement,[userId],function(err,result){
+                if(err){
+					//throw err;
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getMOTaskAlertsNotifications');
+                    //console.log("errorMsg=================:" + errorMsg);
+                    logger.log('node','error',errorMsg);
+					callback(result);
+				}else {
+                 
+                    callback(result);
+                    
+                }
+				
+            });			                                                         
+			connectionProvider.closeMysqlConnection(connection);
+        }
+    },
+	
+	 getUserProfileInfo : function(userId, callback){
+         
+        var connection = connectionProvider.getMysqlConnection();
+        var sqlStatement ="SELECT *,(select Actor_desc from hm_actor where Actor_id=(select Actor_id from hm_user_actor where user_id='"+userId+"'))User_role from hm_user_details where User_id=?";		
+
+        if(connection){
+           var query = connection.query(sqlStatement,[userId],function(err,result){
+                if(err){
+                    //throw err;
+                    console.log(err);
+                    console.log('error............................');
+                    var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getUserProfileInfo');
+                    //console.log("errorMsg=================:" + errorMsg);                    
+                    logger.log('node','error',errorMsg);
+                    callback(result);
+                }else {
+                   
+                    callback(result);
+                }
+            });
+            //console.log(query.sql);                                                               
+            connectionProvider.closeMysqlConnection(connection);
+        }
+     },
+	  getUserList : function(callback){
+         
+       var connection = connectionProvider.getMysqlConnection();     
+        var sqlStatement ="select a.User_id as HM_User_id,a.User_Name as User_Name,c.Actor_desc as User_role,b.Programs_id as Programs_id from HM_User_Details a, hm_user_actor b, hm_actor c where a.User_id = b.User_id and b.Actor_id = c.Actor_id";		
+		
+		if(connection){
+           var query = connection.query(sqlStatement,function(err,result){
+                if(err){
+					//throw err;
+                    console.log(err);
+					console.log('error............................');
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getUserList');
+                    //console.log("errorMsg=================:" + errorMsg);                    
+                    logger.log('node','error',errorMsg);
+					callback(result);
+				}else {                    
+                    
+                    callback(result);
+				}
+            });
+			//console.log(query.sql);                                                               
+			connectionProvider.closeMysqlConnection(connection);
+       }
+     },
+
+	 getAshaAnmUserList : function(callback){
+         
+       var connection = connectionProvider.getMysqlConnection();     
+        var sqlStatement ="select a.User_id as HM_User_id,a.User_Name as User_Name,c.Actor_desc as User_role,b.Programs_id as Programs_id from HM_User_Details a,hm_user_actor b, hm_actor c where a.User_id = b.User_id and b.Actor_id = c.Actor_id and (b.Actor_id = 3 or b.Actor_id = 4) ";		
+		
+		if(connection){
+           var query = connection.query(sqlStatement,function(err,result){
+                if(err){
+					//throw err;
+                    console.log(err);
+					console.log('error............................');
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getAshaAnmUserList');
+                    //console.log("errorMsg=================:" + errorMsg);                    
+                    logger.log('node','error',errorMsg);
+					callback(result);
+				}else {                    
+                    
+                    callback(result);
+				}
+            });
+			//console.log(query.sql);                                                               
+			connectionProvider.closeMysqlConnection(connection);
+       }
+     },
+	 getMoUserList : function(callback){
+         
+       var connection = connectionProvider.getMysqlConnection();     
+        var sqlStatement ="select a.*,c.Actor_desc as User_role,b.Programs_id as Programs_id from HM_User_Details a,hm_user_actor b, hm_actor c where a.User_id = b.User_id and b.Actor_id = c.Actor_id and (b.Actor_id = 2) ";		
+		
+		if(connection){
+           var query = connection.query(sqlStatement,function(err,result){
+                if(err){
+					//throw err;
+                    console.log(err);
+					console.log('error............................');
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getMoUserList');
+                    //console.log("errorMsg=================:" + errorMsg);                    
+                    logger.log('node','error',errorMsg);
+					callback(result);
+				}else {                    
+                    
+                    callback(result);
+				}
+            });
+			//console.log(query.sql);                                                               
+			connectionProvider.closeMysqlConnection(connection);
+       }
+     },
+
+	 getPatientList : function(userId, callback){
+         var finalresult = null;
+         var connection = connectionProvider.getMysqlConnection();
+         var sqlStatement = "SELECT `hmp`.*, `hmpdt`.`Program_item_value` AS `EDD`, (SELECT `Program_item_value` FROM `hm_program_details_transactions` WHERE `Patient_id`=`hmp`.`Patient_id` AND `Program_item_id`=1 LIMIT 1) AS `LMPDate`, (SELECT `Referal_id` from `hm_referals` WHERE `Patient_id`=`hmp`.`Patient_id` ORDER BY `Created_Date` desc LIMIT 1) AS `Referal_id`, `hms`.`OverallFlag`, (SELECT `Device_Attributes_value` from `hm_patients_device_reading` WHERE `Patient_id`=`hmp`.`Patient_id` AND `Devices_id`=4 ORDER BY `Created_Date` desc LIMIT 1) AS hb, (SELECT `Device_Attributes_value` from `hm_patients_device_reading` WHERE `Patient_id`=`hmp`.`Patient_id` AND `Devices_id`=1 AND `Device_Attributes_id`=1 ORDER BY `Created_Date` desc LIMIT 1) AS `bp`, (SELECT count(`Appointment_id`) from `hm_appointments` WHERE `Patient_id`=`hmp`.`Patient_id`) AS `appointment_count` FROM `hm_patient` AS `hmp` JOIN `hm_program_details_transactions` AS `hmpdt` ON `hmp`.`Patient_id` = `hmpdt`.`Patient_id` LEFT JOIN `hm_severity` AS `hms` ON `hmp`.`Patient_id`=`hms`.`Patient_id` WHERE `hmpdt`.`Program_item_id` = 2 AND DATE(`hmpdt`.`Program_item_value`) >= CURDATE()";
+    
+        if(userId > 0) {
+            var condition = ""; // add condition for getting patients for specific actor
+            sqlStatement = sqlStatement.concat(condition);
+        }
+        var orderByCondition = " ORDER BY `hmp`.`Created_Date` DESC;";
+        sqlStatement = sqlStatement.concat(orderByCondition);
+
+        if(connection){
+           var query = connection.query(sqlStatement,[userId],function(err,result){
+                if(err){
+					//throw err;
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getPatientList');
+                    logger.log('node','error',errorMsg);
+					callback({status: 'All Patients data fetching failed!'});
+				}else {
+                    callback(result);                  
+				}
+            });
+            connectionProvider.closeMysqlConnection(connection);
+        }         
+     },
+
+     getReferredPatientList : function(userId, callback){
+         
+        var connection = connectionProvider.getMysqlConnection();
+         
+        var sqlStatement2 ="SELECT patient_id FROM HM_referals";
+                if(connection){
+                    var query = connection.query(sqlStatement2, function(err,result){
+                        if(err){
+                            //throw err;
+                            console.log(err);
+                            var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                            errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 
+                                                'getReferredPatientList => fetching referrals error');
+                            logger.log('node','error',errorMsg);
+                             connectionProvider.closeMysqlConnection(connection);
+                            callback({status: 'Referred Patients data fetching fail'});
+                        }else {
+                            finalresult = {'referred_patients' : result};
+                            connectionProvider.closeMysqlConnection(connection);
+                            callback(finalresult);
+                        }
+                    });
+                }
+         
+     },
+    
+    getPatientCareplan : function(patientId, callback){
+        
+        var connection = connectionProvider.getMysqlConnection();
+        var finalresult = null;
+        var patientCarePlan = null;
+
+        if(connection){
+            var sqlStatement1 = "SELECT `p`.`Template_id`, `p`.`Created_By`, `p`.`Created_Date`, `p`.`Updated_By`, `p`.`Updated_Date`, `c`.`Category_Desc`, `t`.`Template_Task_Desc`,`p`.`role`,(select `Frequency_Desc` from `HM_CP_frequency_details` where `frequency_detail_id`=`p`.`frequency_detail_id`)Frequency_Desc, (SELECT `User_Name` FROM `hm_user_details` WHERE `User_id`=`p`.`User_id`) AS `MedicineGivenBy_User_Name`, (SELECT `User_Place_ofWork` FROM `hm_user_details` WHERE `User_id`=`p`.`User_id`) AS `PHC`, (SELECT `Template_Name` FROM `hm_cp_templates` WHERE `Template_id`=`p`.`Template_id`) AS `template_name`, `p`.`Approved` FROM `hm_cp_patient` AS `p` LEFT JOIN `hm_cp_tasks` AS `t` ON `p`.`Template_id`=`t`.`Template_id` AND `p`.`Template_Task_id`=`t`.`Template_Task_id` LEFT JOIN `hm_cp_frequency` AS `f` ON `p`.`Template_id`=`f`.`Template_id` AND `p`.`Frequency_id`=`f`.`Frequency_id` LEFT JOIN `hm_cp_category` AS `c` ON `p`.`Template_id`=`c`.`Template_id` AND `p`.`Category_id`=`c`.`Category_id` where `p`.`Patient_id`=? ORDER BY `p`.`Category_id`";
+            
+            var query = connection.query(sqlStatement1, [patientId], function(err,result){
+                if(err){
+                    //throw err;
+                    console.log(err);
+                    var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getPatientCareplan => CP error');
+                    logger.log('node','error',errorMsg);
+                    callback({status: 'Patient care plan data fetching fail'});
+                    connectionProvider.closeMysqlConnection(connection);
+                }else {
+                    //callback(result);
+                    patientCarePlan = result;
+                    var sqlStatement2 = "SELECT hmm.DrugId, hmm.Medicine_Qty, hmm.Duration_In_Days, hmm.Created_By, hmm.Created_Date, hmd.DrugName, hmd.DrugForm, hmd.Route, hmd.Units, hmd.DrugDescription, hud.User_Name, hud.User_Name, (select PHC_NAME from hm_phc where PHC_ID=hud.PHC_ID)PHC FROM `hm_medication` hmm INNER JOIN hm_drugmaster hmd ON hmm.DrugId = hmd.DrugId LEFT JOIN hm_user_details hud ON hud.User_id = hmm.Created_By WHERE patient_id= ?";
+                    var query = connection.query(sqlStatement2, [patientId], function(err,result){
+                        if(err){
+                            //throw err;
+                            console.log(err);
+                            var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                            errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getPatientCareplan => medication error');
+                            logger.log('node','error',errorMsg);
+                            callback({status: 'Patient medication data fetching fail'});
+                        }else {
+                            finalresult = {'patientCarePlan' : patientCarePlan, 'medication' : result};
+                            callback(finalresult);
+                        }
+                    });
+                    connectionProvider.closeMysqlConnection(connection);
+                }
+            });
+        }
+    },
+     getAllPatientsMedicationInfo : function(callback) {
+        var connection=connectionProvider.getMysqlConnection();
+        var sqlStatement='select (select Template_Task_Desc from hm_cp_tasks where Template_Task_id=p.Template_Task_id)Template_Task_Desc,Patient_id,User_id,Created_Date from hm_cp_patient p';
+         var query = connection.query(sqlStatement, function(err,result) {
+                if(err){
+                    //throw err;
+                    console.log(err);
+                    var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getAllPatientsMedicationInfo => CP error');
+                    logger.log('node','error',errorMsg);
+                    connectionProvider.closeMysqlConnection(connection);
+                    callback({status: 'All Patient care plan data get fail'});
+                    
+                }else {
+                    var medications=[];
+                    for(var i in result){
+                       
+                        if(result[i].Template_Task_Desc=='TT2' || result[i].Template_Task_Desc=='TT1' ||
+                          result[i].Template_Task_Desc=='IFA' || 
+                           result[i].Template_Task_Desc=='TT_Booster'){
+                       
+                        medications.push({Patient_id:result[i].Patient_id,Medication :   
+                        result[i].Template_Task_Desc,Medication_given_by:result[i].User_id,
+                        Created_Date:result[i].Created_Date});
+                        }
+                    }
+                    
+                    connectionProvider.closeMysqlConnection(connection);
+                    callback(medications);
+                }
+     });
+    },
+    getCareplanTemplate : function(template_name,callback){
+        var connection=connectionProvider.getMysqlConnection();
+        var sqlStatement="select template.Template_id,(select Frequency_Desc from HM_CP_frequency_details where frequency_detail_id=f.frequency_detail_id)Frequency_Desc,c.Category_Desc,t.Template_Task_Desc,(select Actor_desc from hm_actor where Actor_id=t.Actor_id)role from hm_cp_frequency as f INNER JOIN hm_cp_tasks t ON f.Template_Task_id=t.Template_Task_id INNER JOIN hm_cp_category c ON f.Category_id=c.Category_id INNER JOIN hm_cp_templates template ON f.Template_id= template.Template_id where template.Template_Name='"+template_name+"'";
+        
+         var query = connection.query(sqlStatement, function(err,result) {
+                if(err){
+                    //throw err;
+                    console.log(err);
+                    var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getCareplanTemplate => CP error');
+                    logger.log('node','error',errorMsg);
+                    connectionProvider.closeMysqlConnection(connection);
+                    callback({status: 'getCareplanTemplatecare data get fail'});
+                    
+                }else {
+                    connectionProvider.closeMysqlConnection(connection);
+                    callback(result);
+                }
+         
+         
+     });
+        
+        
+    },
+    
+     getAllCareplanTemplates : function(callback){
+         
+          var connection=connectionProvider.getMysqlConnection();
+        var sqlStatement="select template.Template_id,template.Template_Name,(select Frequency_Desc from HM_CP_frequency_details where frequency_detail_id=f.frequency_detail_id)Frequency_Desc,c.Category_Desc,t.Template_Task_Desc,(select Actor_desc from hm_actor where Actor_id=t.Actor_id)role from hm_cp_frequency as f INNER JOIN hm_cp_tasks t ON f.Template_Task_id=t.Template_Task_id INNER JOIN hm_cp_category c ON f.Category_id=c.Category_id INNER JOIN hm_cp_templates template ON f.Template_id= template.Template_id";
+        
+         var query = connection.query(sqlStatement, function(err,result) {
+                if(err){
+                    //throw err;
+                    console.log(err);
+                    var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getAllCareplanTemplates => CP error');
+                    logger.log('node','error',errorMsg);
+                    connectionProvider.closeMysqlConnection(connection);
+                    callback({status: 'getAllCareplanTemplates data get fail'});
+                    
+                }else {
+                    connectionProvider.closeMysqlConnection(connection);
+                    callback(result);
+                }
+         
+         
+     });
+        
+     },
+   
+    
+    setPatientCareplan : function(patientId,data,callback) {
+      
+        var remaining=data.length;
+        var connection = connectionProvider.getMysqlConnection();
+        
+        
+        var connection1=connectionProvider.getMysqlConnection();
+        var sqlStatement="delete from hm_cp_patient where Patient_id='"+patientId+"'";
+        var Category_id,Template_Task_id;       
+            
+         var query = connection1.query(sqlStatement, function(err,result) {
+                if(err){
+                    //throw err;
+                    console.log(err);
+                    var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'setPatientCareplan => CP error');
+                    logger.log('node','error',errorMsg);
+                    connectionProvider.closeMysqlConnection(connection1);
+                    callback({status: 'Patient care plan data set fail'});
+                    
+                }else {
+                 
+                //set task for MO 'Approve care plan of particular patient'
+                var Approved=data[0].Approved;
+            if(Approved==0){
+                
+                 var stmt="select Patient_FName,Patient_LName from hm_patient where Patient_id=?";
+                 var query = connection1.query(stmt,[patientId],function(err,result) {
+                if(err){
+                    //throw err;
+                    console.log(err);
+                    var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'setPatientCareplan => CP error');
+                    logger.log('node','error',errorMsg);
+                  
+                    callback({status: 'Patient care plan data set fail'});
+                    
+                }else {
+                           
+            var task=["MO1",1,"Approve care plan of patient","Approve care plan of patient "+result[0].Patient_FName+" "+result[0].Patient_LName+"(PID:  "+patientId+")","task",3,data[0].Created_Date,1,null,data[0].Created_Date,data[0].Created_By];
+    
+                
+             var commonApisDaoObj = require(env.paths.root+env.paths.daoCommon+'commonApisDao.js');
+	         commonApisDaoObj.addMoTaskAlertNotification(task,function(result){
+	   
+              });
+            }
+               
+              });
+                
+                 connectionProvider.closeMysqlConnection(connection1);
+           
+            }
+            else{
+               
+                var connection2=connectionProvider.getMysqlConnection();
+                var stmt="select Patient_FName,Patient_LName from hm_patient where Patient_id=?";
+                 var query = connection1.query(stmt,[patientId],function(err,result) {
+                if(err){
+                    //throw err;
+                    console.log(err);
+                    var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'setPatientCareplan => CP error');
+                    logger.log('node','error',errorMsg);
+                     connectionProvider.closeMysqlConnection(connection1);
+                    callback({status: 'Patient care plan data set fail'});
+                    
+                }else {
+                     connectionProvider.closeMysqlConnection(connection1);
+                    
+                       var connection2=connectionProvider.getMysqlConnection();
+                    var desc="Approve care plan of patient "+result[0].Patient_FName+" "+result[0].Patient_LName+"(PID:  "+patientId+")";
+                
+                var stmt="delete from hm_user_tasks where User_Task_Description=?";
+                  var query = connection2.query(stmt,[desc],function(err,result) {
+                if(err){
+                    //throw err;
+                    console.log(err);
+                    var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'setPatientCareplan => CP error');
+                    logger.log('node','error',errorMsg);
+                  
+                    callback({status: 'Patient care plan data set fail'});
+                    
+                }else {
+                    
+                }
+             connectionProvider.closeMysqlConnection(connection2);
+              });
+                }
+                   
+                });
+            }
+              
+            for(var i in data) {
+
+            if(connection){
+            
+              if(data[i].MedicineGivenBy_User_Name!='' && data[i].MedicineGivenBy_User_Name!=null)
+              var sqlStatement1 = "insert into hm_cp_patient values ('"+patientId+"',(select Template_id from hm_cp_tasks where Template_Task_Desc='"+data[i].Template_Task_Desc+"'),(select Category_id from hm_cp_category where Category_Desc='"+data[i].Category_Desc+"'&& Template_id=(select Template_id from hm_cp_tasks where Template_Task_Desc='"+data[i].Template_Task_Desc+"')),(select Template_Task_id from hm_cp_tasks where Template_Task_Desc='"+data[i].Template_Task_Desc+"'),null,(select frequency_detail_id from hm_cp_frequency_details where frequency_Desc='"+data[i].Frequency_Desc+"'),(select User_id from hm_user_details where User_Name='"+data[i].MedicineGivenBy_User_Name+"'),'"+data[i].role+"','"
++data[i].Created_By+"','"+data[i].Created_Date+"','"+data[i].Updated_By+"','"+data[i].Updated_Date+"',"+data[i].Approved+")";
+
+                else
+                    var sqlStatement1 = "insert into hm_cp_patient values ('"+patientId+"',(select Template_id from hm_cp_tasks where Template_Task_Desc='"+data[i].Template_Task_Desc+"'),(select Category_id from hm_cp_category where Category_Desc='"+data[i].Category_Desc+"'&& Template_id=(select Template_id from hm_cp_tasks where Template_Task_Desc='"+data[i].Template_Task_Desc+"')),(select Template_Task_id from hm_cp_tasks where Template_Task_Desc='"+data[i].Template_Task_Desc+"'),null,(select frequency_detail_id from hm_cp_frequency_details where frequency_Desc='"+data[i].Frequency_Desc+"'),null,'"+data[i].role+"','"
++data[i].Created_By+"','"+data[i].Created_Date+"','"+data[i].Updated_By+"','"+data[i].Updated_Date+"',"+data[i].Approved+")";
+
+             var query = connection.query(sqlStatement1, function(err,result) {
+                if(err){
+                    //throw err;
+                    console.log(err);
+                   
+                    var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'setPatientCareplan => CP error');
+                    logger.log('node','error',errorMsg);
+                    connectionProvider.closeMysqlConnection(connection);
+                    callback({status: 'Patient care plan data set fail'});
+                    
+                }else {
+                     remaining-=1;
+                     if(remaining==0){
+                        connectionProvider.closeMysqlConnection(connection);
+                        callback([{status:'data inserted'}]);
+                     }
+                 }                    
+               });
+            }   
+        }
+                      
+       }                    
+    });
+},
+   
+    setMedicationGivenBy :  function(data,callback){
+        //userName,Template_Task_Desc,Template_Name
+        
+        var connection = connectionProvider.getMysqlConnection();
+    var sqlStatement = "update hm_cp_patient set User_id=(select User_id from hm_user_details where User_Name='"+data.MedicineGivenBy_User_Name+"'),Updated_By=(select User_id from hm_user_details where User_Name='"+data.MedicineGivenBy_User_Name+"'),Updated_Date='"+data.Updated_Date+"' where Template_Task_id=(select Template_Task_id from hm_cp_tasks where Template_Task_Desc='"+data.Template_Task_Desc+"') && Patient_id='"+data.Patient_Id+"'";
+        
+        
+        if(connection){
+           var query = connection.query(sqlStatement,function(err,result){
+                if(err){
+					//throw err;
+                    console.log(err);
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getLearningContents');
+                    //console.log("errorMsg=================:" + errorMsg);
+                    logger.log('node','error',errorMsg);
+                    connectionProvider.closeMysqlConnection(connection);
+					callback(result);
+				}else {         
+                    connectionProvider.closeMysqlConnection(connection);
+                    callback(result);
+				}
+            });
+			//console.log(query.sql);                                                               
+			
+        }          
+   },
+    
+    getTasksAccordingTocategory :  function(category_Desc,callback){
+         
+        var connection = connectionProvider.getMysqlConnection();
+        
+        var sqlStatement = "select t.Template_Task_Desc, t.Template_id from hm_cp_tasks as t INNER JOIN hm_cp_category as c ON t.category_id=c.category_id where c.Category_Desc='"+category_Desc+"'";
+        
+        if(connection){
+           var query = connection.query(sqlStatement,function(err,result){
+                if(err){
+					//throw err;
+                    console.log(err);
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getLearningContents');
+                    //console.log("errorMsg=================:" + errorMsg);
+                    logger.log('node','error',errorMsg);
+                    connectionProvider.closeMysqlConnection(connection);
+					callback(result);
+				}else {         
+                    connectionProvider.closeMysqlConnection(connection);
+                    callback(result);
+				}
+            });
+			//console.log(query.sql);                                                               
+			
+        }         
+         
+         
+    },
+
+   getLearningContents : function(userType, userId, callback){
+        var connection = connectionProvider.getMysqlConnection();
+        var sqlStatement = "SELECT hmlc.*, hmp.program_desc FROM `hm_learning_content` hmlc INNER JOIN hm_programs hmp ON hmp.Programs_id = hmlc.Programs_id WHERE learning_user_type = ?";
+
+       // if(userId > 0) {
+           // var condition = " AND hm_user_id = ?"; // add condition for getting patients for specific actor
+           // sqlStatement = sqlStatement.concat(condition);
+       // }
+
+        if(connection){
+           var query = connection.query(sqlStatement,[userType, userId],function(err,result){
+                if(err){
+					//throw err;
+                    console.log(err);
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getLearningContents');
+                    //console.log("errorMsg=================:" + errorMsg);
+                    logger.log('node','error',errorMsg);
+					callback(result);
+				}else {                    
+                    callback(result);
+				}
+            });
+			//console.log(query.sql);                                                               
+			connectionProvider.closeMysqlConnection(connection);
+        }         
+    },
+
+    addMyActivities : function(MyActivities,callback){
+        var connection = connectionProvider.getMysqlConnection();
+        var sqlStatement = "INSERT INTO HM_User_Tasks (User_id,Programs_id,Andriod_User_Tasks_id,User_Task_Name,User_Task_Description,Created_Date,User_Task_Type,User_Task_Date,Set_Reminder,User_Reminder_interval,Created_by,Task_Status) VALUES ?";
+      
+        if(connection){
+            var query = connection.query(sqlStatement,[MyActivities],function(err,result){
+                 if(err){
+                    //throw err;
+                    console.log(err);
+                    var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'addMyActivities');
+                    logger.log('node','error',errorMsg);
+                    callback({status: 'fail'});
+                }else {                    
+                    callback({status: 'success'});
+                }
+            });
+			//console.log(query.sql);	
+            connectionProvider.closeMysqlConnection(connection);
+        }
+    },
+	setAndriodUserTasksid : function(Andriod_User_Tasks_id,User_Tasks_id,callback){
+        var connection = connectionProvider.getMysqlConnection();
+        var sqlStatement = "UPDATE HM_User_Tasks SET Andriod_User_Tasks_id = ? WHERE User_Tasks_id = ? ";
+
+        if(connection){
+           var query = connection.query(sqlStatement,[Andriod_User_Tasks_id, User_Tasks_id],function(err,result){
+                if(err){
+					//throw err;
+                    console.log(err);
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'setAndriodUserTasksid');
+                    logger.log('node','error',errorMsg);
+					callback({status: 'fail'});
+				}else {
+                    callback({status: 'success'});
+				}
+            });
+			
+			connectionProvider.closeMysqlConnection(connection);
+        }
+    },
+    
+    setTaskViewedForHMUserTasks : function(User_Tasks_id,callback){
+        var connection = connectionProvider.getMysqlConnection();
+        var sqlStatement = "UPDATE HM_User_Tasks SET Task_Viewed = 1 WHERE User_Tasks_id = ? ";
+
+        if(connection){
+           var query = connection.query(sqlStatement,[User_Tasks_id],function(err,result){
+                if(err){
+					//throw err;
+                    console.log(err);
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'setTaskViewedForHMUserTasks');
+                    logger.log('node','error',errorMsg);
+					callback({status: 'fail'});
+				}else {
+                    callback({status: 'success'});
+				}
+            });
+			connectionProvider.closeMysqlConnection(connection);
+        }
+    },
+
+    getMyActivities : function(Hm_User_id,callback){
+                  
+        var connection = connectionProvider.getMysqlConnection();
+        var sqlStatement = "SELECT a.*,b.User_Name as createdByName  FROM HM_User_Tasks a, hm_user_details b WHERE a.User_id = ? and a.User_Task_Type = 'myactivity' and a.Created_by = b.User_id";
+      
+       if(connection){
+            var query = connection.query(sqlStatement,[Hm_User_id],function(err,result){
+                if(err){
+					//throw err;
+                    console.log(err);
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getMyActivities');
+                    logger.log('node','error',errorMsg);
+					callback(result);
+				}else {                    
+                    callback(result);
+				}
+            });
+			//console.log(query.sql);	
+            connectionProvider.closeMysqlConnection(connection);
+         }
+    },
+	editMyActivity : function(data,Andriod_User_Tasks_id,callback){
+        var connection = connectionProvider.getMysqlConnection();
+        var sqlStatement = "UPDATE hm_user_tasks set ? WHERE Andriod_User_Tasks_id = ? ";
+        if(connection){
+           var query = connection.query(sqlStatement,[data,Andriod_User_Tasks_id], function(err,result){
+                if(err){
+					//throw err;
+                    console.log(err);
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'editSelfActivity');
+                    //console.log("errorMsg=================:" + errorMsg);
+                    logger.log('node','error',errorMsg);
+					callback({status: 'fail'});
+				}else {                    
+                    callback({status: 'success'});
+				}
+            });
+			//console.log(query.sql);
+			connectionProvider.closeMysqlConnection(connection);
+        }
+    },
+	addAppointments : function(appointments,callback){
+        var connection = connectionProvider.getMysqlConnection();
+        var sqlStatement = "INSERT INTO hm_appointments (User_id,Patient_id,Appointment_Date,Appointment_new_old_flag,Created_Date,Created_By,Referred,AcceptedFlag) VALUES ?";
+      
+        if(connection){
+            var query = connection.query(sqlStatement,[appointments],function(err,result){
+                 if(err){
+                    //throw err;
+                    console.log(err);
+                    var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'addAppointments');
+                    logger.log('node','error',errorMsg);
+                    callback({status: 'fail'});
+                }else {                    
+                    callback({status: 'success'});
+                }
+            });
+			//console.log(query.sql);	
+            connectionProvider.closeMysqlConnection(connection);
+        }
+    },
+	 getActivities : function(Hm_User_id,callback){
+                  
+        var connection = connectionProvider.getMysqlConnection();
+        var sqlStatement = "SELECT a.*,b.User_Name as createdByName  FROM HM_User_Tasks a, hm_user_details b WHERE a.User_id = ? and a.User_Task_Type = 'activity' and a.Created_by = b.User_id";
+      
+       if(connection){
+            var query = connection.query(sqlStatement,[Hm_User_id],function(err,result){
+                if(err){
+					throw err;
+                    console.log(err);
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getActivities');
+                    logger.log('node','error',errorMsg);
+					callback(result);
+				}else {                    
+                    callback(result);
+				}
+            });
+			//console.log(query.sql);	
+            connectionProvider.closeMysqlConnection(connection);
+         }
+    },
+	addMoTaskAlertNotification : function(data,callback){
+        
+        var connection = connectionProvider.getMysqlConnection();
+        
+        var sqlStatement = "INSERT INTO hm_user_tasks(User_id,Programs_id,User_Task_Name,User_Task_Description,User_Task_Type,User_Task_Severity,User_Task_Date,User_Task_Actionable,User_Task_Action,Created_Date,Created_by) VALUES (?)";
+
+        if(connection){
+            var query = connection.query(sqlStatement,[data],function(err,result){
+                 if(err){
+                    //throw err;
+                    console.log(err);
+                    var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'addMoTaskAlertNotification');
+                    logger.log('node','error',errorMsg);
+                    callback({status: 'fail'});
+                }else {                    
+                    callback({status: 'success'});
+                }
+            });
+			
+            connectionProvider.closeMysqlConnection(connection);
+        }
+    },
+	addPatientinvestigationtestData : function(data,callback){
+        var connection = connectionProvider.getMysqlConnection();
+        var sqlStatement = "INSERT INTO hm_patientinvestigationtest(Patient_id,InvestigationTest_id,Quantity,Comments,Status,Resolved_Date,UploadReportPath) VALUES ?";
+      
+        if(connection){
+            var query = connection.query(sqlStatement,[data],function(err,result){
+                 if(err){
+                    //throw err;
+                    console.log(err);
+                    var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'addPatientinvestigationtestData');
+                    logger.log('node','error',errorMsg);
+                    callback({status: 'fail'});
+                }else {                    
+                    callback({status: 'success'});
+                }
+            });
+			//console.log(query.sql);	
+            connectionProvider.closeMysqlConnection(connection);
+        }
+    },
+	addPatientdiagnosisData : function(data,callback){
+        var connection = connectionProvider.getMysqlConnection();
+        var sqlStatement = "INSERT INTO hm_patientdiagnosis (Patient_id,Diagnosis_id,Comments,User_id) VALUES ?";
+      
+        if(connection){
+            var query = connection.query(sqlStatement,[data],function(err,result){
+                 if(err){
+                    //throw err;
+                    console.log(err);
+                    var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'addPatientdiagnosisData');
+                    logger.log('node','error',errorMsg);
+                    callback({status: 'fail'});
+                }else {                    
+                    callback({status: 'success'});
+                }
+            });
+			//console.log(query.sql);	
+            connectionProvider.closeMysqlConnection(connection);
+        }
+    },
+	addPatientprocedureData : function(data,callback){
+        var connection = connectionProvider.getMysqlConnection();
+        var sqlStatement = "INSERT INTO hm_patientprocedure(Patient_id,Procedure_id,Comments,User_id,Resolved_Date,UploadReportPath) VALUES ?";
+      
+        if(connection){
+            var query = connection.query(sqlStatement,[data],function(err,result){
+                 if(err){
+                    //throw err;
+                    console.log(err);
+                    var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'addPatientprocedureData');
+                    logger.log('node','error',errorMsg);
+                    callback({status: 'fail'});
+                }else {                    
+                    callback({status: 'success'});
+                }
+            });
+			//console.log(query.sql);	
+            connectionProvider.closeMysqlConnection(connection);
+        }
+    },
+	getPatientMedications : function(patientId,callback){
+                  
+        var connection = connectionProvider.getMysqlConnection();
+        var sqlStatement = "SELECT a.*,b.DrugName FROM hm_medication a, hm_drugmaster b WHERE a.Patient_id = ? and a.DrugId = b.DrugId";
+      
+       if(connection){
+            var query = connection.query(sqlStatement,[patientId],function(err,result){
+                if(err){
+					throw err;
+                    console.log(err);
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getPatientMedications');
+                    logger.log('node','error',errorMsg);
+					callback(result);
+				}else {                    
+                    callback(result);
+				}
+            });
+			//console.log(query.sql);	
+            connectionProvider.closeMysqlConnection(connection);
+         }
+    },
+	getPatientdiagnosis : function(patientId,callback){
+                  
+        var connection = connectionProvider.getMysqlConnection();
+        var sqlStatement = "SELECT a.*, b.DiagnosisType, c.User_Name FROM hm_patientdiagnosis a, hm_diagnosis b, hm_user_details c WHERE a.Patient_id = ? and a.Diagnosis_id = b.Diagnosis_id and c.User_id = a.User_id";
+      
+       if(connection){
+            var query = connection.query(sqlStatement,[patientId],function(err,result){
+                if(err){
+					throw err;
+                    console.log(err);
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getPatientdiagnosis');
+                    logger.log('node','error',errorMsg);
+					callback(result);
+				}else {                    
+                    callback(result);
+				}
+            });
+			//console.log(query.sql);	
+            connectionProvider.closeMysqlConnection(connection);
+         }
+    },
+	getPatientinvestigationtest : function(patientId,callback){
+                  
+        var connection = connectionProvider.getMysqlConnection();
+        var sqlStatement = "SELECT a.*, b.InvestigationTestType FROM hm_patientinvestigationtest a, hm_investigationtest b WHERE a.Patient_id = ? and a.InvestigationTest_id = b.InvestigationTest_id";
+      
+       if(connection){
+            var query = connection.query(sqlStatement,[patientId],function(err,result){
+                if(err){
+					throw err;
+                    console.log(err);
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getPatientinvestigationtest');
+                    logger.log('node','error',errorMsg);
+					callback(result);
+				}else {                    
+                    callback(result);
+				}
+            });
+			//console.log(query.sql);	
+            connectionProvider.closeMysqlConnection(connection);
+         }
+    },
+	getPatientprocedure : function(patientId,callback){
+                  
+        var connection = connectionProvider.getMysqlConnection();
+        var sqlStatement = "SELECT a.*, b.ProcedureType FROM hm_patientprocedure a, hm_procedures b WHERE a.Patient_id = ? and a.Procedure_id = b.Procedure_id";
+      
+       if(connection){
+            var query = connection.query(sqlStatement,[patientId],function(err,result){
+                if(err){
+					throw err;
+                    console.log(err);
+					var errorMsg = util.inspect(err, {showHidden: false, depth: null});
+                    errorMsg = logger.concatPathInError(errorMsg, currentFilePath, 'getPatientprocedure');
+                    logger.log('node','error',errorMsg);
+					callback(result);
+				}else {                    
+                    callback(result);
+				}
+            });
+			//console.log(query.sql);	
+            connectionProvider.closeMysqlConnection(connection);
+         }
+    },
+  
+}
+module.exports = commonApisDao;

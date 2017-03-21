@@ -1,0 +1,20 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/layout_root"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawVerticalTrack="true" >
+
+        <ImageView android:id="@+id/refer_doc_popup"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_landing_refertodoc"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+</ScrollView>

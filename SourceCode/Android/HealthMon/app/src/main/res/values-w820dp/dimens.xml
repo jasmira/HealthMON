@@ -1,0 +1,65 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="stdRowSize">38dp</dimen>
+    <dimen name="stdWidthPatientRegEdttext">300dp</dimen>
+    <!-- Text size dimens-->
+    <dimen name="text17sp">17sp</dimen>
+    <dimen name="text20sp">20sp</dimen>
+    <dimen name="text18sp">18sp</dimen>
+
+
+    <!-- Landing Screen-->
+    <dimen name="heightoftoolbar">75dp</dimen>
+    <dimen name="heightoftoolbarprofileImage">62dp</dimen>
+    <dimen name="heightlayoutheading">30dp</dimen>
+    <dimen name="sizetextheading">20sp</dimen>
+    <dimen name="paddingheadingtophelpguide">10dp</dimen>
+    <dimen name="paddingheadingallleft">5dp</dimen>
+    <dimen name="heightsearchview">35dp</dimen>
+    <dimen name="sizetexttoolbar">12sp</dimen>
+    <dimen name="paddinguseronline">5dp</dimen>
+    <dimen name="paddinguseronlineouter">2dp</dimen>
+    <dimen name="radiususeronline">35dp</dimen>
+    <dimen name="widthstrokeuseronline">8dp</dimen>
+    <!--Task Row-->
+    <dimen name="task_row_text_view_sms_count_dimen">18dp</dimen>
+    <dimen name="task_row_img_size">38dp</dimen>
+    <dimen name="task_row_status_size">48dp</dimen>
+    <dimen name="task_row_address">18sp</dimen>
+    <dimen name="task_row_body">12sp</dimen>
+    <dimen name="task_row_count">16sp</dimen>
+    <dimen name="task_row_unread_count">10dp</dimen>
+    <dimen name="task_row_date">12sp</dimen>
+    <dimen name="task_row_margin_bottom">8dp</dimen>
+    <dimen name="task_row_margin_right">10dp</dimen>
+    <dimen name="task_row_margin_right_overdue_count">15dp</dimen>
+    <integer name="task_row_max_address_size">18</integer>
+    <!--Task Search-->
+    <dimen name="task_search_padding">12dp</dimen>
+    <!--DashboardPanel-->
+    <dimen name="widthdashboardlayout">150dp</dimen>
+    <dimen name="heightdashboardpanelbutton">80dp</dimen>
+    <dimen name="margintopdashboardpanelbutton">9dp</dimen>
+    <dimen name="sizetexttopdashboardpanelbutton">17sp</dimen>
+
+    <!--Asha POP up-->
+    <dimen name="margintopashadetails">20dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!--<dimen name="activity_horizontal_margin">16dp</dimen>-->
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="tile_icons_size">30dp</dimen>
+    <dimen name="capture_buttons_between_margin">70dp</dimen>
+
+
+    <!--Feedback Radio-->
+    <dimen name="feedbackStronglyAgreeRight">39dp</dimen>
+    <dimen name="feedbackAgreeRight">62dp</dimen>
+    <dimen name="feedbackDisgreeRight">109dp</dimen>
+    <dimen name="feedbackStronglyDisagreeRight">62dp</dimen>
+
+</resources>

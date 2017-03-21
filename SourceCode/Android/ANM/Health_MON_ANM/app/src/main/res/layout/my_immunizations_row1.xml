@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorlinegray"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/imName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/stdRowHeader"
+        android:layout_margin="1dp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="TT2"
+        android:textColor="@color/colorBlue"
+        android:background="@color/colorWhite"
+        android:textSize="@dimen/text17sp" />
+
+    <TextView
+        android:id="@+id/imQuantity"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/stdRowHeader"
+        android:layout_margin="1dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="1"
+        android:textColor="@color/colorBlue"
+        android:background="@color/colorWhite"
+        android:textSize="@dimen/text17sp" />
+
+    <TextView
+        android:id="@+id/imRole"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/stdRowHeader"
+        android:layout_margin="1dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="ANM"
+        android:textColor="@color/colorBlue"
+        android:background="@color/colorWhite"
+        android:textSize="@dimen/text17sp" />
+
+    <TextView
+        android:id="@+id/imGivenBy"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/stdRowHeader"
+        android:layout_margin="1dp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="Sakshi Kulkarni"
+        android:textColor="@color/colorBlue"
+        android:background="@color/colorWhite"
+        android:textSize="@dimen/text17sp" />
+
+    <TextView
+        android:id="@+id/imLocation"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/stdRowHeader"
+        android:layout_margin="1dp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="Hc1"
+        android:textColor="@color/colorBlue"
+        android:background="@color/colorWhite"
+        android:textSize="@dimen/text17sp" />
+    <TextView
+        android:id="@+id/imDueDate"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/stdRowHeader"
+        android:layout_margin="1dp"
+        android:layout_weight="3"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="23-03-2016"
+        android:textColor="@color/colorBlue"
+        android:textSize="@dimen/text17sp" />
+    <TextView
+        android:id="@+id/imDoneDate"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/stdRowHeader"
+        android:layout_margin="1dp"
+        android:layout_weight="3"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="23-03-2016"
+        android:textColor="@color/colorBlue"
+        android:textSize="@dimen/text17sp" />
+
+</LinearLayout>

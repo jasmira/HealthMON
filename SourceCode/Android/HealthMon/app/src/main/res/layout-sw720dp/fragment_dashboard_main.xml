@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorlightgray"
+    android:padding="10dp"
+    tools:context=".communication.HealthDevicesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/fragment_dashboard_tasks"
+            android:name="com.persistent.healthmon.fragments.DashboardTasksFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:layout_margin="5dp"
+            >
+
+        </fragment>
+        <fragment
+            android:id="@+id/fragment_dashboard_collaboration"
+            android:name="com.persistent.healthmon.fragments.DashBoardCallSupportFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:layout_margin="5dp"
+            >
+
+        </fragment>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorBlack"
+                android:layout_height="@dimen/heightlayoutheading"
+                android:paddingLeft="@dimen/paddingheadingallleft"
+                android:paddingStart="@dimen/paddingheadingallleft"
+                android:textSize="@dimen/sizetextheading"
+                android:text="@string/txthelpguide"/>
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:numColumns="2"
+                android:paddingTop="@dimen/paddingheadingtophelpguide"
+                android:id="@+id/dashboard_help_gridview">
+
+            </GridView>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>
+

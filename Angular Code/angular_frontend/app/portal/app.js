@@ -1,0 +1,1 @@
+ var healthMon = angular.module('healthMon', ['ui.router','ui.bootstrap','configPaths','angular.filter','ngCookies','ui.calendar','angularMoment','angularjs-datetime-picker','underscore','nvd3','chart.js']);

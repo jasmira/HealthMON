@@ -1,0 +1,19 @@
+ <div role="tabpanel" class="tab-pane active" id="alert">
+<div style="overflow-y: scroll; height: 400px;">
+<div ng-repeat='alert in dashboardCtrl.TaskAlertList' ng-if="alert.User_Task_Type == 'task' && alert.User_Task_Severity==1" class='border-bottom'>
+  <div class="panel-body">
+  <div class="row">
+  <div class="col-md-3 text" ng-if="alert.Modified_User_Task_Date.daysFromTaskCreation != '0'">  
+                                      {{alert.Modified_User_Task_Date.daysFromTaskCreation}}  days
+                                      {{alert.Modified_User_Task_Date.hoursFromTaskCreation}} hours ago
+                                       
+  </div>
+      <div class="col-md-3 text" ng-if="alert.Modified_User_Task_Date.daysFromTaskCreation == '0'">  
+                                      {{alert.Modified_User_Task_Date.daysFromTaskCreation}}  days
+                                      {{alert.Modified_User_Task_Date.hoursFromTaskCreation}} hours ago
+                                       
+  </div>
+  <div class="col-md-9 border-left alert-text"> {{alert.User_Task_Description}}</div>
+</div>
+    </div>
+    </div>

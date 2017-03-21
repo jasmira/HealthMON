@@ -1,0 +1,26 @@
+<div class="col-sm-12 top-pad-both">
+		<div class="panel panel-default">
+			<div class="panel-body">
+		<div class="row"><h4  class="pull-left col-md-6">ADMITTED PATIENTS ({{dashboardCtrl.patientCount}})</h4><span class="col-md-6 "><a href="/#/allPatients" style="color:#1dbd9d !important" class="pull-right">View all</a></span></div>
+		<div class="row" id="admitpatient">
+		<div class="col-md-3" ng-repeat="patient in dashboardCtrl.PatientList | limitTo:4">
+		 <div class="panel panel-default">
+		  <div class="panel-body">
+			<div class="row">
+				<div class="col-md-4 text-center">
+				<img class="patient-image" data-ng-src= "{{'data:image/png;base64,'+patient.Patient_Image}}"><br>
+				<span class="subtext">Ward No.<br> </span> <span class="number">{{patient.Patient_Ward}}</span></div>
+				<div class="col-md-8 border-left"><span class="card-title">{{patient.Patient_FName}} {{patient.Patient_LName}} <br>
+				ID - {{patient.Patient_id}}<br><br>
+				</span> <span class="card-small-text">Admitted on<br>
+				{{patient.Created_Date}}
+				</span></div>
+			</div>
+		</div>
+	  </div>
+	 </div>
+
+		</div>
+	  </div>
+	</div>
+</div>

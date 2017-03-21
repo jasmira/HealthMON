@@ -1,0 +1,98 @@
+<div><h4>insight <span class="insight-text">(for year {{InsightCtrl.currentYear}})</span></h4> </div>
+<div class="row" id="insight" data-ng-init="init()">
+    <div class="col-md-3"><div class="panel panel-default" style="height:370px">
+        <div class="panel-heading">
+            <h3 class="panel-title"><a ui-sref="expectedDelivery" class="insight">Expected Deliveries</a></h3>
+        </div>
+        <!--div class="panel-body" ng-controller="graphHorizontalBarController"-->
+        <div class="panel-body">
+            <div class="row">
+            <div class="col-md-12">
+               <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">{{InsightCtrl.horizontalSelectedValue}}<span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation" ng-repeat="(key, value) in InsightCtrl.quarterDetails">
+                    <a role="menuitem" tabindex="-1" ng-click="InsightCtrl.horizontalQuarterSelected(key, value)">{{value}}</a>
+                    </li>      
+                    </ul>
+                    </div>
+            </div>
+            </div>
+            <!--div ><img src="/static/images/bar_graph.png" width="240" height="240" class="img-responsive"></div-->
+            <div id="chartHorizontalBar" ng-if="!InsightCtrl.noHorizontalGraphData"></div>
+            <div id="noDataForEDD" ng-if="InsightCtrl.noHorizontalGraphData"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+        </div>
+        </div>
+    </div>
+    <div class="col-md-3"><div class="panel panel-default" style="height:370px ">
+        <div class="panel-heading">
+            <h3 class="panel-title"><a ui-sref="analytics" class="insight">High Risk Patients</a></h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">{{InsightCtrl.pieSelectedValue}}<span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation" ng-repeat="(key, value) in InsightCtrl.quarterDetails">
+                    <a role="menuitem" tabindex="-1" ng-click="InsightCtrl.PieQuarterSelected(key, value)">{{value}}</a>
+                    </li>      
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <!--div ><img src="/static/images/graph_1.png" width="239" height="240" class=" img-responsive"></div-->
+            <div id="chartPie" ng-if="!InsightCtrl.noPieGraphData"></div>
+            <div ng-if="InsightCtrl.noPieGraphData"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+        </div>
+    </div>
+    </div>
+    <div class="col-md-3"><div class="panel panel-default" style="height:370px">
+        <div class="panel-heading">
+            <h3 class="panel-title"><a ui-sref="anemiaStatus" class="insight">Anemia Status</a></h3>
+        </div>
+        <!--div class="panel-body" ng-controller="graphDonutController"-->
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">{{InsightCtrl.donutSelectedValue}}<span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation" ng-repeat="(key, value) in InsightCtrl.quarterDetails">
+                    <a role="menuitem" tabindex="-1" ng-click="InsightCtrl.donutQuarterSelected(key, value)">{{value}}</a>
+                    </li>      
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <!--div ><img src="/static/images/graph-2.png" width="239" height="240" class=" img-responsive"></div--> 
+            <div id="chartDonut" ng-if="!InsightCtrl.noDonutData"></div>
+            <div ng-if="InsightCtrl.noDonutData"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+        </div>
+    </div>
+    </div>
+    <div class="col-md-3"><div class="panel panel-default" style="height:370px">
+        <div class="panel-heading">
+            <h3 class="panel-title"><a ui-sref="enrolledPatients" class="insight">Enrolled Patients</a> </h3>
+        </div>
+        <!--div class="panel-body" ng-controller="graphVerticalBarController"-->
+        <div class="panel-body">
+            <div class="row">
+            <div class="col-md-12">
+                <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">{{InsightCtrl.verticalBarSelectedValue}}<span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation" ng-repeat="(key, value) in InsightCtrl.quarterDetails">
+                    <a role="menuitem" tabindex="-1" ng-click="InsightCtrl.verticalBarQuarterSelected(key, value)">{{value}}</a>
+                    </li>      
+                </ul>
+                </div>
+            </div>
+            </div>
+            <!--div ><img src="/static/images/graph-3.png" width="239" height="240" class="img-responsive"></div-->
+            <div id="chartVerticalBar" ng-if="!InsightCtrl.noVerticalGraphData"></div>
+            <div ng-if="InsightCtrl.noVerticalGraphData"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+        </div>
+    </div>
+    </div>
+</div>

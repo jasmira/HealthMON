@@ -1,0 +1,18 @@
+<div class="tab-pane" id="hra" style="height: 480px;overflow-y: auto;">
+<table class="table table-bordered table-responsive patientSummarytable">
+    <thead class="blueBgTh">
+      <tr>
+        <th>S No.</th>
+        <th>Questions</th>
+        <th>Answers</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="(index, info) in patientHRACtrl.patientHRAInfo">
+        <td>{{index -- 1}}</td>
+        <td>{{info.Survey_Question_Description}}</td>
+        <td>{{info.Survey_Option_Answer}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

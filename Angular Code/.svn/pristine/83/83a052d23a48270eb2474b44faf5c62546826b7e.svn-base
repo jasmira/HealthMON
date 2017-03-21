@@ -1,0 +1,1440 @@
+@charset "utf-8";
+/* CSS Document */
+body{ font-family:Arial, Helvetica, sans-serif;}
+.wrapper{ background:#f9f9f9;}
+.container-fluid{margin:0 !important; padding:0 !important;}
+.login-wrapper{ background:#FFF; color:#999999; width:40%; margin:0 auto; padding:10px; margin-top:100px;}
+.logo-login{ width:225px; margin:20px auto 60px auto;}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border-top: none !important;
+	border-right: none !important;
+	border-left: none !important;
+	border-bottom:1px solid #ccc;
+	border-radius:0 !important;
+	border-radius: 4px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-transition: 0 !important;
+	-webkit-transition: 0 !important;
+    -o-transition:  0 !important;
+    transition:  none !important;
+	padding: 6px 1px !important;}
+
+	.form-control:focus {
+  border-color: #ccc !important;
+}
+
+.input-group-addon {
+ background-color:#fff !important;
+ border-top: none !important;
+ border-right: none !important;
+ border-left: none !important;
+ border-bottom:1px solid #ccc;
+ border-radius:0 !important ;
+}
+
+#login-form .btn-default {
+    text-shadow: 0 1px 0 #fff;
+    background:#1abc9c !important;
+    border-color: #dbdbdb;
+    border-color: #ccc;
+}
+
+#login-form .btn-lg{
+    padding: 10px 16px  !important;
+    border-radius: 25px  !important;
+	color:#FFF !important;
+	text-shadow: none !important;
+	text-transform:uppercase !important;
+}
+
+.forgot-pass{font-size:16px; text-align:center}
+.forgot-pass a{ color:#1abc9c; text-decoration:none;}
+.forgot-pass a:hover{ color:#18ae90; text-decoration:none;}
+
+.profile-bg{ background:#34495e;}
+.top-header{ background:#1dbd9d; height:104px;}
+.row {
+    margin-right:0 !important;
+    margin-left:0 !important;
+}
+
+#left-nav  .main-nav{ min-height:1220px; background:#275073;}
+@-moz-document url-prefix() {
+  #left-nav  .main-nav {
+      min-height:1230px; background:#275073;
+  }
+}
+
+#left-nav .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus {
+    color: #275073;
+    cursor: default;
+    background-color: #f9f9f9 !important;
+    border: 1px solid #f9f9f9;
+    border-bottom-color: transparent;
+   text-transform: capitalize !important;
+}
+
+#left-nav .nav > li > a:hover{ color:#275073;}
+#left-nav .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 0px  !important;
+    height: 86px !important;
+	color:#fff;
+}
+
+#left-nav .nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+    width: 114px;
+}
+@media screen\0 {
+	#left-nav .nav-tabs > li {
+    width: 116px;
+}
+}
+
+#left-nav .nav-tabs > li > a {
+    border-radius:0 !important;
+	border-bottom:1px solid #51728e;
+}
+.margin-help{ padding: 0px 17px !important;}
+
+.col-sm-1{ padding-left:0!important;}
+
+
+
+
+
+.nav-tabs {
+     border-bottom: none !important;
+}
+
+#nav-mid .nav > li > a {
+	padding: 10px 10px !important;
+    margin-top: 0px !important;
+	border-radius:0 !important;
+	border-top: 1px solid #ddd !important;
+	border-right: 1px solid #ddd !important;
+	border-left: 1px solid #ddd !important;
+	border-bottom: none !important;
+	text-transform:uppercase !important;
+	 color:#999; font-size:16px;
+	 height: auto !important;
+	}
+
+#nav-mid .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+     border: 1px solid #ddd !important;
+	background:#275073 !important;
+	color:#fff;
+	text-transform:uppercase !important;
+}
+#nav-mid .nav-tabs {
+     border-bottom: 1px solid #ddd !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#logo .col-md-2{ padding-left:0 !important; padding-right:0 !important; margin-top:5px;}
+#logo .col-md-10, .col-md-12{ padding-left:0 !important; padding-right:0 !important;}
+#profile .col-sm-6{padding-right:0 !important;}
+#profile .user-pic{ -webkit-border-radius: 32px; -moz-border-radius: 32px; border-radius: 32px; border:4px solid #00ff66;}
+#profile .user-online{border:4px solid #00ff66;}
+#profile .user-offline{border:4px solid #898b8e;}
+#profile .btn-primary{
+	background-image: none;
+    background-image: none;
+     background-image:none;
+    background-image: none;
+     border-color: transparent;
+	 background-color:transparent;
+	 text-shadow: none;
+     -webkit-box-shadow: none;
+     box-shadow:none;
+	}
+#profile .btn{ padding:0;}
+
+
+
+
+
+
+#profile .badge {background-color: #285074; margin-top:-27px; margin-left:-6px; color: #fff;}
+.m-tp-profile{ margin-top:5px;}
+.gen-margin-top{ margin-top:15px;}
+.gen-margin-header{ margin-top:22px;}
+.gen-margin-top-alert{ margin-top:5px;}
+.notification{ background:url(../images/notification.png) no-repeat; width:20px; height:25px;}
+.header-link{ color:#fff; font-size:13px;}
+.header-link a{ color:#fff; font-size:13px;}
+ .header-link a:hover{ color:#fff; font-size:13px; text-decoration:underline;}
+.top-font-text{ font-size:11px;}
+.top-font-textsm{ font-size:10px;}
+.top-arrow-m{ margin-left:3px;}
+h4{ text-transform:uppercase!important; color:#222222 !important; padding-top:0 !important; margin-top:0 !important;}
+#appointment-main .panel-default, #admit-main .panel-default, #insight-main .panel-default {border-color:#fff !important;}
+#insight .panel-default, #alert .panel-default, #task .panel-default {border-color:#ddd !important;}
+#alert .panel {
+    border-top: 1px solid transparent !important;
+	border-right: 1px solid transparent !important;
+	border-bottom: 1px solid  #ddd !important;
+	border-left:1px solid  transparent  !important;
+    border-radius: 0 !important;
+	-webkit-box-shadow: none !important;
+    box-shadow: none !important;
+	margin-bottom:0 !important; padding-bottom:0 !important;}
+#alert .panel-body { padding:18.5px;}
+#alert .text{ font-size:12px; color:#999999;}
+#alert .border-left{ border-left:1px solid #d1d1d1;}
+#alert .alert-text{ color:#265173 !important; font-size:14px !important;}
+
+
+
+#task .panel {
+    border-top: 1px solid transparent !important;
+	border-right: 1px solid transparent !important;
+	border-bottom: 1px solid  #ddd !important;
+	border-left:1px solid  transparent  !important;
+    border-radius: 0 !important;
+	-webkit-box-shadow: none !important;
+    box-shadow: none !important;
+	margin-bottom:0 !important; padding-bottom:0 !important;}
+#task .panel-body { padding:17.2px;}
+#task .text{ font-size:12px; color:#999999;}
+#task .border-left{ border-left:1px solid #d1d1d1;}
+#task .alert-text{ color:#265173 !important; font-size:14px !important;}
+
+
+
+#appointments .form-control, #allPatients .form-control{
+  display: block !important;
+  width: 100% !important;
+  height: 40px !important;
+ padding-left:5px!important;
+  font-size: 14px !important;
+  line-height: 1.42857143 !important;
+  color: #555 !important;
+  background-color: #fff !important;
+  background-image: none !important;
+  border: 1px solid #ccc !important;
+-webkit-border-top-left-radius: 3px !important;
+-webkit-border-bottom-left-radius: 3px !important;
+-moz-border-radius-topleft: 3px !important;
+-moz-border-radius-bottomleft: 3px !important;
+border-top-left-radius: 3px !important;
+border-bottom-left-radius: 3px !important;
+}
+
+#appointments .input-group-addon {
+ background-color:#fff !important;
+ border-top: none !important;
+ border-right: none !important;
+ border-left: none !important;
+ border-bottom:1px solid #ccc !important;
+ border-radius:0 !important ;
+}
+
+
+
+#appointments .btn-default, .modal-footer .buttonDiv .btn-default,#carePlanDiv .btn-default,
+.carePlanLeftPanelLargeBtn , .carePlanTopBtn  .btn-default,.btnCarePlan, .cancelBtnCarePlanAddRecord,
+.previewBtn, .activityBtn, .blueBtn, .modal-footer .btn{
+    text-shadow: 0 1px 0 #fff !important;
+    background-image: none !important;
+    background-image: none !important;
+    background-image: none !important;
+    background-image: none !important;
+    border-color: none !important;}
+
+#appointments .btn, .modal-footer .buttonDiv .btn, #carePlanDiv .btn,
+.carePlanLeftPanelLargeBtn , .carePlanTopBtn  .btn, .btnCarePlan,
+.cancelBtnCarePlanAddRecord, .previewBtn, .activityBtn, .blueBtn,.modal-footer .btn
+{ -webkit-border-top-right-radius: 3px !important;
+-webkit-border-bottom-right-radius: 3px !important;
+-moz-border-radius-topright: 3px !important;
+-moz-border-radius-bottomright: 3px !important;
+border-top-right-radius: 3px !important;
+border-bottom-right-radius: 3px !important;
+width: auto !important;
+border-left: none !important;}
+
+#appointments .btn-default, .modal-footer .buttonDiv .btn-default, #carePlanDiv .btn-default,
+.carePlanLeftPanelLargeBtn, .carePlanTopBtn  .btn-default, .btnCarePlan, .cancelBtnCarePlanAddRecord  , .previewBtn,
+.activityBtn, .blueBtn, .modal-footer .btn{
+    text-shadow: none !important;
+    -webkit-box-shadow: none !important;
+     box-shadow: none !important;}
+
+#appointments .btn-default:hover,.modal-footer .buttonDiv .btn-default:hover , #carePlanDiv .btn-default:hover,
+.carePlanLeftPanelLargeBtn, .carePlanTopBtn  .btn-default:hover, .btnCarePlan:hover,.cancelBtnCarePlanAddRecord:hover,
+.previewBtn:hover, .activityBtn:hover, .blueBtn:hover, .modal-footer, .btn:hover, .btn{
+    background-color: transparent !important; color:#fff;}
+
+
+
+
+
+#appoint-list-red .panel {
+    border-top: 1px solid #ddd !important;
+	border-right: 1px solid transparent !important;
+	border-bottom: 1px solid  transparent !important;
+	border-left: 3px solid #ce0707 !important;
+    border-radius: 0 !important;
+	-webkit-box-shadow: none !important;
+    box-shadow: none !important;
+	margin-bottom:0 !important; padding-bottom:0 !important;
+}
+
+#appoint-list-orange .panel {
+    border-top: 1px solid #ddd !important;
+	border-right: 1px solid transparent !important;
+	border-bottom: 1px solid  transparent !important;
+	border-left: 3px solid #ecb100 !important;
+    border-radius: 0 !important;
+	-webkit-box-shadow: none !important;
+    box-shadow: none !important;
+	margin-bottom:0 !important; padding-bottom:0 !important;
+}
+
+#appoint-list-red .col-md-6, .col-md-3{ padding:0 !important;}
+#appoint-list-orange .col-md-6, .col-md-3{ padding:0 !important;}
+#appoint-list-red .btn-default, #carePlanDiv .btn-default,
+.carePlanLeftPanelLargeBtn , .carePlanTopBtn  .btn-default , .btnCarePlan ,.cancelBtnCarePlanAddRecord, .previewBtn,
+.activityBtn, .blueBtn, .modal-footer .btn{
+    text-shadow: 0 1px 0 #fff;
+    background:#fff !important;
+    border-color: #1abc9c;
+	 padding: 5px 21px  !important;
+    border-radius: 25px  !important;
+	text-shadow: none !important;
+	text-transform: capitalize !important;
+	border:1px solid #1abc9c !important;
+	color:#1abc9c!important;
+}
+
+#appoint-list-orange .btn-default {
+    text-shadow: 0 1px 0 #fff;
+    background:#fff !important;
+    border-color: #1abc9c;
+	 padding: 5px 21px  !important;
+    border-radius: 25px  !important;
+	text-shadow: none !important;
+	text-transform: capitalize !important;
+	border:1px solid #1abc9c !important;
+	color:#1abc9c;
+}
+#appoint-list-red .btn-default:hover, #carePlanDiv .btn-default:hover, .carePlanLeftPanelLargeBtn:hover,
+.carePlanTopBtn  .btn-default:hover, .btnCarePlan:hover , .cancelBtnCarePlanAddRecord:hover,
+.previewBtn:hover,.blueBtn:hover{
+    background:#1abc9c !important;
+	color:#fff!important;
+}
+#appoint-list-orange .btn-default:hover {
+    background:#1abc9c !important;
+	color:#fff;
+}
+#appoint-list-success .panel {
+    border-top: 1px solid #ddd !important;
+	border-right: 1px solid transparent !important;
+	border-bottom: 1px solid  transparent !important;
+	border-left: 3px solid #00a651 !important;
+    border-radius: 0 !important;
+	-webkit-box-shadow: none !important;
+    box-shadow: none !important;
+	margin-bottom:0 !important; padding-bottom:0 !important;}
+
+
+
+#appoint-list-success .col-md-6, #appoint-list-success .col-md-3{ padding:0 !important;}
+#appoint-list-success  .btn-default{
+    text-shadow: 0 1px 0 #fff;
+    background:#fff !important;
+    border-color: #ccc;
+	 padding: 5px 21px  !important;
+    border-radius: 25px  !important;
+	text-shadow: none !important;
+	text-transform: capitalize !important;
+	border:1px solid #1abc9c !important;
+	color:#1abc9c;
+}
+
+#appoint-list-success  .btn-default:hover {
+    background:#1abc9c !important;
+	color:#fff;
+}
+
+#admitpatient .panel-default {
+    border-color:#fff !important;
+}
+#admitpatient .col-md-3{ padding:15px !important;}
+#admitpatient .col-md-4{ padding:0 !important;}
+#admitpatient .panel-body{ padding:5px !important;}
+#admitpatient .subtext{ color:#275073; margin-top:15px; font-size:14px; display:block;}
+#admitpatient .number{ color:#275073; font-size:18px;}
+#admitpatient .border-left{ border-left:1px solid #d1d1d1;}
+#admitpatient .panel {
+    border-top: 1px solid #ddd !important;
+	border-right: 1px solid #ddd !important;
+	border-bottom: 1px solid #ddd !important;
+	border-left: 3px solid #ce0707 !important;
+    border-radius: 0 !important;
+	-webkit-box-shadow: none !important;
+    box-shadow: none !important;
+	margin-bottom:0 !important; padding-bottom:0 !important;
+}
+
+#admitpatient .panel {
+    border-top: 1px solid #ddd !important;
+	border-right: 1px solid #ddd !important;
+	border-bottom: 1px solid #ddd !important;
+	border-left: 3px solid #ce0707 !important;
+    border-radius: 0 !important;
+	-webkit-box-shadow: none !important;
+    box-shadow: none !important;
+	margin-bottom:0 !important; padding-bottom:0 !important;
+}
+#admityellow .panel {
+    border-top: 1px solid #ddd !important;
+	border-right: 1px solid #ddd !important;
+	border-bottom: 1px solid #ddd !important;
+	border-left: 3px solid #ecb100 !important;
+    border-radius: 0 !important;
+	-webkit-box-shadow: none !important;
+    box-shadow: none !important;
+	margin-bottom:0 !important; padding-bottom:0 !important;
+}
+
+#insight .col-md-3{ padding:15px !important;}
+#insight .panel-title {text-align: center !important; color:#fff;}
+#insight .panel-default > .panel-heading {background: #1dbd9d !important;}
+
+#insight .btn, #snoozeTimeDropdown .btn, #sortBySeverityDropDown .btn, .categoryDropDown .btn , .newActiviryRemSelect,
+#medicineTypeDropDown .btn,#quantityDropDown .btn, #frequencyDropDown .btn, .dropdownBlue .btn {
+	background-image: none !important;
+	border-bottom: 2px solid #e0e0e0 !important;
+	border-top: 1px solid transparent !important;
+	border-right: 1px solid transparent !important;
+	border-left: 1px solid transparent !important;
+	border-radius: 0 !important;
+}
+
+#insight .btn .caret, #snoozeTimeDropdown .btn .caret, #sortBySeverityDropDown .btn .caret, .categoryDropDown .btn .caret,
+#medicineTypeDropDown .btn .caret,#quantityDropDown .btn .caret, #frequencyDropDown .btn  .caret, .dropdownBlue .btn .caret{
+    /* margin-left: 70px !important; */
+    color: #1bbf9c !important;
+    border-top: 7px dashed !important;
+    border-top: 4px solid \9 !important;
+    border-right: 7px solid transparent !important;
+    border-left: 7px solid transparent !important;
+    float: right;
+    margin-top: 7px;
+}
+
+#insight .btn-default, #snoozeTimeDropdown  .btn-default, #sortBySeverityDropDown .btn-default, .categoryDropDown .btn-default,
+.newActiviryRemSelect, #medicineTypeDropDown .btn-default,#quantityDropDown .btn-default, #frequencyDropDown .btn-default,
+.dropdownBlue .btn-default {
+	text-shadow:none !important;
+    -webkit-box-shadow:none !important;
+     box-shadow:none !important;
+	 text-align: left;
+     width: 100%;
+	 font-size: 12px;
+	 }
+
+#insight .btn-default:hover {background-color: #fff !important;}
+#insight .dropdown-menu{ min-width: 100% !important;}
+#insight .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
+#snoozeTimeDropdown .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
+#sortBySeverityDropDown .dropdown-menu > li > a:hover, .categoryDropDown  .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .newActiviryRemSelect option:hover,
+#medicineTypeDropDown .dropdown-menu > li > a:hover,#quantityDropDown .dropdown-menu > li > a:hover,#frequencyDropDown .dropdown-menu > li > a:hover,
+.dropdownBlue .dropdown-menu > li > a:hover{
+    background-color: #e8f8f5 !important;
+}
+
+#insight .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
+#snoozeTimeDropdown .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus ,
+#sortBySeverityDropDown .dropdown-menu > li > a:hover, .categoryDropDown .dropdown-menu > li > a:hover, .newActiviryRemSelect option:hover,
+#medicineTypeDropDown .dropdown-menu > li > a:hover,#quantityDropDown .dropdown-menu > li > a:hover,#frequencyDropDown .dropdown-menu > li > a:hover,
+.dropdownBlue .dropdown-menu > li > a:hover{
+    background-color: #e8f8f5!important;
+     background-image: none;
+    background-image: none;
+    background-image: none;
+     background-image: none;
+    background-repeat: repeat-x;
+}
+
+
+
+
+/*helper classes*/
+.border-right{border-right:1px solid #d1d1d1;}
+.border-left{border-left:1px solid #d1d1d1;}
+.sub-text{ font-size:12px; color:#333333; text-align:center}
+.gen-text-margintop{ margin-top:10px;}
+.card-title{ font-size:16px; color:#275073;  display:block}
+.about-description{ font-size:16px; color:#275073; display:block}
+.card-small-text{ font-size:12px; color:#999999;}
+.card-new-text{ font-size:14px; color:#1dbd9d;}
+.gen-left-margin{ margin-left:10px;}
+.insight-text{ text-transform: capitalize!important; color:#222222 !important; font-size:18px;}
+.insight{ color:#fff; text-decoration:underline;}
+
+
+#top-lang-dropdn .btn-default {
+    color: #fff;
+    background-color: transparent;
+    border-color: none;
+	text-shadow:none !important;
+    background-image: none  !important;
+    filter: none  !important;
+    background-repeat: no-repeat;
+    border-color: transparent !important;
+	-webkit-box-shadow: none !important;
+}
+#top-lang-dropdn .btn {
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 12px;}
+
+
+#top-lang-dropdn .dropdown-menu {
+    left: 68%;
+    min-width: 30%;
+    border-radius: 0;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+	    border:0 !important;
+}
+
+
+#top-lang-dropdn .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #e8f8f5;
+    /* background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%); */
+    background-image: none;
+    /* background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e8e8e8)); */
+    /* background-image: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%); */
+    filter: none;;
+    background-repeat: no-repeat;
+}
+
+.top-pad-both{ padding:0 !important;}
+
+.top-pad-right{ padding-right:0 !important;}
+
+
+#panel-dropdn .panel-default > .panel-heading {
+    background: #275073;
+	color:#fff;
+	text-align:center
+}
+#panel-dropdn .panel-footer {
+    padding: 0px;
+    background-color: #275073;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+	color:#fff;
+	text-align:center
+}
+
+#panel-dropdn .panel {
+    border-left: 2px solid #275073;
+	border-right: 2px solid #275073;
+	border-top: none !important;
+    border-radius: 4px;
+}
+
+
+.border-bottom{ border-bottom:1px thin #1dbd9d; margin:15px 0 15px 0px;}
+.small-text-gray{ color:#333333; font-size:12px; line-height:20px;}
+
+.dropdownPanel {
+ position:absolute; right:17px; top:98px;
+}
+
+#notification .blue-caret{ position:absolute; top:-16px; left:87% !important;}
+.caret-position{ position:relative;}
+#notification{ cursor:pointer;}
+
+#notification .dropdown-menu{ right:0!important; width:473px; position:absolute; left: -300px;
+	background-clip: none;
+    border: none;
+    border: none;
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+	border-left:2px solid #275073;
+	border-right:2px solid #275073;
+	border-top:0;
+	border-bottom:2px solid #275073;
+	padding: 0;
+	top: 48px;
+	}
+
+#notification .panel-heading {
+    background: #275073;
+	color:#fff;
+	text-align:center
+}
+#notification .panel-footer {
+    padding: 0px;
+    background-color: #275073;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+	color:#fff;
+	text-align:center
+}
+
+#notification .dropdown-menu > li > a {
+    padding: 0px 20px;
+}
+
+
+
+
+#userprofile .dropdown-menu{ right:0!important; width:473px; position:absolute; left: -399px;
+	background-clip: none;
+    border: none;
+    border: none;
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+	border-left:2px solid #275073;
+	border-right:2px solid #275073;
+	border-top:none;
+	border-bottom:2px solid #275073;
+	    padding: 0;
+		    top: 66px;
+	}
+
+#userprofile .panel-heading {
+    background: #275073;
+	color:#fff;
+	text-align:center
+}
+#userprofile .panel-footer {
+    padding: 0px;
+    background-color: #275073;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+	color:#fff;
+	text-align:center
+}
+
+#userprofile .dropdown-menu > li > a {
+    padding: 0px 20px;
+}
+
+
+#userprofile .blue-caret{ position:absolute; top:-16px; left:92%;}
+
+#userprofile .user-online-frame{ position:absolute; z-index:1; width:111px; height:110px; top:0;}
+
+#userprofile .user-edit-strip{ position:absolute;  width:111px; height:30px; bottom:0; background:#636363; font-size:12px; color:#fff;}
+
+#userprofile .user-edit-text a{font-size:12px; color:#fff; bottom:10px; z-index:99; text-decoration:underline; cursor:pointer; position:absolute; right:32px;}
+
+#userprofile .user-name{ font-size:16px; text-align:left}
+#userprofile .user-reg-num{ font-size:12px;}
+#userprofile .user-designation{ font-size:14px;}
+#userprofile .gen-pad-left{ padding-left:40px;}
+#userprofile .small-text-gray{ color:#333333; font-size:13px; line-height:20px;}
+#userprofile .small-text-gray a{ color:#275073;}
+#userprofile .border-bottom{ border-bottom:1px solid #1dbd9d; margin:15px;}
+#userprofile .change-password{ color:#1abc9c; font-size:13px; padding-left:10px; text-decoration:underline;}
+#userprofile .btn-default {
+    padding: 5px 20px !important;
+}
+
+#userprofile .btn-default {
+    text-shadow: 0 1px 0 #fff;
+    background:#fff !important;
+    border-color: #1abc9c;
+	 padding: 5px 21px  !important;
+    border-radius: 25px  !important;
+	text-shadow: none !important;
+	text-transform: capitalize !important;
+	border:1px solid #1abc9c !important;
+	color:#1abc9c;
+}
+#userprofile .btn-default:hover {
+    background:#1abc9c !important;
+	color:#fff;
+}
+
+#userprofile .gen-bot-pad{ padding-bottom:10px;}
+
+
+
+
+
+
+
+/* Desktops and laptops ----------- */
+
+/*@media only screen and (min-device-width : 900px) and (max-device-width : 1440px) {
+
+	#left-nav .nav-tabs > li {
+    width: 122px !important;
+}
+#notification .dropdown-menu {
+    left: -298px !important;}
+
+#userprofile .dropdown-menu {left: -411px;}
+
+#userprofile .blue-caret {left: 95%;}
+#notification .blue-caret {left: 89%;}
+
+	}
+*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1300px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    #left-nav .nav-tabs > li {
+    width: 109px!important;
+}
+#alert .panel-body {
+    padding: 18.6px !important;
+}
+#task .panel-body {
+    padding: 15.9px !important;
+}
+#notification .blue-caret {left: 85% !important;}
+
+#userprofile .blue-caret {
+    left: 93% !important;
+}
+
+#notification .dropdown-menu {left: -303px;}
+#userprofile .dropdown-menu {left: -399px !important;}
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1300px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+  #left-nav .nav-tabs > li {
+    width: 109px;
+}
+#alert .panel-body {
+    padding: 22.2px !important;
+}
+#task .panel-body {
+    padding: 18.4px !important;
+}
+.blue-caret {left: 93% !important;}
+#notification .dropdown-menu {left: -303px;}
+#userprofile .dropdown-menu {left: -399px !important;}
+}
+
+
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+#left-nav .nav-tabs > li {
+    width: 87px !important;
+}
+#appoint-list-red .btn-default {
+    padding: 5px 20px !important;
+}
+
+#appoint-list-orange .btn-default {
+    padding: 5px 20px !important;
+}
+#alert .panel-body {
+    padding: 13.5px !important;
+}
+#task .panel-body {
+
+    padding: 15.2px !important;
+}
+#top-lang-dropdn .dropdown-menu {
+    left: 58%;
+}
+#notification .dropdown-menu {
+    left: -334px !important;}
+
+#userprofile .dropdown-menu {left: -411px;}
+
+#userprofile .blue-caret {left: 95%;}
+#notification .blue-caret {left: 84%;}
+
+.gen-margin-header {
+    margin-right: -16px;
+}
+.top-pad-both-1024 {
+    padding-right: 13px !important;
+}
+
+}
+
+/*HO dashboard*/
+/*task nav*/
+#HOTaskNav{
+    width:70%;
+    margin-bottom:10%;
+}
+
+.HOCards{
+    padding: 10px;
+    padding-top:15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd !important;
+
+}
+
+.heading{font-size:17px; color:#222222 !important; padding-top:0 !important; margin-top:0 !important;font-weight:bold;}
+
+.HODashboardPerformance{
+padding-top:15px;
+}
+
+/*Calendar*/
+.calendarTopOption{
+
+    border: 1px solid #1abc9c;
+    font-size:11pt;
+    padding:5px;
+    text-align:center;
+    padding-left:0px!important;
+    padding-right:0px!important;
+    margin-right:15px;
+}
+.calendarTopOption a{
+color:#1abc9c !important;
+}
+#calendarPage, #allPatients{
+margin-top:15px;
+}
+
+#allPatients .checkbox+.checkbox{
+    margin-top:10px;
+}
+.recordSavedCalendar {
+	background:#275073;
+	color:#FFFFFF;
+	padding:5px;
+	font-size: 13px;
+}
+
+/*modal*/
+.modal-header {
+
+
+    background: #275073;
+    padding:5px!important;
+    padding-left:15px!important;
+
+}
+
+.modal-title{
+    color:#fff;
+    font-size:13pt;
+}
+
+.glyphicon, .caret-left, .caret-right{
+color:#1dbd9d;
+}
+
+.modal-body,.modal-footer{
+font-size:12px;
+}
+
+.modal-footer{
+text-align:left!important;
+}
+
+.titleInModalBody{
+      margin-left: -15px!important;
+    margin-right: -15px!important;
+  background-color: rgb(242, 242, 242);
+  vertical-align :center;
+  color: rgb(39, 80, 115);
+  font-size:14px;
+}
+
+ .paddingDown{
+  padding-bottom: 5px;
+ }
+
+ .paddingTop{
+  padding-top: 10px;
+ }
+#reminderList{
+max-height:190px;
+overflow-y:auto;
+}
+
+.modal-footer, #snoozeTimeDropdown .btn{
+background-color: rgb(242, 242, 242);
+}
+
+.calendarTopOption a    {
+    outline: none !important;
+    }
+
+    /*all patients specific*/
+.blueTextTitle{
+color:#275073;
+}
+
+#casesCardWrapper .panel-body{
+    padding:0;
+
+}
+
+.profileDiv, .infoDiv1, .infoDiv2{
+margin-top:0;
+padding:5px;
+    font-size:11px!important;
+}
+
+.infoDiv1 .card-small-text{
+    font-size:9px!important;
+}
+
+.minPadding{
+    padding: 2px!important;
+}
+
+
+#casesCardWrapper .borderBottom{
+border-bottom:1px solid #ddd;
+}
+ .redTextSpan{
+    color:red;
+ }
+
+ .greenTextSpan{
+    color:green;
+ }
+
+.yellowTextSpan{
+    color:#ecb100;
+}
+ .cardRow .panel-default {
+	 border-color:#1bbf9c;
+	 border-radius:0px;
+ }
+
+ .cardViewPatientName{
+         word-wrap: break-word;
+    width: 165px;
+    /*height: 43px;*/
+    /* text-overflow: ellipsis; */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    /* white-space: nowrap; */
+ }
+
+.redSevere{
+
+	    border-left: 3px solid #ce0707 !important;
+}
+
+.yellowSevere{
+	    border-left: 3px solid #ecb100 !important;
+}
+.greenSevere{
+	    border-left:3px solid #00a651 !important;
+}
+
+   .cardRow .border-bottom {
+    margin:0;
+    }
+
+.allPatientReferTag {
+    color: #275073;
+}
+
+.allPatientCard{
+    padding: 5px!important;
+}
+
+.allPatientCard .panel{
+    margin-bottom: 0!important;
+}
+
+.blackTextSpan{
+    color:black!important;
+}
+
+.allPatientCard .panel-default{
+    border-color:rgb(29, 189, 157);
+}
+
+.cardRow{
+    font-size:13px;
+}
+
+.infoDiv1{
+    border-bottom: 1px solid #1dbd9d;
+}
+
+.infoDiv2{
+    padding-top: 0px;
+
+}
+
+/*New Activity Textbox*/
+.txtBox{
+	border-right:none!important;
+	border-top:none!important;
+	border-left:none!important;
+	border-color:#dddddd;
+}
+
+.txtboxBottomBorder{
+	border-bottom:1px solid #ddd;
+
+}
+
+.asteric{
+	color:red;
+}
+
+#CalendarNewActivityTaskNav{
+	width:45%;
+	margin-bottom:3%;
+}
+
+/*care plan*/
+.paragraphDropdown{
+    word-wrap: break-word;
+    width:90% ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom :0px!important;
+}
+
+.paragraphDropdownSmall{
+    word-wrap: break-word;
+    width:80% ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom :0px!important;
+}
+
+.largeDropBtn{
+    padding:0px!importrant;
+    width:200px!important;
+    max-width:200px;
+    height: 35px;
+}
+
+.smallDropBtn{
+    padding:0px!importrant;
+    width:120px!important;
+    max-width:120px;
+    height: 35px;
+}
+
+#carePlanAddRecordDiv ul.dropdown-menu{
+    width:160%!important;
+}
+
+#carePlanMenuPatientName{
+	font-size: 16px;
+	color:#1dbd9d;
+}
+
+.carePlanTopBtn{
+	margin-top:15px;
+}
+
+.subTabName{
+	color:#999999;
+}
+
+.borderBottomForRow,.suggestDiv{
+padding-bottom:10px;
+border-bottom:1px solid #ddd;
+}
+
+.carePlanLeftPanelLargeBtn{
+width:95%!important;
+margin-top:15px;
+margin-bottom:15px!important;
+
+}
+
+.optionName{
+    color:#1dbd9d;
+}
+
+.optionDivCarePlan{
+    text-align:center;
+}
+
+.optionDivCarePlan a{
+   text-decoration: none!important;
+}
+
+#optionDiv{
+    border:1px solid #1dbd9d;
+
+}
+
+.optionDivRightBorder{
+    padding-top:20px;
+    padding-bottom:20px;
+   border-right:1px solid #1dbd9d;
+}
+
+#carePlanTable{
+margin-top:15px;
+
+}
+
+#carePlanTable table, .editPlanCatagoryCol{
+    font-size: 12px!important;
+}
+
+
+#carePlanTable th {
+background:#ddd;
+color:#275073 !important;
+}
+
+.optionDivNoRightBorder{
+    padding-top:20px;
+    padding-bottom:20px;
+
+}
+
+#suggestionText{
+border-top:none!important;
+border-right:none!important;
+border-left:none!important;
+border-bottom:1px solid #ddd;
+}
+
+.cancelBtnCarePlanAddRecord{
+    color: #1dbd9d!important;
+    font-size: 20px!important;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+    margin-left:10%;
+}
+
+.btnNegMarginTop{
+margin-top:-10%;
+}
+
+#carePlanTableAddRecord, #carePlanTable{
+overflow:auto;
+}
+
+.suggestSpan{
+font-size:12px;
+color:#275073;
+}
+
+.modalHeader{
+text-align:center;
+color:#275073;
+border-bottom:1px solid #ddd;
+}
+
+.borderedRow{
+border:1px solid #ddd;
+}
+
+.rightBorderedCol{
+border-right:1px solid #ddd;
+}
+
+.riskRow{
+margin-bottom:7px!important;
+}
+
+.allPatientListOrangeBgCol{
+      background-color: rgb(255, 227, 227)!important;
+}
+
+.minPaddingListView{
+    padding: 6px!important;
+}
+
+#allPatientsListTableHeader{
+text-align:center;
+font-weight:bold;
+}
+
+#allPatientsListTableHeader div{    height: 40px;}
+
+.allPatientsListViewTable .card-title{
+font-size:14px;
+}
+
+.allPatientsListViewTable{
+font-size:11px;
+}
+.allPatientsListViewTable .card-small-text{
+font-size:11px;
+}
+
+.blueBgRow{
+background-color: rgb(232, 248, 245);
+
+}
+
+.entityInNewActivity{
+margin-bottom:5%;
+}
+
+
+ /* patient summary */
+ .patientSummaryTab ul{
+ height:30px;
+ }
+
+  .patientSummaryTabLink{
+font-size:12px!important;
+ }
+
+  .patientSummaryTab ul li{
+ width:160px;
+ }
+
+ #patientSummaryNav{
+ border-bottom:none!important;
+ }
+
+ #nav-mid .patientSummaryTab .nav-tabs {
+    border-bottom: none !important;
+}
+
+#nav-mid .patientSummaryTab .nav > li > a {
+    background:#275073 !important;
+    padding: 10px 10px !important;
+    margin-top: 0px !important;
+    border: none !important;
+    text-transform: uppercase !important;
+    color: #fff;
+    font-size: 16px;
+    height: auto !important;
+}
+
+#nav-mid .patientSummaryTab .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+
+    background: #ffffff !important;
+    color: #275073;
+    text-transform: uppercase !important;
+}
+
+.patientSummaryTabContent{
+    margin-top:5%;
+}
+
+.patientSummarytable{
+font-size:12px;
+
+}
+
+.tdInGray{
+color:gray;
+}
+
+.lightBluebg{
+background:#e8f8f5;
+}
+
+.blueBgTh{
+background:#275073;
+color:#fff;
+}
+
+.tableNames{
+ text-align:center;
+ }
+
+ .bottomNoneForTble{
+ margin-bottom:0!important;
+ }
+
+ .patientSummaryTabContent .tab-pane{
+    /*height: 461px;
+    overflow: auto;*/}
+
+.borderBtmTxtBox{
+border-left:none!important;
+border-right:none!important;
+border-top:none!important;
+}
+
+.divMaxHeight{
+height:460px;
+overflow:auto;
+}
+
+.removeTopBorder{
+border-top:none!important;
+}
+
+/*Transfer*/
+.transferTitles{
+    font-size:14px;
+    font-weight:bold;
+}
+
+/*refer*/
+.borderNoneTable th, .borderNoneTable td{
+border:none!important;
+}
+
+/*Trends*/
+.chartRowTrends{
+    margin-top: 6%;
+}
+
+.setHeight{
+    height:650px;
+}
+
+#trendsChartDiv
+{
+padding-bottom:5%;
+padding-top:5%;
+}
+.patientRoundImg{
+	border-radius:27px;
+}
+}
+
+/* all patient --> treatment tab */
+.treatmentContainer
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.selectDrugIPBox{
+    width : 95%;
+}
+
+.quantityIPBox{
+    line-height: 4px;
+}
+
+.floatRightBtn{
+    float: right;
+}
+
+.medicineListContainer{
+    padding-top: 5px;
+}
+
+.commentBoxContainer{
+    padding-top: 15px;
+}
+
+.treatmentContainer .panel-group .panel{
+  overflow:visible!important;
+  }
+
+
+
+
+.btn { /* just for this demo. */
+    margin-top: 5px;
+}
+.btn-arrow-right,
+.btn-arrow-left {
+    position: relative;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.btn-arrow-right {
+    padding-left: 36px;
+}
+.btn-arrow-left {
+    padding-right: 36px;
+}
+.btn-arrow-right:before,
+.btn-arrow-right:after,
+.btn-arrow-left:before,
+.btn-arrow-left:after { /* make two squares (before and after), looking similar to the button */
+    content:"";
+    position: absolute;
+    top: 5px; /* move it down because of rounded corners */
+    width: 22px; /* same as height */
+    height: 22px; /* button_outer_height / sqrt(2) */
+    background-color: darkgreen; /* use parent background */
+    border: inherit; /* use parent border */
+    border-left-color: transparent; /* hide left border */
+    border-bottom-color: transparent; /* hide bottom border */
+    border-radius: 0px 4px 0px 0px; /* round arrow corner, the shorthand property doesn't accept "inherit" so it is set to 4px */
+    -webkit-border-radius: 0px 4px 0px 0px;
+    -moz-border-radius: 0px 4px 0px 0px;
+}
+.btn-arrow-right:before,
+.btn-arrow-right:after {
+     background-color: darkgreen;
+    transform: rotate(45deg); /* rotate right arrow squares 45 deg to point right */
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+.btn-arrow-left:before,
+.btn-arrow-left:after {
+     background-color: darkgreen;
+    transform: rotate(225deg); /* rotate left arrow squares 225 deg to point left */
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+}
+.btn-arrow-right:before,
+.btn-arrow-left:before { /* align the "before" square to the left */
+    left: -11px;
+}
+.btn-arrow-right:after,
+.btn-arrow-left:after { /* align the "after" square to the right */
+    right: -11px;
+}
+.btn-arrow-right:after,
+.btn-arrow-left:before { /* bring arrow pointers to front */
+    z-index: 1;
+}
+.btn-arrow-right:before,
+.btn-arrow-left:after { /* hide arrow tails background */
+    background-color: white;
+}
+
+}
+

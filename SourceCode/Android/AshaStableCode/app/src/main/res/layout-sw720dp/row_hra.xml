@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight=".5"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_gravity="center"
+            android:id="@+id/iv_HRA_Q"
+            android:gravity="center"
+            android:src="@drawable/user_default_blue"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tvHRAQuestion"
+            android:layout_gravity="center"
+            android:paddingLeft="20dp"
+            android:layout_height="wrap_content"
+
+            android:textColor="@color/colorBlack"
+            android:text="@string/txtFirstSetQuestionHeader"/>
+
+
+    </LinearLayout>
+    <!--android:layout_height="@dimen/feedbackQuestionHeight"-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight=".5"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/radioGroupHRA"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/feedbackQuestionHeight"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioHRAYes"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:text="@string/txtYes"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:id="@+id/radioHRANo"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:text="@string/txtNo"
+                android:layout_height="wrap_content" />
+
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+</LinearLayout>

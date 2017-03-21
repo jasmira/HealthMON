@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtHeader"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Address Line1-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtAddressLine1" />
+
+            <TextView
+                style="@style/Font17RedNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/txtAsteriskMark" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtAddLine1"
+            style="@style/edt_patient_registration"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize"
+            android:hint="@string/txtMinimum10Characters"
+            android:inputType="textCapSentences"
+            android:maxLength="60"
+            android:nextFocusDown="@+id/edtAddLine2"
+            android:singleLine="true" />
+
+
+        <!-- Address Line2-->
+
+        <TextView
+            style="@style/Font17BlackNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/txtAddressLine2" />
+
+        <EditText
+            android:id="@+id/edtAddLine2"
+            style="@style/edt_patient_registration"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize"
+            android:inputType="textCapSentences"
+            android:maxLength="60"
+            android:nextFocusDown="@+id/edtWard"
+            android:singleLine="true"
+            android:hint="@string/txtMinimum10Characters"/>
+        <!-- District-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtDistrict" />
+
+            <TextView
+                style="@style/Font17RedNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/txtAsteriskMark" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerDistrict"
+            style="@style/spinner_style"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize" />
+
+
+        <!-- Taluka-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtTaluka" />
+
+            <TextView
+                style="@style/Font17RedNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/txtAsteriskMark" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerTaluka"
+            style="@style/spinner_style"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"><!-- Village -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtVillage" />
+
+            <TextView
+                style="@style/Font17RedNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/txtAsteriskMark" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerVillage"
+            style="@style/spinner_style"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize" />
+
+        <!-- Ward-->
+        <TextView
+            style="@style/Font17BlackNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/txtWard" />
+
+        <EditText
+            android:id="@+id/edtWard"
+            style="@style/edt_patient_registration"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize"
+            android:imeOptions="actionDone"
+            android:inputType="textCapSentences"
+
+            android:singleLine="true"
+            android:hint="@string/txtMinimum10Characters"/>
+
+        <!-- Pincode -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtPincode" />
+
+            <TextView
+                style="@style/Font17RedNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/txtAsteriskMark" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerPincode"
+            style="@style/spinner_style"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/saveProceed"
+            style="@style/greenRoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:text="@string/txtSaveProceed" />
+    </RelativeLayout>
+
+</LinearLayout>

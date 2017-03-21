@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="700dp"
+    android:layout_height="500dp"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/txt_blue_lable_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="@string/txtAssignDoctor" />
+
+    <TextView
+        style="@style/Font15BlackNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="@string/txtSelectDoctor"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lstMo"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:layout_marginTop="10dp"></android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/btnOk"
+        style="@style/greenRoundButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="@string/txtDone" />
+</LinearLayout>

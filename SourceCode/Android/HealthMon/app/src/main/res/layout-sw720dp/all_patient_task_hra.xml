@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/all_patient_task_header_hra"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lstHRAQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <!--Action Buttons-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskVitalsSave"
+            android:id="@+id/btn_hra_save"
+            android:layout_marginRight="@dimen/capture_buttons_between_margin"
+            android:layout_marginEnd="@dimen/capture_buttons_between_margin"
+            style="@style/greenRoundButton"
+            android:layout_alignParentBottom="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskVitalsCancel"
+            android:id="@+id/btn_hra_cancel"
+            style="@style/greenRoundButton"
+            android:layout_toRightOf="@id/btn_hra_save"
+            android:layout_toEndOf="@id/btn_hra_save"
+            android:layout_alignParentBottom="true" />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

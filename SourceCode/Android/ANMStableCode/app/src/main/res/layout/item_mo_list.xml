@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMoContainer"
+    android:layout_width="250dp"
+    android:layout_height="300dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/border_darkgreen"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/image_placeholder" />
+
+        <ImageView
+            android:id="@+id/imgTick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_tickmark"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtMoName"
+        style="@style/Font17BlueNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Sample"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/txtSpecialization"
+        android:textColor="@color/colorBlack" />
+
+    <TextView
+        android:id="@+id/txtSpecialization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/txtSpecialization"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/txtNumberOfPatientInQueue"
+        android:textColor="@color/colorBlack" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="20"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold" />
+</LinearLayout>

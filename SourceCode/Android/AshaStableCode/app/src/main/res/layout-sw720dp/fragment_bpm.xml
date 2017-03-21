@@ -1,0 +1,90 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:background="@drawable/tile_bg"
+    tools:context=".fragments.BpmFragment"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Blood Pressure"
+        style="@style/TextReportTitle"
+        android:gravity="center"
+        android:padding="4dp"
+        android:background="@color/colorPrimary"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:padding="5dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/btnConnectAndRead"
+            android:layout_width="@dimen/tile_icons_size"
+            android:layout_height="@dimen/tile_icons_size"
+            android:src="@drawable/ic_refresh_white_48dp"
+            />
+
+        <ImageView
+            android:id="@+id/imgDeviceAvailability"
+            android:layout_width="@dimen/tile_icons_size"
+            android:layout_height="@dimen/tile_icons_size"
+            android:src="@drawable/device_available"
+            android:layout_marginLeft="5dp"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressDeviceReading"
+            android:layout_width="@dimen/tile_icons_size"
+            android:layout_height="@dimen/tile_icons_size"
+            style="@android:style/Widget.ProgressBar.Inverse"
+            android:layout_marginLeft="5dp"
+            android:padding="2dp"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtSystolicReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        style="@style/TextReportNumber"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Systolic"
+        style="@style/TextReportTitle"/>
+
+    <TextView
+        android:id="@+id/txtDiastolicReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        style="@style/TextReportNumber"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diastolic"
+        style="@style/TextReportTitle"/>
+
+    <TextView
+        android:id="@+id/txtPulseRateReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        style="@style/TextReportNumber"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pulse rate"
+        style="@style/TextReportTitle"/>
+</LinearLayout>

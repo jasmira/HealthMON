@@ -1,0 +1,1239 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:padding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Basic info and Address container-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Basic Info Container-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_border_gray"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_margin="1dp"
+                        android:background="@color/colorLightGreenBg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/txtBasicInfo"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text17sp" />
+                    <!-- Salutation -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/keySalutation" />
+
+                        <TextView
+                            android:id="@+id/valSalutation"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+
+                    <!-- Full Name -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtFullName" />
+
+                        <TextView
+                            android:id="@+id/valFullName"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            android:ellipsize="marquee"
+                            android:singleLine="false"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+                    <!-- Full Name -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtAgeGender" />
+
+                        <TextView
+                            android:id="@+id/valAgeGender"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+                    <!-- Date of Birth -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtDateofBirth" />
+
+                        <TextView
+                            android:id="@+id/valDateOfBirth"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+
+                    <!-- Place of Birth -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtPlaceofBirth" />
+
+                        <TextView
+                            android:id="@+id/valPlaceOfBirth"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+                    <!-- Marital Status -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtMaritalStatus" />
+
+                        <TextView
+                            android:id="@+id/valMaritalStatus"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+                    <!-- Category -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtCategory" />
+
+                        <TextView
+                            android:id="@+id/valCategory"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+
+                    <!-- BPL -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtBPL" />
+
+                        <TextView
+                            android:id="@+id/valBPL"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+
+                    <!-- Language -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtLanguage" />
+
+                        <TextView
+                            android:id="@+id/valLanguage"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+                    <!-- Edcation -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtEducation" />
+
+                        <TextView
+                            android:id="@+id/valEducation"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+                    <!-- Card Type -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtIdCardType" />
+
+                        <TextView
+                            android:id="@+id/valCardType"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+                    <!-- Card No -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtIdCardNumber" />
+
+                        <TextView
+                            android:id="@+id/valCardNumber"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+                    <!-- Emergency contact -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtContact" />
+
+                        <TextView
+                            android:id="@+id/valContact"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+                    <!-- Emergency contact -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtEmergencyContact" />
+
+                        <TextView
+                            android:id="@+id/valEmergencyContact"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- Address Container-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_border_gray"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_margin="1dp"
+                        android:background="@color/colorLightGreenBg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/txtAddress"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text17sp" />
+
+                    <!-- Address Line 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtAddressLine1" />
+
+                        <TextView
+                            android:id="@+id/valAddressLine1"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            android:singleLine="false"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+                    <!-- Address Line 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtAddressLine2" />
+
+                        <TextView
+                            android:id="@+id/valAddressLine2"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            android:singleLine="false"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+                    <!-- District -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtDistrict" />
+
+                        <TextView
+                            android:id="@+id/valDistrict"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+
+                    <!-- Taluka -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtTaluka" />
+
+                        <TextView
+                            android:id="@+id/valTaluka"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+                    <!-- Village -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtVillage" />
+
+                        <TextView
+                            android:id="@+id/valVillage"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+                    <!-- Ward -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtWard" />
+
+                        <TextView
+                            android:id="@+id/valWard"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+                    <!-- Pin code -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtPincode" />
+
+                        <TextView
+                            android:id="@+id/valPincode"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- Program info info and Family info container-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <!-- Program Info Container-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_border_gray"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_margin="1dp"
+                        android:background="@color/colorLightGreenBg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/txtProgramInfo"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text17sp" />
+
+
+                    <!-- Program Info -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtProgram" />
+
+                        <TextView
+                            android:id="@+id/valProgram"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+                    <!-- LMP Date -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtLMPDate" />
+
+                        <TextView
+                            android:id="@+id/valLMPDate"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+                    <!-- EDD Date -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtEDD" />
+
+                        <TextView
+                            android:id="@+id/valEDDDate"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+
+                    <!-- First Pragnency -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtFirstPregnancy" />
+
+                        <TextView
+                            android:id="@+id/valFirstPregnancy"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+                    <!-- if First pragnancy is "No"-->
+                    <LinearLayout
+                        android:id="@+id/llFirstPrag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Gravida -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/stdRowSize"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/txt_preview_gray_lable"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:text="@string/txtGravida" />
+
+                            <TextView
+                                android:id="@+id/valGravida"
+                                style="@style/txt_preview_black_lable"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorlinegray" />
+
+                        <!-- Parity -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/stdRowSize"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/txt_preview_gray_lable"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:text="@string/txtParity" />
+
+                            <TextView
+                                android:id="@+id/valParity"
+                                style="@style/txt_preview_black_lable"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorlinegray" />
+
+                        <!-- Past Abortions -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/stdRowSize"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/txt_preview_gray_lable"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:text="@string/txtPastAbortions" />
+
+                            <TextView
+                                android:id="@+id/valPastAbortons"
+                                style="@style/txt_preview_black_lable"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorlinegray" />
+
+                        <!-- Past Still Births -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/stdRowSize"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/txt_preview_gray_lable"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:text="@string/txtPastStillBirths" />
+
+                            <TextView
+                                android:id="@+id/valPastStillBirths"
+                                style="@style/txt_preview_black_lable"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorlinegray" />
+
+                        <!-- Living Children -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/stdRowSize"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/txt_preview_gray_lable"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:text="@string/txtLivingChildren" />
+
+                            <TextView
+                                android:id="@+id/valLivingChildren"
+                                style="@style/txt_preview_black_lable"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorlinegray" />
+
+                        <!-- Previous Dilivery Date -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/stdRowSize"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/txt_preview_gray_lable"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:text="@string/txtPreviousDeliveryDate" />
+
+                            <TextView
+                                android:id="@+id/valPreviousDeliveryDate"
+                                style="@style/txt_preview_black_lable"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorlinegray" />
+
+                        <!-- Nature of Previous Delivery -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/stdRowSize"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/txt_preview_gray_lable"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:text="@string/txtNatureofPreviousDelivery" />
+
+                            <TextView
+                                android:id="@+id/valNatureofPreviousDelivery"
+                                style="@style/txt_preview_black_lable"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorlinegray" />
+                    </LinearLayout>
+                    <!-- Notes -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtNotes" />
+
+                        <TextView
+                            android:id="@+id/valNotes"
+                            style="@style/txt_preview_black_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="15dp"
+                            android:layout_weight="1"
+                            android:text="@string/txtClear" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorlinegray" />
+                </LinearLayout>
+
+                <!-- Family info Container-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_border_gray"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:layout_margin="1dp"
+                        android:background="@color/colorLightGreenBg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/txtFamilyInfo"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text17sp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerFamily"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"></android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnRegister"
+        style="@style/roundButtonSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:text="@string/btnRegister" />
+
+</RelativeLayout>

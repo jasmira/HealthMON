@@ -1,0 +1,21 @@
+<div class="tab-pane" id="feedback" style="height: 480px;overflow-y: auto;">                                             
+    <table class="table table-bordered table-responsive patientSummarytable bottomNoneForTble">
+        <thead class="blueBgTh">
+            <tr>
+                <th>Sr No.</th>
+                <th>Questions</th>
+                <th>Answers</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="feedbacks in patientFeedbackCtrl.patientFeedbackInfo">
+            <tr>
+                <td colspan="3" class="lightBluebg" style="text-align:center;"><b>{{feedbacks.categoryKey}}</b></rd>
+            </tr>
+            <tr ng-repeat="(index, feedback) in feedbacks.data">
+                <td>{{index -- 1}}</td>
+                <td>{{feedback.Survey_Question_Description}}</td>
+                <td>{{feedback.Survey_Question_Options}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

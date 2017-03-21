@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/colorlightgray"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/loginManiLayout"
+        android:layout_width="550dp"
+        android:layout_height="600dp"
+        android:layout_centerInParent="true"
+        android:background="@color/colorWhite"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="400dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/healthmonlogo_login" />
+
+        <EditText
+            android:id="@+id/editTextUsername"
+            style="@style/edt_patient_registration"
+            android:layout_width="300dp"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_marginTop="30dp"
+            android:drawableLeft="@drawable/ic_login_username"
+            android:hint="@string/username_hint"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/colorBlack"
+            android:textSize="@dimen/text17sp">
+
+        </EditText>
+
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_login_password"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:maxLength="12"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/colorBlack"
+            android:textSize="@dimen/text17sp" />
+
+
+        <Spinner
+            android:id="@+id/spinnerLanguage"
+            style="@style/spinner_style"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_marginTop="20dp"
+            android:entries="@array/language" />
+
+        <CheckBox
+            android:id="@+id/saveLoginCheckBox"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:text="@string/txtRememberMe"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/buttonLogin"
+            style="@style/greenRoundButton"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_marginTop="30dp"
+            android:text="@string/txtLogin"
+            android:textSize="@dimen/text17sp" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/txtForgotPassword"
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/bgobject" />
+</RelativeLayout>

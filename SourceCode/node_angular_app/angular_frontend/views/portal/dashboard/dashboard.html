@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard</title>
+</head>
+
+<body>
+<div class="wrapper" id='top'>
+	<div class="container-fluid">
+		<!---header--->
+		<header></header>
+		<!---header close--->
+		<div class="row" >
+			<!---left menu---->
+		
+			<left-menu-panel></left-menu-panel>
+			<!---left menu close---->
+			<!---right coloumn----->
+			<div id="main-panel">
+				<div class="col-sm-11">
+					<div>&nbsp;</div>
+					<div class="row"  id="appointment-main">
+					  <div class="col-sm-6 col-md-7 top-pad-both">
+						<div class="panel panel-default">
+						  <div class="panel-body">
+							
+							  <ui-view name="appointment"></ui-view>
+							
+						  </div>
+						</div>
+					  </div>
+					  <div class="col-sm-5 col-md-5 top-pad-right">
+						<div class="panel panel-default">
+						  <div class="panel-body">
+							<div id="nav-mid"> 
+							  
+							  <!-- Nav tabs -->
+							  <ul class="nav nav-tabs nav-justified" role="tablist">
+								<li role="presentation" ng-class='{active: dashboardCtrl.highlight_alert}'>
+									<a href="#alert" aria-controls="alert" role="tab" data-toggle="tab" aria-expanded="true" ui-sref=".alerts" data-target="#alert">
+										ALERTS  ({{dashboardCtrl.alertCount}}) 
+									</a>
+								</li>
+								<li role="presentation" ng-class='{active: dashboardCtrl.highlight_task}'>
+									<a href="#task" aria-controls="task" role="tab" data-toggle="tab" aria-expanded="false"	ui-sref=".tasks" data-target="#task">
+										TASKS ({{dashboardCtrl.taskCount}})
+									</a>
+								</li>
+								
+							  </ul>
+							  
+							  <!-- Tab panes -->
+							  <div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="alert"></div>
+
+								<div role="tabpanel" class="tab-pane" id="task"></div>
+									<div ui-view></div> 
+								<!--<div role="tabpanel" class="tab-pane" id="settings">gghjhftry.</div> -->
+							  </div>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<!---admit patient--->
+					<div class="row" id="admit-main"> 
+					<ui-view name="admittedPatients"></ui-view>
+				    </div>
+					<!---admit patient close--->
+				
+					<!---insight for year--->
+					<div class="row" id="insight-main"> 
+						<div class="col-sm-12 top-pad-both">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<ui-view name="insights"></ui-view> 
+								</div>
+							</div>
+						</div>
+					</div>        
+					<!---insight for year close--->
+				</div>
+			</div>
+			<!---right coloumn----->
+		</div>
+	</div>
+</div>
+
+</body>
+</html> 

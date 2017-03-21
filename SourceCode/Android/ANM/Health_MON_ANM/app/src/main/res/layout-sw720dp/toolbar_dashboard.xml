@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/heightoftoolbar"
+    android:background="@color/colorgreenprimary"
+    android:minHeight="@dimen/heightoftoolbar"
+    android:padding="0dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:contentInsetEnd="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetStart="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/toolbar_profile_layout"
+            style="@android:style/Widget.ActionButton"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/dashboarduserimage"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:src="@drawable/user_default_blue"
+                app:civ_border_color="#EEEEEE"
+                app:civ_border_width="1dp"
+                app:civ_shadow="false"
+                app:civ_shadow_color="#8BC34A"
+                app:civ_shadow_radius="1" />
+
+            <TextView
+                android:id="@+id/toolbar_profile_layout_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtLastSyncNotAvaliable"
+                android:textColor="@color/colordashboardtext"
+                android:textSize="@dimen/sizetexttoolbar" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/toolbar_dashboard_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/toolbar_profile_layout"
+            android:layout_toRightOf="@+id/toolbar_profile_layout"
+            android:src="@drawable/healthmonlogo" />
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.Toolbar>

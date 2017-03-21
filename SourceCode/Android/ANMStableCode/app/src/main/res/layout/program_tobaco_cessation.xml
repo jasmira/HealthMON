@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <!-- First Column-->
+    <LinearLayout
+        android:id="@+id/column1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtHeader"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+
+
+        <TextView
+            style="@style/Font17BlackNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Field 1" />
+
+
+        <EditText
+            android:id="@+id/txtLMPDate"
+            style="@style/edt_patient_registration"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize"
+            android:drawableRight="@drawable/ic_calender"
+            android:editable="false"
+            android:gravity="center_vertical" />
+
+
+        <TextView
+            style="@style/Font17BlackNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Field 2" />
+
+
+        <EditText
+            style="@style/edt_patient_registration"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize"
+            android:gravity="center_vertical" />
+
+        <!-- First Pregnancy -->
+        <LinearLayout
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Field 3" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGroupPregnancy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/txtYes" />
+
+                <RadioButton
+                    android:id="@+id/radioNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtNo" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1">
+        <!-- Notes-->
+        <TextView
+            android:id="@+id/txtNote"
+            style="@style/Font17BlackNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/txtNotes" />
+
+        <EditText
+            android:id="@+id/edtNotes"
+            style="@style/edt_patient_registration"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="150dp"
+            android:layout_below="@+id/txtNote"
+            android:background="@drawable/edittext_border_gray"
+            android:gravity="start|left"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:maxLength="40"
+            android:maxLines="3"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/greenRoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:text="@string/txtSave" />
+    </RelativeLayout>
+
+</LinearLayout>

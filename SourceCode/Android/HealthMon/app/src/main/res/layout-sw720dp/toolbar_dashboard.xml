@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/heightoftoolbar"
+    android:minHeight="@dimen/heightoftoolbar"
+    android:background="@color/colorgreenprimary"
+    android:padding="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetEnd="0dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:id="@+id/toolbar_profile_layout"
+            style="@android:style/Widget.ActionButton"
+            android:gravity="center">
+
+<!--            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/dashboarduserimage"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/asha_4"
+                android:background="@drawable/user_online"
+                app:civ_border_width="3dp"
+                app:civ_border_color="@color/colorgreenonline"/>-->
+<!--            <ImageView
+                android:layout_width="@dimen/heightoftoolbar"
+                android:layout_height="@dimen/heightoftoolbar"
+                android:id="@+id/dashboarduserimage"
+                android:background="@drawable/user_online"
+                android:scaleType="centerCrop"
+                android:src="@drawable/koala" />-->
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:src="@drawable/user_default_blue"
+                android:id="@+id/dashboarduserimage"
+                app:civ_border_color="#EEEEEE"
+                app:civ_border_width="1dp"
+                app:civ_shadow="false"
+                app:civ_shadow_radius="1"
+                app:civ_shadow_color="#8BC34A"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sizetexttoolbar"
+                android:textColor="@color/colordashboardtext"
+                android:id="@+id/toolbar_profile_layout_username"
+                android:text="@string/txtLastSyncNotAvaliable"/>
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_dashboard_icon"
+            android:src="@drawable/healthmonlogo"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/toolbar_profile_layout"
+            android:layout_toEndOf="@+id/toolbar_profile_layout" />
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.Toolbar>

@@ -1,0 +1,677 @@
+<resources>
+    <string name="app_name">ASHA HealthMon</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Activities Name-->
+    <string name="title_activity_health_mon_login">HealthMonLoginActivity</string>
+
+    <!-- Login Activity-->
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="txtLogin">Login</string>
+    <string-array name="language">
+        <item>Select Language</item>
+        <item>Marathi</item>
+        <item>Hindi</item>
+        <item>English</item>
+    </string-array>
+    <string name="txtRememberMe">Remember Me</string>
+    <string name="txtOK">OK</string>
+    <string name="txtForgotPassword">Forgot Password?</string>
+    <string name="msgLoginErrorInvalidCredential">Invalid Username or Password</string>
+
+
+    <!-- Dashboard Screen-->
+    <string name="txtPatientRegistration">Register Patient</string>
+    <string name="txtAllPatients">All Patients</string>
+    <string name="txtMyTasks">My Tasks</string>
+    <string name="txtEducation">Education</string>
+    <string name="txtCollaborationForum">Collaboration Forum</string>
+    <string name="txtReports">Reports</string>
+    <string name="txtHelpSupport">Help &amp; Support</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="txtDashboard">Dashboard</string>
+    <string name="txtduetasks">Due Tasks</string>
+    <string name="txtupcomingtasks">UpComing Tasks</string>
+    <string name="txthelpguide">Help Guide</string>
+    <string name="txtcallsupport">Call Support</string>
+    <string name="txttasks">Tasks</string>
+    <string name="txthaemoglobin">Haemoglobin</string>
+    <string name="txtbloodpressure">Blood Pressure</string>
+    <string name="txtimmunization">Immunization</string>
+    <string name="txtbloodglucose">Blood Glucose</string>
+    <string name="txttemperature">Temperature</string>
+    <string name="txtpulseocimeter">Pulse Oximeter</string>
+    <string name="txturineprotein">Urine Protein</string>
+    <string name="txtecg">ECG</string>
+    <string name="txtfetalmonitor">Fetal Monitor</string>
+    <string name="txtCollaboration">Collaboration</string>
+    <string name="txtMyActivities">My Activities</string>
+    <string name="hinttasksearch">  Search by Name, ID</string>
+    <string name="txtFavourites">Favourites</string>
+    <string name="txtAllContacts">All Contacts</string>
+
+    <!-- Patient Registration Screen-->
+    <string name="txtPatientInfo">Patient info</string>
+    <string name="txtAddress">Address</string>
+    <string name="txtFamilyInfo">Family info</string>
+    <string name="txtPreview">Preview</string>
+    <string name="txtBasicInfo">Basic Info</string>
+    <string name="txtProgramInfo">Program Info</string>
+    <string name="txtAsteriskMark">*</string>
+    <string name="txtDataLoss">Your data is not saved, Do you want to continue? </string>
+    <string name="txtCancel">Cancel</string>
+    <string name="msgPatientRegisteredSuccessfully">Patient Registered Successfully</string>
+    <string name="txtGotoPatientCard">Go to Patient Card</string>
+
+    <!-- Patient Registration Personal Info Screen-->
+    <string name="txtBasicInformation">Basic Information</string>
+    <string name="txtMandatoryFields"> * Mandatory Fields</string>
+    <string name="txtTitle">Title</string>
+    <string name="txtFirstName">First Name</string>
+    <string name="txtMiddleName">Middle Name</string>
+    <string name="txtLastName">Last Name</string>
+    <string name="txtGender">Gender</string>
+    <string name="txtFemale">Female</string>
+    <string name="txtMale">Male</string>
+    <string name="txtDateofBirth">Date of Birth</string>
+    <string name="txtAge">Age</string>
+    <string name="txtPlaceofBirth">Place of Birth</string>
+    <string name="txtMaritalStatus">Marital Status</string>
+    <string name="txtCategory">Category</string>
+    <string name="txtBPL">BPL</string>
+    <string name="txtLanguage">Language</string>
+    <string name="txtLiterate">Literate</string>
+    <string name="txtIlliterate">Illiterate</string>
+    <string name="txtIdCardType">Id Card Type</string>
+    <string name="txtIdCardNumber">Id Card Number</string>
+    <string name="txtContact">Mobile no</string>
+    <string name="txtSaveProceed">Save &amp; proceed</string>
+    <string name="txtCapture">Capture</string>
+    <string name="txtRationCard">Ration Card</string>
+    <string-array name="salutation">
+        <item>Mrs</item>
+        <item>Mr</item>
+        <item>Miss</item>
+    </string-array>
+    <string-array name="marritalStatus">
+        <item>Married</item>
+        <item>Unmarried</item>
+        <item>Divorced</item>
+        <item>Separated</item>
+    </string-array>
+    <string-array name="category">
+        <item>SC</item>
+        <item>ST</item>
+        <item>OBC</item>
+        <item>General</item>
+    </string-array>
+    <string-array name="idCardType">
+        <item>Aadhar Card</item>
+        <item>Voter ID</item>
+        <item>Pan Card</item>
+        <item>Ration Card</item>
+    </string-array>
+    <string name="txtAadharCard">Aadhar Card</string>
+    <string name="txtVoterID">Voter ID</string>
+    <string name="txtPanCard">Pan Card</string>
+
+    <!-- Patient Registration Address Screen-->
+    <string name="txtAddressLine1">Address Line 1</string>
+    <string name="txtAddressLine2">Address Line 2</string>
+    <string name="txtDistrict">District</string>
+    <string name="txtTaluka">Taluka</string>
+    <string name="txtVillage">Village</string>
+    <string name="txtWard">Ward</string>
+    <string name="txtPincode">Pincode</string>
+    <string name="txtEmergencyContact">Emergency Contact</string>
+    <string name="SaveProceedtoProgramInfo">Save &amp; proceed to Program Info</string>
+
+    <!-- Patient Registration Program Info Screen-->
+    <string name="txtProgramInformation">Program Information</string>
+    <string name="txtSelectProgram">Select Program</string>
+    <string name="txtFirstPregnancy">First Pregnancy</string>
+    <string name="txtYes">Yes</string>
+    <string name="txtNo">No</string>
+    <string name="txtLMPDate">LMP Date</string>
+    <string name="txtEDD">EDD</string>
+    <string name="txtNotes">Notes</string>
+    <string name="txtGravida">Gravida</string>
+    <string name="txtParity">Parity</string>
+    <string name="txtPastAbortions">Past Abortions</string>
+    <string name="txtPastStillBirths">Past Still Births</string>
+    <string name="txtLivingChildren">Living Children</string>
+    <string name="txtSpacingBetweenChildren">Spacing Between Children</string>
+    <string name="txtNatureofPreviousDelivery">Nature of Previous Delivery</string>
+    <string name="txtPreviousDeliveryDate">Previous Delivery Date</string>
+    <string name="txtSaveProceedtoFamilyInfo">Save &amp; Proceed to Family Info</string>
+    <string name="msgErrorCheckPrgParams">Please check All pregnancy Parameters</string>
+    <string name="txtCesarean">Cesarean</string>
+    <string name="txtForceps">Forceps</string>
+    <string name="txtVacuum">Vacuum</string>
+    <string-array name="programs">
+        <item>Ante Natal Care (ANC)</item>
+        <item>Post Natal Care (PNC)</item>
+        <item>Family Planning</item>
+        <item>Child Health</item>
+    </string-array>
+
+    <string-array name="DeliveryNature">
+        <item>Normal</item>
+        <item>Cesarean</item>
+        <item>Forceps</item>
+        <item>Vacuum</item>
+    </string-array>
+    <string-array name="district">
+        <item>Haveli</item>
+        <item>Khed</item>
+        <item>Junar</item>
+        <item>Daund</item>
+    </string-array>
+    <string-array name="taluka">
+        <item>Valhe</item>
+        <item>Indapur</item>
+        <item>Bhor</item>
+        <item>Shirur</item>
+    </string-array>
+    <string-array name="villageId">
+        <item>Ambegaon</item>
+        <item>Bhor</item>
+        <item>Talegaon</item>
+        <item>Daund</item>
+    </string-array>
+    <string-array name="pincode">
+        <item>400100</item>
+        <item>400101</item>
+        <item>400111</item>
+        <item>400121</item>
+    </string-array>
+
+    <!-- Patient Registration Family Info Screen-->
+
+    <string name="txtSaveProceedtoPreview">Save &amp; Proceed to Preview</string>
+    <string name="txtFamilyInformation">Family Information</string>
+    <string name="txtName">Name</string>
+    <string name="txtRelation">Relation</string>
+    <string name="txtAadharNo">Aadhar No</string>
+    <string name="txtEdit">Edit</string>
+    <string name="txtDelete">Delete</string>
+    <string name="txtFullName">Full Name</string>
+    <string name="txtRelationtoPatient">Relation to Patient</string>
+    <string name="txtAdd">Add</string>
+    <string name="txtSave">Save</string>
+    <string name="txtClear">Clear</string>
+    <string name="txtSkip">Skip</string>
+    <string name="txtFamilyMemberAlreadyExsist">Family Member Already Exist</string>
+    <string-array name="relation">
+        <item>Husband</item>
+        <item>Mother</item>
+        <item>Father</item>
+        <item>Mother-in-law</item>
+        <item>Father-in-law</item>
+        <item>Brother</item>
+        <item>Sister</item>
+        <item>Daughter</item>
+        <item>Son</item>
+    </string-array>
+
+    <!-- Patient Registration Preview Screen-->
+    <string name="txtAgeGender">Age/Gender</string>
+    <string name="txtProgram">Program</string>
+    <string name="txtRegistreringPatient">Registering Patient</string>
+
+    <!-- TODO: remove this placeholder text -->
+    <string name="new_message_notification_placeholder_text_template">You said %1$s and lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Etiam non enim magna. Morbi dictum, velit vel
+        semper venenatis, magna odio volutpat velit, at ullamcorper nulla lacus sed turpis.
+        Pellentesque vitae metus elit, nec tincidunt tellus. Integer sed nisl sem, ullamcorper
+        ornare lacus. Duis ac mauris sed massa congue volutpat. Donec sed erat sit amet turpis
+        viverra rhoncus sit amet nec magna. Donec lacinia ligula at libero volutpat volutpat nec nec
+        tortor.
+    </string>
+
+    <string name="action_share">Share</string>
+    <string name="action_reply">Reply</string>
+    <string name="valCategory">General</string>
+    <string name="keyBPL">BPL:</string>
+    <string name="valBPL">NO</string>
+    <string name="keyLanguage">Language:</string>
+    <string name="valLanguage">Marathi</string>
+    <string name="keyEducation">Education:</string>
+    <string name="valEducation">illeterate</string>
+    <string name="keyAadharNo">Aadhar No:</string>
+    <string name="valAadharNo">123456789</string>
+    <string name="keyRationCNo">Ration Card No:</string>
+    <string name="valRationCNo">Abc123456</string>
+    <string name="keyContact">Contact:</string>
+    <string name="valContact">9823829823</string>
+    <string name="keyProgram">Program:</string>
+    <string name="valProgram">MHO</string>
+    <string name="keyLMPDate">LMP Date:</string>
+    <string name="LMPDate">02/11/2015</string>
+    <string name="keyEDD">EDD:</string>
+    <string name="valEDD">24/07/2016</string>
+    <string name="keyFstPrgncy">First Pregnancy:</string>
+    <string name="valFstPrgncy">Yes</string>
+    <string name="keyNotes">Notes:</string>
+    <string name="valNotes">Lorem ipsum...</string>
+    <string name="keyAddrLn1">Address Line 1:</string>
+    <string name="valAddrLn1">Lorem ipsum..</string>
+    <string name="keyAddrLn2">Address Line 2:</string>
+    <string name="valAddrLn2">Lorem ipsum</string>
+    <string name="keyDistrict">District:</string>
+    <string name="valDistrict">Pune</string>
+    <string name="keyTaluka">Taluka:</string>
+    <string name="valTaluka">Pune</string>
+    <string name="keyVillage">Village:</string>
+    <string name="valVillage">Mahad</string>
+    <string name="keyWard">Ward:</string>
+    <string name="valWard">Lorem ipsum..</string>
+    <string name="keyPin">PinCode:</string>
+    <string name="valPin">411007</string>
+    <string name="keyEmergencyNo">Emergency No:</string>
+    <string name="valEmergencyNo">7738383288</string>
+    <string name="keySalutation">Salutation:</string>
+    <string name="btnRegister">Register Patient</string>
+    <string name="txtNotifications">Notifications</string>
+    <string name="txtSyncData">Sync Data</string>
+    <string name="txtLastSyncData">last Sync</string>
+
+    <!--Error Strings-->
+    <string name="txtEnterValue">Please Enter Value</string>
+    <string name="txtErrAddMember">Please Add Family Member</string>
+    <string name="txtEnterCorrectValue">Please Enter Correct Value</string>
+    <string name="msgErrorNoInternet">No Network Connection</string>
+    <string name="msgCallFunctionalityNotAvailableOnDevice">Call Functionality Not Available On Device</string>
+    <string name="txtDeleteConfirm">Are you sure you want to Delete?</string>
+    <string name="txtClose">Close</string>
+    <string name="msgPatientHighRisk">Patient is at high Risk</string>
+    <string name="txtSelectatleastoneparameter">Select at least one parameter</string>
+    <string name="txtNoPatientDataAvailable">No Patient Data Available</string>
+
+    <!--Asha pop up strings-->
+    <string name="txtashaqualification">Qualification</string>
+    <string name="txtashaemergencycontact">Emergency Contact</string>
+    <string name="txtashaaddress">Address</string>
+    <string name="txtashacontact">Contact</string>
+    <string name="txtashasignout">Sign Out</string>
+
+    <!--Notification-->
+    <string name="txtnotificationdismiss">Dismiss</string>
+
+
+    <string name="txtLastSyncNotAvaliable">Not Available</string>
+    <string name="toastDataSyncStarted">Data sync started</string>
+    <string name="msgNetworkConnectivityNotAvailable">No network connectivity</string>
+    <string name="msgTaskDetailsNotFetch">Error while fetching task details</string>
+    <string name="msgSyncError">Error while syncing with server</string>
+    <string name="msgAshaDetailsNotFetch">Error while fetching asha details</string>
+    <string name="msgLastSyncCompleted">Data sync completed</string>
+
+
+    <!-- All Patient Screen-->
+    <string name="txtPID">PID</string>
+    <string name="txtAllPatientContact">Contact</string>
+    <string name="txtHaemoglobin">Haemoglobin</string>
+    <string name="txtBloodPressure">Blood Pressure</string>
+    <string name="txtHaemoglobinMeasure">g/dL</string>
+    <string name="txtBloodPressureMeasure">mmHg</string>
+    <string name="txtReferToDoc">Refer To Doc</string>
+    <string name="txtPregnancyDient">Pregnancy Diet</string>
+    <string name="txtAshaName">Asha Name</string>
+    <string name="txtVisitPatient">Visit Patient</string>
+    <string name="txtLMP">LMP</string>
+    <string name="txtBMI">BMI</string>
+    <string name="txtBP">BP</string>
+    <string name="txtHB">HB</string>
+    <string name="txtWeeks">Weeks</string>
+    <string name="txtStatus">Status</string>
+
+    <string name="txtHighRisk">High Risk</string>
+    <string name="txtModerateRisk">Moderate Risk</string>
+    <string name="txtNormalRisk">Normal</string>
+    <string name="txtEditProfile">Edit Profile</string>
+    <string name="txtSummaryView">Summary View</string>
+    <string name="txtBack">Back</string>
+    <string name="txtTasks">Tasks</string>
+    <string name="txtRefertoDoctor">Refer to Doctor</string>
+    <string name="txtHRA">HRA</string>
+    <string name="txtCaptureTestData">Capture Test Data</string>
+    <string name="txtMedication">Medication</string>
+    <string name="txtFeedback">Feedback</string>
+
+    <string-array name="sortOrderList">
+        <item>Select Sort</item>
+        <item>Recently Added</item>
+        <item>EDD</item>
+        <item>Locality</item>
+        <item>Age</item>
+        <item>Delivered Patients</item>
+    </string-array>
+
+    <string name="txtVitals">Vitals</string>
+    <string name="txtTaskHelpGuide">\? Help Guide</string>
+    <string name="txtTaskViewAll">View All</string>
+    <string name="txtTaskDue">Due :</string>
+    <string name="txtTaskLastRecorded">Last recorded :</string>
+    <string name="txtTaskLastData">Last Data :</string>
+    <string name="txtTaskVitalsTemperature">Temperature</string>
+    <string name="txtTaskVitalsHeight">Height</string>
+    <string name="txtTaskVitalsGirth">Girth</string>
+    <string name="txtTaskVitalsWeight">Weight</string>
+    <string name="txtTaskVitalsBMI">BMI</string>
+    <string name="txtTaskVitalsFundalheight">Fundal Height</string>
+    <string name="txtTaskVitalsTemperatureUnit">&#xb0;F</string>
+    <string name="txtTaskVitalsGirthUnit">cm</string>
+    <string name="txtTaskVitalsWeightUnit">Kgs</string>
+    <string name="txtTaskVitalsBMIUnit">Kg/m^2</string>
+    <string name="txtTaskVitalsSave">Save</string>
+    <string name="txtTaskVitalsCancel">Cancel</string>
+    <string name="txtTaskVitalsCapture">Capture</string>
+    <string name="txtTaskCaptureOxiReading">Capture Reading</string>
+    <string name="txtTaskCaptureOxiGraph">Capture Waveform</string>
+    <string name="txtTaskVitalsreCapture">Re-Capture</string>
+    <string name="txtTaskVitalsPatientWeight">Patient is under weight.</string>
+    <string name="txtTaskManualMode">Manual Mode</string>
+    <string name="txtTaskDeviceMode">Device Mode</string>
+    <string name="txtBluetooth">Bluetooth</string>
+    <string name="txtScan">Scan</string>
+    <string name="txtPairedDevices">Paired Devices</string>
+    <string name="txtAvailableDevices">Available Devices</string>
+    <string name="txtTaskConnectionSetting">Connection Setting</string>
+    <string name="txtTaskBPSystolic">Systolic</string>
+    <string name="txtTaskBPDiastolic">Diastolic</string>
+    <string name="txtTaskBPPulse">Pulse</string>
+    <string name="txtTaskOxiSpO">SpO2</string>
+    <string name="txtTaskOxiSpOUnit">%</string>
+    <string name="txtTaskOxiPI">PI</string>
+    <string name="txtTaskBPSysDiaUnit">mmHg</string>
+    <string name="txtTaskBPPulseUnit">beats/min</string>
+    <string name="txtTaskHBUnit">g/dL</string>
+    <string name="txtTaskBPDataInserted">Data stored successfully</string>
+    <string name="txtTaskBPDataNotValid">Data not valid</string>
+    <string name="txtTaskOxiCaptureReading">Data is incomplete\nCapture Waveform</string>
+    <string name="txtTaskOxiCaptureWave">Data is incomplete\nCapture Reading</string>
+    <string name="txtTaskOxiCaptureReadingWarning">Please remove fingure from device before capturing reading\nand again press capture reading button</string>
+    <string name="txtTaskOxiCaptureWaveWarning">Please remove fingure from device before capturing wave from\nand again press capture waveform button</string>
+    <string name="txtComingSoon">Coming Soon</string>
+    <string name="txtSaveData">Data will be saved. Do you wish to continue?</string>
+    <string name="txtOverRideData">Data will be override. Do you wish to continue?</string>
+    <string name="txtPatientUnderWeight">Patient is under weight!</string>
+    <string name="txtPatientOverweight">Patient is over weight!</string>
+    <string name="txtPatientHightBp">Patient has high BP!</string>
+    <string name="txtPatientLowBP">Patient has low BP!</string>
+    <string name="txtCapturingData">Capturing data</string>
+    <string name="txtStatusDue">Due</string>
+    <string name="txtComment">Comment</string>
+    <string name="txtsyncDatafirst">Please sync data first</string>
+
+    <string name="txtPatientID">ID</string>
+    <!--Point of care device-->
+    <!--Health Monitor-->
+    <string name="app_registration">App Registration</string>
+
+    <string name="bluetooth_not_available">Bluetooth is not available</string>
+
+    <string name="bluetooth_health_profile_not_available">Bluetooth health profile is not available</string>
+
+    <string name="channel_connection">Channel Connection</string>
+
+    <string name="channel_connection_desc">(some devices automatically initiate connection)</string>
+
+    <string name="connect">Connect</string>
+
+    <string name="connected">CONNECTED</string>
+
+    <string name="connection_state">Connection State</string>
+
+    <string name="data_ind">Data Indicator</string>
+
+    <string name="disconnect">Disconnect</string>
+
+    <string name="disconnected">DISCONNECTED</string>
+
+    <string name="empty"> </string>
+
+    <string name="none">None...</string>
+
+    <string name="ok">Okay</string>
+
+    <string name="read_data">Reading data...</string>
+
+    <string name="read_data_done">Done with reading data...</string>
+
+    <string name="register">Register</string>
+
+    <string name="select_device">Select a device</string>
+
+    <string name="status_create_channel">Create channel status: %d</string>
+
+    <string name="status_destroy_channel">Destroy channel status: %d</string>
+
+    <string name="status_msg">Status Message</string>
+
+    <string name="status_reg">App registration status: %d</string>
+
+    <string name="status_unreg">App unregistration status: %d</string>
+
+    <string name="unregister">Unregister</string>
+    <string name="txtBluetoothDisable">Bluetooth is Disabled</string>
+    <string name="txtDataCapturedSuccessfully">Data captured successfully</string>
+    <string name="txtECGHeartbeats">ECG HeartBeats</string>
+    <!--Health Monitor-->
+
+    <string name="info_Systolic"> Pressure in the arteries when the heart beats (when the heart muscle contracts)</string>
+    <string name="info_diastolic_bpm"> pressure in the arteries between heartbeats (when the heart muscle is resting between beats and refilling with blood)</string>
+    <string name="info_pulse"> Heart bits per minute </string>
+    <string name="normal_systolic">less than 120</string>
+    <string name="normal_diastolic">less than 80</string>
+    <string name="reset_blutooth">Bluetooth connection is lost .Please reset device’s bluetooth.</string>
+    <string name="info_heart_rate">Heart rate is the number of times per minute that the heart contracts - the number of heart beats per minute (bpm).</string>
+    <string name="info_pulse_rate"> Pulse is the mechanical pulse of blood flow through the capillaries caused by the contractions of the heart per minute</string>
+    <string name="info_ecg">Electrocardiography  is the process of recording the electrical activity of the heart over a period of time using electrodes placed on a patient\'s body.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtMyTrainings">MY TRAININGS</string>
+    <string name="txtOnlineTrainings">Online Trainings</string>
+    <string name="txtInternalTrns">Internal Trainings</string>
+    <string name="txtExternalTrns">External Trainings</string>
+
+
+    <!-- Summary View Strings-->
+    <string name="txtDemographics">Demographics</string>
+    <string name="txtEligibility">Eligibility</string>
+    <string name="txtAllergies">Allergies</string>
+    <string name="txtDiagnosis">Diagnosis</string>
+    <string name="txtMedications">Medications</string>
+    <string name="txtTests">Tests</string>
+    <string name="txtProcedures">Procedures</string>
+    <string name="txtCarePlan">Care Plan</string>
+    <string name="txtimmunizations">Immunizations</string>
+
+    <!-- Refer to doctor Strings-->
+    <string name="txtViewAll">View all</string>
+    <string name="txtLastReferred">Last Referred</string>
+    <string name="txtTestResult">Test Result</string>
+    <string name="txtHealthCenterLab">Health Center / Lab</string>
+    <string name="txtLocation">Location</string>
+    <string name="txtReason">Reason</string>
+    <string name="txtRefer">Refer</string>
+    <string name="msgPatientSuccessfullyRefferedto">Patient Successfully Refered to</string>
+    <string-array name="reason">
+        <item>High BP</item>
+        <item>Anemic</item>
+        <item>Low HB</item>
+        <item>Low BP</item>
+    </string-array>
+
+    <!-- My Activities Strings-->
+    <string name="txtAddActivity">Add Activity</string>
+    <string name="txtDate">Date</string>
+    <string name="txtActivity">Activity</string>
+    <string name="txtComments">Comments</string>
+    <string name="txtSetReminder">Set Reminder</string>
+    <string name="txtSno">S. no.</string>
+    <string name="txtMarkStatus">Mark Status</string>
+    <string name="txtDone">Done</string>
+    <string name="txtTime">Time</string>
+    <string name="txtCreatedBy">Created By</string>
+
+    <!--HRA-->
+    <string name="txtStronglyAgree">Strongly Agree</string>
+    <string name="txtAgree">Agree</string>
+    <string name="txtDisgree">Disagree</string>
+    <string name="txtStronglyDisagree">Strongly Disagree</string>
+    <string name="txtFirstSetQuestionHeader">Communicating by ASHA</string>
+    <string name="txtSecondSetQuestionHeader">Care from ASHA</string>
+    <string name="txtThirdSetQuestionHeader">Communication from ANM</string>
+    <string name="txtFeedBackFirstSetQ1">Q1. ASHA\'s communication was very good with you</string>
+    <string name="txtFeedBackFirstSetQ2">Q2. ASHA has explain you enough on program benefits, Diets, Exercise, Test and Visits</string>
+    <string name="txtFeedBackFirstSetQ3">Q3. Asha explained things in a way you colud understand</string>
+    <string name="txtFeedBackFirstSetQ4">Q4. ASHA listen carefully to you during your visit</string>
+    <string name="txtFeedBackSecondSetQ1">Q1. Asha visited your home as soon you wanted it</string>
+    <string name="txtFeedBackSecondSetQ2">Q2. Asha has good knowledge on how to take your care</string>
+    <string name="txtFeedBackThirdSetQ1">Q1. ANM listen carefully to you during your course of teatment</string>
+
+    <string-array name="reminderTime">
+        <item>5 min</item>
+        <item>10 min</item>
+        <item>15 min</item>
+        <item>20 min</item>
+        <item>25 min</item>
+        <item>30 min</item>
+    </string-array>
+
+    <!-- Reports string-->
+    <string name="txtType">Type</string>
+    <string name="txtFrom">From</string>
+    <string name="txtTo">To</string>
+    <string name="txtGenerate">Generate</string>
+    <string name="txtBeneficiaryPatient">Beneficiary/Patient</string>
+    <string name="txtSelectParameter">Select Parameter</string>
+    <string-array name="reportType">
+        <item>Select Report Type</item>
+        <item>ANC Register</item>
+        <item>Log of referral</item>
+        <item>High Risk Pregnancy Register</item>
+        <item>Health Status Trend</item>
+        <item>Details of Beneficiaries</item>
+        <item>Log of referral</item>
+        <item>Eligible couple Register</item>
+        <item>Infection (RTI/STI) Register</item>
+        <item>Log of Health Survey</item>
+        <item>Women Health Record</item>
+        <item>Log of Vitals, Health data captured &amp; treat</item>
+    </string-array>
+    <string name="txtANCRegister">ANC Register</string>
+    <string name="txtHealthStatusTerned">Health Status Trend</string>
+    <string name="txtSelectReportType">Select Report Type</string>
+    <string name="txtNoDataAvailableforHbTrend">No Data Available for Hb Trend</string>
+    <string name="txtNoDataAvailable">No Data Available</string>
+    <string name="txtNoDataAvailableforSystolicBP">No Data Available for Systolic BP</string>
+    <string name="txtNoDataAvailableforDiastolicBP">No Data Available for Diastolic BP</string>
+
+
+    <!--ANC Reports string-->
+    <string name="txtANCRegisterReport">ANC Register Report</string>
+    <string name="txtWeeksDuringRegistration">Weeks during Registration</string>
+    <string name="txtDeliveryNumber">Delivery Number</string>
+
+    <!--Health Status Terned Reports string-->
+    <string name="txtRegistrationDate">Registration Date</string>
+    <string name="txtTrimester">Trimester</string>
+    <string name="txtHealthStatusTernedOf">Health Status Trend Of</string>
+    <string name="txtHbTrend">Hb Trend</string>
+    <string name="txtHaemoglobingdL">Haemoglobin (g/dL)</string>
+    <string name="txtSystolicBP">Systolic BP</string>
+    <string name="txtDiastolicBP">Diastolic BP</string>
+    <string name="txtBloodPressuremmHg">Blood Pressure (mmHg)</string>
+
+    //Education
+    <string name="ANC">ANTE NATAL CARE (ANC)</string>
+    <string name="PNC">POST NATAL CARE (PNC)</string>
+    <string name="FP">FAMILY PLANNING (FP)</string>
+    <string name="CH">CHILD HEALTH (CH)</string>
+    <string name="QUC">M1 - Quality Antenatal Care</string>
+    <string name="ACI">M2 - Antenatal Care Interventions</string>
+    <string name="PNA">M1 - Post Natal Assessment</string>
+    <string name="AB">M2 - Asha Booklet</string>
+    <string name="ITF">M1 - Introduction To FP</string>
+    <string name="SS">M2 - Safe Sex</string>
+    <string name="Vasecotomy">M3 - Vasectomy</string>
+    <string name="CO">M1 - Child Overview</string>
+    <string name="Dirhea">M2 - Diarhea</string>
+
+    <string name="txtImmunizationStatus">Immunization Status</string>
+    <string name="txtImmunizationName">Immunization Name</string>
+    <string name="txtImmunizationDueDate">Due</string>
+    <string name="txtImmunizationDoneDate">Done</string>
+    <string name="txtImmunizationGivenBy">Given By</string>
+    <string name="txtImmunizationRole">Role</string>
+    <string name="txtImmunizationGivenAt">Given at/Location</string>
+    <string name="txtSecondSetQuestionHeaderv">Care from ASHA</string>
+    <string name="txtcollaboration">Collaboration</string>
+
+    <string name="txtCalciumGivenTillDate">Calcium given till date</string>
+    <string name="txtDrugName">DrugName</string>
+    <string name="txtQuantity">Quantity</string>
+    <string name="txtDueDate">DueDate</string>
+    <string name="txtAction">Action</string>
+    <string name="txtCalcium">Calcium</string>
+    <string name="txtAsha">Asha</string>
+
+    <!-- New validation/Error Strings-->
+    <string name="txtIncorrectDateOfBirth">Incorrect Date of Birth</string>
+    <string name="txtPatientageshouldbetween18to55">Patient\'s age should between 18 to 55</string>
+    <string name="txtLMPDateCanNotBeTodayDate">LMP Date Can not be Today\'s Date</string>
+    <string name="txtLMPDateCanNotBeBefore9Months">LMP Date Can not be Before 9 Months</string>
+    <string name="txtLMPDateCanNotBeFutureDate">LMP Date Can not be Future Date</string>
+    <string name="txtPreviousDeliveryDateCanNotBeFutureDate">Previous Delivery Date Can not be Future Date</string>
+    <string name="txtPreviousDeliveryCanNotBeTodayDate">Previous Delivery Can not be Today\'s Date</string>
+    <string name="txtPreviousDeliveryShouldbefore10months">Previous Delivery Should be before 10 months</string>
+    <string name="msgGravidaCountshouldmatchallotherparameter">Gravida Count should match all other parameter</string>
+    <string name="txtAadharCardShouldbeof12Digits">Aadhar Card Should be of 12 Digits</string>
+    <string name="txtRationCardShouldbeof12Digits">Ration Card Should be of 12 Digits</string>
+    <string name="txtPanCardShouldbeof10to20Digits">Pan Card Should be of 10 to 20 Digits</string>
+    <string name="txtMinimum10Characters">Minimum 10 Characters</string>
+    <string name="txtWorkinProgress">Work in Progress</string>
+
+
+    <!--Validation Hints-->
+    <string name="txtRangeSys">10-255</string>
+    <string name="txtRangeDia">10-255</string>
+    <string name="txtRangePulse">10-255</string>
+    <string name="txtRangeHB">1-25</string>
+    <string name="txtRangeTemp">10-150</string>
+    <string name="txtRangeWeight">25-20txtSummaryView0</string>
+    <string name="txtRangeHeight">25-200</string>
+    <string name="txtRangeBMI">1-255</string>
+    <string name="txtRangeGirth">100-1500</string>
+    <string name="txtRangeFundal">10-255</string>
+    <string name="txtRangePI">1-100</string>
+    <string name="txtRangeSpO2">95-100</string>
+
+
+    <string name="txtStop">STOP</string>
+
+
+    <string name="txtIFAGivenTillDate">IFA given till date</string>
+    <string name="txtLocality">Locality</string>
+
+    <string name="txtToday">Today</string>
+
+
+    <string name="txtIFATablets">IFA Tablets</string>
+    <string name="txtCalciumTablets">Calcium Tablets</string>
+    <string name="txtOtherTablets">Other Tablets</string>
+    <string name="txtTotalTabletsGiven">Total tablets given: </string>
+    <string name="txtMedicationName">Medication Name</string>
+    <string name="txtPatientAutoReferHB">Patient has low HB! Patient successfully referred to health center</string>
+    <string name="txtPatientAutoReferLowBP">Patient has low BP! Patient successfully referred to health center</string>
+    <string name="txtPatientAutoReferHighBP">Patient has high BP! Patient successfully referred to health center</string>
+
+    <!--Collaboration Screen Strings-->
+
+
+</resources>

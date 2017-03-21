@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/txtAddActivity"
+        android:textColor="@color/colorBlack"
+        android:textSize="23sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtDate" />
+
+                <TextView
+                    style="@style/Font17RedNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/txtAsteriskMark" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtDate"
+                style="@style/edt_patient_registration"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/stdRowSize"
+                android:drawableRight="@drawable/ic_calender"
+                android:editable="false"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtTime" />
+
+                <TextView
+                    style="@style/Font17RedNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/txtAsteriskMark" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtReminderTime"
+                style="@style/edt_patient_registration"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/stdRowSize"
+                android:drawableRight="@drawable/ic_clock"
+                android:editable="false"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtActivity" />
+
+                <TextView
+                    style="@style/Font17RedNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/txtAsteriskMark" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtActivity"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/stdRowSize"
+                android:inputType="textPersonName"
+                android:maxLength="30"
+                android:singleLine="true"
+                android:textSize="@dimen/text17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtComments" />
+
+            <EditText
+                android:id="@+id/edtComments"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/stdRowSize"
+                android:inputType="textPersonName"
+                android:maxLength="30"
+                android:singleLine="true"
+                android:textSize="@dimen/text17sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/swtchReminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtSetReminder"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text17sp" />
+
+        <Spinner
+            android:id="@+id/spinnerReminderTime"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize"
+            android:layout_marginLeft="20dp"
+            android:entries="@array/reminderTime" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/greenRoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btnCancel"
+            android:text="@string/txtSave" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/greenRoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/txtCancel" />
+    </RelativeLayout>
+</LinearLayout>

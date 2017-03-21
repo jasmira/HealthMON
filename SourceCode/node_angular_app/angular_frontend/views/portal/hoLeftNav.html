@@ -1,0 +1,39 @@
+<div id="left-nav">
+    <div class="col-sm-1 profile-bg main-nav">
+		<div class="tabs-left">
+			<ul class="nav nav-tabs">
+				<li class="{{$state.current.name=='hoDashboard' ? 'active text-center' : 'text-center'}}">
+				<a ui-sref="hoDashboard" data-toggle="tab">
+					<div class="icon-ic-menu-dashboard-normal icon-font"></div> 
+					<div class="text-center">Dashboard</div>
+				</a>
+				</li>
+				<li class="{{$state.current.name=='Hoanalytics' ? 'active text-center' : 'text-center'}}">
+					<a ui-sref="Hoanalytics" data-toggle="tab">
+						<div class="icon-ic-menu-analytics-normal icon-font"></div>
+						<div class="text-center">Analytics</div>
+					</a>
+				</li>
+				<li class="{{$state.current.name=='collobration' ? 'active text-center' : 'text-center'}}">
+					<a ui-sref="collobration" data-toggle="tab">
+						<div class="icon-ic-menu-collaboration-normal icon-font"></div>
+						<div class="text-center">Collobration</div>
+					</a>
+				</li>
+				<li class="{{$state.current.name=='calendar' ? 'active text-center' : 'text-center'}}">
+					<a ui-sref="calendar" data-toggle="tab">
+						<div class="icon-ic-menu-calender-normal icon-font"></div>
+						<div class="text-center">Calender</div>
+					</a>
+				</li>
+				
+				<li class="{{$state.current.name=='reports' ? 'active text-center' : 'text-center'}}">
+					<a ui-sref="reports" data-toggle="tab">
+						<div class="icon-ic-menu-education-normal icon-font"></div>
+						<div class="text-center">Reports</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+    </div>
+</div>

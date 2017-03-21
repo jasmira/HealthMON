@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <!-- First Column-->
+    <LinearLayout
+        android:id="@+id/column1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtHeader"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <!-- LMP Date-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/txtLMPDate" />
+
+            <TextView
+                style="@style/Font17RedNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/txtAsteriskMark" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/txtLMPDate"
+            style="@style/edt_patient_registration"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize"
+            android:drawableRight="@drawable/ic_calender"
+            android:editable="false"
+            android:gravity="center_vertical" />
+
+
+        <!-- EDD-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtEDD" />
+
+            <TextView
+                style="@style/Font17RedNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/txtAsteriskMark" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/txtEDD"
+            style="@style/edt_patient_registration"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize"
+            android:drawableRight="@drawable/ic_calender"
+            android:editable="false"
+            android:enabled="false"
+            android:gravity="center_vertical" />
+
+        <!-- First Pregnancy -->
+        <LinearLayout
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtFirstPregnancy" />
+
+                <TextView
+                    style="@style/Font17RedNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/txtAsteriskMark" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroupPregnancy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/txtYes" />
+
+                <RadioButton
+                    android:id="@+id/radioNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtNo" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- Second Column-->
+    <RelativeLayout
+        android:id="@+id/llPrgnancyOption"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/transparentwhitebg"></LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Gravida-->
+            <TextView
+                android:id="@+id/lblGravida"
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/txtGravida" />
+
+            <LinearLayout
+                android:layout_width="@dimen/stdWidthPatientRegEdttext"
+                android:layout_height="wrap_content"
+                android:gravity="right|bottom"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgGravidaMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_minus" />
+
+                <EditText
+                    android:id="@+id/edtGravida"
+                    style="@style/edt_patient_registration"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:background="@color/colorWhite"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:text="0" />
+
+                <ImageView
+                    android:id="@+id/imgGravidaPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_plus" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/stdWidthPatientRegEdttext"
+                android:layout_height="1dp"
+                android:background="@color/colorlinegray" />
+
+            <!-- Parity-->
+            <TextView
+                android:id="@+id/lblParity"
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/txtParity" />
+
+            <LinearLayout
+                android:layout_width="@dimen/stdWidthPatientRegEdttext"
+                android:layout_height="wrap_content"
+                android:gravity="right|bottom"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgParityMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_minus" />
+
+                <EditText
+                    android:id="@+id/edtParity"
+                    style="@style/edt_patient_registration"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:background="@color/colorWhite"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:text="0" />
+
+
+                <ImageView
+                    android:id="@+id/imgParityPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_plus" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/stdWidthPatientRegEdttext"
+                android:layout_height="1dp"
+                android:background="@color/colorlinegray" />
+            <!-- Past Abortions-->
+            <TextView
+                android:id="@+id/lblPastAbortions"
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/txtPastAbortions" />
+
+            <LinearLayout
+                android:layout_width="@dimen/stdWidthPatientRegEdttext"
+                android:layout_height="wrap_content"
+                android:gravity="right|bottom"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgAbortionMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_minus" />
+
+                <EditText
+                    android:id="@+id/edtAbortions"
+                    style="@style/edt_patient_registration"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:background="@color/colorWhite"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:text="0" />
+
+
+                <ImageView
+                    android:id="@+id/imgAbortionPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_plus" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/stdWidthPatientRegEdttext"
+                android:layout_height="1dp"
+                android:background="@color/colorlinegray" />
+            <!-- Past Still Births-->
+            <TextView
+                android:id="@+id/lblPastStillBirths"
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/txtPastStillBirths" />
+
+            <LinearLayout
+                android:layout_width="@dimen/stdWidthPatientRegEdttext"
+                android:layout_height="wrap_content"
+                android:gravity="right|bottom"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgStillBirthMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_minus" />
+
+                <EditText
+                    android:id="@+id/edtStillBirths"
+                    style="@style/edt_patient_registration"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:background="@color/colorWhite"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:text="0" />
+
+
+                <ImageView
+                    android:id="@+id/imgStillBirthPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_plus" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/stdWidthPatientRegEdttext"
+                android:layout_height="1dp"
+                android:background="@color/colorlinegray" />
+            <!-- Living Children-->
+            <TextView
+                android:id="@+id/lblLivingChildren"
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/txtLivingChildren" />
+
+            <LinearLayout
+                android:layout_width="@dimen/stdWidthPatientRegEdttext"
+                android:layout_height="wrap_content"
+                android:gravity="right|bottom"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgLivingChildrenMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_minus" />
+
+                <EditText
+                    android:id="@+id/edtLivingChildren"
+                    style="@style/edt_patient_registration"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:background="@color/colorWhite"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:text="0" />
+
+
+                <ImageView
+                    android:id="@+id/imgLivingChildrenPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_plus" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/stdWidthPatientRegEdttext"
+                android:layout_height="1dp"
+                android:background="@color/colorlinegray" />
+            <!-- Previous Delivery Date-->
+            <TextView
+                android:id="@+id/lblPreviousDeliveryDate"
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/txtPreviousDeliveryDate" />
+
+            <EditText
+                android:id="@+id/txtPreviousDeliveryDate"
+                style="@style/edt_patient_registration"
+                android:layout_width="@dimen/stdWidthPatientRegEdttext"
+                android:layout_height="@dimen/stdRowSize"
+                android:drawableRight="@drawable/ic_calender"
+                android:editable="false"
+                android:gravity="center_vertical" />
+
+
+            <!-- Nature of Previous Delivery-->
+            <TextView
+                android:id="@+id/lblNatureDelivery"
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/txtNatureofPreviousDelivery" />
+
+            <Spinner
+                android:id="@+id/spinnerDeliveryNature"
+                style="@style/spinner_style"
+                android:layout_width="@dimen/stdWidthPatientRegEdttext"
+                android:layout_height="@dimen/stdRowSize"
+                android:entries="@array/DeliveryNature" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1">
+        <!-- Notes-->
+        <TextView
+            android:id="@+id/txtNote"
+            style="@style/Font17BlackNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/txtNotes" />
+
+        <EditText
+            android:id="@+id/edtNotes"
+            style="@style/edt_patient_registration"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="150dp"
+            android:layout_below="@+id/txtNote"
+            android:background="@drawable/edittext_border_gray"
+            android:gravity="start|left"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:maxLength="40"
+            android:maxLines="3"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/greenRoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:text="@string/txtSave" />
+    </RelativeLayout>
+
+</LinearLayout>

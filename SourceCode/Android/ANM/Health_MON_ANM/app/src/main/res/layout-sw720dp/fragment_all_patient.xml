@@ -1,0 +1,212 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:layout_weight="1"
+    android:background="@color/colorlightgray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dp"
+            android:text="@string/txtAllPatients"
+            android:textColor="@color/colorBlack"
+            android:textSize="23sp" />
+        <!-- Search view and sort spinner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.SearchView
+                android:id="@+id/searchViewPatient"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/stdRowSize"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="6"
+                android:background="@drawable/edittext_border_gray"
+                android:focusable="true"
+                android:queryHint="@string/hinttasksearch" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_compat2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Doctor Out"
+                android:layout_weight="1"
+                android:textColor="@color/colortextgray"
+                android:textSize="23sp"
+                app:showText="false"/>
+            <Spinner
+                android:id="@+id/spinnerSort"
+                style="@style/spinner_style"
+                android:layout_width="@dimen/stdWidthPatientRegEdttext"
+                android:layout_height="@dimen/stdRowSize"
+                android:layout_gravity="clip_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                 />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/grid"
+                android:src="@drawable/ic_listview"
+                android:layout_weight="1"
+                />
+            <Button
+                android:id="@+id/btnRegister"
+                style="@style/roundButtonSelector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:text="Register Patient" />
+
+                />
+        </LinearLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!-- High risk header-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtHighRisk"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtHighRiskCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text=""
+                        android:textColor="@color/colorBlue"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <!-- High risk Recycler view -->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lstHighRiskPatient"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_below="@+id/txtHeader"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorlinegray" />
+                <!-- Moderate risk header-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtModerateRisk"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtModerateRiskCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text=""
+                        android:textColor="@color/colorBlue"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <!-- Moderate risk Recycler view -->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lstModerateRiskPatient"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_below="@+id/txtHeader"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorlinegray" />
+                <!-- Normal header-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtNormalRisk"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtNormalCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text=""
+                        android:textColor="@color/colorBlue"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <!-- Moderate risk Recycler view -->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lstNormalPatient"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_below="@+id/txtHeader"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+</LinearLayout>

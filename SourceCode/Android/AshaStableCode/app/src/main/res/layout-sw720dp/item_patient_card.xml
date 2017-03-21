@@ -1,0 +1,226 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_border_green"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtPriority"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorLightRed" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/llFirstRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txtPriority"
+                android:orientation="horizontal">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/imgPatient"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:src="@mipmap/ic_launcher" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtPatientName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="Sample"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtAgeGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Sample"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="17sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txtPID"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/txtPID"
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Sample"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txtContact"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/txtContact"
+                            style="@style/txt_preview_gray_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Sample"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/llFirstRow"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/txtPriority"
+                android:background="@color/colorlinegray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/txtPriority"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/txt_preview_gray_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtHaemoglobin"
+                        android:textSize="17sp" />
+
+                    <LinearLayout
+                        android:id="@+id/llHBContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9"
+                            android:textColor="@color/colorred"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/txtHaemoglobinMeasure"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorlinegray" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/txt_preview_gray_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtBloodPressure"
+                        android:textSize="17sp" />
+
+                    <LinearLayout
+                        android:id="@+id/llBloodPresureContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9"
+                            android:textColor="@color/colorred"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/txtBloodPressureMeasure"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

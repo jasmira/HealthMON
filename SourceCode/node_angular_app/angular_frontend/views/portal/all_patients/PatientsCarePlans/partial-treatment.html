@@ -1,0 +1,385 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+  .treatmentContainer  .panel-heading{
+  background-color:#1dbd9d;
+  background-image:none!important;
+  }
+  .treatmentContainer .panel-title a{
+  color:#ffffff!important;
+  }
+
+  .treatmentContainer .panel-group .panel{
+  overflow:visible!important;
+  }
+  </style>
+
+
+</head>
+<body>
+<div align='left' width='40%' style="margin-top:2%">
+<div class="treatmentContainer" ng-controller = "patientTreatmentTabCtrl">
+    <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="" data-target="#collapse1">Medication</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+          <!-- Medication -->
+        <div class="panel-body">
+            <!-- ------------------ -->
+            <div role="tabpanel" class="tab-pane" id="treatmenttDiv">
+                <div id="treatmentAccord1">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div id="medicineTypeDropDown" >
+                              <div class="dropdown " style="margin-top:1%"><div>Select Drug</div>
+                                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="width:80%">
+                                {{selectedMed}}
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" >
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" ng-repeat = 'drug in availDrugsLst' ng-click = 'selectMedicine(drug)'> {{drug.DrugName}}</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                        </div>
+                         <div class="col-md-3">
+                            <div id="quantityDropDown" >
+                              <div class="dropdown "><div>Quantity</div>
+                              <input type="text" name="name" placeholder="Define Quantity" class = 'txtBox' ng-model = 'medicationQuantity' style="margin-top:5%">
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div id="frequencyDropDown" >
+                              <div class="dropdown "><div>Frequency</div>
+                                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="width:80%">
+                                <span class="small-text-gray">{{medFrequency}}</span>
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" ng-click = "setMedFrequency('0--1--0','Once Daily')">Once Daily</a></li>
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" ng-click = "setMedFrequency('1--0--1','Twice Daily')">Twice Daily</a></li>
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" ng-click = "setMedFrequency('1--1--1','Thrice Daily')">Thrice Daily</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary blueBtn pull-right" type="submit" style="margin-top:15%" ng-click = 'addMedicine()'>Add</button>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:1%">
+                        <div class="col-md-4">
+                            <a class="heperlinkBlue" ng-click = 'addPreviousDrugs()'>Add Previous Drugs</a>
+                        </div>
+                        <div class="col-md-8">
+                            <span style="color:red;" ng-show = 'medicationSaveMsg' > *You have unsaved changes, Please save before changing tab </span>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:4%" ng-repeat = "medicationDetail in newMedication " >
+
+                            <div class="col-md-12" style="margin-bottom:1%">
+                                <div class="col-md-3">
+                                    <span class="srNo"> {{index}} </span>
+                                    <span class="srNo"> {{medicationDetail.drug}} </span>
+                                </div>
+                                <div class="col-md-3">&nbsp;&nbsp;&nbsp; {{medicationDetail.quantity}} </div>
+                                <div class="col-md-4">
+                                    <div class="" ng-show = "medicationDetail.freq == 1">
+                                        <span class="morningFreq">&nbsp;&nbsp;&nbsp;0</span>
+                                        <span> ----- </span>
+                                        <span class="afternoonFreq">1</span>
+                                        <span class="morningFreq"> ------ </span>
+                                        <span class="eveFreq">0</span>&nbsp;&nbsp;&nbsp;
+                                    </div>
+                                    <div class="" ng-show = "medicationDetail.freq === 2">
+                                        <span class="morningFreq">&nbsp;&nbsp;&nbsp;1</span>
+                                        <span> ----- </span>
+                                        <span class="afternoonFreq">0</span>
+                                        <span class="morningFreq"> ------ </span>
+                                        <span class="eveFreq">1</span>&nbsp;&nbsp;&nbsp;
+                                    </div>
+                                    <div class="" ng-show = "medicationDetail.freq === 3">
+                                        <span class="morningFreq">&nbsp;&nbsp;&nbsp;1</span>
+                                        <span> ----- </span>
+                                        <span class="afternoonFreq">1</span>
+                                        <span class="morningFreq"> ------ </span>
+                                        <span class="eveFreq">1</span>&nbsp;&nbsp;&nbsp;
+                                    </div>
+
+
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-primary blueBtn" type="submit" ng-click = 'removeMedication(medicationDetail)'>&times</button>
+                                </div>
+                            </div>
+
+                            </div>
+                            <div class="row" style="margin-top:4%">
+                                <!-- <div class="txtboxBottomBorder row">
+                                    <label for="comment">
+                                        <span>Comment</span>
+                                    </label>
+                                        <br>
+                                        <input type="text" class="txtBox" placeholder="Write here" style="width: 100%;;" ng-model = "medicationComments">
+
+                                </div> -->
+                            </div>
+            <!-- ------------------- -->
+        </div>
+      </div>
+    </div>
+
+
+</div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="" data-target="#collapse2">Investigations and  Tests</a>
+        </h4>
+      </div>
+
+
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+            <!-- -------------------- -->
+            <div id="treatmentAccord2">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="dropdownBlue" >
+                          <div class="dropdown "><div>Type</div>
+                            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="width:80%">
+                            {{investigationType}}
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" >
+
+                              <li role="presentation"><a role="menuitem" tabindex="-1" ng-click = "setInvestigationType(investtest)" ng-repeat = 'investtest in investigationAndTests '> {{investtest.type}}</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                     <div class="col-md-3">
+                         <div>
+                           <div class="dropdown "><div>Quantity</div>
+                           <input type="number" name="name" placeholder="Define Quantity" class = 'txtBox' ng-model = 'investigationQuantity' style="margin-top:4%">
+                           </div>
+                         </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="txtboxBottomBorder row">
+                                <label for="comment">
+                                    <span style="font-weight:normal">Comment</span>
+                                </label>
+                                    <br>
+                                    <input type="text" class="txtBox" placeholder="Write here" style="width: 100%;" ng-model = "investigationComment">
+
+                            </div>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary blueBtn pull-right" type="submit" ng-click = 'addInvestigationToLst()'>Add</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a class="heperlinkBlue" ng-click = 'addPreviousTests()'> Show Previous Tests</a>
+                    </div>
+                    <div class="col-md-6">
+                        <span style="color:red;" ng-show = 'investigationSaveMsg'> *You have unsaved changes. Please save before changing tab </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" style="padding-top:10px;">
+
+                    </div>
+                </div>
+
+
+                <div class="row" style="margin-top:4%" ng-repeat = "investigation in newinvestigationLst" >
+                    <div class="col-md-12" style="margin-bottom:1%">
+                        <div class="col-md-4">
+                            <!-- <span class="srNo"> 1 </span> need to do something  -->
+                            <span > {{investigation.type}} </span>
+                        </div>
+                        <div class="col-md-3">&nbsp;&nbsp;&nbsp; {{investigation.quantity}} </div>
+                        <div class="col-md-3">
+                            <span> {{investigation.comment}} </span>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ----------------- -->
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="" data-target="#collapse3">Diagnosis</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+
+        <div class="panel-body">
+            <div id="treatmentAccord3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="dropdownBlue" >
+                          <div class="dropdown "><div>Type</div>
+                            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="width:80%">
+                            {{diagnosis}}
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" >
+                              <li role="presentation"><a role="menuitem" tabindex="-1" ng-repeat = 'diagnosistype in diagnosisTypes' ng-click = "setDiagnosis(diagnosistype)"> {{diagnosistype.type}} </a></li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="txtboxBottomBorder row">
+                                <label for="comment">
+                                    <span style="font-weight:normal">Comment</span>
+                                </label>
+                                    <br>
+                                    <input type="text" class="txtBox" placeholder="Write here" style="width: 100%;;" ng-model = 'diagnosisComments'>
+
+                            </div>
+                    </div>
+                    <div class="col-md-5">
+                        <button class="btn btn-primary blueBtn pull-right" type="submit" ng-click = "addDiagnosisToLst()">Add</button>
+                    </div>
+                    <span> &nbsp;</span>
+                    <br>
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a class="heperlinkBlue" ng-click = 'addPreviousDiag()'> Show Previous Diagnosis</a>
+                    </div>
+                    <div class="col-md-6">
+                        <span style="color:red;" ng-show = 'diagnosisSaveMsg'> *You have unsaved changes. Please save before changing tab </span>
+                    </div>
+                </div>
+
+
+                <div class="">
+                    <div class="row" style="margin-top:2%" ng-repeat = "diagnosis in newDiagnosisLst" >
+                        <div class="col-md-12" style="margin-bottom:1%">
+                            <div class="col-md-4">
+                                <!-- <span class="srNo"> 1 </span> need to do something  -->
+                                <span > {{diagnosis.type}} </span>
+                            </div>
+                            <div class="col-md-3">
+                                <span> {{diagnosis.comment}} </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+     <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="" data-target="#collapse4">Procedure</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div id="treatmentAccord4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="dropdownBlue" >
+                          <div class="dropdown "><div>Type</div>
+                            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="width:80%">
+                            {{procedure}}
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" >
+                              <li role="presentation"><a role="menuitem" tabindex="-1" ng-repeat = 'procedure in procedures' ng-click = 'setProcedure(procedure)'>{{procedure.type}}</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="" style="padding-top:50px;">
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="txtboxBottomBorder row">
+                                <label for="comment">
+                                    <span style="font-weight:normal">Comment</span>
+                                </label>
+                                    <br>
+                                    <input type="text" class="txtBox" placeholder="Write here" style="width: 100%;;" ng-model = 'procedureComments'>
+
+                            </div>
+                    </div>
+                    <div class="col-md-5">
+                        <button class="btn btn-primary blueBtn pull-right" type="submit" ng-click = 'addProcedureToLst()'>Add</button>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <a class="heperlinkBlue" ng-click = 'addPreviousProcedures()'> Show Previous Procedures</a>
+                    </div>
+                    <div class="col-md-6">
+                        <span style="color:red;" ng-show = 'procedureSaveMsg'> *You have unsaved changes. Please save before changing tab </span>
+                    </div>
+                </div>
+
+                <div class="">
+                    <div class="row" style="margin-top:1%" ng-repeat = "procedure in newProcedureLst" >
+                        <div class="col-md-12" style="margin-bottom:1%">
+                            <div class="col-md-4">
+                                <!-- <span class="srNo"> 1 </span> need to do something  -->
+                                <span > {{procedure.type}} </span>
+                            </div>
+                            <div class="col-md-3">
+                                <span> {{procedure.comment}} </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+       </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+      <div class="" style="padding-top:10px;">
+        <span style="margin-top:3%;">
+            <b> {{saveStatus}} </b> </span>
+      </div>
+    <button class="btn btn-default blueBtn pull-right" type="button" ng-click = "savePatientTreatmentDetails()" style="margin-top:1%">Save </button>
+  </div>
+</div>
+</div>
+
+
+</body>
+</html>

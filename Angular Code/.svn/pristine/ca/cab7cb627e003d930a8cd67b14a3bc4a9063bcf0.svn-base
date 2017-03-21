@@ -1,0 +1,90 @@
+<form name="form" ng-submit="newActivityInviteCtrl.saveInvite()" novalidate>
+<div class="row">
+	<div class="col-md-4">
+		
+		<div class="entityInNewActivity  row" auto-focus><span ng-if="newActivityInviteCtrl.message!=''" class="recordSavedCalendar">{{newActivityInviteCtrl.message}}</span></div>
+		<div class="entityInNewActivity col-md-12">
+			<div class="col-md-2 top-pad-both pull-left"><label for="to" class="">
+				<span>To</span>
+				<span class="asteric">*</span>
+			</label></div>
+			  <div class="col-md-10">
+			  <select size="10" name="selectedUsers" multiple ng-multiple="true" ng-model="newActivityInviteCtrl.newInvite.selectedUsers" ng-options="user.User_Name+'('+user.User_role+')' for user in newActivityInviteCtrl.users" required>
+			  </select>
+			  </div>
+			  
+		</div>
+		<div class="entityInNewActivity row">
+			<label for="Venue" class="col-md-2 top-pad-both">
+				<span>Venue</span>
+				<span class="asteric">*</span>
+			</label>
+			<input type="text" name='venue' class="txtBox col-md-10" maxlength="50" ng-model="newActivityInviteCtrl.newInvite.venue" ng-required="true">
+		</div>
+		<div class="entityInNewActivity row">
+			<label for="All Day Booked" class="col-md-5 top-pad-both">
+				<span>All Day Booked</span>
+				
+			</label>
+			<input type="checkbox" class="txtBox col-md-1" ng-model="newActivityInviteCtrl.newInvite.allDayBooked">
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="entityInNewActivity row">
+			<label for="Start Time" class="col-md-3 top-pad-both">
+				<span>Start Time</span>
+				<span class="asteric">*</span>
+			</label>
+			<input datetime-picker date-format="yyyy-MM-dd HH:mm:ss" name='startDt' class="txtBox col-md-9 top-pad-both" ng-model="newActivityInviteCtrl.newInvite.start" ng-required="true">
+		</div>
+		<div class="entityInNewActivity row">
+			<label for="End Time" class="col-md-3  top-pad-both">
+				<span>End Time</span>
+				<span class="asteric">*</span>
+			</label>
+			<input datetime-picker date-format="yyyy-MM-dd HH:mm:ss" name='endDt' ng-disabled="newActivityInviteCtrl.newInvite.allDayBooked" class="txtBox col-md-9 top-pad-both" ng-model="newActivityInviteCtrl.newInvite.end" ng-required="true">
+		</div>
+		
+		<div class="entityInNewActivity">
+			<label for="Set Reminder" class="col-md-4 top-pad-both">
+				<span>Set Reminder</span>
+				
+			</label>
+			<input type="checkbox" class="txtBox col-md-1" ng-model="newActivityInviteCtrl.newInvite.setReminder">
+			<select class="col-md-6 newActiviryRemSelect" name="ReminderInterval" ng-model="newActivityInviteCtrl.newInvite.ReminderInterval" ng-disabled="!newActivityInviteCtrl.newInvite.setReminder">
+				<option value="">Select</option>
+				<option value="5">5 min</option>
+				<option value="10">10 min</option>
+				<option value="15">15 min</option>
+				<option value="20">20 min</option>
+				<option value="30">30 min</option>
+				<option value="60">1 hour</option>
+			</select>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="entityInNewActivity row">
+			<label for="Subject" class="col-md-3 ">
+				<span>Subject</span>
+				<span class="asteric"> *</span>
+			</label>
+			<input type="text" name='subject' class="txtBox col-md-9 top-pad-both" maxlength="100" ng-model="newActivityInviteCtrl.newInvite.subject" ng-required="true">
+		</div>
+		<div class="entityInNewActivity">
+			<label for="Message" class="col-md-3">
+				<span>Message</span>
+				
+			</label>
+			<textarea rows=10 cols=51 style="resize:none" ng-model="newActivityInviteCtrl.newInvite.message">
+			</textarea>
+		</div>
+		<div class="row"><div class="col-md-9"></div> 
+            <div class="col-md-3 top-pad-both"> 
+				<button class="btn btn-primary activityBtn pull-right" type="submit">Send</button> 
+			</div>
+		</div>
+		
+	</div>
+	<div class="col-md-6"></div>
+</div>
+</form>

@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+  font-family: "health-mon";
+  src:url("../fonts/health-mon.eot");
+  src:url("../fonts/health-mon.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/health-mon.woff") format("woff"),
+    url("../fonts/health-mon.ttf") format("truetype"),
+    url("../fonts/health-mon.svg#health-mon") format("svg");
+  font-weight: normal;
+  font-style: normal;}
+
+[data-icon]:before {
+  font-family: "health-mon" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "health-mon" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ic-menu-education-normal:before {
+  content: "\61";
+}
+.icon-ic-menu-collaboration-normal:before {
+  content: "\62";
+}
+.icon-ic-menu-analytics-normal:before {
+  content: "\63";
+}
+.icon-ic-menu-calender-normal:before {
+  content: "\64";
+}
+.icon-ic-menu-all-patients-normal:before {
+  content: "\65";
+}
+.icon-ic-menu-dashboard-normal:before {
+  content: "\66";
+}
+
+.icon-font {
+    font-size: 60px;
+    height:51px;
+   /*border: 1px solid #000;*/
+    padding: 0;
+    margin: 0;
+}
+

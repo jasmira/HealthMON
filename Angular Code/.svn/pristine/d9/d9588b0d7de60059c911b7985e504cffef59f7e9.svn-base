@@ -1,0 +1,21 @@
+angular.module('healthMon').controller("headerCtrl", function($http,authFact) {
+	var vm = this;
+		$http.get("common/getMOTaskAlertsNotifications/"+authFact.getUserObj().HM_User_id,
+                      {headers : {'Authorization' : authFact.getToken()}}).then(function(response) {
+               vm.TaskAlertList=response.data;
+			   var list=vm.TaskAlertList;
+			   var cnt = 0;
+			   for(var i in list){
+					if(list[i].User_Task_Type=='notification')
+						cnt++;
+			   }
+			   vm.notificationCount=cnt;
+			   
+         });
+        $http.get('common/getUserProfileInfo/'+authFact.getUserObj().HM_User_id,{headers : {'Authorization' : 
+                                             authFact.getToken()}}).then(function(response) {             
+            vm.profileInfo=response.data;             
+        });
+     
+  
+});

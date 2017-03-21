@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/all_patient_task_medication_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical">
+        <!--IFA / CA Header-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/heightMedicationHeader"
+            android:background="@color/colorLightGreenBg"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:text="@string/txtDrugName"
+                android:textColor="@color/colorBlue" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:text="@string/txtQuantity"
+                android:textColor="@color/colorBlue" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:text="@string/txtImmunizationGivenBy"
+                android:textColor="@color/colorBlue" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:text="@string/txtImmunizationRole"
+                android:textColor="@color/colorBlue" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:text="@string/txtLocation"
+                android:textColor="@color/colorBlue" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:text="@string/txtDueDate"
+                android:textColor="@color/colorBlue" />
+
+<!--            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:text="@string/txtAction"
+                android:textColor="@color/colorBlue" />-->
+
+        </LinearLayout>
+
+        <!--IFA-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/heightMedicationrow"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp">
+
+
+            <Spinner
+                android:id="@+id/spinnerIFAType"
+                style="@style/spinner_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".14"
+                android:entries="@array/reportType" />
+
+            <Spinner
+                android:id="@+id/spinnerIFAQntyType"
+                style="@style/spinner_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".14"
+                android:entries="@array/reportType" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:id="@+id/tvIFAgivenBy"
+                android:text="@string/txtLastSyncNotAvaliable"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:id="@+id/tvIFARole"
+                android:text="@string/txtLastSyncNotAvaliable"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:id="@+id/tvIFALocation"
+                android:text="@string/txtLastSyncNotAvaliable"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:id="@+id/tvIFADueDate"
+                android:text="@string/txtLastSyncNotAvaliable"
+                android:textColor="@color/colorred" />
+
+<!--            <LinearLayout
+                android:id="@+id/llMIFASave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".14"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btnMIFASave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtSave"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text20sp" />
+
+                    <TextView
+                        android:id="@+id/btnMIFASave2"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/colorPrimary" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMIFAEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".14"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btnMIFAEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtEdit"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text20sp" />
+
+                    <TextView
+                        android:id="@+id/btnMIFAEdit2"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/colorPrimary" />
+                </LinearLayout>
+            </LinearLayout>-->
+
+        </LinearLayout>
+
+
+        <!--Calcium-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/heightMedicationrow"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp">
+
+<!--            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:id="@+id/tvCADrugName"
+                android:text="@string/txtCalcium"
+                android:textColor="@color/colorBlue" />-->
+                        <Spinner
+                            android:id="@+id/spinnerCAType"
+                            style="@style/spinner_style"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".14"
+                            android:entries="@array/reportType" />
+
+            <Spinner
+                android:id="@+id/spinnerCAQntymType"
+                style="@style/spinner_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".14"
+                android:entries="@array/reportType" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:id="@+id/tvCAGivenBy"
+                android:text="@string/txtLastSyncNotAvaliable"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:id="@+id/tvCARole"
+                android:text="@string/txtLastSyncNotAvaliable"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:id="@+id/tvCALocation"
+                android:text="@string/txtLastSyncNotAvaliable"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:id="@+id/tvCADueDate"
+                android:text="@string/txtLastSyncNotAvaliable"
+                android:textColor="@color/colorred" />
+
+<!--            <LinearLayout
+                android:id="@+id/llMCalciumSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".14"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/btnMCalciumSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtSave"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text20sp" />
+
+                <TextView
+                    android:id="@+id/btnMCalciumSave2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorPrimary" />
+
+                    </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMCalciumEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".14"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/btnMCalciumEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtEdit"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text20sp" />
+
+                <TextView
+                    android:id="@+id/btnMCalciumEdit2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorPrimary" />
+            </LinearLayout>
+                </LinearLayout>-->
+
+        </LinearLayout>
+
+        <!--Other Drug Header-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/heightMedicationHeader"
+            android:background="@color/colorLightGreenBg"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:text="@string/txtDrugName"
+                android:textColor="@color/colorBlue" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:text="@string/txtQuantity"
+                android:textColor="@color/colorBlue" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:text="@string/txtImmunizationGivenBy"
+                android:textColor="@color/colorBlue" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:text="@string/txtImmunizationRole"
+                android:textColor="@color/colorBlue" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:text="@string/txtLocation"
+                android:textColor="@color/colorBlue" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:text="@string/txtAction"
+                android:textColor="@color/colorBlue" />
+
+        </LinearLayout>
+
+        <!--Other Drug Add-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/heightMedicationrow"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp">
+
+
+            <Spinner
+                android:id="@+id/spinnerOtherType"
+                style="@style/spinner_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".14"
+                android:entries="@array/reportType" />
+
+            <Spinner
+                android:id="@+id/spinnerOtherQntymType"
+                style="@style/spinner_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".14"
+                android:entries="@array/reportType" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:id="@+id/tvAddOtherGivenBy"
+                android:text="@string/txtLastSyncNotAvaliable"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:id="@+id/tvAddOtherRole"
+                android:text="@string/txtLastSyncNotAvaliable"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".14"
+                android:id="@+id/tvAddOtherLocation"
+                android:text="@string/txtLastSyncNotAvaliable"
+                android:textColor="@color/colorBlack" />
+
+
+            <LinearLayout
+                android:id="@+id/llMOtherAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".14"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/btnMOtherAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtAdd"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text20sp" />
+
+                <TextView
+                    android:id="@+id/btnMOtherAdd2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorPrimary" />
+                    </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lstMedicationOther"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
+    <!--Action Buttons-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="2dp"
+
+        >
+
+        <Button
+            android:id="@+id/btn_medication_save"
+            style="@style/greenRoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/capture_buttons_between_margin"
+            android:layout_marginRight="@dimen/capture_buttons_between_margin"
+            android:text="@string/txtTaskVitalsSave" />
+
+        <Button
+            android:id="@+id/btn_medication_cancel"
+            style="@style/greenRoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/btn_medication_save"
+            android:layout_toRightOf="@id/btn_medication_save"
+            android:text="@string/txtTaskVitalsCancel" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

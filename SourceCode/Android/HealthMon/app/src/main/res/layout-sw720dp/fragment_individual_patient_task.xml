@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/colorlightgray"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:text="@string/txtAllPatients"
+                android:textColor="@color/colorBlack"
+                android:textSize="23sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtBack"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorPrimary" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- Patient Card-->
+        <include layout="@layout/item_patient_detail_card" />
+        <!-- Task & Refer to Doctor Screen Task-->
+
+        <LinearLayout
+            android:id="@+id/llBtnsOptionsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/edittext_border_gray"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btnTask"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/stdRowSize"
+                android:layout_weight="1"
+                android:background="@color/colorBlue"
+                android:text="@string/txtTasks"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text17sp" />
+
+            <TextView
+                android:id="@+id/devider"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorlinegray" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/stdRowSize"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btnReferToDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/stdRowSize"
+                    android:background="@color/colorWhite"
+                    android:text="@string/txtRefertoDoctor"
+                    android:textColor="@color/colortextgray"
+                    android:textSize="@dimen/text17sp" />
+
+                <ImageView
+                    android:id="@+id/imgExlamation"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="150dp"
+                    android:src="@drawable/ic_exclamation_sign" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlTabContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:visibility="visible">
+            <!-- Layout for task screen-->
+            <include
+                android:id="@+id/llTasks"
+                layout="@layout/layout_task_individual_patient" />
+            <!-- Layout for task screen-->
+            <include
+                android:id="@+id/llReferToDoc"
+                layout="@layout/layout_refer_to_doctor"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTabOptionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:visibility="visible"></RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

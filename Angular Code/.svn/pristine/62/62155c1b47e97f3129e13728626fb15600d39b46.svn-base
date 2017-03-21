@@ -1,0 +1,28 @@
+<div class="tab-pane" id="medications">
+<div class="col-md-12">
+    <a class="pull-right" ui-sref="{{$state.current.name}}"> View All</a>
+</div>
+
+<table class="table table-bordered table-responsive patientSummarytable">
+    <thead class="blueBgTh">
+      <tr>
+        <th>Sr. No.</th>
+        <th>Date</th>
+        <th>Medication</th>
+        <th>Quantity</th>
+        <th>Given at/Location</th>
+        <th>Given by</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="(index, info) in patientMedicationCtrl.medicationData">
+        <td>{{index -- 1}}</td>
+        <td class="tdClass">{{info.created_date}}</td>
+        <td class="tdClass">{{info.drug_name}}</td>
+        <td class="tdClass">{{info.medicine_qty}}</td>
+        <td class="tdClass">{{info.phc}}</td>
+        <td class="tdClass">{{info.created_by}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

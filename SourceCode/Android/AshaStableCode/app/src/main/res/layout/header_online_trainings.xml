@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5sp"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:text="@string/txtOnlineTrainings"
+        android:textSize="23sp"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/txtHeader"
+
+      />
+
+    <Button
+        android:id="@+id/btnInternalTrns"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorBlue"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@id/txtHeader"
+        android:textSize="@dimen/text17sp"
+        android:text="@string/txtInternalTrns" />
+
+    <Button
+        android:id="@+id/btnExternalTrns"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHeader"
+        android:background="@color/colorWhite"
+        android:textColor="@color/colortextgray"
+        android:layout_toRightOf="@id/btnInternalTrns"
+        android:gravity="center"
+        android:textSize="@dimen/text17sp"
+        android:text="@string/txtExternalTrns" />
+
+    </RelativeLayout>

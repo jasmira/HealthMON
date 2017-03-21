@@ -1,0 +1,33 @@
+<div class="tab-pane" id="eligibility">                                                                
+      <div class="col-md-8">
+        <table class="table patientSummarytable">
+            <thead class="lightBluebg">
+              <tr>
+                <th colspan="2"><h5>PROGRAM INFORMATION</h5></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tdInGray">Program:</td>
+                <td>{{patientEligibilityCtrl.patientProgramInfo[0].Program_desc}}</td>
+              </tr>
+              <tr>
+                <td class="tdInGray">LMP Date:</td>
+                <td>{{patientEligibilityCtrl.patientProgramInfo[0].Program_item_value}}</td>
+             </tr>
+             <tr>
+                <td class="tdInGray">EDD:</td>
+                <td>{{patientEligibilityCtrl.patientProgramInfo[1].Program_item_value}}</td>
+             </tr>
+             <tr>
+                <td class="tdInGray">First Pregnancy:</td>
+                <td>{{patientEligibilityCtrl.patientProgramInfo[2].Program_item_value}}</td>
+             </tr>
+             <tr>
+                <td class="tdInGray">Notes:</td>
+                <td>{{patientEligibilityCtrl.patientProgramInfo[10].Program_item_value}}</td>
+             </tr>
+            </tbody>
+          </table>
+      </div>
+</div>

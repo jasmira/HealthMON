@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorlightgray"
+    android:padding="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/colortextgray"
+                android:textColor="@color/colorBlack"
+                android:layout_height="@dimen/heightlayoutheading"
+                android:paddingLeft="@dimen/paddingheadingallleft"
+                android:paddingStart="@dimen/paddingheadingallleft"
+                android:layout_marginBottom="@dimen/paddingheadingtophelpguide"
+                android:textSize="@dimen/sizetextheading"
+                android:gravity="center"
+                android:text="Others"/>
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:numColumns="3"
+                android:paddingTop="@dimen/paddingheadingtophelpguide"
+                android:id="@+id/dashboard_help_gridview"
+                >
+
+            </GridView>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>
+

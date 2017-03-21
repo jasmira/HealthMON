@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/toolbar_menu_dashboard_lastsync"
+        android:title="@string/txtLastSyncData"
+        android:textColor="@color/colordashboardtext"
+        app:actionLayout="@layout/toolbar_last_sync"
+        app:showAsAction="always|withText"/>
+
+    <item android:id="@+id/toolbar_menu_dashboard_sync"
+        android:title="@string/app_name"
+        android:textColor="@color/colordashboardtext"
+        android:icon="@drawable/ic_landing_sync_unupload"
+        app:actionLayout="@layout/toolbar_sync_data"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/toolbar_menu_dashboard_notification"
+        android:title="@string/app_name"
+        android:textColor="@color/colordashboardtext"
+        android:icon="@drawable/ic_landing_notifications"
+        app:actionLayout="@layout/toolbar_notification_icon"
+        app:showAsAction="always"/>
+
+</menu>

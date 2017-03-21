@@ -1,0 +1,221 @@
+<html>
+ <head>
+
+</head>
+
+<body>
+    
+	<!-- Tab panes -->
+    <div class="tab-content">
+	<div role="tabpanel" class="tab-pane active" 
+                id="carePlanAddRecordDiv">
+		<div class="row pull-left">
+			<div class="col-md-12 carePlanTopBtn">
+			    <button ui-sref='patientCareplan.addcareplantemplates' type="button" class="btn btn-default gen-left-
+                        margin">Add Care Plan Template</button>
+			</div>
+		</div>
+                                                                           
+		<div class="row pull-right">
+			<div class="col-md-12 carePlanTopBtn">
+				<button ng-click='editCareplanCtrl.deleteAllNewAddedTasks()' 
+                   type="button" class="btn btn-default gen-left-margin">Cancel</button>
+                <button ui-sref='patientCareplan' type="button" class="btn btn-default">Save</button>
+		    </div>
+		</div>
+	
+												  <div class="row" >
+													<div class="col-md-12" style="margin-top:1%;border:1px solid #275073;padding: 1%!important">
+													   <span class="" style="color:#275073;font-weight:bold">Suggestions</span>
+															
+															<!-- -->
+															<div  class="top-pad-both">
+                              
+															  <textarea class="col-md-12" type="text" id="" rows="1" placeholder="Write here" style="border:none" disabled='true'></textarea>
+															 
+															</div>
+															<!-- -->
+															
+															</th>
+													</div>
+												  </div>
+														
+			</div>
+	     </div>
+                                                  
+    <div id="carePlanTableAddRecord	" class="row" style="margin-top:2%; height:400px;overflow:auto">  
+        <div class="">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="">Category <br><br>  
+						   <div  class="col-md-10 categoryDropDown top-pad-both">
+                                <div class="dropdown ">
+								   	<button class="btn btn-default  dropdown-toggle largeDropBtn" type="button" 
+                                            id="menu1" 
+                                            data-toggle="dropdown" title ={{editCareplanCtrl.selectedCategory}} >
+                                        <p  class="pull-left paragraphDropdown">                                                          {{editCareplanCtrl.selectedCategory}}</p>
+										<span class="caret pull-right"></span>
+                                    </button>
+                                       
+										 <ul class="dropdown-menu" 
+                                            role="menu" aria-labelledby="menu1">
+											<li ng-repeat='category in 
+                                                editCareplanCtrl.categoryList' role="presentation"
+                                              ng-click='editCareplanCtrl.selectCategory(category)'>
+                                               {{category}}
+                                             </li>
+										</ul>  
+                                  </div>
+							</div>  
+						</th>
+                        <th class="">Task <br><br>
+						    <div class="col-md-10 categoryDropDown top-pad-both">
+                                <div class="dropdown ">
+								    <button class="btn btn-default dropdown-toggle largeDropBtn" type="button" 
+                                            id="menu1" 
+                                            data-toggle="dropdown" title={{editCareplanCtrl.selectedTask}}>
+                                        <p class="pull-left paragraphDropdown">  {{editCareplanCtrl.selectedTask}}</p>
+										<span class="caret pull-right"></span>
+									</button>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+									    <li ng-repeat='task in 
+                                                editCareplanCtrl.displaytaskList' role="presentation"
+                                              ng-click='editCareplanCtrl.selectedTask=task'>{{task}}
+                                        </li>
+									  
+									</ul>
+								</div>
+							</div>
+														
+						</th>
+                        <th class="">Frequency <br> <br>
+							<div class="col-md-10 categoryDropDown top-pad-both">
+                                <div class="dropdown ">
+								    <button class="btn btn-default dropdown-toggle smallDropBtn" type="button" 
+                                            id="menu1" 
+                                            data-toggle="dropdown" title={{editCareplanCtrl.selectedFrequency}}>
+                                        <p class="pull-left paragraphDropdownSmall">{{editCareplanCtrl.selectedFrequency}}</p>
+								    <span class="caret pull-right"></span>
+									</button>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+									 <li ng-repeat='frequency in 
+                                                editCareplanCtrl.frequencyList' role="presentation"
+                                              
+                                         ng-click='editCareplanCtrl.selectedFrequency=frequency'>
+                                              {{frequency}}
+                                        </li>
+									</ul>
+								</div>
+															 
+							</div>
+						</th>
+                        <th class="">Role <br> <br>
+							<div class="col-md-10 categoryDropDown top-pad-both">
+                                <div class="dropdown ">
+									<button class="btn btn-default dropdown-toggle smallDropBtn" type="button" id="menu1" 
+                                            data-toggle="dropdown" title={{editCareplanCtrl.selectedRole}}>
+                                        <p class="pull-left paragraphDropdownSmall">{{editCareplanCtrl.selectedRole}}</p>
+										<span class="caret pull-right"></span>
+									</button>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+									 <li ng-repeat='role in 
+                                                editCareplanCtrl.roleList' role="presentation"
+                                              
+                                         ng-click='editCareplanCtrl.selectedRole=role'>
+                                              {{role}}
+                                        </li>
+									</ul>
+								</div>
+							</div>
+						</th>
+                        <th> 
+                            <button ng-click='addTask()' type="button" 
+                                                class="btn btn-default btnCarePlan">Add</button></th>
+                    </tr>
+                </thead>
+                    <tbody ng-repeat='careplan in patientCareplan track by $index'>
+                        <tr ng-repeat='i in careplan track by $index'>
+                            <td class="editPlanCatagoryCol" ng-if="$index == 0">{{i.Category_Desc}}</td>
+                                <td ng-if="$index > 0"></td>
+                            <td>
+                                <div class="col-md-10 categoryDropDown top-pad-both">
+                                    <div class="dropdown ">
+								        <button class="btn btn-default dropdown-toggle largeDropBtn" type="button" 
+                                                id="menu1" data-toggle="dropdown" title={{i.Template_Task_Desc}}>
+                                            <p  class="pull-left paragraphDropdown">     {{i.Template_Task_Desc}}</p> <span class="caret pull-right"></span>
+										</button>
+										<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+											<li ng-repeat='task in 
+                                                editCareplanCtrl.taskList' role="presentation"
+                                                
+                                ng-click='i.Template_Task_Desc=task'>
+                                                {{task}}  
+                                        </li>
+							            </ul>
+							        </div>
+							    </div>
+                            </td>
+                            <td>
+                                <div class="col-md-10 categoryDropDown top-pad-both">
+                                    <div class="dropdown ">
+										<button class="btn btn-default dropdown-toggle smallDropBtn" type="button" 
+                                                id="menu1" data-toggle="dropdown" title={{i.Frequency_Desc}}>
+                                            <p class="pull-left paragraphDropdownSmall">{{i.Frequency_Desc}}</p>
+										     <span class="caret pull-right"></span>
+									    </button>
+										<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+											 <li ng-repeat='frequency in 
+                                                editCareplanCtrl.frequencyList' role="presentation"
+                                              
+                                         ng-click='i.Frequency_Desc=frequency'>
+                                              {{frequency}}
+                                        </li>
+										</ul>
+						            </div>
+								</div>
+                            </td>
+                            <td>
+                                <div class="col-md-10 categoryDropDown top-pad-both">
+                                    <div class="dropdown ">
+										<button class="btn btn-default dropdown-toggle smallDropBtn" type="button" 
+                                                id="menu1" data-toggle="dropdown" title={{i.role}}>
+                                            <p class="pull-left paragraphDropdownSmall">{{i.role}}</p>
+										    <span class="caret pull-right"></span>
+										</button>
+									    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+										  <li ng-repeat='role in 
+                                                editCareplanCtrl.roleList' role="presentation"
+                                              
+                                         ng-click='i.role=role'>
+                                              {{role}}
+                                        </li>
+										</ul>
+								    </div>
+								</div> <br> <br>
+                            </td>
+                            <td>
+                                <button 
+    ng-click='editCareplanCtrl.deleteOneTask(i.Category_Desc,i.Template_Task_Desc,i.Frequency_Desc,i.role)'
+                                        type="button" class="btn btn-default cancelBtnCarePlanAddRecord">
+                                                                &times;
+                                </button> 
+                            </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+												
+	</div>
+	    <div role="tabpanel" class="tab-pane" id="patientSummarytDiv">
+		</div>
+	    <div role="tabpanel" class="tab-pane" id="patientSummarytDiv">
+	    </div>
+								
+	</div>    
+    
+</body>
+
+
+</html>

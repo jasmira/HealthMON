@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/deviceTile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.psl.bluetoothdemoapp.fragments.PulseOximeterFragment">
+
+    <TextView
+        style="@style/TextReportTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="Pulse Oximeter" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/btnConnectAndRead"
+            android:layout_width="@dimen/tile_icons_size"
+            android:layout_height="@dimen/tile_icons_size"
+            android:src="@drawable/ic_refresh_white_48dp"
+            />
+
+        <ImageView
+            android:id="@+id/imgDeviceAvailability"
+            android:layout_width="@dimen/tile_icons_size"
+            android:layout_height="@dimen/tile_icons_size"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/device_available" />
+
+        <ProgressBar
+            android:id="@+id/progressDeviceReading"
+            style="@android:style/Widget.ProgressBar.Inverse"
+            android:layout_width="@dimen/tile_icons_size"
+            android:layout_height="@dimen/tile_icons_size"
+            android:layout_marginLeft="5dp"
+            android:padding="2dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtspo2"
+        style="@style/TextReportNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <TextView
+        style="@style/TextReportTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SpO2" />
+
+
+    <TextView
+        android:id="@+id/txtPI"
+        style="@style/TextReportNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <TextView
+        style="@style/TextReportTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PI" />
+
+    <TextView
+        android:id="@+id/txtPulseRateOximeter"
+        style="@style/TextReportNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <TextView
+        style="@style/TextReportTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pulse rate" />
+</LinearLayout>

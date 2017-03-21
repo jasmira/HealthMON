@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dp"
+    android:layout_height="300dp"
+    android:background="@color/colorWhite"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtErrorMsg"
+        style="@style/txt_blue_lable_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/msgPatientRegisteredSuccessfully" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tickmark" />
+
+        <TextView
+            android:id="@+id/txtPatientName"
+            style="@style/Font17BlackNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/msgPatientRegisteredSuccessfully" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtPatientId"
+        style="@style/Font17BlackNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/msgPatientRegisteredSuccessfully" />
+
+    <Button
+        android:id="@+id/btnOk"
+        style="@style/greenRoundButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:text="@string/txtOK" />
+</LinearLayout>

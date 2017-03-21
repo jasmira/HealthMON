@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Patient Detailed Card-->
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_border_green"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtPriority"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorLightRed" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/imgPatient"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@mipmap/ic_launcher" />
+        <!-- First Column-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtPatientName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Sample"
+                android:textColor="@color/colorBlue"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/txt_blue_lable_normal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txtPID" />
+
+                <TextView
+                    android:id="@+id/txtPID"
+                    style="@style/txt_blue_lable_normal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="Sample" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/txt_blue_lable_normal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txtContact" />
+
+                <TextView
+                    android:id="@+id/txtContactVal"
+                    style="@style/txt_blue_lable_normal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="Sample" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llReffredContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Refered"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorPrimary" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorlinegray" />
+        <!-- Second Column-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtProgramName"
+                style="@style/txt_preview_gray_lable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/txtANCare" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txtStatus" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorlinegray" />
+        <!-- Third Column-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="20 weeks"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/txtBMI"
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="21dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txtLMP"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/txtBP"
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="21dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txtEDD"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/txtHB"
+                    style="@style/txt_preview_gray_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="21dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txtEditProfile"
+                    android:textColor="@color/colorGreenButtonDark"
+                    android:textSize="17sp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorlinegray" />
+        <!-- Fourth Column-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgRefer"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/refer_butt" />
+
+                <ImageView
+                    android:id="@+id/imgTransfer"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/transfer_butt" />
+
+                <ImageView
+                    android:id="@+id/imgReschedule"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/reschedule_butt" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!-- Button column-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assign to Dr "
+                android:textColor="@color/colorBlue"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/btnSummaryView"
+                style="@style/greenRoundButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/txtChange" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

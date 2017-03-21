@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/immunizationContainer"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/all_patient_task_header"/>
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dip"
+        android:paddingLeft="60dip"
+        android:paddingRight="110dip"
+        android:paddingBottom="15dip">
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/greenRoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:text="@string/txtBack" />
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/gray_circle_with_line"
+        android:scaleType="centerCrop"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtIm1"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:text="TT2"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtDate1"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:singleLine="true"
+            android:text="Due:05-05-2016"/>
+        </LinearLayout>
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/gray_circle_with_line"
+            android:scaleType="centerCrop"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txtIm2"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:text="TTBuster"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txtDate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"
+                    android:singleLine="true"
+                    android:text="Due:05-06-2016"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtOthers"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/gray_circle_with_line"
+            android:scaleType="centerCrop"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:text="Others"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"
+                    android:singleLine="true"
+                    android:text=""/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

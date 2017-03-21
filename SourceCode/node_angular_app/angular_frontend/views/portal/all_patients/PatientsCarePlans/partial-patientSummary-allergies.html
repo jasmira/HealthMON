@@ -1,0 +1,25 @@
+<div class="tab-pane" id="allergies">
+    <table class="table table-bordered table-responsive patientSummarytable">
+        <thead class="blueBgTh">
+          <tr>
+            <th>S No.</th>
+            <th>Type</th>
+            <th>Item</th>
+            <th>Start Date</th>
+            <th>Resolved Date</th>
+            <th>Severity type</th>
+          </tr>
+        </thead>
+        <tbody ng-repeat="(parentIndex, allergies) in patientAllergiesCtrl.patientAllergiesInfo">
+          <tr ng-repeat="(childIndex, allergy) in allergies.data">
+            <td  ng-if="childIndex == 0" rowspan="{{allergies.data.length}}">{{parentIndex -- 1}}</td>
+            <td  ng-if="childIndex == 0" rowspan="{{allergies.data.length}}">{{allergy.AllergyTypeName}}</td>
+            <td>{{allergy.AllergyItemName}}</td>
+            <td>{{allergy.Start_Date}}</td>
+            <td>{{allergy.Resolved_Date}}</td>
+            <td>{{allergy.Severity_type}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+                                                            

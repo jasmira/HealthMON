@@ -1,0 +1,213 @@
+ <!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Analytics</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="container-fluid">
+		<!---header--->
+			<header></header>
+		<!---header close--->
+		<div class="row" >
+			<!---left menu---->
+				<left-menu-panel></left-menu-panel>
+			<!---left menu close---->
+			<!---right coloumn----->
+			<div id="main-panel">
+                <!-- <div><h4>Enrolled Patients Page <span class="insight-text">(for year 2016)</span></h4> </div> -->
+                <div>
+                    <h4>
+                        ANALYTICS
+                    </h4>
+                </div>
+                <div class="row">
+                    
+                    <div id="sortBySeverityDropDown" class="col-md-2 dropdown">
+                        <div class="col-md-9"><b>Period</b></div>
+                        <div>
+                           <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                                 {{orderByColumnLabel}} <span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1"  ng-click="periodFunction('Monthly')">Monthly</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="periodFunction('Quarterly')">Quarterly</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="periodFunction('Yearly')">Yearly</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3" ng-hide="navFlag">
+                        <br><br>
+                        <span class="col-md-1 glyphicon glyphicon-triangle-left" aria-hidden="true" ng-click="changeQuaterMinus()"></span>
+                        <span class="col-md-1 glyphicon glyphicon-triangle-right" aria-hidden="true" ng-click="changeQuaterPlus()"></span>                  
+                        <div class="col-md-9"><b>{{enrolledPatientsCtrl.selectedQuarter}} {{year}}</b></div>
+                    </div>
+                    
+                    <div class="col-md-2" ng-if="orderByColumnLabel=='Quarterly'"> 
+                        <br><br>
+                        
+                        <span class="col-md-1 glyphicon glyphicon-unchecked" aria-hidden="true" ng-hide="!showAllQuarter" ng-click="showAllQuarters()"></span>
+                        <span class="col-md-1 glyphicon glyphicon-check" aria-hidden="true" ng-hide="showAllQuarter" ng-click="showAllQuarters()"></span>            
+                        <div class="col-md-10">Show all Quarters</div>
+                    </div>
+                    
+                    <div class="col-md-2">
+                    <button type="button" class="btn btn-default blueBtn btn-lg" aria-label="Left Align" ng-click="showFilterPanel()">
+                            <span class="glyphicon glyphicon-filter" aria-hidden="true"></span>Refine
+                    </button>
+                    </div>
+                    <div class="col-md-2"><p>Village : All</p>
+                        <p>Program : All</p>
+                        <p>Parameter : Enroll Patients</p></div>
+                 <br><br><br>
+                   
+                    <div id="filterPanel" ng-hide="buttonFlag">
+                        <div class="page-title green-bg col-md-11" ></div>
+                        <div class="col-md-1"></div>
+                            <div class="col-md-2">
+                             <h4 class="type">VILLAGE</h4>
+							<div class="checkbox">
+							<label><input type="checkbox" name="village" ng-model="allvil" ng-click="selectedVillage('all',allvil)" ng-checked="allvil">All</label>
+							 </div>
+							<div class="checkbox">
+							<label><input type="checkbox"  name="village" ng-model="village1" ng-click="selectedVillage('village1',village1)" disabled>Village1</label>
+							</div>
+							<div class="checkbox">
+							<label><input type="checkbox" name="village" ng-model="village2" ng-click="selectedVillage('village2',village2)" disabled>Village2</label>
+							</div>
+							<div class="checkbox">
+							<label><input type="checkbox" name="village" ng-model="village3" ng-click="selectedVillage('village3',village3)" disabled>Village3</label>
+							</div>
+							<div class="checkbox">
+							<label><input type="checkbox" name="village" ng-model="village4" ng-click="selectedVillage('village4',village4)" disabled>Village4</label>
+							</div>
+							</div>
+							<div class="col-md-2">
+							<h4 class="type">PROGRAM</h4>
+							<div class="checkbox">
+							<label><input type="checkbox" name="program" ng-model="allpro" ng-click="selectedProgram('all',allpro)" disabled>All</label>
+							</div>
+							<div class="checkbox">
+							<label><input type="checkbox" name="program" ng-model="maternal" ng-click="selectedProgram('metarnalCare',maternal)" ng-checked="maternal">Maternal Care</label>
+							</div>
+							<div class="checkbox">
+							<label><input type="checkbox" name="program" ng-model="child" ng-click="selectedProgram('childCare',child)" disabled>Child Care</label>
+							</div>
+							<div class="checkbox">
+							<label><input type="checkbox" name="program" ng-model="family" ng-click="selectedProgram('familyPlanning',family)" disabled>Family Planning</label>
+							</div>
+							<div class="checkbox">
+							<label><input type="checkbox" name="program" ng-model="natal" ng-click="selectedProgram('postNatalCare',natal)" disabled>Post Natal Care</label>
+							</div>
+							</div>
+                            <div class="col-md-2">
+                            <h4 class="type">PARAMETER</h4>
+						 <div class="checkbox">
+										<label><input type="checkbox" name="parameter" ng-model="allpar" ng-click="selectedParameter('all',allpar)" disabled>All</label>
+						 </div>
+						<div class="checkbox">
+										<label><input type="checkbox" name="parameter" ng-model="enrollment" ng-click="selectedParameter('enrollment',enrollment)" ng-checked="enrollment">Enrollment</label>
+						 </div>
+						<div class="checkbox">
+									   <label><input type="checkbox" name="parameter" ng-model="highrisk" ng-click="selectedParameter('highRisk',highrisk)" disabled>High Risk</label>
+						 </div>
+                            <div class="checkbox">
+										<label><input type="checkbox" name="parameter" ng-model="expected" ng-click="selectedParameter('ExpectedDelivery',expected)" disabled>Expected Deliveries</label>
+							</div>
+                            <div class="checkbox">
+								<label><input type="checkbox" name="parameter" ng-model="anemia" ng-click="selectedParameter('anemiaStatus',anemia)" disabled>Anemia Status</label>
+							</div>
+                            </div>
+                            <button class="btn btn-default blueBtn" type="button" ng-click="sendCheckedData()" style="margin-top:1%">OK </button>
+                               </div>
+
+								<div>
+								<div class="col-xs-11">
+								<h5 style="background: #d9f9ec;height: 35px; padding-top:10px;padding-left:15px;"><b>Enrolled Patients for: Year({{year}}) - {{enrolledPatientsCtrl.selectedQuarter}} </b></h5> 
+								</div>
+
+                <div ng-if="monthFlag && showAllQuarter">
+				<div class="page-title green-bg col-xs-4" ></div>
+					<div class="page-title green-bg col-xs-4" >
+					 	<div id="chartVerticalBar" ng-if="!enrolledPatientsCtrl.noVerticalGraphData"></div>
+				        <div ng-if="enrolledPatientsCtrl.noVerticalGraphData"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+					</div>
+					<!-- <nvd3 options="options" data="data">  -->
+				
+                </div>
+					
+				<!-- nvd3 for graph -->
+                <div ng-if="!monthFlag && showAllQuarter">
+                    <div class="page-title green-bg col-xs-3" >
+                            <div class="col-md-4"></div>
+                        <div class="col-md-4"><strong>{{month1}} {{currentYear}}</strong></div>
+                        <div id="chartVerticalBarM1" ng-if="!enrolledPatientsCtrl.noVerticalGraphData1"></div>
+                            <div ng-if="enrolledPatientsCtrl.noVerticalGraphData1"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+                    </div>
+                    <div class="page-title green-bg col-xs-3 col-md-offset-1" >
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4"><strong>{{month2}} {{currentYear}}</strong></div>
+                            <div id="chartVerticalBarM2" ng-if="!enrolledPatientsCtrl.noVerticalGraphData2"></div>
+                            <div ng-if="enrolledPatientsCtrl.noVerticalGraphData2"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+                    </div>
+                    <div class="page-title green-bg col-xs-3 col-md-offset-1" >
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4"><strong>{{month3}} {{currentYear}}</strong></div>
+                            <div id="chartVerticalBarM3" ng-if="!enrolledPatientsCtrl.noVerticalGraphData3"></div>
+                            <div ng-if="enrolledPatientsCtrl.noVerticalGraphData3"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+                    </div>
+                </div>
+			
+                <!-- for all quarters graph-->   
+                                    
+                <div ng-if="!showAllQuarter">
+                    <div class="page-title green-bg col-xs-6 col-md-offset-1">
+                        <div class="page-title green-bg col-xs-4" ></div>
+                        <div class="col-md-4"><strong>{{quarter1}}</strong></div>
+                        <div id="chartVerticalBar" ng-if="!enrolledPatientsCtrl.noVerticalGraphData"></div>
+                        <div ng-if="enrolledPatientsCtrl.noVerticalGraphData"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+                    </div>
+                    <div class="page-title green-bg col-xs-6 col-md-offset-1">
+                        <br><br>
+                        <div class="page-title green-bg col-xs-4" ></div>
+                        <div class="col-md-4"><strong>{{quarter2}}</strong></div>
+                        <div id="chartVerticalBarM1" ng-if="!enrolledPatientsCtrl.noVerticalGraphData1"></div>
+                        <div ng-if="enrolledPatientsCtrl.noVerticalGraphData1"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+                    </div>
+                    <div class="page-title green-bg col-xs-6 col-md-offset-1">
+                            <br><br>
+                            <div class="page-title green-bg col-xs-4" ></div>
+                            <div class="col-md-4"><strong>{{quarter3}}</strong></div>
+                            <div id="chartVerticalBarM2" ng-if="!enrolledPatientsCtrl.noVerticalGraphData2"></div>
+                            <div ng-if="enrolledPatientsCtrl.noVerticalGraphData2"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+                    </div>
+                    <div class="page-title green-bg col-xs-6 col-md-offset-1">
+                            <br><br>
+                            <div class="page-title green-bg col-xs-4" ></div>
+                            <div class="col-md-4"><strong>{{quarter4}}</strong></div>
+                            <div id="chartVerticalBarM3" ng-if="!enrolledPatientsCtrl.noVerticalGraphData3"></div>
+                            <div ng-if="enrolledPatientsCtrl.noVerticalGraphData3"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+                    </div>
+                </div>
+				<!---right coloumn----->
+		</div>
+                    
+                <!--<div class="col-md-11 well well-sm">
+                        <span class="pull-left">At village level distribution</span>
+                        <span class="pull-right">(Detail View)</span>
+                </div>
+                  <div class="page-title green-bg col-xs-4" ></div>
+					<div class="page-title green-bg col-xs-4" >
+					 	<div id="chartVerticalBar4" ng-if="!enrolledPatientsCtrl.noVerticalGraphData4"></div>
+				        <div ng-if="enrolledPatientsCtrl.noVerticalGraphData4"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+					</div>-->  
+                    
+                </div>
+	</div>
+</div>
+
+</body>
+</html>

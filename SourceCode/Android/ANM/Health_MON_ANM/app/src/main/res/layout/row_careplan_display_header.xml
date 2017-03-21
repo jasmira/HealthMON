@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Care Plan Title"
+        android:id="@+id/textViewCareplanTemplateTitle"
+        style="@style/textView_row_title"/>
+    <TextView
+        android:id="@+id/textViewRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/remove"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        style="@style/textViewWithUnderline"/>
+
+    <LinearLayout
+        android:id="@+id/linearlayoutheader"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewCareplanTemplateTitle"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorBlue"
+        android:padding="@dimen/padding_top_line">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="@string/drugname"
+            style="@style/textView_row_headerText"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="@string/task"
+            style="@style/textView_row_headerText"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="@string/frequency"
+            style="@style/textView_row_headerText"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="@string/role"
+            style="@style/textView_row_headerText"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/section_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stdRowSize"
+        android:layout_margin="1dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/txtMyTrainings"
+        android:textColor="@color/colorBlue"
+        android:textSize="@dimen/text17sp" />
+
+</LinearLayout>

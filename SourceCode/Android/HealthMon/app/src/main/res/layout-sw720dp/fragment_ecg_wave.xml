@@ -1,0 +1,55 @@
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+style="@style/deviceTile"
+android:gravity="top"
+tools:context="com.psl.bluetoothdemoapp.fragments.EcgFragment"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimary"
+    android:padding="5dp"
+    android:layout_alignParentTop="true"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ECG Waveform"
+        style="@style/TextReportTitle"
+        android:background="@color/colorPrimary"
+        android:paddingTop="3dp"
+        />
+    <ImageView
+        android:id="@+id/btnConnectAndRead"
+        android:layout_width="@dimen/tile_icons_size"
+        android:layout_height="@dimen/tile_icons_size"
+        android:src="@drawable/ic_refresh_white_48dp"
+        android:layout_gravity="right"
+        android:layout_marginLeft="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgDeviceAvailability"
+        android:layout_width="@dimen/tile_icons_size"
+        android:layout_height="@dimen/tile_icons_size"
+        android:src="@drawable/device_available"
+        android:layout_marginLeft="5dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressDeviceReading"
+        android:layout_width="@dimen/tile_icons_size"
+        android:layout_height="@dimen/tile_icons_size"
+        style="@android:style/Widget.ProgressBar.Inverse"
+        android:layout_marginLeft="5dp"
+        android:padding="2dp"
+        android:visibility="gone"
+        />
+</LinearLayout>
+</LinearLayout>

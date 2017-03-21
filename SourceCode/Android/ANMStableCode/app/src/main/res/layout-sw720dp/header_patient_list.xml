@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@color/colorLightGreenBg"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+
+    <TextView
+        style="@style/Font17BlackNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="3.5"
+        android:gravity="center"
+        android:text="@string/txtPatient"
+        android:textSize="17sp" />
+
+    <TextView
+        style="@style/Font17BlackNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="@string/txtProgram"
+        android:textSize="17sp" />
+
+    <TextView
+        style="@style/Font17BlackNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/txtTasks"
+        android:textSize="17sp" />
+
+    <TextView
+        style="@style/Font17BlackNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="@string/txtAssignedto"
+        android:textSize="17sp" />
+
+    <TextView
+        style="@style/Font17BlackNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:text="@string/txtStatus"
+        android:textSize="17sp" />
+
+
+</LinearLayout>

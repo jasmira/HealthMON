@@ -1,0 +1,259 @@
+-- insert into HM_country
+INSERT INTO `hm_country` (`Country_ID`, `Country_NM`, `Country_Desc`) VALUES ('1', 'India', 'All states of India');
+
+-- Insert into HM_State
+INSERT INTO `hm_states` (`State_ID`, `Country_ID`, `State_NM`, `State_Desc`) VALUES ('1', '1', '1', 'Maharashtra');
+INSERT INTO `hm_states` (`State_ID`, `Country_ID`, `State_NM`, `State_Desc`) VALUES ('2', '1', 'Gujrat', 'Kutch+vadodra_surat+ahemedabad');
+
+
+-- Districts
+INSERT INTO `hm_districts` (`District_id`, `Country_ID`, `State_ID`, `District_name`) VALUES ('1', '1', '1', 'Akola');
+INSERT INTO `hm_districts` (`District_id`, `Country_ID`, `State_ID`, `District_name`) VALUES ('2', '1', '1', 'Amravati');
+INSERT INTO `hm_districts` (`District_id`, `Country_ID`, `State_ID`, `District_name`) VALUES ('3', '1', '1', 'Thane');
+INSERT INTO `hm_districts` (`District_id`, `Country_ID`, `State_ID`, `District_name`) VALUES ('4', '1', '1', 'Raigad');
+INSERT INTO `hm_districts` (`District_id`, `Country_ID`, `State_ID`, `District_name`) VALUES ('5', '1', '1', 'Pune');
+INSERT INTO `hm_districts` (`District_id`, `Country_ID`, `State_ID`, `District_name`) VALUES ('6', '1', '1', 'Nagpur');
+INSERT INTO `hm_districts` (`District_id`, `Country_ID`, `State_ID`, `District_name`) VALUES ('7', '1', '1', 'Sangli');
+INSERT INTO `hm_districts` (`District_id`, `Country_ID`, `State_ID`, `District_name`) VALUES ('8', '1', '1', 'Kolhapur');
+
+
+-- City-Pune
+INSERT INTO `hm_city` (`District_id`, `City_id`, `State_ID`, `Country_ID`, `City_name`) VALUES ('5', '1', '1', '1', 'PuneCity');
+INSERT INTO `hm_city` (`District_id`, `City_id`, `State_ID`, `Country_ID`, `City_name`) VALUES ('5', '2', '1', '1', 'Khadki');
+INSERT INTO `hm_city` (`District_id`, `City_id`, `State_ID`, `Country_ID`, `City_name`) VALUES ('5', '3', '1', '1', 'Pimpri');
+INSERT INTO `hm_city` (`District_id`, `City_id`, `State_ID`, `Country_ID`, `City_name`) VALUES ('5', '4', '1', '1', 'Hadapsar');
+INSERT INTO `hm_city` (`District_id`, `City_id`, `State_ID`, `Country_ID`, `City_name`) VALUES ('5', '5', '1', '1', 'Aundh');
+
+
+-- Villages of PuneCity
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('1', '1', '1', '5', 'khadakwasla', '1');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('2', '1', '1', '5', 'Erandawane', '1');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('3', '1', '1', '5', 'Shivajinagar', '1');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('4', '1', '1', '5', 'Kothrud', '1');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('5', '1', '1', '5', 'Sadashiv Peth', '1');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('6', '1', '1', '5', 'Swargate', '1');
+-- Villages of Khadki
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('7', '1', '1', '5', 'Sangvi', '2');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('8', '1', '1', '5', 'KhadkiStn', '2');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('9', '1', '1', '5', 'Bopodi', '2');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('10', '1', '1', '5', 'Dapodi', '2');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('11', '1', '1', '5', 'Navi Sangvi', '2');
+-- Villages of Pimpri
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('12', '1', '1', '5', 'Pimpri', '3');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('13', '1', '1', '5', 'Chinchwad', '3');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('14', '1', '1', '5', 'Nigdi', '3');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('15', '1', '1', '5', 'Akurdi', '3');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('16', '1', '1', '5', 'Bhosari', '3');
+-- Villages of Hadapsar
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('17', '1', '1', '5', 'Magarpatta', '4');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('18', '1', '1', '5', 'GadiTal', '4');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('19', '1', '1', '5', 'Waidhwadi', '4');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('20', '1', '1', '5', 'Fatimanagar', '4');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('21', '1', '1', '5', 'Phursungi', '4');
+-- Villages of Aundh
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('22', '1', '1', '5', 'SindhColony', '5');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('23', '1', '1', '5', 'National Society', '5');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('24', '1', '1', '5', 'Anand Park', '5');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('25', '1', '1', '5', 'AundhGaon', '5');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('26', '1', '1', '5', 'Siddharthnagar', '5');
+
+-- City-Nagpur
+INSERT INTO `hm_city` (`District_id`, `City_id`, `State_ID`, `Country_ID`, `City_name`) VALUES ('6', '1', '1', '1', 'NagpurCity');
+INSERT INTO `hm_city` (`District_id`, `City_id`, `State_ID`, `Country_ID`, `City_name`) VALUES ('6', '2', '1', '1', 'Ramtek');
+INSERT INTO `hm_city` (`District_id`, `City_id`, `State_ID`, `Country_ID`, `City_name`) VALUES ('6', '3', '1', '1', 'Kamtee');
+INSERT INTO `hm_city` (`District_id`, `City_id`, `State_ID`, `Country_ID`, `City_name`) VALUES ('6', '4', '1', '1', 'Umred');
+INSERT INTO `hm_city` (`District_id`, `City_id`, `State_ID`, `Country_ID`, `City_name`) VALUES ('6', '5', '1', '1', 'Sioner');
+
+
+-- Villages of NagpurCity
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('27', '1', '1', '6', 'NagpurEast', '1');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('28', '1', '1', '6', 'NagpurWest', '1');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('29', '1', '1', '6', 'NagpurNorth', '1');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('30', '1', '1', '6', 'NagpurSouth', '1');
+-- Villages of Ramtek                                                                                                                 
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('31', '1', '1', '6', 'RamtekEast', '2');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('32', '1', '1', '6', 'RamtekWest', '2');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('33', '1', '1', '6', 'RamtekNorth', '2');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('34', '1', '1', '6', 'RamtekSouth', '2');
+-- Villages of Kamtee
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('35', '1', '1', '6', 'KamteeEast', '3');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('36', '1', '1', '6', 'KamteeWest', '3');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('37', '1', '1', '6', 'KamteeNorth', '3');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('38', '1', '1', '6', 'KamteeSouth', '3');
+-- Villages of Umred                                                                                                                
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('39', '1', '1', '6', 'UmredEast', '4');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('40', '1', '1', '6', 'UmredWest', '4');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('41', '1', '1', '6', 'UmredNorth', '4');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('42', '1', '1', '6', 'UmredSouth', '4');
+-- Villages of Sioner                                                                                                                   
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('43', '1', '1', '6', 'SionerEast', '5');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('44', '1', '1', '6', 'SionerWest', '5');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('45', '1', '1', '6', 'SionerNorth', '5');
+INSERT INTO `hm_villages` (`Village_id`, `Country_ID`, `State_ID`, `District_id`, `Village_Name`, `City_id`) VALUES ('46', '1', '1', '6', 'SionerSouth', '5');
+
+INSERT INTO `hm_programs` (`Programs_id`, `Program_desc`, `Program_start_date`, `Program_end_date`) VALUES (1, 'Pregnancy program', '2016-07-01', '2016-08-31');
+
+INSERT INTO `hm_program_details` (`Program_Details_id`, `Programs_id`, `Program_item_id`, `Program_item_name`, `Program_item_description`, `Program_item_data_type`, `Created_By`, `Updated_By`, `Created_Date`, `Updated_Date`) VALUES
+(1, 1, 1, 'LMPDate', 'Last menstural period date of patient', 'datetime', '1', NULL, '2016-07-01 00:00:00', NULL),
+(2, 1, 2, 'EDD', 'Expected delivery date of patient', 'datetime', '1', NULL, '2016-07-01 00:00:00', NULL),
+(3, 1, 3, 'isFirstPregnancy', 'Patient''s first pregnancy', 'boolean', '1', NULL, '2016-07-01 00:00:00', NULL),
+(4, 1, 4, 'gravida', 'Gravida of patient', 'integer', '1', NULL, '2016-07-01 00:00:00', NULL),
+(5, 1, 5, 'parity', 'Parity of patient', 'integer', '1', NULL, '2016-07-01 00:00:00', NULL),
+(6, 1, 6, 'pastAbortions', 'If patient has past abortions', 'integer', '1', NULL, '2016-07-01 00:00:00', NULL),
+(7, 1, 7, 'pastStillBirths', 'Patient''s previous still births', 'integer', '1', NULL, '2016-07-01 00:00:00', NULL),
+(8, 1, 8, 'livingChildren', 'Patient''s living children', 'integer', '1', NULL, '2016-07-01 00:00:00', NULL),
+(9, 1, 9, 'natureofPreviousDelivery', 'Patient''s previous pregnancy nature', 'varchar', '1', NULL, '2016-07-01 00:00:00', NULL),
+(10, 1, 10, 'previousDeliveryDate', 'Patient''s last pregnancy date', 'datetime', '1', NULL, '2016-07-01 00:00:00', NULL),
+(11, 1, 11, 'notes', 'Any notes related to patient', 'varchar', '1', NULL, '2016-07-01 00:00:00', NULL);
+
+-- PHC table
+INSERT INTO `hm_phc` (`PHC_ID`, `PHC_NAME`, `SelfLocationVillage`) VALUES ('1', 'PHC-Sasoon-Pune', '3');
+
+-- PHC details table
+INSERT INTO `hm_phcdetails` (`idHM_PhcDetails`, `Village_id`, `PHC_ID`) VALUES ('1', '1', '1');
+INSERT INTO `hm_phcdetails` (`idHM_PhcDetails`, `Village_id`, `PHC_ID`) VALUES ('2', '2', '1');
+INSERT INTO `hm_phcdetails` (`idHM_PhcDetails`, `Village_id`, `PHC_ID`) VALUES ('3', '3', '1');
+INSERT INTO `hm_phcdetails` (`idHM_PhcDetails`, `Village_id`, `PHC_ID`) VALUES ('4', '4', '1');
+INSERT INTO `hm_phcdetails` (`idHM_PhcDetails`, `Village_id`, `PHC_ID`) VALUES ('5', '5', '1');
+
+
+
+INSERT INTO `hm_vitals` (`Vitals_id`, `Vital_Name`, `Vital_Unit`) VALUES
+(1, 'Temperature', 'decimal'),
+(2, 'Weight', 'decimal'),
+(3, 'Height', 'decimal'),
+(4, 'Bmi', 'decimal'),
+(5, 'Girth', 'decimal'),
+(6, 'Fundal_Heights', 'decimal');
+
+INSERT INTO `hm_devices` (`Devices_id`, `Device_long_Name`, `Device_Short_Name`) VALUES
+(1, 'Blood pressure device', 'bp'),
+(2, 'ECG device', 'ecg'),
+(3, 'Pulse oximeter device', 'pulse_oxi'),
+(4, 'HB device', 'hb');
+
+INSERT INTO `hm_device_attributes` (`Device_Attributes_id`, `Devices_id`, `Device_Attribute_Name`, `Device_Attribute_short_Name`, `Device_Attribute_Datatype`) VALUES
+(1, 1, 'hm_systolic', 'bp_sys', 'integer'),
+(2, 1, 'hm_diastolic', 'bp_dia', 'integer'),
+(3, 1, 'hm_pulseRate', 'bp_pulse', 'integer'),
+(4, 2, 'ecg_wavepoints', 'ecg_wavepoints', 'varbinary'),
+(5, 3, 'pulse_rate', 'pulse_rate', 'integer'),
+(6, 3, 'perfusion_index', 'perfusion_index', 'integer'),
+(7, 3, 'SpO2', 'SpO2', 'integer'),
+(8, 3, 'pulseox_wave_points', 'pulseox_wave_points', 'varbinary'),
+(9, 3, 'pulse_beats_points', 'pulse_beats_points', 'varbinary'),
+(10, 4, 'hb', 'hb', 'decimal');
+
+-- DB insert script for hm_actor
+INSERT INTO `hm_actor` (Actor_id ,Programs_id,Actor_desc ) VALUES (1,1, 'Health Officer'), (2,1,'Medical Officer'), (3,1,'ANM'), (4,1,'ASHA');
+
+-- DB insert script for hm_user
+INSERT INTO `hm_user` (`User_id`, `Programs_id`) VALUES ('MO1', '1'), ('HO1', '1'), ('ASHA1', '1'), ('ANM1', '1');
+
+-- DB insert script for hm_user_details
+INSERT INTO `hm_user_details` (`User_Details_id` ,`Programs_id`,`PHC_id`, `User_id`, `User_Name`, `User_Password`, `User_qualification`, `User_contact_number`, `User_Emergency_contact`, `User_Address1`, `User_Address2`) VALUES ( 1,1,1, 'MO1', 'mo1', 'mo1', 'MBBS', '324234', '3434534', 'kothrud', 'pune'), (2,1, 1, 'HO1', 'ho1', 'ho1', 'MBBS', '33434', '3434', 'Nul stop', 'Pune'), (3,1, 1,'ANM1', 'anm1', 'anm1', 'HSC', '34534', '567567', 'wakad', 'pune'), (4,1,1, 'ASHA1', 'asha1', 'asha1', 'SSC', '3453454', '345345', 'chinchwad ', 'pune');
+
+
+ -- Insert into PHC_USER
+ INSERT INTO `hm_phc_user` (`PHC_id`, `User_id`) VALUES ('1', 'ASHA1');
+
+-- DB insert script for hm_user_actor
+INSERT INTO `hm_user_actor` (`Programs_id`, `User_id`, `Actor_id`) VALUES ('1', 'MO1', '2'),('1', 'HO1', '1'),('1', 'ANM1', '3'),('1', 'ASHA1', '4');
+
+-- DB insert script for hm_referral_reason
+INSERT INTO `hm_referral_reason` (`Referral_Reason_Id`, `Referral_Reason_Description`) VALUES ('1', 'Diarrhea/Running stomach'), ('2', 'Malaria/Fever'), ('3', 'Cough/ARI'), ('4', 'Malnutrition'), ('5', 'Family Planning'), ('6', 'Other Diseases');
+
+
+-- Insert into `hm_cp_templates`
+
+INSERT INTO `hm_cp_templates` (`Template_id`, `Programs_id`, `User_id`, `Template_Name`, `Created_By`, `Created_Date`, `Updated_By`, `Updated_Date`) VALUES
+(101, 1, 'ANM1', 'Care Plan 1', 'ANM1', '2016-06-20 00:00:00', NULL, NULL);
+
+
+-- Insert into`hm_cp_category`
+
+INSERT INTO `hm_cp_category` (`Template_id`, `Category_id`, `Category_Desc`, `Created_By`, `Created_Date`, `Updated_By`, `Updated_Date`) VALUES
+(101, '1', 'Condition Specific Care Management', 'ANM1', '2016-06-20 00:00:00', NULL, NULL),
+(101, '2', 'Vaccines', 'ANM2', '2016-06-20 00:00:00', NULL, NULL),
+(101, '3', 'Self Management', 'ANM1', '2016-06-20 00:00:00', NULL, NULL),
+(101, '4', 'Medication Adherence', 'ANM1', '2016-06-17 00:00:00', NULL, NULL);
+
+
+
+-- Insert into`hm_cp_tasks`
+
+INSERT INTO `hm_cp_tasks` (`Template_id`, `Template_Task_id`, `Template_Task_Desc`, `Created_By`, `Created_Date`, `Updated_By`, `Updated_Date`, `role`) VALUES
+(101, 1, 'Measure Heamoglobin(Hb)', 'ANM1', '2016-06-09 00:00:00', NULL, NULL, 'asha'),
+(101, 2, 'TT1', 'ANM', '2016-06-12 00:00:00', NULL, NULL, 'ANM'),
+(101, 3, 'Drink 2 full glass of milk', 'ANM2', '2016-06-04 00:00:00', NULL, NULL, 'patient'),
+(101, 4, 'Measure Girth', 'ANM2', '2016-06-01 00:00:00', NULL, NULL, 'asha'),
+(101, 5, 'TT2', 'ANM2', '2016-06-04 00:00:00', NULL, NULL, 'patient'),
+(101, 6, 'IFA 100 mg ', 'ANM1', '2016-06-12 00:00:00', NULL, NULL, 'asha'),
+(101, 7, 'Calcium', 'ANM2', '2016-06-12 00:00:00', NULL, NULL, 'patient'),
+(101, 8, 'Sleep for 9 hours', 'ANM1', '2016-06-22 00:00:00', NULL, NULL, 'patient');
+
+
+
+-- Insert into`hm_cp_frequency` 
+
+INSERT INTO `hm_cp_frequency` (`Template_id`, `Frequency_id`, `Frequency_Desc`, `Created_By`, `Created_Date`, `Updated_By`, `Updated_Date`) VALUES
+(101, 1, 'Monthly', 'ANM1', '2016-06-19 00:00:00', NULL, NULL),
+(101, 2, 'Quarterly', 'ANM2', '2016-06-10 00:00:00', NULL, NULL),
+(101, 3, 'Once', 'ANM1', '2016-06-07 00:00:00', NULL, NULL),
+(101, 4, 'Daily', 'ANM1', '2016-06-20 00:00:00', NULL, NULL);
+
+
+-- Insert into`hm_drugmaster` 
+
+INSERT INTO `hm_drugmaster` (`DrugId`, `DrugName`, `DrugForm`, `Route`, `Units`, `DrugType`, `DrugDescription`) VALUES
+(1, 'Paracetemol', 'tablet', 'oral', 'milligrams', 1, 'Used for mild aches.'),
+(2, 'Gelousel', 'capsule', 'oral', 'milligrams', 1, 'Used for acidity.');
+
+
+
+
+
+INSERT INTO `hm_survey_template` (`Survey_template_id`, `Programs_id`, `Survey_Template_Name`, `Survey_Template_Description`, `Survey_Template_Type`) VALUES
+(1, 1, 'Preg_HRA', 'HRA description', 'hra'),
+(2, 1, 'Preg_FB', 'Feedback form for pregnancy', 'feedback');
+
+INSERT INTO `hm_survey_questionair` (`Survey_Questionair_id`, `Programs_id`, `Survey_template_id`, `Survey_Question_Category`, `Survey_Question_no`, `Survey_Question_Description`, `Survey_Question_Options`, `Parent_Qid`) VALUES
+(1, 1, 1, 'Question category 1', 1, 'Question 1', NULL, 0),
+(2, 1, 1, 'Question category 1', 2, 'Question 2', 'option 1', 1),
+(3, 1, 1, 'Question category 1', 2, 'Question 2', 'option 2', 1),
+(4, 1, 1, 'Question category 1', 2, 'Question 2', 'option 3', 1),
+(5, 1, 1, 'Question category 1', 3, 'Question 3', 'option 1', 0),
+(6, 1, 1, 'Question category 1', 3, 'Question 3', 'option 2', 0),
+(7, 1, 1, 'Question category 1', 3, 'Question 3', 'option 3', 0),
+(8, 1, 1, 'Question category 2', 4, 'Question 4', 'option 1', 0),
+(9, 1, 1, 'Question category 2', 4, 'Question 4', 'option 2', 0),
+(10, 1, 1, 'Question category 2', 5, 'Question 5', NULL, 0),
+(11, 1, 1, 'Question category 2', 6, 'Question 6', 'option 1', 10),
+(12, 1, 1, 'Question category 2', 6, 'Question 6', 'option 2', 10),
+(13, 1, 1, 'Question category 2', 6, 'Question 6', 'option 3', 10),
+(14, 1, 2, 'FB Question category 1', 1, NULL, NULL, 0),
+(15, 1, 2, 'FB Question category 1', 2, 'FB Question 2', 'Strongly Agree', 0),
+(16, 1, 2, 'FB Question category 1', 2, 'FB Question 2', 'Agree', 0),
+(17, 1, 2, 'FB Question category 1', 2, 'FB Question 2', 'Disagree', 0),
+(18, 1, 2, 'FB Question category 1', 2, 'FB Question 2', 'Strongly Disagree', 0),
+(19, 1, 2, 'FB Question category 1', 3, 'FB Question 3', 'Strongly Agree', 0),
+(20, 1, 2, 'FB Question category 1', 3, 'FB Question 3', 'Agree', 0),
+(21, 1, 2, 'FB Question category 1', 3, 'FB Question 3', 'Disaree', 0),
+(22, 1, 2, 'FB Question category 1', 3, 'FB Question 3', 'Strongly Disagree', 0),
+(23, 1, 2, 'FB Question category 2', 4, NULL, NULL, 0),
+(24, 1, 2, 'FB Question category 2', 5, 'FB Question 5', 'Strongly Agree', 0),
+(25, 1, 2, 'FB Question category 2', 5, 'FB Question 5', 'Agree', 0),
+(26, 1, 2, 'FB Question category 2', 5, 'FB Question 5', 'Disagree', 0),
+(27, 1, 2, 'FB Question category 2', 5, 'FB Question 5', 'Strongly Disagree', 0),
+(28, 1, 2, 'FB Question category 2', 6, 'FB Question 6', 'Strongly Agree', 0),
+(29, 1, 2, 'FB Question category 2', 6, 'FB Question 6', 'Agree', 0),
+(30, 1, 2, 'FB Question category 2', 6, 'FB Question 6', 'Disagree', 0),
+(31, 1, 2, 'FB Question category 2', 6, 'FB Question 6', 'Strongly Disagree', 0),
+(32, 1, 2, 'FB Question category 2', 7, 'FB Question 7', 'Strongly Agree', 0),
+(33, 1, 2, 'FB Question category 2', 7, 'FB Question 7', 'Agree', 0),
+(34, 1, 2, 'FB Question category 2', 7, 'FB Question 7', 'Disagree', 0),
+(35, 1, 2, 'FB Question category 2', 7, 'FB Question 7', 'Strongly Disgree', 0);
+
+
+
+

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/colorlightgray"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/txtMyActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:text="@string/txtMyActivities"
+                android:textColor="@color/colorBlack"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/txtDash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/txtMyActivity"
+                android:paddingLeft="5dp"
+                android:text="-"
+                android:textColor="@color/colorBlack"
+                android:textSize="23sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/txtDash"
+                android:paddingLeft="5dp"
+                android:text="@string/txtViewAll"
+                android:textColor="@color/colorBlack"
+                android:textSize="23sp" />
+
+            <LinearLayout
+                android:id="@+id/viewAllContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/btnViewAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtBack"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorPrimary" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lblNoData"
+                style="@style/Font17BlueNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/txtNoDataAvailable"
+                android:visibility="visible" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lstAllActivities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"></android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Login Activity-->
+    <string name="username_hint"> युजरचे नाव</string>
+    <string name="password_hint">पासवर्ड</string>
+    <string name="txtLogin">प्रवेश करा</string>
+    <string name="txtForgotPassword">पासवर्ड विसरलात? </string>
+    <string-array name="language">
+        <item>भाषा निवडा</item>
+        <item>मराठी</item>
+        <item>हिंदी</item>
+        <item>इंग्रजी</item>
+    </string-array>
+    <string name="txtRememberMe">लक्षात ठेवा </string>
+    <string name="txtOK">ओके </string>
+    <string name="msgLoginErrorInvalidCredential">चुकीचा युजर अथवा पासवर्ड </string>
+
+    <!-- Landing Screen -->
+    <string name="txtLastSyncNotAvaliable">उपलब्ध नाही</string>
+    <string name="txtDashboard">डॅशबोर्ड</string>
+
+    <!-- Dashboard Screen-->
+    <string name="txtPatientRegistration">रुग्ण नोंदणी</string>
+    <string name="txtAllPatients">सर्व रुग्ण</string>
+    <string name="txtReports">अहवाल</string>
+    <string name="txtEducation">शिक्षण</string>
+    <string name="txtCollaboration">सहयोग</string>
+    <string name="txtMyActivities">माझी कामे</string>
+    <string name="txtInventory">यादी</string>
+</resources>

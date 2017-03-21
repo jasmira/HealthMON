@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/all_patient_test_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llreadings">
+        <RelativeLayout
+            android:paddingTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight=".333"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <!--SpO2-->
+                    <TextView
+                        style="@style/Font17BlackNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskOxiSpO"
+                        android:id="@+id/tvtemp1"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <TextView
+                        style="@style/Font17RedNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtAsteriskMark"
+                        android:layout_alignBaseline="@+id/tvtemp1"
+                        android:layout_alignBottom="@+id/tvtemp1"
+                        android:layout_toRightOf="@+id/tvtemp1"
+                        android:layout_toEndOf="@+id/tvtemp1" />
+                    <TextView
+                        style="@style/Font15BlackNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskOxiSpOUnit"
+                        android:id="@+id/tvtemp2"
+                        android:layout_alignBaseline="@+id/edtOxiSpO"
+                        android:layout_alignBottom="@+id/edtOxiSpO"
+                        android:layout_toRightOf="@+id/edtOxiSpO"
+                        android:layout_toEndOf="@+id/edtOxiSpO" />
+                    <!--@dimen/stdRowSize-->
+                    <EditText
+                        style="@style/edt_patient_registration"
+                        android:id="@+id/edtOxiSpO"
+                        android:layout_width="110dp"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:inputType="numberDecimal"
+                        android:maxLength="3"
+                        android:nextFocusDown="@+id/edtOXIPI"
+                        android:singleLine="true"
+                        android:layout_below="@+id/tvtemp1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <!--PI-->
+                    <TextView
+                        style="@style/Font17BlackNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskOxiPI"
+                        android:id="@+id/tvOxiPI"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <TextView
+                        style="@style/Font17RedNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtAsteriskMark"
+                        android:layout_alignBaseline="@+id/tvOxiPI"
+                        android:layout_alignBottom="@+id/tvOxiPI"
+                        android:layout_toRightOf="@+id/tvOxiPI"
+                        android:layout_toEndOf="@+id/tvOxiPI" />
+                    <TextView
+                        style="@style/Font15BlackNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskOxiSpOUnit"
+                        android:id="@+id/tvOxiPI2"
+                        android:layout_alignBaseline="@+id/edtOXIPI"
+                        android:layout_alignBottom="@+id/edtOXIPI"
+                        android:layout_toRightOf="@+id/edtOXIPI"
+                        android:layout_toEndOf="@+id/edtOXIPI"/>
+                    <!--@dimen/stdRowSize-->
+                    <EditText
+                        style="@style/edt_patient_registration"
+                        android:id="@+id/edtOXIPI"
+                        android:layout_width="110dp"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:inputType="numberDecimal"
+                        android:maxLength="3"
+                        android:nextFocusDown="@+id/edtOxiPulse"
+                        android:singleLine="true"
+                        android:layout_below="@+id/tvOxiPI"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <!--Pulse-->
+                    <TextView
+                        style="@style/Font17BlackNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskBPPulse"
+                        android:id="@+id/tvVitalBMI"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <TextView
+                        style="@style/Font17RedNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtAsteriskMark"
+                        android:layout_alignBaseline="@+id/tvVitalBMI"
+                        android:layout_alignBottom="@+id/tvVitalBMI"
+                        android:layout_toRightOf="@+id/tvVitalBMI"
+                        android:layout_toEndOf="@+id/tvVitalBMI" />
+                    <TextView
+                        style="@style/Font15BlackNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskBPPulseUnit"
+                        android:id="@+id/tvVitalBMI2"
+                        android:layout_alignBaseline="@+id/edtOxiPulse"
+                        android:layout_alignBottom="@+id/edtOxiPulse"
+                        android:layout_toRightOf="@+id/edtOxiPulse"
+                        android:layout_toEndOf="@+id/edtOxiPulse"/>
+                    <!--@dimen/stdRowSize-->
+                    <EditText
+                        style="@style/edt_patient_registration"
+                        android:id="@+id/edtOxiPulse"
+                        android:layout_width="110dp"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:inputType="numberDecimal"
+                        android:maxLength="3"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:layout_below="@+id/tvVitalBMI"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight=".66"
+            android:id="@+id/rl_oxi_graph">
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--Action Buttons-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskCaptureOxiReading"
+            android:id="@+id/btn_oxi_capture_reading"
+            style="@style/greenRoundButton"
+            android:layout_marginRight="@dimen/capture_buttons_between_margin"
+            android:layout_marginEnd="@dimen/capture_buttons_between_margin"
+            android:layout_alignParentBottom="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskCaptureOxiGraph"
+            android:id="@+id/btn_oxi_capture_graph"
+            style="@style/greenRoundButton"
+            android:layout_marginRight="@dimen/capture_buttons_between_margin"
+            android:layout_marginEnd="@dimen/capture_buttons_between_margin"
+            android:layout_toRightOf="@id/btn_oxi_capture_reading"
+            android:layout_alignParentBottom="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskVitalsSave"
+            android:id="@+id/btn_oxi_save"
+            android:layout_marginRight="@dimen/capture_buttons_between_margin"
+            android:layout_marginEnd="@dimen/capture_buttons_between_margin"
+            style="@style/greenRoundButton"
+            android:layout_toRightOf="@id/btn_oxi_capture_graph"
+            android:layout_alignParentBottom="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskVitalsCancel"
+            android:id="@+id/btn_oxi_cancel"
+            android:layout_marginRight="@dimen/capture_buttons_between_margin"
+            android:layout_marginEnd="@dimen/capture_buttons_between_margin"
+            style="@style/greenRoundButton"
+            android:layout_toRightOf="@id/btn_oxi_save"
+            android:layout_alignParentBottom="true" />
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

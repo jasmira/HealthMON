@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical" >
+
+
+
+    <TextView android:id="@+id/notification_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JMD Group"
+        android:textColor="@color/colorBlue"
+        android:textSize="22px" />
+
+    <TextView android:id="@+id/notification_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17px"
+        android:padding="2px"
+        android:text="beyond the expectations..."
+        android:textColor="@color/gray"
+        android:layout_below="@+id/notification_name"
+        android:layout_alignLeft="@+id/notification_name"
+        android:layout_alignStart="@+id/notification_name" />
+
+    <TextView android:id="@+id/notification_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notification_date"
+        android:textSize="12px"
+        android:text="2 hours ago"
+        android:textColor="@color/gray"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtnotificationdismiss"
+        android:id="@+id/btdismiss"
+        android:textSize="14px"
+        android:layout_below="@+id/notification_name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        style="@style/notificationgreenRoundButton"/>
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_audio_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:background="@color/colorBlack"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Now playing:"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        android:textStyle="bold"
+
+        />
+    <TextView
+        android:id="@+id/now_playing_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_gravity="center"
+        android:text="Now playing.."
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        />
+
+    <!--<SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"/>-->
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|center_horizontal">
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:text="Play"/>
+
+
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:text="Stop"/>
+
+    </LinearLayout>-->
+</LinearLayout>

@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/individual_task_vital_card" />
+
+        <!--&lt;!&ndash;Vitals inputs&ndash;&gt;
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:paddingTop="50dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/temperatureLayout"
+                android:layout_weight=".333"
+                >
+                &lt;!&ndash;Temperature&ndash;&gt;
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtTaskVitalsTemperature"
+                    android:id="@+id/tvTemperature1"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <TextView
+                    style="@style/Font15BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtTaskVitalsTemperatureUnit"
+                    android:id="@+id/tvTemperature2"
+                    android:layout_alignBaseline="@+id/edtvitaltemperature"
+                    android:layout_alignBottom="@+id/edtvitaltemperature"
+                    android:layout_toRightOf="@+id/edtvitaltemperature"
+                    android:layout_toEndOf="@+id/edtvitaltemperature" />
+                &lt;!&ndash;@dimen/stdRowSize&ndash;&gt;
+                <EditText
+                    style="@style/edt_patient_registration"
+                    android:id="@+id/edtvitaltemperature"
+                    android:layout_width="110dp"
+                    android:layout_height="@dimen/stdRowSize"
+                    android:inputType="numberDecimal"
+                    android:maxLength="30"
+                    android:nextFocusDown="@+id/edtVitalHeight"
+                    android:singleLine="true"
+                    android:layout_below="@+id/tvTemperature1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                &lt;!&ndash;Height&ndash;&gt;
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtTaskVitalsHeight"
+                    android:id="@+id/tvheight1"
+                    android:layout_below="@+id/edtvitaltemperature"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <EditText
+                    style="@style/edt_patient_registration"
+                    android:id="@+id/edtVitalHeight"
+                    android:layout_width="110dp"
+                    android:layout_height="@dimen/stdRowSize"
+                    android:inputType="numberDecimal"
+                    android:maxLength="30"
+                    android:nextFocusDown="@+id/edtVitalGirth"
+                    android:singleLine="true"
+                    android:layout_below="@+id/tvheight1"
+                    android:layout_alignLeft="@+id/tvheight1"
+                    android:layout_alignStart="@+id/tvheight1" />
+                <TextView
+                    style="@style/Font15BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtTaskVitalsHeightUnit"
+                    android:id="@+id/tvheight2"
+                    android:layout_alignBaseline="@+id/edtVitalHeight"
+                    android:layout_alignBottom="@+id/edtVitalHeight"
+                    android:layout_toRightOf="@+id/edtVitalHeight"
+                    android:layout_toEndOf="@+id/edtVitalHeight" />
+                &lt;!&ndash;Girth&ndash;&gt;
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtTaskVitalsGirth"
+                    android:id="@+id/tvGirth1"
+                    android:layout_below="@+id/edtVitalHeight"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                &lt;!&ndash;style="@style/edt_task_vital"&ndash;&gt;
+                <EditText
+                    style="@style/edt_patient_registration"
+
+                    android:id="@+id/edtVitalGirth"
+                    android:layout_width="110dp"
+                    android:layout_height="@dimen/stdRowSize"
+                    android:inputType="numberDecimal"
+                    android:maxLength="30"
+                    android:nextFocusDown="@+id/edtvitalWeight"
+                    android:singleLine="true"
+                    android:layout_below="@+id/tvGirth1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <TextView
+                    style="@style/Font15BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtTaskVitalsGirthUnit"
+                    android:id="@+id/tvGirth2"
+                    android:layout_alignBaseline="@+id/edtVitalGirth"
+                    android:layout_alignBottom="@+id/edtVitalGirth"
+                    android:layout_toRightOf="@+id/edtVitalGirth"
+                    android:layout_toEndOf="@+id/edtVitalGirth" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtTaskVitalsSave"
+                    android:id="@+id/btn_vitals_save"
+                    style="@style/greenRoundButton"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:paddingTop="50dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/weightLayout"
+                android:layout_weight=".333"
+                >
+                &lt;!&ndash;Weight&ndash;&gt;
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtTaskVitalsWeight"
+                    android:id="@+id/tvWeight1"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <TextView
+                    style="@style/Font15BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtTaskVitalsWeightUnit"
+                    android:id="@+id/tvWeight2"
+                    android:layout_alignBaseline="@+id/edtvitalWeight"
+                    android:layout_alignBottom="@+id/edtvitalWeight"
+                    android:layout_toRightOf="@+id/edtvitalWeight"
+                    android:layout_toEndOf="@+id/edtvitalWeight" />
+                &lt;!&ndash;@dimen/stdRowSize&ndash;&gt;
+                <EditText
+                    style="@style/edt_patient_registration"
+                    android:id="@+id/edtvitalWeight"
+                    android:layout_width="110dp"
+                    android:layout_height="@dimen/stdRowSize"
+                    android:inputType="numberDecimal"
+                    android:maxLength="30"
+                    android:nextFocusDown="@+id/edtVitalBMI"
+                    android:singleLine="true"
+                    android:layout_below="@+id/tvWeight1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                &lt;!&ndash;BMI&ndash;&gt;
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtTaskVitalsBMI"
+                    android:id="@+id/tvBMI1"
+                    android:layout_below="@+id/edtvitalWeight"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <EditText
+                    style="@style/edt_patient_registration"
+                    android:id="@+id/edtVitalBMI"
+                    android:layout_width="110dp"
+                    android:layout_height="@dimen/stdRowSize"
+                    android:inputType="numberDecimal"
+                    android:maxLength="30"
+                    android:nextFocusDown="@+id/edtVitalFundalH"
+                    android:singleLine="true"
+                    android:layout_below="@+id/tvBMI1"
+                    android:layout_alignLeft="@+id/tvBMI1"
+                    android:layout_alignStart="@+id/tvBMI1" />
+                <TextView
+                    style="@style/Font15BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtTaskVitalsBMIUnit"
+                    android:id="@+id/tvBMI2"
+                    android:layout_alignBaseline="@+id/edtVitalBMI"
+                    android:layout_alignBottom="@+id/edtVitalBMI"
+                    android:layout_toRightOf="@+id/edtVitalBMI"
+                    android:layout_toEndOf="@+id/edtVitalBMI" />
+                &lt;!&ndash;Fundal Height&ndash;&gt;
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtTaskVitalsFundalheight"
+                    android:id="@+id/tvFundalH1"
+                    android:layout_below="@+id/edtVitalBMI"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                &lt;!&ndash;style="@style/edt_task_vital"&ndash;&gt;
+                <EditText
+                    style="@style/edt_patient_registration"
+
+                    android:id="@+id/edtVitalFundalH"
+                    android:layout_width="110dp"
+                    android:layout_height="@dimen/stdRowSize"
+                    android:inputType="numberDecimal"
+                    android:maxLength="30"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:layout_below="@+id/tvFundalH1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <TextView
+                    style="@style/Font15BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtTaskVitalsGirthUnit"
+                    android:id="@+id/tvFundalH2"
+                    android:layout_alignBaseline="@+id/edtVitalFundalH"
+                    android:layout_alignBottom="@+id/edtVitalFundalH"
+                    android:layout_toRightOf="@+id/edtVitalFundalH"
+                    android:layout_toEndOf="@+id/edtVitalFundalH" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtTaskVitalsCancel"
+                    android:id="@+id/btn_vitals_cancel"
+                    style="@style/greenRoundButton"
+                    android:layout_marginBottom="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginStart="50dp" />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".333"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_smiley_red"
+                        android:id="@+id/ivHeightSmiely"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskVitalsPatientWeight"
+                        android:id="@+id/tvPatientWeight"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivHeightSmiely"
+                        android:layout_toEndOf="@+id/ivHeightSmiely" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+-->
+
+
+    <!--ReadingInputs-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llreadings">
+        <RelativeLayout
+            android:paddingTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight=".333"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <!--Temperature-->
+                    <TextView
+                        style="@style/Font17BlackNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskVitalsTemperature"
+                        android:id="@+id/tvtemp1"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <TextView
+                        style="@style/Font17RedNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtAsteriskMark"
+                        android:layout_alignBaseline="@+id/tvtemp1"
+                        android:layout_alignBottom="@+id/tvtemp1"
+                        android:layout_toRightOf="@+id/tvtemp1"
+                        android:layout_toEndOf="@+id/tvtemp1" />
+                    <TextView
+                        style="@style/Font15BlackNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskVitalsTemperatureUnit"
+                        android:id="@+id/tvtemp2"
+                        android:layout_alignBaseline="@+id/edtVitalTemp"
+                        android:layout_alignBottom="@+id/edtVitalTemp"
+                        android:layout_toRightOf="@+id/edtVitalTemp"
+                        android:layout_toEndOf="@+id/edtVitalTemp" />
+                    <!--@dimen/stdRowSize-->
+                    <EditText
+                        style="@style/edt_patient_registration"
+                        android:id="@+id/edtVitalTemp"
+                        android:layout_width="110dp"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:inputType="numberDecimal"
+                        android:maxLength="3"
+                        android:nextFocusDown="@+id/edtVitalWeight"
+                        android:singleLine="true"
+                        android:layout_below="@+id/tvtemp1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <!--BMI-->
+                    <TextView
+                        style="@style/Font17BlackNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskVitalsBMI"
+                        android:id="@+id/tvVitalBMI"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <TextView
+                        style="@style/Font17RedNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtAsteriskMark"
+                        android:layout_alignBaseline="@+id/tvVitalBMI"
+                        android:layout_alignBottom="@+id/tvVitalBMI"
+                        android:layout_toRightOf="@+id/tvVitalBMI"
+                        android:layout_toEndOf="@+id/tvVitalBMI" />
+                    <TextView
+                        style="@style/Font15BlackNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskVitalsBMIUnit"
+                        android:id="@+id/tvVitalBMI2"
+                        android:layout_alignBaseline="@+id/edtVitalBMI"
+                        android:layout_alignBottom="@+id/edtVitalBMI"
+                        android:layout_toRightOf="@+id/edtVitalBMI"
+                        android:layout_toEndOf="@+id/edtVitalBMI"/>
+                    <!--@dimen/stdRowSize-->
+                    <EditText
+                        style="@style/edt_patient_registration"
+                        android:id="@+id/edtVitalBMI"
+                        android:layout_width="110dp"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:enabled="false"
+                        android:nextFocusDown="@+id/edtVitalWeight"
+                        android:singleLine="true"
+                        android:layout_below="@+id/tvVitalBMI"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:paddingTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight=".333"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <!--Weight-->
+                    <TextView
+                        style="@style/Font17BlackNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskVitalsWeight"
+                        android:id="@+id/tvWeight1"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <TextView
+                        style="@style/Font17RedNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtAsteriskMark"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/tvWeight1"
+                        android:layout_toEndOf="@+id/tvWeight1" />
+                    <TextView
+                        style="@style/Font15BlackNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskVitalsWeightUnit"
+                        android:id="@+id/tvWeight2"
+                        android:layout_alignBaseline="@+id/edtVitalWeight"
+                        android:layout_alignBottom="@+id/edtVitalWeight"
+                        android:layout_toRightOf="@+id/edtVitalWeight"
+                        android:layout_toEndOf="@+id/edtVitalWeight" />
+                    <!--@dimen/stdRowSize-->
+                    <EditText
+                        style="@style/edt_patient_registration"
+                        android:id="@+id/edtVitalWeight"
+                        android:layout_width="110dp"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:inputType="numberDecimal"
+                        android:maxLength="3"
+                        android:nextFocusDown="@+id/edtVitalGirth"                        android:singleLine="true"
+                        android:layout_below="@+id/tvWeight1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <!--Girth-->
+                    <TextView
+                        style="@style/Font17BlackNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskVitalsGirth"
+                        android:id="@+id/tvVitalGirth"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <TextView
+                        style="@style/Font17RedNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtAsteriskMark"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/tvVitalGirth"
+                        android:layout_toEndOf="@+id/tvVitalGirth" />
+                    <TextView
+                        style="@style/Font15BlackNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtTaskVitalsGirthUnit"
+                        android:id="@+id/tvVitalGirth2"
+                        android:layout_alignBaseline="@+id/edtVitalGirth"
+                        android:layout_alignBottom="@+id/edtVitalGirth"
+                        android:layout_toRightOf="@+id/edtVitalGirth"
+                        android:layout_toEndOf="@+id/edtVitalGirth"/>
+                    <!--@dimen/stdRowSize-->
+                    <EditText
+                        style="@style/edt_patient_registration"
+                        android:id="@+id/edtVitalGirth"
+                        android:layout_width="110dp"
+                        android:layout_height="@dimen/stdRowSize"
+                        android:inputType="numberDecimal"
+                        android:maxLength="4"
+                        android:nextFocusDown="@+id/edtVitalHt"                        android:singleLine="true"
+                        android:layout_below="@+id/tvVitalGirth"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:paddingTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight=".333"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+            <!--Height-->
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtTaskVitalsHeight"
+                android:id="@+id/tvVitalHt"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+                    <TextView
+                        style="@style/Font17RedNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtAsteriskMark"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/tvVitalHt"
+                        android:layout_toEndOf="@+id/tvVitalHt" />
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtTaskVitalsGirthUnit"
+                android:id="@+id/tvVitalHt2"
+                android:layout_alignBaseline="@+id/edtVitalHt"
+                android:layout_alignBottom="@+id/edtVitalHt"
+                android:layout_toRightOf="@+id/edtVitalHt"
+                android:layout_toEndOf="@+id/edtVitalHt" />
+            <!--@dimen/stdRowSize-->
+            <EditText
+                style="@style/edt_patient_registration"
+                android:id="@+id/edtVitalHt"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/stdRowSize"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                android:nextFocusDown="@+id/edtVitalFundalWt"
+                android:singleLine="true"
+                android:layout_below="@+id/tvVitalHt"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+            <!--Fundal Height-->
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtTaskVitalsFundalheight"
+                android:id="@+id/tvfundalwt"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+                    <TextView
+                        style="@style/Font17RedNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtAsteriskMark"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/tvfundalwt"
+                        android:layout_toEndOf="@+id/tvfundalwt" />
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtTaskVitalsGirthUnit"
+                android:id="@+id/tvfundalwt2"
+                android:layout_alignBaseline="@+id/edtVitalFundalWt"
+                android:layout_alignBottom="@+id/edtVitalFundalWt"
+                android:layout_toRightOf="@+id/edtVitalFundalWt"
+                android:layout_toEndOf="@+id/edtVitalFundalWt"/>
+            <!--@dimen/stdRowSize-->
+            <EditText
+                style="@style/edt_patient_registration"
+                android:id="@+id/edtVitalFundalWt"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/stdRowSize"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:layout_below="@+id/tvfundalwt"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <!--Action Buttons-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskVitalsCancel"
+            android:id="@+id/btnVitalcancel"
+            android:layout_toRightOf="@+id/btVitalsave"
+            android:layout_toEndOf="@+id/btVitalsave"
+            style="@style/greenRoundButton"
+            android:layout_alignParentBottom="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskVitalsSave"
+            android:id="@+id/btVitalsave"
+            style="@style/greenRoundButton"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/capture_buttons_between_margin"
+            android:layout_marginEnd="@dimen/capture_buttons_between_margin"/>
+
+    </RelativeLayout>
+    </LinearLayout>

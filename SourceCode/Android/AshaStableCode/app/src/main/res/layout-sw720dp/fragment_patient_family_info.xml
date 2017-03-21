@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <!-- First column-->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <!-- Full Name-->
+        <LinearLayout
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtFullName" />
+
+            <TextView
+                style="@style/Font17RedNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/txtAsteriskMark" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtFullName"
+            style="@style/edt_patient_registration"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize"
+            android:inputType="textCapWords"
+            android:maxLength="60"
+            android:nextFocusDown="@+id/edtIdCardNum"
+            android:singleLine="true" />
+
+        <!-- Gender -->
+        <LinearLayout
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtGender" />
+
+                <TextView
+                    style="@style/Font17RedNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/txtAsteriskMark" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroupGender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/txtFemale" />
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtMale" />
+            </RadioGroup>
+        </LinearLayout>
+        <!-- Date of Birth & Age -->
+        <!-- Date of Birth & Age -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <!-- Date of Birth-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioDOB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                    <TextView
+                        style="@style/Font17BlackNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtDateofBirth" />
+
+                    <TextView
+                        style="@style/Font17RedNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="@string/txtAsteriskMark" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/txtDateOfBirth"
+                    android:layout_width="200dp"
+                    android:layout_height="@dimen/stdRowSize"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/ic_calender"
+                    android:editable="false"
+                    android:gravity="center_vertical"
+                    android:padding="5dp" />
+            </LinearLayout>
+            <!-- Age-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false" />
+
+                    <TextView
+                        style="@style/Font17BlackNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtAge" />
+
+                    <TextView
+                        style="@style/Font17RedNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="@string/txtAsteriskMark" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edtAge"
+                    style="@style/edt_patient_registration"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/stdRowSize"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Relation to Patient-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtRelationtoPatient" />
+
+                <TextView
+                    style="@style/Font17RedNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/txtAsteriskMark" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spinnerRelation"
+                style="@style/spinner_style"
+                android:layout_width="@dimen/stdWidthPatientRegEdttext"
+                android:layout_height="@dimen/stdRowSize"
+                android:entries="@array/relation" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Marital status-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtMaritalStatus" />
+
+                <TextView
+                    style="@style/Font17RedNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/txtAsteriskMark" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spinnerMarritalStatus"
+                style="@style/spinner_style"
+                android:layout_width="@dimen/stdWidthPatientRegEdttext"
+                android:layout_height="@dimen/stdRowSize"
+                android:entries="@array/marritalStatus" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <!-- Education -->
+        <LinearLayout
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Font17BlackNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtEducation" />
+
+                <TextView
+                    style="@style/Font17RedNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/txtAsteriskMark" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radioEducation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioLiterate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/txtLiterate" />
+
+                <RadioButton
+                    android:id="@+id/radioIlliterate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtIlliterate" />
+            </RadioGroup>
+        </LinearLayout>
+        <!-- Id Card Type-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtIdCardType" />
+
+            <TextView
+                style="@style/Font17RedNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/txtAsteriskMark" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerIdCardType"
+            style="@style/spinner_style"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize" />
+
+        <!-- Id Card Number-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtIdCardNumber" />
+
+            <TextView
+                style="@style/Font17RedNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/txtAsteriskMark" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtIdCardNum"
+            style="@style/edt_patient_registration"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize"
+            android:inputType="text"
+            android:maxLength="20"
+            android:nextFocusDown="@+id/edtContact"
+            android:singleLine="true" />
+
+        <!-- Contact No-->
+
+        <!-- Contact-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtContact" />
+
+            <TextView
+                style="@style/Font17RedNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/txtAsteriskMark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="@dimen/stdRowSize"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/stdRowSize"
+                android:editable="false"
+                android:text="+91" />
+
+            <EditText
+                android:id="@+id/edtContact"
+                style="@style/edt_patient_registration"
+                android:layout_width="@dimen/stdWidthPatientRegEdttext"
+                android:layout_height="@dimen/stdRowSize"
+                android:layout_marginLeft="10dp"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="10"
+                android:singleLine="true" />
+        </LinearLayout>
+
+
+        <!-- Button Panel-->
+        <LinearLayout
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFamilyAdd"
+                style="@style/greenRoundButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtAdd" />
+
+            <Button
+                android:id="@+id/btnFamilyClear"
+                style="@style/greenRoundButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/txtClear" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!-- Third Column -->
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lstFamilyMember"
+            android:layout_width="@dimen/stdWidthPatientRegEdttext"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txtHeader"
+            android:layout_marginBottom="70dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/btnSkip"
+            style="@style/greenRoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btnSaveProceed"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btnSaveProceed"
+            android:text="@string/txtSkip" />
+
+        <Button
+            android:id="@+id/btnSaveProceed"
+            style="@style/greenRoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:text="@string/txtSaveProceed" />
+
+    </RelativeLayout>
+</LinearLayout>

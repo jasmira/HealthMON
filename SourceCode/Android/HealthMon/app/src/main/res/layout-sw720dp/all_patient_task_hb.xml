@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/all_patient_test_header"/>
+
+    <!--ReadingInputs-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llreadings">
+        <RelativeLayout
+            android:paddingTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/temperatureLayout"
+            android:gravity="center"
+            >
+            <!--Systolic-->
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtHB"
+                android:id="@+id/tvHb"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                style="@style/Font17RedNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtAsteriskMark"
+                android:layout_alignBaseline="@+id/tvHb"
+                android:layout_alignBottom="@+id/tvHb"
+                android:layout_toRightOf="@+id/tvHb"
+                android:layout_toEndOf="@+id/tvHb" />
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtTaskHBUnit"
+                android:id="@+id/tvTemperature2"
+                android:layout_alignBaseline="@+id/edthbSys"
+                android:layout_alignBottom="@+id/edthbSys"
+                android:layout_toRightOf="@+id/edthbSys"
+                android:layout_toEndOf="@+id/edthbSys" />
+            <!--@dimen/stdRowSize-->
+            <EditText
+                style="@style/edt_patient_registration"
+                android:id="@+id/edthbSys"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/stdRowSize"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:layout_below="@+id/tvHb"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--Action Buttons-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"
+
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskVitalsCapture"
+            android:id="@+id/btn_hb_capture"
+            style="@style/greenRoundButton"
+            android:layout_marginRight="70dp"
+            android:layout_marginEnd="70dp"
+            android:layout_alignParentBottom="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskVitalsSave"
+            android:id="@+id/btn_hb_save"
+            android:layout_marginRight="@dimen/capture_buttons_between_margin"
+            android:layout_marginEnd="@dimen/capture_buttons_between_margin"
+            style="@style/greenRoundButton"
+            android:layout_toRightOf="@id/btn_hb_capture"
+            android:layout_alignParentBottom="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskVitalsCancel"
+            android:id="@+id/btn_hb_cancel"
+            android:layout_marginRight="@dimen/capture_buttons_between_margin"
+            android:layout_marginEnd="@dimen/capture_buttons_between_margin"
+            style="@style/greenRoundButton"
+            android:layout_toRightOf="@id/btn_hb_save"
+            android:layout_alignParentBottom="true" />
+
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

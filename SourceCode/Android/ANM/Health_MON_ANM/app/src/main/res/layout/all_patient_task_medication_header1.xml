@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Patient Detailed Card-->
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/colorLightGreenBg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorLightGreenBg"
+        android:gravity="center|right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtIfaVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/colorBlue"
+            android:text="120"
+            android:textSize="24sp"
+            android:paddingRight="10dp"/>
+        <TextView
+            android:id="@+id/txtIfaGiven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/colorBlue"
+            android:paddingRight="15dp"
+            android:textSize="20sp"
+            android:text="@string/txtIFAGivenTillDate" />
+        <TextView
+            android:id="@+id/txtCalcVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/colorBlue"
+            android:paddingRight="10dp"
+            android:textSize="24sp"
+            android:text="30" />
+        <TextView
+            android:id="@+id/txtCalGiven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/colorBlue"
+            android:text="@string/txtCalciumGivenTillDate"
+            android:textSize="20sp"
+            android:paddingRight="10dp"/>
+   </LinearLayout>
+</android.support.v7.widget.CardView>

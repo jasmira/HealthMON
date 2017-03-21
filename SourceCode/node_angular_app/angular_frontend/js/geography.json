@@ -1,0 +1,59 @@
+{
+	"id": 0,
+	"title": "root - not displayed",
+	"children": [{
+		"id": 1,
+		"title": "North Zone",
+		"children": [{
+			"id": 11,
+			"title": "Kashmir",
+			"children": [{
+				"id": 111,
+				"title": "Leh"
+			}, {
+				"id": 112,
+				"title": "Pangkong"
+			}]
+		}, {
+			"id": 12,
+			"title": "New Delhi"
+		}]
+	}, {
+		"id": 2,
+		"title": "South Zone",
+		"children": [{
+			"id": 21,
+			"title": "Kerala"
+		}, {
+			"id": 22,
+			"title": "Tamil Nadu"
+		}]
+	}, {
+		"id": 3,
+		"title": "West Zone",
+		"children": [{
+			"id": 31,
+			"title": "Goa"
+		}, {
+			"id": 32,
+			"title": "Mumbai"
+		}]
+	}, {
+		"id": 4,
+		"title": "East Zone",
+		"children": [{
+			"id": 41,
+			"title": "West Bengal",
+			"children": [{
+				"id": 411,
+				"title": "Kolkata"
+			}, {
+				"id": 412,
+				"title": "Howrah"
+			}]
+		}, {
+			"id": 42,
+			"title": "Mizoram"
+		}]
+	}]
+}

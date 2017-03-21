@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/all_patient_test_header"/>
+
+    <!--ReadingInputs-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llreadings">
+        <RelativeLayout
+            android:paddingTop="50dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/temperatureLayout"
+            android:gravity="center"
+            android:layout_weight=".333"
+            >
+            <!--Systolic-->
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtTaskBPSystolic"
+                android:id="@+id/tvTemperature1"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                style="@style/Font17RedNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtAsteriskMark"
+                android:layout_alignBaseline="@+id/tvTemperature1"
+                android:layout_alignBottom="@+id/tvTemperature1"
+                android:layout_toRightOf="@+id/tvTemperature1"
+                android:layout_toEndOf="@+id/tvTemperature1" />
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtTaskBPSysDiaUnit"
+                android:id="@+id/tvTemperature2"
+                android:layout_alignBaseline="@+id/edtBpSys"
+                android:layout_alignBottom="@+id/edtBpSys"
+                android:layout_toRightOf="@+id/edtBpSys"
+                android:layout_toEndOf="@+id/edtBpSys" />
+            <!--@dimen/stdRowSize-->
+            <EditText
+                style="@style/edt_patient_registration"
+                android:id="@+id/edtBpSys"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/stdRowSize"
+                android:inputType="number"
+                android:maxLength="3"
+                android:nextFocusDown="@+id/edBpDia"
+                android:singleLine="true"
+                android:layout_below="@+id/tvTemperature1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:paddingTop="50dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/weightLayout"
+            android:layout_weight=".333"
+            >
+            <!--Diastolic-->
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtTaskBPDiastolic"
+                android:id="@+id/tvWeight1"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                style="@style/Font17RedNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtAsteriskMark"
+                android:layout_above="@+id/edBpDia"
+                android:layout_toRightOf="@+id/tvWeight1"
+                android:layout_toEndOf="@+id/tvWeight1" />
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtTaskBPSysDiaUnit"
+                android:id="@+id/tvWeight2"
+                android:layout_alignBaseline="@+id/edBpDia"
+                android:layout_alignBottom="@+id/edBpDia"
+                android:layout_toRightOf="@+id/edBpDia"
+                android:layout_toEndOf="@+id/edBpDia" />
+            <!--@dimen/stdRowSize-->
+            <EditText
+                style="@style/edt_patient_registration"
+                android:id="@+id/edBpDia"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/stdRowSize"
+                android:inputType="number"
+                android:maxLength="3"
+                android:nextFocusDown="@+id/edtBpPulse"
+                android:singleLine="true"
+                android:layout_below="@+id/tvWeight1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:paddingTop="50dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight=".333"
+            >
+            <!--Pulse-->
+            <TextView
+                style="@style/Font17BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtTaskBPPulse"
+                android:id="@+id/tvWeight11"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                style="@style/Font17RedNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtAsteriskMark"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tvWeight11"
+                android:layout_toEndOf="@+id/tvWeight11" />
+            <TextView
+                style="@style/Font15BlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtTaskBPPulseUnit"
+                android:id="@+id/tvWeight22"
+                android:layout_alignBaseline="@+id/edtBpPulse"
+                android:layout_alignBottom="@+id/edtBpPulse"
+                android:layout_toRightOf="@+id/edtBpPulse"
+                android:layout_toEndOf="@+id/edtBpPulse" />
+            <!--@dimen/stdRowSize-->
+            <EditText
+                style="@style/edt_patient_registration"
+                android:id="@+id/edtBpPulse"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/stdRowSize"
+                android:inputType="number"
+                android:maxLength="3"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:layout_below="@+id/tvWeight11"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--Action Buttons-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"
+
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskVitalsCapture"
+            android:id="@+id/btn_bp_capture"
+            style="@style/greenRoundButton"
+            android:layout_marginRight="@dimen/capture_buttons_between_margin"
+            android:layout_marginEnd="@dimen/capture_buttons_between_margin"
+            android:layout_alignParentBottom="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskVitalsSave"
+            android:id="@+id/btn_bp_save"
+            android:layout_marginRight="@dimen/capture_buttons_between_margin"
+            android:layout_marginEnd="@dimen/capture_buttons_between_margin"
+            style="@style/greenRoundButton"
+            android:layout_toRightOf="@id/btn_bp_capture"
+            android:layout_alignParentBottom="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskVitalsCancel"
+            android:id="@+id/btn_bp_cancel"
+            android:layout_marginRight="@dimen/capture_buttons_between_margin"
+            android:layout_marginEnd="@dimen/capture_buttons_between_margin"
+            style="@style/greenRoundButton"
+            android:layout_toRightOf="@id/btn_bp_save"
+            android:layout_alignParentBottom="true" />
+
+
+
+<!--        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskConnectionSetting"
+            android:id="@+id/btn_connection"
+            android:layout_marginRight="@dimen/capture_buttons_between_margin"
+            android:layout_marginEnd="@dimen/capture_buttons_between_margin"
+            style="@style/greenRoundButton"
+            android:layout_toRightOf="@id/btn_bp_save"
+            android:layout_alignParentBottom="true" />-->
+    </RelativeLayout>
+
+</LinearLayout>

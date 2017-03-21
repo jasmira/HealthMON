@@ -1,0 +1,26 @@
+<div class="tab-pane" id="vitals">
+<table class="table table-bordered table-responsive patientSummarytable">
+    <thead class="blueBgTh">
+      <tr>
+        <th>Sr. No.</th>
+        <th>Date</th>
+        <th>Temperature</th>
+        <th>Weight</th>
+        <th>BMI</th>
+        <th>Girth</th>
+        <th>Fundal Height</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="(index, info) in patientVitalsCtrl.vitalsInfo">
+        <td>{{index -- 1}}</td>
+        <td>{{info.Created_Date}}</td>
+        <td>{{info.Temperature}}&nbsp;{{info.Temperature ? "&#176;F" : ''}}</td>
+        <td>{{info.Weight}}&nbsp;{{info.Weight ? "Kg" : ''}}</td>
+        <td>{{info.Bmi}}&nbsp;{{info.Weight ? "Kg/m&#94;2" : ''}}</td>
+        <td>{{info.Girth}}&nbsp;{{info.Weight ? "cm" : ''}}</td>
+        <td>{{info.Fundal_Heights}}&nbsp;{{info.Fundal_Heights ? "cm" : ''}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

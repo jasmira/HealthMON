@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popup_element"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="10sp">
+
+
+    <RelativeLayout
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:id="@+id/toolbar_profile_layout"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/user_default_blue"
+            android:id="@+id/profile_image"
+            app:civ_border_color="#EEEEEE"
+            app:civ_border_width="4dp"
+            app:civ_shadow="true"
+            app:civ_shadow_radius="10"
+            app:civ_shadow_color="#8BC34A"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtAshaName"
+        android:id="@+id/asha_popup_ashaname"
+        android:layout_below="@+id/toolbar_profile_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtLastSyncNotAvaliable"
+        android:id="@+id/asha_popup_ashaid"
+        android:layout_below="@+id/asha_popup_ashaname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:id="@+id/asha_popup_line1"
+        android:layout_below="@+id/asha_popup_ashaid"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorBlue"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/asha_text_info_layout"
+        android:orientation="vertical"
+        android:layout_below="@+id/asha_popup_line1"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtashaqualification"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/asha_popup_qualification"
+            android:text="@string/txtLastSyncNotAvaliable"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margintopashadetails"
+            android:text="@string/txtashaemergencycontact"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/asha_popup_emergency_contact"
+            android:text="@string/txtLastSyncNotAvaliable"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margintopashadetails"
+            android:text="@string/txtashaaddress"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/asha_popup_address"
+            android:text="@string/txtLastSyncNotAvaliable"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margintopashadetails"
+            android:text="@string/txtashacontact"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/asha_popup_contact"
+            android:text="@string/txtLastSyncNotAvaliable"/>
+
+
+    </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:id="@+id/asha_popup_line2"
+            android:layout_below="@+id/asha_text_info_layout"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorBlue"
+            android:layout_marginTop="@dimen/margintopashadetails"/>
+    <Button
+        android:id="@+id/btn_sign_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/txtashasignout"
+        android:layout_below="@+id/asha_popup_line2"
+        android:layout_marginTop="@dimen/margintopashadetails"
+        style="@style/greenRoundButton"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
+
+</LinearLayout>

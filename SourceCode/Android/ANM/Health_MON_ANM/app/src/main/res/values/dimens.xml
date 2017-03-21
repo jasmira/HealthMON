@@ -1,0 +1,46 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="stdRowSize">48dp</dimen>
+    <dimen name="stdWidthPatientRegEdttext">300dp</dimen>
+
+    <!-- Text size dimens-->
+    <dimen name="text15sp">15sp</dimen>
+    <dimen name="text17sp">17sp</dimen>
+    <dimen name="text20sp">20sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="stdRowHeader">55dp</dimen>
+
+    <!-- Landing Screen-->
+    <dimen name="heightoftoolbar">75dp</dimen>
+    <dimen name="heightoftoolbarprofileImage">62dp</dimen>
+    <dimen name="heightlayoutheading">30dp</dimen>
+    <dimen name="sizetextheading">20sp</dimen>
+    <dimen name="paddingheadingtophelpguide">20dp</dimen>
+    <dimen name="paddingheadingallleft">5dp</dimen>
+    <dimen name="heightsearchview">35dp</dimen>
+    <dimen name="sizetexttoolbar">12sp</dimen>
+    <dimen name="paddinguseronline">5dp</dimen>
+    <dimen name="paddinguseronlineouter">2dp</dimen>
+    <dimen name="radiususeronline">35dp</dimen>
+    <dimen name="widthstrokeuseronline">8dp</dimen>
+
+    <!--DashboardPanel-->
+    <!--Task Search-->
+    <dimen name="task_search_padding">12dp</dimen>
+
+
+    <!--feedback-->
+    <dimen name="capture_buttons_between_margin">70dp</dimen>
+    <dimen name="feedbackSmileHeight">25dp</dimen>
+    <dimen name="feedbackSmileWidth">25dp</dimen>
+    <dimen name="text16sp">16sp</dimen>
+    <dimen name="feedbackQuestionHeight">35dp</dimen>
+
+    <!--careplan-->
+    <dimen name="padding_top_line">6dp</dimen>
+    <!--Medication-->
+    <dimen name="heightMedicationHeader">37dp</dimen>
+    <dimen name="heightMedicationrow">33dp</dimen>
+</resources>

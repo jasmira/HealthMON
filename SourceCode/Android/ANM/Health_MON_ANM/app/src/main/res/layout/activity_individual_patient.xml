@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/colorlightgray"
+    android:clickable="true"
+    android:orientation="vertical">
+    <!--
+    <include
+        android:id="@+id/toolbar_dashboard"
+        layout="@layout/toolbar_dashboard" />
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:text="@string/txtAllPatients"
+                android:textColor="@color/colorBlack"
+                android:textSize="23sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtBack"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorPrimary" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Patient Card-->
+        <include layout="@layout/item_patient_detail_card" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+                    <fragment
+                        android:id="@+id/fragment_dashboard_tasks"
+                        android:name="persistent.healthmon.fragments.TasksFragment"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".25"
+                        android:layout_margin="5dp"
+                        tools:layout="@layout/fragment_tasks">
+
+                    </fragment>
+
+            <fragment
+                android:id="@+id/fragment_dashboard"
+                android:name="persistent.healthmon.fragments.HealthLogFragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:layout_margin="5dp"
+                tools:layout="@layout/fragment_health_log">
+
+            </fragment>
+            <fragment
+                android:id="@+id/fragment_dashboard_collaboration"
+                android:name="persistent.healthmon.fragments.OthersIndividualFragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:layout_margin="5dp"
+                tools:layout="@layout/fragment_others_individual">
+
+            </fragment>
+        </LinearLayout>>
+        <RelativeLayout
+            android:id="@+id/fragmentContainerMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:visibility="visible"></RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

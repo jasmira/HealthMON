@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lblLastReffered"
+        style="@style/txt_preview_gray_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtLastReferred" />
+
+    <TextView
+        android:id="@+id/valLastRefered"
+        style="@style/txt_preview_gray_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/lblLastReffered"
+        android:text="" />
+
+    <LinearLayout
+        android:id="@+id/ViewAllContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtViewAll"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtSeperator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/ViewAllContainer"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorlinegray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSeperator"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/txt_20sp_lable_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTestResult" />
+
+        <TextView
+            android:id="@+id/txtTestResults"
+            style="@style/txt_20sp_lable_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/txt_20sp_lable_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtHealthCenterLab" />
+
+                <Spinner
+                    android:id="@+id/spinnerHealthCenterLab"
+                    style="@style/spinner_style"
+                    android:layout_width="250dp"
+                    android:layout_height="@dimen/stdRowSize"
+                    android:entries="@array/district" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/txt_20sp_lable_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtLocation" />
+
+                <Spinner
+                    android:id="@+id/spinnerLocation"
+                    style="@style/spinner_style"
+                    android:layout_width="250dp"
+                    android:layout_height="@dimen/stdRowSize"
+                    android:entries="@array/villageId" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/txt_20sp_lable_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtReason" />
+
+                <Spinner
+                    android:id="@+id/spinnerReason"
+                    style="@style/spinner_style"
+                    android:layout_width="250dp"
+                    android:layout_height="@dimen/stdRowSize"
+                    android:entries="@array/reason" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/txt_20sp_lable_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtComment" />
+
+                <EditText
+                    android:id="@+id/edtComment"
+                    style="@style/edt_patient_registration"
+                    android:layout_width="250dp"
+                    android:layout_height="@dimen/stdRowSize"
+                    android:maxLength="30"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRefer"
+            style="@style/greenRoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtRefer" />
+
+        <Button
+            android:id="@+id/btnClear"
+            style="@style/greenRoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/txtClear" />
+    </LinearLayout>
+</RelativeLayout>

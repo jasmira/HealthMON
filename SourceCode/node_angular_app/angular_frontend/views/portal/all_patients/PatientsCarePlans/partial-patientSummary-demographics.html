@@ -1,0 +1,106 @@
+<div class="tab-pane active" id="demographics">
+<div class="col-md-12">
+    <div class="col-md-6">
+        <table class="table patientSummarytable">
+            <thead class="lightBluebg">
+                <tr>
+                    <th colspan="2"><h5>BASIC INFORMATION</h5></th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="tdInGray">Salutation:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Patient_Salutation}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">Full Name:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Patient_FName}} {{patientDemographicsCtrl.patientPersonalInfo[0].Patient_LName}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">Age/Gender:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Patient_Age}}/F</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">Date of Birth:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Patient_DOB}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">Place of Birth:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Patient_POB}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">Marital Status:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Patient_Marital_Status}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">Category:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Cast_Category_NM}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">BPL:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Patient_BPL}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">Language:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Patient_Language}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">Education:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Education}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">{{patientDemographicsCtrl.patientPersonalInfo[0].Card_Description}} No:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Card_Number}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">Contact:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Patient_Contact}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="col-md-6">
+    <table class="table patientSummarytable">
+        <thead class="lightBluebg">
+            <tr>
+                <th colspan="2"><h5>ADDRESS</h5></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tdInGray">Address line 1:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Address_line1}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">Address line 2:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Address_line2}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">District:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].District_name}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">Taluka:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].City_name}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">Village:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Village_Name}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">Ward:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Patient_Ward}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">Pincode:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].PinCode}}</td>
+            </tr>
+            <tr>
+                <td class="tdInGray">Emergency Contact:</td>
+                <td>{{patientDemographicsCtrl.patientPersonalInfo[0].Patient_Emergency_number}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>

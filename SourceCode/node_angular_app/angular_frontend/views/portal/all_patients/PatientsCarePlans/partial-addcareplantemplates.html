@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+<body >
+    
+    <!-- Copy From Here-->
+    <!--Modal Header-->
+    <h5 class="modalHeader"> Add Care Plan</h5>
+    
+    <!--Modal Body-->
+    <div class="">
+	<br>
+    <br>
+	<!-- -->
+    <div class="row">
+    <div class="col-md-3">
+            
+        </div>
+    
+	<div class="col-md-4 categoryDropDown top-pad-both">
+        <span>Select Careplan Template</span>
+        <br>
+      <div class="dropdown ">
+		<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+        {{addcareplantemplatesCtrl.selectedTemplate}}
+		<span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  
+				  <li role="presentation" ng-click="addcareplantemplatesCtrl.selectedTemplate='Ante Natal Care'">Ante Natal Care(Pregnancy - ANC)</li>
+				  <li role="presentation" ng-click="addcareplantemplatesCtrl.selectedTemplate='Post Natal Care'">Post Natal Care ( PNC)</li>
+                  <li role="presentation" ng-click="addcareplantemplatesCtrl.selectedTemplate='Diabetes'">Diabetes</li>
+            </ul>
+        </div>
+		</div>
+        
+        <div class="col-md-2">
+            <button type="button" class="btn btn-default previewBtn" 
+            ng-click='addcareplantemplatesCtrl.displaySelectedTemplate()'>Preview</button>
+        </div>
+         <div class="col-md-3">
+            
+         </div>
+        </div>
+        
+        <div class="row grayBgRow">
+            <div class="col-md-10">
+             
+            </div>
+            <div class="col-md-2">
+               
+                  <a class="pull-right"  ng-click="addcareplantemplatesCtrl.removeSelectedTemplate()"> Remove </a>  
+            </div>
+        </div>
+        <div class="row">
+        <table class="table">
+                        <thead>
+                          <tr>
+                            <th class="">Category</th>
+                            <th class="">Task</th>
+                            <th class="">Frequency</th>
+                            <th class="">Role</th>
+                          </tr>
+                        </thead>
+                        <tbody ng-repeat='template in  
+                            displayTemplate track by $index'>
+                        <tr ng-repeat='i in template track by $index'>
+                            <td ng-if="$index == 0">{{i.Category_Desc}}</td>
+                            <td ng-if="$index > 0"></td>
+                            <td> <span>{{i.Template_Task_Desc}}</span></td>
+                            <td><span>{{i.Frequency_Desc}}</span> </td>
+                            <td><span>{{i.role}}</span></td>
+                        </tr>
+                    </tbody>
+                                                      </table></div>
+      
+            <div class="row">
+                <div class="pull-right"> <button class="btn btn-primary activityBtn" type="submit" 
+                ui-sref='patientCareplan.editcareplan' 
+               ng-click="addcareplantemplatesCtrl.addSelectedTemplate()">Add</button>  </div>
+            </div>
+                                                                  
+        
+		<!-- -->
+		</div>
+ <!--   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.3.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/bootstrap.js"></script>
+    <script src="js/simple.dropdown.js"></script>
+    <script type="text/javascript">
+        
+    </script>
+-->
+</body>
+</html>

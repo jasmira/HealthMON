@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reports</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="wrapper" id='top'>
+	<div class="container-fluid">
+		<!---header--->
+		<header></header>
+		<!---header close--->
+		<br/>
+		<div class="row" >
+			<!---left menu---->
+		
+			<left-menu-panel></left-menu-panel>
+			<!---left menu close---->
+			<!---right coloumn----->
+			<div id="main-panel">
+				<div class="col-sm-11">
+					     <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <h3>REPORTS</h3>
+									<hr/>                                   
+                                </div>
+								<!-- Report Type -->
+								<div class="row">
+									                                  
+                                    <div id="sortBySeverityDropDown" class="col-md-2 dropdown">
+                                            <div class="col-md-9"><b>Report Type</b></div>
+                                           <button class="btn btn-default dropdown-toggle col-md-12" type="button" id="menu1" data-toggle="dropdown">
+                                                 {{reportsCtrl.selectedReport}} <span class="caret"></span></button>
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" ui-sref=".enrolledBenificiaries"  ng-click="reportsCtrl.selectReport('Enrolled Beneficiaries')">Enrolled Beneficiaries</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" ui-sref=".healthStatusTrend" ng-click="reportsCtrl.selectReport('Health Status Trend')">Health Status Trend</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" ui-sref=".anemiaPatientTrends" ng-click="reportsCtrl.selectReport('Anemia Patient Trends')">Anemia Patient Trends</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" ui-sref=".healthStatusOfBenificiary" ng-click="reportsCtrl.selectReport('Health Status of Beneficiaries')">Health Status of Beneficiaries</a></li>
+                                                 <li role="presentation"><a role="menuitem" tabindex="-1" ui-sref=".referalCases" ng-click="reportsCtrl.selectReport('Referral Cases')">Referral Cases</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" ui-sref=".performanceOfTeamMembers" ng-click="reportsCtrl.selectReport('Performance of Team Members')">Performance of Team Members</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" ui-sref=".missedRecordTrends" ng-click="reportsCtrl.selectReport('Missed Records Trends')">Missed Records Trends</a></li>
+                                            </ul>
+                                    </div>
+                                    
+                                     <div id="sortBySeverityDropDown" class="col-md-2 dropdown">
+                                        <div class="col-md-9"><b>PHC Name</b></div>
+                                           <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                                                  <span class="caret"></span></button>
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                                <li role="presentation" ng-repeat="phc in reportsCtrl.phcData"><a role="menuitem" tabindex="-1"  ng-click="periodFunction('Monthly')">{{phc.phc_name}}</a></li>
+                                            </ul>
+                                    </div>
+                                    
+                                    <div id="sortBySeverityDropDown" class="col-md-2 dropdown">
+                                            <div class="col-md-9"><b>Village</b></div>
+                                           <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                                                  <span class="caret"></span></button>
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                                <li role="presentation"><a role="menuitem" tabindex="-1"  ng-click="periodFunction('Monthly')">Village1</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="periodFunction('Quarterly')">Village2</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="periodFunction('Yearly')">Village3</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="periodFunction('Yearly')">Village4</a></li>
+                                            </ul>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label class="col-md-9">From</label>
+								        <div class="bfh-datepicker col-md-12"></div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label class="col-md-9">To</label>
+								        <div class="bfh-datepicker col-md-12"></div>
+                                    </div>
+									<div  class="col-md-2 text-center">
+										<button class="btn btn-default blueBtn" type="button" ng-click="reportsCtrl.generateReport()">Generate</button>
+									</div>
+                                    </div>
+                                <div ng-if="reportsCtrl.anemiaFlag">
+                                    <ui-view></ui-view>
+                                </div>
+                                <div ng-if="reportsCtrl.enrolFlag">
+                                    <ui-view></ui-view>
+                                </div>
+                                <div ng-if="reportsCtrl.healthFlag">
+                                    <ui-view></ui-view>
+                                </div>
+                                <div ng-if="reportsCtrl.healthOfBenFlag">
+                                    <ui-view></ui-view>
+                                </div>
+                                <div ng-if="reportsCtrl.referalFlag">
+                                    <ui-view></ui-view>
+                                </div>
+                                <div ng-if="reportsCtrl.missedFlag">
+                                    <ui-view></ui-view>
+                                </div>
+                                <div ng-if="reportsCtrl.perOfTeam">
+                                    <ui-view></ui-view>
+                                </div>
+                                </div>
+							</div>
+						</div>			
+
+				</div>
+			</div>
+			<!---right coloumn----->
+		</div>
+	</div>
+
+</body>
+</html> 

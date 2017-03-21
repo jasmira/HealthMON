@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+    <!-- Full Name -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stdRowSize"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/txt_preview_gray_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/txtFullName" />
+
+        <TextView
+            android:id="@+id/valFullName"
+            style="@style/txt_preview_black_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/txtClear" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorlinegray" />
+
+    <!-- Age/Gender -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stdRowSize"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/txt_preview_gray_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/txtAgeGender" />
+
+        <TextView
+            android:id="@+id/valAgeGender"
+            style="@style/txt_preview_black_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/txtClear" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorlinegray" />
+
+    <!-- Date of Birth -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stdRowSize"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/txt_preview_gray_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/txtDateofBirth" />
+
+        <TextView
+            android:id="@+id/valDateofBirth"
+            style="@style/txt_preview_black_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/txtClear" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorlinegray" />
+
+
+    <!-- Relation to Patient -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stdRowSize"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/txt_preview_gray_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/txtRelationtoPatient" />
+
+        <TextView
+            android:id="@+id/valRelationtoPatient"
+            style="@style/txt_preview_black_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/txtClear" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorlinegray" />
+
+    <!-- Marital Status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stdRowSize"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/txt_preview_gray_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/txtMaritalStatus" />
+
+        <TextView
+            android:id="@+id/valMaritalStatus"
+            style="@style/txt_preview_black_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/txtClear" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorlinegray" />
+
+
+    <!-- Education -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stdRowSize"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/txt_preview_gray_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/txtEducation" />
+
+        <TextView
+            android:id="@+id/valEducation"
+            style="@style/txt_preview_black_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/txtClear" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorlinegray" />
+
+    <!-- Id Card Type -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stdRowSize"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/txt_preview_gray_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/txtIdCardType" />
+
+        <TextView
+            android:id="@+id/valIdCardType"
+            style="@style/txt_preview_black_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/txtClear" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorlinegray" />
+
+    <!-- Id Card Number -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stdRowSize"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/txt_preview_gray_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/txtIdCardNumber" />
+
+        <TextView
+            android:id="@+id/valIdCardNumber"
+            style="@style/txt_preview_black_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/txtClear" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorlinegray" />
+
+    <!-- Contact -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stdRowSize"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/txt_preview_gray_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/txtContact" />
+
+        <TextView
+            android:id="@+id/valContact"
+            style="@style/txt_preview_black_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/txtClear" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorlinegray" />
+
+</LinearLayout>

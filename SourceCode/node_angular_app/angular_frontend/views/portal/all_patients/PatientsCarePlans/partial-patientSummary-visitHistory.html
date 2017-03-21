@@ -1,0 +1,33 @@
+<div class="tab-pane" id="visitHistory">
+	<div class="col-md-12">
+		<a class="pull-right" ui-sref="{{$state.current.name}}"> View All</a>
+	</div>
+	
+	<table class="table table-bordered table-responsive patientSummarytable">
+		<thead class="blueBgTh">
+		  <tr>
+			<th>S No.</th>
+			<th>Visit No.</th>
+			<th>Date</th>
+			<th>Investigator</th>
+			<th>Contact</th>
+			<th>Place</th>
+			<th>ASHA/ANM</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr ng-repeat="(index, data) in patientVisitHistoryCtrl.patientVisitHistoryData">
+			<td>{{index -- 1}}</td>
+			<td>Visit {{index -- 1}}</td>
+			<td>{{data.appntDateTime}}</td>
+			<td>{{data.investigator}}</td>
+			<td>{{data.contact}}</td>
+			<td>{{data.place}}</td>
+			<td>{{data.ASHA_ANM_NAME}}({{data.createdByRole}})</td>
+		  </tr>
+		  <tr>
+		  
+		</tbody>
+	  </table>
+</div>
+                                                            

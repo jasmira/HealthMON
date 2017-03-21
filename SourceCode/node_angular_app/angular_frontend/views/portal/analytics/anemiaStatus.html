@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Analytics</title>
+    <script src="/static/js/default_functions.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <!---header--->
+            <header></header>
+            <!---header close--->
+
+            <!---left menu---->
+            <left-menu-panel></left-menu-panel>
+            <!---left menu close---->
+            <!---right coloumn----->
+            <div id="main-panel">
+                 <div>
+                    <h4>
+                        ANALYTICS
+                    </h4>
+                </div>
+                <div class="row">
+                    <div id="sortBySeverityDropDown" class="col-md-2 dropdown">
+                        <div class="col-md-9"><b>Period</b></div>
+                        <div>
+                           <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                                 {{orderByColumnLabel}} <span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1"  ng-click="periodFunction('Monthly')">Monthly</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="periodFunction('Quarterly')">Quarterly</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" ng-click="periodFunction('Yearly')">Yearly</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3" ng-hide="navFlag">
+                        <br><br>
+                        <span class="col-md-1 glyphicon glyphicon-triangle-left" aria-hidden="true" ng-click="changeQuaterMinus()"></span>
+                        <span class="col-md-1 glyphicon glyphicon-triangle-right" aria-hidden="true" ng-click="changeQuaterPlus()"></span>
+                        <div class="col-md-9"><b>{{anemiaStatusCtrl.selectedQuarter}} {{year}}</b></div>
+                    </div>
+
+                    <div class="col-md-2" ng-if="orderByColumnLabel=='Quarterly'">
+                        <br><br>
+
+                        <span class="col-md-1 glyphicon glyphicon-unchecked" aria-hidden="true" ng-hide="!showAllQuarter" ng-click="showAllQuarters()"></span>
+                        <span class="col-md-1 glyphicon glyphicon-check" aria-hidden="true" ng-hide="showAllQuarter" ng-click="showAllQuarters()"></span>
+                        <div class="col-md-10">Show all Quarters</div>
+                    </div>
+
+                    <div class="col-md-2">
+                    <button type="button" class="btn btn-default blueBtn btn-lg" aria-label="Left Align" ng-click="showFilterPanel()">
+                            <span class="glyphicon glyphicon-filter" aria-hidden="true"></span>Refine
+                    </button>
+                    </div>
+
+                    <div class="col-md-2"><p>Village : All</p>
+                    <p>Program : All</p>
+                    <p>Parameter : Anemia Status</p>
+                    </div>
+
+                    <br><br><br>
+
+                    <div id="filterPanel" ng-hide="buttonFlag">
+                        <div class="page-title green-bg col-md-11" ></div>
+                        <div class="col-md-1"></div>
+
+
+                            <!--<div class="col-md-2">
+                             <h4 class="type">VILLAGE</h4>
+							<div class="checkbox">
+							<label><input type="checkbox" name="village" ng-model="allvil" ng-click="selectedVillage('all',allvil)" ng-checked="allvil">All</label>
+							 </div>
+							<div class="checkbox">
+							<label><input type="checkbox"  name="village" ng-model="village1" ng-click="selectedVillage('village1',village1)" disabled>Village1</label>
+							</div>
+							<div class="checkbox">
+							<label><input type="checkbox" name="village" ng-model="village2" ng-click="selectedVillage('village2',village2)" disabled>Village2</label>
+							</div>
+							<div class="checkbox">
+							<label><input type="checkbox" name="village" ng-model="village3" ng-click="selectedVillage('village3',village3)" disabled>Village3</label>
+							</div>
+							<div class="checkbox">
+							<label><input type="checkbox" name="village" ng-model="village4" ng-click="selectedVillage('village4',village4)" disabled>Village4</label>
+							</div>
+            </div> -->
+
+            <div class="col-md-3">
+                <h4 class="type">GEOGRAPHY</h4>
+                <div class="checkbox">
+                    <label id="north"></label>
+                </div>
+                <div class="checkbox">
+                    <label id="south"></label>
+                </div>
+                <button id="west" class="accordion"></button>
+                    <div class="panel" id="myPanel">
+                        <div class="checkbox">
+                            <span id="sub_level_menu_name"><label id="west_subzone1"></label></span>
+                        </div>
+                        <div class="checkbox">
+                            <span id="sub_level_menu_name"><label id="west_subzone2"></label></span>
+                        </div>
+                        <button id="west_subzone3" class="accordion customizedAccordion"></button>
+                            <div class="panel" id="myPanel">
+                                <div class="checkbox">
+                                    <span id="sub_level_menu_name2"><label id="west_subzone3_1"></label></span>
+                                </div>
+                                <div class="checkbox">
+                                    <span id="sub_level_menu_name2"><label id="west_subzone3_2"></label></span>
+                                </div>
+                                <div class="checkbox">
+                                    <span id="sub_level_menu_name2"><label id="west_subzone3_3"></label></span>
+                                </div>
+                            </div>
+                    </div>
+                <div class="checkbox">
+                    <label id="east"></label>
+                </div>
+            </div>
+
+
+							<div class="col-md-2">
+							<h4 class="type">PROGRAM</h4>
+							<div class="checkbox">
+							<label><input type="checkbox" name="program" ng-model="allpro" ng-click="selectedProgram('all',allpro)" disabled>All</label>
+							</div>
+							<div class="checkbox">
+							<label><input type="checkbox" name="program" ng-model="maternal" ng-click="selectedProgram('metarnalCare',maternal)" ng-checked="maternal">Maternal Care</label>
+							</div>
+							<div class="checkbox">
+							<label><input type="checkbox" name="program" ng-model="child" ng-click="selectedProgram('childCare',child)" disabled>Child Care</label>
+							</div>
+							<div class="checkbox">
+							<label><input type="checkbox" name="program" ng-model="family" ng-click="selectedProgram('familyPlanning',family)" disabled>Family Planning</label>
+							</div>
+							<div class="checkbox">
+							<label><input type="checkbox" name="program" ng-model="natal" ng-click="selectedProgram('postNatalCare',natal)" disabled>Post Natal Care</label>
+							</div>
+							</div>
+                            <div class="col-md-2">
+                            <h4 class="type">PARAMETER</h4>
+						 <div class="checkbox">
+										<label><input type="checkbox" name="parameter" ng-model="allpar" ng-click="selectedParameter('all',allpar)" disabled>All</label>
+						 </div>
+						<div class="checkbox">
+										<label><input type="checkbox" name="parameter" ng-model="enrollment" ng-click="selectedParameter('enrollment',enrollment)" disabled>Enrollment</label>
+						 </div>
+						<div class="checkbox">
+									   <label><input type="checkbox" name="parameter" ng-model="highrisk" ng-click="selectedParameter('highRisk',highrisk)" disabled>High Risk</label>
+						 </div>
+                            <div class="checkbox">
+										<label><input type="checkbox" name="parameter" ng-model="expected" ng-click="selectedParameter('expectedDelivery',expected)" disabled>Expected Deliveries</label>
+							</div>
+                            <div class="checkbox">
+								<label><input type="checkbox" name="parameter" ng-model="anemia" ng-click="selectedParameter('anemiaStatus',anemia)" ng-checked="anemia">Anemia Status</label>
+							</div>
+                            </div>
+                            <button class="btn btn-default blueBtn" type="button" ng-click="sendCheckedData()" style="margin-top:1%">OK </button>
+                               </div>
+
+                <div class="col-sm-11">
+                    <div class="row" style="overflow: hidden;">
+
+                         <div style="background: #d9f9ec; height: 35px; padding-top: 10px; padding-left: 15px;">
+                            <span class="pull-left"><b>Anemia Status for: Year({{year}}) - {{anemiaStatusCtrl.selectedQuarter}} </b></span><span class="pull-right">(Summary view)</span>
+                        </div>
+
+                        <!--Year and quarter single graph-->
+                        <div ng-if="monthFlag && showAllQuarter">
+                        <!--<div style="margin-top: 50px; margin-left: 150px; position: absolute;">-->
+                            <div class="page-title green-bg col-xs-2" ></div>
+                            <div class="col-xs-3" ng-if="!anemiaStatusCtrl.noDonutData">
+                                 Number of Severe Patients
+                                     <span style="color: #1dbd9d; font-size: large;"> {{severePatients}}</span><br><br>                                        Number of Moderate Patients
+                                    <span style="color: #1dbd9d; font-size: large;"> {{moderatePatients}}</span><br><br>
+                                 Number of Normal patients are
+                                    <span style="color: #1dbd9d; font-size: large;"> {{normalPatients}}</span><br><br>
+                                 Total Patients registered
+                                    <span style="color: #1dbd9d; font-size: large;">{{registeredPatients}}</span>
+                            </div>
+				        <div class="col-xs-6" id="chartDonut" ng-if="!anemiaStatusCtrl.noDonutData"></div>
+				        <div ng-if="anemiaStatusCtrl.noDonutData"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+                        <!--</div>-->
+                        </div>
+
+                        <!--Month graphs-->
+                    <div ng-if="!monthFlag && showAllQuarter">
+                    <div class="page-title green-bg col-xs-3" >
+                            <div class="col-md-4"></div>
+                            <div class="col-md-6"><strong>{{month1}} {{currentYear}}</strong></div>
+                            <div class="col-xs-5" ng-if="!anemiaStatusCtrl.noDonutData1">
+                                 Severe patients
+                                     <span style="color: #1dbd9d; font-size: large;"> {{severePatients1}}</span><br><br>                                    Moderate patients
+                                    <span style="color: #1dbd9d; font-size: large;"> {{moderatePatients1}}</span><br><br>
+                                 Normal patients
+                                    <span style="color: #1dbd9d; font-size: large;"> {{normalPatients1}}</span><br><br>
+                                 Registered patients
+                                    <span style="color: #1dbd9d; font-size: large;">{{registeredPatients1}}</span>
+                            </div>
+                            <div class="col-xs-7" id="chartDonut1" ng-if="!anemiaStatusCtrl.noDonutData1"></div>
+				            <div ng-if="anemiaStatusCtrl.noDonutData1"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+                    </div>
+                    <div class="page-title green-bg col-xs-3 col-md-offset-1" >
+                            <div class="col-md-4"></div>
+                            <div class="col-md-6"><strong>{{month2}} {{currentYear}}</strong></div>
+                            <div class="col-xs-5" ng-if="!anemiaStatusCtrl.noDonutData2">
+                                 Severe patients
+                                     <span style="color: #1dbd9d; font-size: large;"> {{severePatients2}}</span><br><br>                                     Moderate patients
+                                    <span style="color: #1dbd9d; font-size: large;"> {{moderatePatients2}}</span><br><br>
+                                 Normal patients
+                                    <span style="color: #1dbd9d; font-size: large;"> {{normalPatients2}}</span><br><br>
+                                 Registered patients
+                                    <span style="color: #1dbd9d; font-size: large;">{{registeredPatients2}}</span>
+                            </div>
+                            <div class="col-xs-7" id="chartDonut2" ng-if="!anemiaStatusCtrl.noDonutData2"></div>
+				            <div ng-if="anemiaStatusCtrl.noDonutData2"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+                    </div>
+                    <div class="page-title green-bg col-xs-3 col-md-offset-1" >
+                            <div class="col-md-4"></div>
+                            <div class="col-md-6"><strong>{{month3}} {{currentYear}}</strong></div>
+                            <div class="col-xs-5" ng-if="!anemiaStatusCtrl.noDonutData3">
+                                 Severe patients
+                                     <span style="color: #1dbd9d; font-size: large;"> {{severePatients3}}</span><br><br>                                    Moderate patients
+                                    <span style="color: #1dbd9d; font-size: large;"> {{moderatePatients3}}</span><br><br>
+                                 Normal patients
+                                    <span style="color: #1dbd9d; font-size: large;"> {{normalPatients3}}</span><br><br>
+                                Registered patients
+                                    <span style="color: #1dbd9d; font-size: large;">{{registeredPatients3}}</span>
+                            </div>
+                            <div class="col-xs-7" id="chartDonut3" ng-if="!anemiaStatusCtrl.noDonutData3"></div>
+				            <div ng-if="anemiaStatusCtrl.noDonutData3"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+                    </div>
+                </div>
+
+                    <!--quarter graphs-->
+
+                <div ng-if="!showAllQuarter">
+                    <div class="page-title green-bg col-xs-6 col-md-offset-1">
+                        <div class="page-title green-bg col-xs-4" ></div>
+                        <div class="col-md-4"><strong>{{quarter1}}</strong></div>
+                        <div class="col-xs-6" ng-if="!anemiaStatusCtrl.noDonutData">
+                                 Number of Severe Patients
+                                     <span style="color: #1dbd9d; font-size: large;"> {{severePatients}}</span><br><br>                                        Number of Moderate Patients
+                                    <span style="color: #1dbd9d; font-size: large;"> {{moderatePatients}}</span><br><br>
+                                 Number of Normal patients are
+                                    <span style="color: #1dbd9d; font-size: large;"> {{normalPatients}}</span><br><br>
+                                 Total Patients registered
+                                    <span style="color: #1dbd9d; font-size: large;">{{registeredPatients}}</span>
+                            </div>
+                            <div class="col-xs-6" id="chartDonut" ng-if="!anemiaStatusCtrl.noDonutData"></div>
+				            <div ng-if="anemiaStatusCtrl.noDonutData"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+                    </div>
+
+                    <div class="page-title green-bg col-xs-6 col-md-offset-1">
+                        <br><br>
+                        <div class="page-title green-bg col-xs-4" ></div>
+                        <div class="col-md-4"><strong>{{quarter2}}</strong></div>
+                        <div class="col-xs-6" ng-if="!anemiaStatusCtrl.noDonutData1">
+                                 Number of Severe Patients
+                                     <span style="color: #1dbd9d; font-size: large;"> {{severePatients1}}</span><br><br>                                        Number of Moderate Patients
+                                    <span style="color: #1dbd9d; font-size: large;"> {{moderatePatients1}}</span><br><br>
+                                 Number of Normal patients are
+                                    <span style="color: #1dbd9d; font-size: large;"> {{normalPatients1}}</span><br><br>
+                                 Total Patients registered
+                                    <span style="color: #1dbd9d; font-size: large;">{{registeredPatients1}}</span>
+                            </div>
+                            <div class="col-xs-6" id="chartDonut1" ng-if="!anemiaStatusCtrl.noDonutData1"></div>
+				            <div ng-if="anemiaStatusCtrl.noDonutData1"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+                    </div>
+
+                    <div class="page-title green-bg col-xs-6 col-md-offset-1">
+                            <br><br>
+                            <div class="page-title green-bg col-xs-4" ></div>
+                            <div class="col-md-4"><strong>{{quarter3}}</strong></div>
+                            <div class="col-xs-6" ng-if="!anemiaStatusCtrl.noDonutData2">
+                                 Number of Severe Patients
+                                     <span style="color: #1dbd9d; font-size: large;"> {{severePatients2}}</span><br><br>                                        Number of Moderate Patients
+                                    <span style="color: #1dbd9d; font-size: large;"> {{moderatePatients2}}</span><br><br>
+                                 Number of Normal patients are
+                                    <span style="color: #1dbd9d; font-size: large;"> {{normalPatients2}}</span><br><br>
+                                 Total Patients registered
+                                    <span style="color: #1dbd9d; font-size: large;">{{registeredPatients2}}</span>
+                            </div>
+                            <div class="col-xs-6" id="chartDonut2" ng-if="!anemiaStatusCtrl.noDonutData2"></div>
+				            <div ng-if="anemiaStatusCtrl.noDonutData2"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+                    </div>
+
+                    <div class="page-title green-bg col-xs-6 col-md-offset-1">
+                            <br><br>
+                            <div class="page-title green-bg col-xs-4" ></div>
+                            <div class="col-md-4"><strong>{{quarter4}}</strong></div>
+                            <div class="col-xs-6" ng-if="!anemiaStatusCtrl.noDonutData3">
+                                 Number of Severe Patients
+                                     <span style="color: #1dbd9d; font-size: large;"> {{severePatients3}}</span><br><br>                                        Number of Moderate Patients
+                                    <span style="color: #1dbd9d; font-size: large;"> {{moderatePatients3}}</span><br><br>
+                                 Number of Normal patients are
+                                    <span style="color: #1dbd9d; font-size: large;"> {{normalPatients3}}</span><br><br>
+                                 Total Patients registered
+                                    <span style="color: #1dbd9d; font-size: large;">{{registeredPatients3}}</span>
+                            </div>
+                            <div class="col-xs-6" id="chartDonut3" ng-if="!anemiaStatusCtrl.noDonutData3"></div>
+				            <div ng-if="anemiaStatusCtrl.noDonutData3"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+                    </div>
+                </div>
+                    <div ng-hide="!showAllQuarter">
+                    <div class="col-md-12 well well-sm">
+                        <span class="pull-left">At village level distribution</span>
+                        <div ng-if="!anemiaStatusCtrl.noDonutData4">
+                        <div class="col-md-1">
+                        <span class="col-md-1 glyphicon glyphicon-triangle-left" aria-hidden="true" ng-click="villageMinus()"></span>
+                        <span class="col-md-1 glyphicon glyphicon-triangle-right" aria-hidden="true" ng-click="villagePlus()"></span>
+                        </div>
+                        <div class="col-md-1"><strong>{{villageName}}</strong></div>
+                        </div>
+                        <div  ng-hide="monthFlag">
+                        <div class="col-md-1">
+                        <span class="col-md-1 glyphicon glyphicon-triangle-left" aria-hidden="true" ng-click="monthMinus()"></span>
+                        <span class="col-md-1 glyphicon glyphicon-triangle-right" aria-hidden="true" ng-click="monthPlus()"></span>
+                        </div>
+                        <div class="col-md-1"><strong>{{month}}</strong></div>
+                        </div>
+                        <span class="pull-right">(Detail View)</span>
+                        </div>
+                            <div class="page-title green-bg col-xs-2" ></div>
+                            <div class="col-xs-3" ng-if="!anemiaStatusCtrl.noDonutData4">
+                                 Number of Severe Patients
+                                     <span style="color: #1dbd9d; font-size: large;"> {{severePatients4}}</span><br><br>                                        Number of Moderate Patients
+                                    <span style="color: #1dbd9d; font-size: large;"> {{moderatePatients4}}</span><br><br>
+                                 Number of Normal patients are
+                                    <span style="color: #1dbd9d; font-size: large;"> {{normalPatients4}}</span><br><br>
+                                 Total Patients registered
+                                    <span style="color: #1dbd9d; font-size: large;">{{registeredPatients4}}</span>
+                            </div>
+				            <div class="col-xs-6">
+                            <div id="chartDonut4" ng-if="!anemiaStatusCtrl.noDonutData4"></div>
+				            <div ng-if="anemiaStatusCtrl.noDonutData4"><img src="/static/images/no-data-available-txt.jpg" class="img-responsive"></div>
+                            </div>
+                    </div>
+
+                        </div>
+                        <!---right coloumn----->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

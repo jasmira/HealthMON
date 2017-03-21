@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/all_patient_task_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3">
+            <ImageView
+                android:layout_width="@dimen/feedbackSmileWidth"
+                android:layout_height="match_parent"
+                android:id="@+id/ivStrngAgree"
+                android:src="@drawable/ic_strongly_agree"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvSagree"
+                android:text="@string/txtStronglyAgree"
+                android:layout_gravity="center"
+                android:textColor="@color/colorBlue"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2">
+            <ImageView
+                android:layout_width="@dimen/feedbackSmileWidth"
+                android:layout_height="match_parent"
+                android:id="@+id/ivAgree"
+                android:src="@drawable/ic_agree" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvagree"
+                android:text="@string/txtAgree"
+                android:layout_gravity="center"
+                android:textColor="@color/colorBlue"/>
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2">
+            <ImageView
+                android:layout_width="@dimen/feedbackSmileWidth"
+                android:layout_height="match_parent"
+                android:id="@+id/ivDisgree"
+                android:src="@drawable/ic_disagree"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvdisagree"
+                android:text="@string/txtDisgree"
+                android:layout_gravity="center"
+                android:textColor="@color/colorBlue"/>
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".3">
+            <ImageView
+                android:layout_width="@dimen/feedbackSmileWidth"
+                android:layout_height="match_parent"
+                android:id="@+id/ivStrngDisgree9"
+                android:src="@drawable/ic_strongly_disagree" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/stronglydisagree"
+                android:text="@string/txtStronglyDisagree"
+                android:layout_gravity="center"
+                android:textColor="@color/colorBlue"/>
+                    </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/ivStrngDisgree9"
+            android:src="@drawable/ic_strongly_disagree"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/stronglydisagree"
+            android:layout_toStartOf="@+id/stronglydisagree" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/ivDisgree"
+            android:src="@drawable/ic_disagree"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/tvdisagree"
+            android:layout_toStartOf="@+id/tvdisagree" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/ivAgree"
+            android:src="@drawable/ic_agree"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/tvagree"
+            android:layout_toStartOf="@+id/tvagree" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/ivStrngAgree"
+            android:src="@drawable/ic_strongly_agree"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/tvstronglyagree"
+            android:layout_toStartOf="@+id/tvstronglyagree" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvstronglyagree"
+            android:text="@string/txtStronglyAgree"
+            android:textColor="@color/colorBlue"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ivAgree"
+            android:layout_toStartOf="@+id/ivAgree" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvagree"
+            android:text="@string/txtAgree"
+            android:textColor="@color/colorBlue"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ivDisgree"
+            android:layout_toStartOf="@+id/ivDisgree" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvdisagree"
+            android:text="@string/txtDisgree"
+            android:textColor="@color/colorBlue"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ivStrngDisgree"
+            android:layout_toStartOf="@+id/ivStrngDisgree" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stronglydisagree"
+            android:text="@string/txtStronglyDisagree"
+            android:textColor="@color/colorBlue"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/llLstFeedback"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lstFeedbackQuestions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+<!--        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                    android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                &lt;!&ndash;Question first set&ndash;&gt;
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/feedbackQSetHeaderHeight"
+                    android:text="@string/txtFirstSetQuestionHeader"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/feedbackQuestionHeight"
+                        android:layout_marginLeft="@dimen/feedbackQuestionMarginLeft"
+                        android:layout_marginStart="@dimen/feedbackQuestionMarginLeft"
+                        android:text="@string/txtFeedBackFirstSetQ1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/feedbackQuestionHeight"
+                        android:layout_marginLeft="@dimen/feedbackQuestionMarginLeft"
+                        android:layout_marginStart="@dimen/feedbackQuestionMarginLeft"
+                        android:text="@string/txtFeedBackFirstSetQ2"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/feedbackQuestionHeight"
+                        android:layout_marginLeft="@dimen/feedbackQuestionMarginLeft"
+                        android:layout_marginStart="@dimen/feedbackQuestionMarginLeft"
+                        android:text="@string/txtFeedBackFirstSetQ3"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/feedbackQuestionHeight"
+                        android:layout_marginLeft="@dimen/feedbackQuestionMarginLeft"
+                        android:layout_marginStart="@dimen/feedbackQuestionMarginLeft"
+                        android:text="@string/txtFeedBackFirstSetQ4"/>
+
+                    &lt;!&ndash;Question Second set&ndash;&gt;
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/feedbackQSetHeaderHeight"
+                        android:text="@string/txtSecondSetQuestionHeader"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/feedbackQuestionHeight"
+                        android:layout_marginLeft="@dimen/feedbackQuestionMarginLeft"
+                        android:layout_marginStart="@dimen/feedbackQuestionMarginLeft"
+                        android:text="@string/txtFeedBackSecondSetQ1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/feedbackQuestionHeight"
+                        android:layout_marginLeft="@dimen/feedbackQuestionMarginLeft"
+                        android:layout_marginStart="@dimen/feedbackQuestionMarginLeft"
+                        android:text="@string/txtFeedBackSecondSetQ2"/>
+
+                    &lt;!&ndash;Question Third set&ndash;&gt;
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/feedbackQSetHeaderHeight"
+                        android:text="@string/txtThirdSetQuestionHeader"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/feedbackQuestionHeight"
+                        android:layout_marginLeft="@dimen/feedbackQuestionMarginLeft"
+                        android:layout_marginStart="@dimen/feedbackQuestionMarginLeft"
+                        android:text="@string/txtFeedBackThirdSetQ1"/>
+
+            </LinearLayout>
+
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight=".5"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/feedbackQSetHeaderHeight"
+        android:text="@string/txtThirdSetQuestionHeader"/>
+                    &lt;!&ndash;RadioButtons S1Q1&ndash;&gt;
+                    <RadioGroup
+                        android:id="@+id/radioGroupFBFirstSetQ1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/feedbackQuestionHeight"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioFBset1Q1SA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/feedbackStronglyAgreeRight"
+                            android:layout_marginEnd="@dimen/feedbackStronglyAgreeRight"/>
+
+                        <RadioButton
+                            android:id="@+id/radioFBset1Q1A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/feedbackAgreeRight"
+                            android:layout_marginEnd="@dimen/feedbackAgreeRight" />
+
+                        <RadioButton
+                            android:id="@+id/radioFBset1Q1D"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/feedbackDisgreeRight"
+                            android:layout_marginEnd="@dimen/feedbackDisgreeRight" />
+
+                        <RadioButton
+                            android:id="@+id/radioFBset1Q1SD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/feedbackStronglyDisagreeRight"
+                            android:layout_marginEnd="@dimen/feedbackStronglyDisagreeRight"/>
+
+
+                    </RadioGroup>
+
+                &lt;!&ndash;RadioButtons S1Q2&ndash;&gt;
+                <RadioGroup
+                    android:id="@+id/radioGroupFBFirstSetQ12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/feedbackQuestionHeight"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioFBset1Q2SA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/feedbackStronglyAgreeRight"
+                        android:layout_marginEnd="@dimen/feedbackStronglyAgreeRight"/>
+
+                    <RadioButton
+                        android:id="@+id/radioFBset1Q2A"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/feedbackAgreeRight"
+                        android:layout_marginEnd="@dimen/feedbackAgreeRight" />
+
+                    <RadioButton
+                        android:id="@+id/radioFBset1Q2D"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/feedbackDisgreeRight"
+                        android:layout_marginEnd="@dimen/feedbackDisgreeRight" />
+
+                    <RadioButton
+                        android:id="@+id/radioFBset1Q2SD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/feedbackStronglyDisagreeRight"
+                        android:layout_marginEnd="@dimen/feedbackStronglyDisagreeRight"/>
+
+
+                </RadioGroup>
+
+                &lt;!&ndash;RadioButtons S1Q3&ndash;&gt;
+                <RadioGroup
+                    android:id="@+id/radioGroupFBFirstSetQ13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/feedbackQuestionHeight"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioFBset1Q3SA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/feedbackStronglyAgreeRight"
+                        android:layout_marginEnd="@dimen/feedbackStronglyAgreeRight"/>
+
+                    <RadioButton
+                        android:id="@+id/radioFBset1Q3A"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/feedbackAgreeRight"
+                        android:layout_marginEnd="@dimen/feedbackAgreeRight" />
+
+                    <RadioButton
+                        android:id="@+id/radioFBset1Q3D"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/feedbackDisgreeRight"
+                        android:layout_marginEnd="@dimen/feedbackDisgreeRight" />
+
+                    <RadioButton
+                        android:id="@+id/radioFBset1Q3SD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/feedbackStronglyDisagreeRight"
+                        android:layout_marginEnd="@dimen/feedbackStronglyDisagreeRight"/>
+
+
+                </RadioGroup>
+
+                &lt;!&ndash;RadioButtons S1Q4&ndash;&gt;
+                <RadioGroup
+                    android:id="@+id/radioGroupFBFirstSetQ14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/feedbackQuestionHeight"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioFBset1Q4SA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/feedbackStronglyAgreeRight"
+                        android:layout_marginEnd="@dimen/feedbackStronglyAgreeRight"/>
+
+                    <RadioButton
+                        android:id="@+id/radioFBset1Q4A"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/feedbackAgreeRight"
+                        android:layout_marginEnd="@dimen/feedbackAgreeRight" />
+
+                    <RadioButton
+                        android:id="@+id/radioFBset1Q4D"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/feedbackDisgreeRight"
+                        android:layout_marginEnd="@dimen/feedbackDisgreeRight" />
+
+                    <RadioButton
+                        android:id="@+id/radioFBset1Q4SD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/feedbackStronglyDisagreeRight"
+                        android:layout_marginEnd="@dimen/feedbackStronglyDisagreeRight"/>
+
+
+                </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/feedbackQSetHeaderHeight"
+        android:text="@string/txtThirdSetQuestionHeader"/>
+    &lt;!&ndash;RadioButtons S2Q1&ndash;&gt;
+    <RadioGroup
+        android:id="@+id/radioGroupFBSecondSetQ1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/feedbackQuestionHeight"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioFBset2Q1SA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/feedbackStronglyAgreeRight"
+            android:layout_marginEnd="@dimen/feedbackStronglyAgreeRight"/>
+
+        <RadioButton
+            android:id="@+id/radioFBset2Q1A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/feedbackAgreeRight"
+            android:layout_marginEnd="@dimen/feedbackAgreeRight" />
+
+        <RadioButton
+            android:id="@+id/radioFBset2Q1D"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/feedbackDisgreeRight"
+            android:layout_marginEnd="@dimen/feedbackDisgreeRight" />
+
+        <RadioButton
+            android:id="@+id/radioFBset2Q1SD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/feedbackStronglyDisagreeRight"
+            android:layout_marginEnd="@dimen/feedbackStronglyDisagreeRight"/>
+
+
+    </RadioGroup>
+
+
+
+    &lt;!&ndash;RadioButtons S2Q2&ndash;&gt;
+    <RadioGroup
+        android:id="@+id/radioGroupFBSecondSetQ12"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/feedbackQuestionHeight"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioFBset2Q2SA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/feedbackStronglyAgreeRight"
+            android:layout_marginEnd="@dimen/feedbackStronglyAgreeRight"/>
+
+        <RadioButton
+            android:id="@+id/radioFBset2Q2A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/feedbackAgreeRight"
+            android:layout_marginEnd="@dimen/feedbackAgreeRight" />
+
+        <RadioButton
+            android:id="@+id/radioFBset2Q2D"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/feedbackDisgreeRight"
+            android:layout_marginEnd="@dimen/feedbackDisgreeRight" />
+
+        <RadioButton
+            android:id="@+id/radioFBset2Q2SD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/feedbackStronglyDisagreeRight"
+            android:layout_marginEnd="@dimen/feedbackStronglyDisagreeRight"/>
+
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/feedbackQSetHeaderHeight"
+        android:text="@string/txtThirdSetQuestionHeader"/>
+
+    &lt;!&ndash;RadioButtons S3Q1&ndash;&gt;
+    <RadioGroup
+        android:id="@+id/radioGroupFBThirdSetQ3"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/feedbackQuestionHeight"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioFBset3Q1SA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/feedbackStronglyAgreeRight"
+            android:layout_marginEnd="@dimen/feedbackStronglyAgreeRight"/>
+
+        <RadioButton
+            android:id="@+id/radioFBset3Q1A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/feedbackAgreeRight"
+            android:layout_marginEnd="@dimen/feedbackAgreeRight" />
+
+        <RadioButton
+            android:id="@+id/radioFBset3Q1D"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/feedbackDisgreeRight"
+            android:layout_marginEnd="@dimen/feedbackDisgreeRight" />
+
+        <RadioButton
+            android:id="@+id/radioFBset3Q1SD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/feedbackStronglyDisagreeRight"
+            android:layout_marginEnd="@dimen/feedbackStronglyDisagreeRight"/>
+
+
+    </RadioGroup>
+
+
+</LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </ScrollView>-->
+
+    </LinearLayout>
+
+    <!--Action Buttons-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskVitalsSave"
+            android:id="@+id/btn_feedback_save"
+            android:layout_marginRight="@dimen/capture_buttons_between_margin"
+            android:layout_marginEnd="@dimen/capture_buttons_between_margin"
+            style="@style/greenRoundButton"
+            android:layout_alignParentBottom="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTaskVitalsCancel"
+            android:id="@+id/btn_feedback_cancel"
+            style="@style/greenRoundButton"
+            android:layout_toRightOf="@id/btn_feedback_save"
+            android:layout_toEndOf="@id/btn_feedback_save"
+            android:layout_alignParentBottom="true" />
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

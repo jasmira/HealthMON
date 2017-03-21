@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtSeviority"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorred" />
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">-->
+
+        <ImageView
+            android:id="@+id/imgPatientPic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/user_default_blue" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtPatientName"
+                style="@style/txt_blue_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Sample" />
+
+            <TextView
+                android:id="@+id/txtPID"
+                style="@style/txt_gray_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtTaskCount"
+            style="@style/Font17BlackNormal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="Sample"
+            android:textSize="17sp" />
+
+        <!--  </LinearLayout>-->
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/colorlinegray" />
+</LinearLayout>
